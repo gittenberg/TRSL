@@ -25,7 +25,7 @@ examplesequence_2 = "aug aaa cug ccc gag ggg uuu uca uca uuu gag gac aaa cug ccc
 conf = {}
 conf[1] = {
            'exome': {1: examplesequence_1, 2: examplesequence_2},
-           'transcriptome': {1: 0, 2: 2},
+           'transcriptome': {1: 1, 2: 2},
            'init_rates': {1: 0.1, 2: 0.1},
            'description': 'test configuration with 2 genes in 3 transcripts'
            }

@@ -88,8 +88,10 @@ class TRSL:
         self.tRNA_bound = self.tRNA - self.tRNA_free                                             # tRNA bound to ribosomes
 
         self.mRNAs = [MRNA.MRNA(index=gene) for gene in [ran.randint(1, n_genes) for k in range(self.n_mRNA)]] # randomized gene expressions
-        self.proteins = dict() # this is to contain protein indices and counts, only updated at termination, so not including polypeptides in statu nascendi 
+        self.proteins = col.Counter(dict()) # this is to contain protein indices and counts, only updated at termination, so not including polypeptides in statu nascendi 
         self.proteinlength = sum(protein.length for protein in self.proteins)
+        self.state = {'proteome': self.proteins, 'transcriptome': self.mRNAs}
+        
         self.init_rate = p_init/tau_ribo/num_pos_ribo               # 8.2e-07 s^-1 (yeast)
         self.elong_rate = competition/tau_tRNA/num_pos_tRNA         # 0.0001 s^-1  (yeast)
 
@@ -333,19 +335,14 @@ class TRSL:
                 self.timecourses["tRNA_free_"+str(tRNA_type).zfill(2)].append(self.tRNA_free[tRNA_type])
                 #log.info("solve_internal: tRNA_free type %s: %s molecules", tRNA_type, self.tRNA_free[tRNA_type])
 
-            #for species in self.timecourses:
-            #    print "TRSL.timecourses[%s] = %s" % (species, self.timecourses[species])
-            #if self.ribo_bound<0: 
-            #    log.warning("solve_internal: negative bound ribosome number, exiting")
-            #    sys.exit()
-        self.modeldict['timerange'] = self.timerange
-        self.modeldict['timecourses'] = self.timecourses
         #from time import gmtime, strftime; now = strftime("%Y%m%d_%H%M%S", gmtime())
-        #import os.path
-        #pickle.dump({'trange': self.timerange, "timecourses": self.timecourses}, open(os.path.join("..", now+"_timecourses_TRSL.pkl"), "wb"))
+        #import os.path; pickle.dump({'trange': self.timerange, "timecourses": self.timecourses}, open(os.path.join("..", now+"_timecourses_TRSL.pkl"), "wb"))
+
+        return self.state
+
 
 if __name__=="__main__":
-    log.basicConfig(level=log.DEBUG, format='%(message)s', stream=sys.stdout)
+    log.basicConfig(level=log.INFO, format='%(message)s', stream=sys.stdout)
     trsl=TRSL()
     '''
     trsl.solve_internal(0.0, 60.0, deltat=1.0)
