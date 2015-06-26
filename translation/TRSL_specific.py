@@ -406,9 +406,9 @@ if __name__=="__main__":
 
     # demo configuration 3: (part of full-scale) simulation
     # load sequences, transcriptome and initiation rates from pickle file
-    mRNA_abundancies = pkl.load(open("../analysis/transcriptome.p", "rb" ))
-    gene_library = pkl.load(open("../analysis/orf_coding.p", "rb" ))
-    init_rates = pkl.load(open("../analysis/init_rates.p", "rb" ))
+    mRNA_abundancies = pkl.load(open("../parameters/transcriptome.p", "rb" ))
+    gene_library = pkl.load(open("../parameters/orf_coding.p", "rb" ))
+    init_rates = pkl.load(open("../parameters/init_rates_plotkin.p", "rb" ))
     
     mRNAs = []
     counter = 0
