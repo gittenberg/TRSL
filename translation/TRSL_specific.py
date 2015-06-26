@@ -271,6 +271,7 @@ class TRSL_spec(TRSL.TRSL):
         log.info("update_elongation: starting")
         for mRNA in self.mRNAs:
             self.elongate_mRNA_new(mRNA, deltat)
+            log.info("update_elongation: ribosomes: {}".format(mRNA.ribosomes)) 
 
     def elongate_mRNA_new(self, mRNA, deltat):
         #log.debug("update_elongation: ribosomes on this mRNA are: %s", mRNA.ribosomes)
@@ -295,8 +296,8 @@ class TRSL_spec(TRSL.TRSL):
                     success = not (randomnumber<failure_probability) # this means the required tRNA type has diffused to the site
                     if success:
                         #log.debug('update_initiation: matching tRNA diffused to initiation site')
-                        if not self.insert_tRNA(mRNA, 0, required_tRNA_type):
-                            log.warning("update_initiation: unsuccessful attempt to insert tRNA")
+                        if not self.insert_tRNA(mRNA, present_pos, required_tRNA_type):
+                            log.warning("elongate_mRNA_new: unsuccessful attempt to insert tRNA")
                             success = False
     
                 # all non-empty ribosomes may translocate by one codon

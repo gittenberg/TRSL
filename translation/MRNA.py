@@ -18,14 +18,14 @@ class MRNA:
     '''
     class representing a single polysome
     '''
-    def __init__(self, index=None, length=1251, geneID=None): # 1250, source: http://bionumbers.hms.harvard.edu/bionumber.aspx?id=107678
+    def __init__(self, index=None, length=1251, geneID=None, ribosomes={}): # 1250, source: http://bionumbers.hms.harvard.edu/bionumber.aspx?id=107678
         '''
         initializes one mRNA molecule
         '''
         self.index = index   # counts the unique mRNA molecules; no biological meaning
         self.length = length # length of mRNA in nts # http://bionumbers.hms.harvard.edu//bionumber.aspx?id=107678&ver=1
         self.geneID = geneID # corresponds to sequence and proteinID; there might be more than one mRNA with this geneID
-        self.ribosomes = {}  # keys between 1 and self.length - 3*cr - 1, value None: no AA-tRNA, <value>: AA-tRNA of type <value> # TODO: oder laeuft die ab 0?
+        self.ribosomes = ribosomes  # keys between 0 and self.length - 3*cr, value None: no AA-tRNA, <value>: AA-tRNA of type <value> 
 
     def attach_ribosome(self, pos=0):
         '''
