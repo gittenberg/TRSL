@@ -90,7 +90,6 @@ class TRSL:
         self.mRNAs = [MRNA.MRNA(index=gene) for gene in [ran.randint(1, n_genes) for k in range(self.n_mRNA)]] # randomized gene expressions
         self.proteins = proteome  # contains protein IDs and counts not including polypeptides in statu nascendi 
         self.proteinlength = sum(self.proteins.values())
-        self.state = {'proteome': self.proteins, 'transcriptome': self.mRNAs}
         
         self.init_rate = p_init/tau_ribo/num_pos_ribo               # 8.2e-07 s^-1 (yeast)
         self.elong_rate = competition/tau_tRNA/num_pos_tRNA         # 0.0001 s^-1  (yeast)
@@ -136,6 +135,22 @@ class TRSL:
                     print "\t\t", subkey, ":"
                     #print "\t\t", self.__dict__[key][subkey]
                     print "----------------------------------------------------------"
+    
+    def dump_results(self, description='results'):
+        results = {}
+        results['proteome'] = self.proteins
+        results['transcriptome'] = self.mRNAs
+        results['timerange'] = self.timerange
+        results['timecourses'] = self.timecourses
+        results["description"] = description
+        import time; now = time.strftime("%Y%m%d_%H%M", time.gmtime())
+        results["time_stamp"] = now
+        results["n_ribosomes"] = self.ribo_bound + self.ribo_free
+        results["n_tRNA"] = sum(self.tRNA.values())
+        duration = self.timerange[-1] - self.timerange[0]
+        results["duration"] = duration
+        from cPickle import dump; dump(results, open("../results/results_"+now+"_"+str(int(duration)).zfill(4)+"s.p", "wb"))
+        print description
 
     def insert_tRNA(self, mRNA, pos, tRNA_type):
         '''
@@ -338,7 +353,7 @@ class TRSL:
         #from time import gmtime, strftime; now = strftime("%Y%m%d_%H%M%S", gmtime())
         #import os.path; pickle.dump({'trange': self.timerange, "timecourses": self.timecourses}, open(os.path.join("..", now+"_timecourses_TRSL.pkl"), "wb"))
 
-        return self.state
+        return self.proteins, self.mRNAs
 
 
 if __name__=="__main__":

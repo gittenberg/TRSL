@@ -62,7 +62,7 @@ conf[6] = {
            'description': 'full transcriptome and exome, specific best estimate initiation rates according to Stansfield'
            }
 
-for i in [5]: # set configuration_id
+for i in [1]: # set configuration_id
     if 'decay_constants' in conf[i]:
         genes = list(set(conf[i]['exome']) & set(conf[i]['transcriptome']) & set(conf[i]['init_rates']) & set(conf[i]['decay_constants']))
     else:
@@ -86,7 +86,8 @@ for i in [5]: # set configuration_id
                     counter += 1
     print "built gene library, next: run TRSL_spec."
     
-    print conf[i]['description']
+    description = conf[i]['description']
+    print description
     
     duration = 49.0
     
@@ -105,17 +106,6 @@ for i in [5]: # set configuration_id
     #tr.inspect()
     '''
 
-    results = {}
-    results['proteome'] = tr.proteins
-    results['timerange'] = tr.timerange
-    results['timecourses'] = tr.timecourses
-    results["description"] = conf[i]['description']
-    import time; now = time.strftime("%Y%m%d_%H%M", time.gmtime())
-    results["time_stamp"] = now
-    results["n_ribosomes"] = tr.ribo_bound + tr.ribo_free
-    results["n_tRNA"] = sum(tr.tRNA.values())
-    results["duration"] = duration
-    pkl.dump(results, open("../results/results_"+now+"_"+str(int(duration)).zfill(4)+"s.p", "wb"))
-    print conf[i]['description']
+    tr.dump_results(description)
 
 print "done."

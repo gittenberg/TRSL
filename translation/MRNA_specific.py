@@ -12,7 +12,7 @@ Parameters:
       init_rate - the rate (in s^-1) at which initiation start at this mRNA. The default value of the initiation rate  p_init/tau_ribo/num_pos_ribo is calculated in TRSL.py
 """
 
-import logging as log
+#import logging as log
 
 import MRNA
 
