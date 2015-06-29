@@ -44,7 +44,7 @@ class TRSL:
     '''
     class representing a translational network
     '''
-    def __init__(self, nribo=200000):
+    def __init__(self, nribo=200000, proteome=col.Counter({})):
         '''
         initializes the parameters of the translation process
         '''
@@ -88,8 +88,8 @@ class TRSL:
         self.tRNA_bound = self.tRNA - self.tRNA_free                                             # tRNA bound to ribosomes
 
         self.mRNAs = [MRNA.MRNA(index=gene) for gene in [ran.randint(1, n_genes) for k in range(self.n_mRNA)]] # randomized gene expressions
-        self.proteins = col.Counter(dict()) # this is to contain protein indices and counts, only updated at termination, so not including polypeptides in statu nascendi 
-        self.proteinlength = sum(protein.length for protein in self.proteins)
+        self.proteins = proteome  # contains protein IDs and counts not including polypeptides in statu nascendi 
+        self.proteinlength = sum(self.proteins.values())
         self.state = {'proteome': self.proteins, 'transcriptome': self.mRNAs}
         
         self.init_rate = p_init/tau_ribo/num_pos_ribo               # 8.2e-07 s^-1 (yeast)

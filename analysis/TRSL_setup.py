@@ -62,7 +62,7 @@ conf[6] = {
            'description': 'full transcriptome and exome, specific best estimate initiation rates according to Stansfield'
            }
 
-for i in [1]: # set configuration_id
+for i in [5]: # set configuration_id
     if 'decay_constants' in conf[i]:
         genes = list(set(conf[i]['exome']) & set(conf[i]['transcriptome']) & set(conf[i]['init_rates']) & set(conf[i]['decay_constants']))
     else:
@@ -90,7 +90,7 @@ for i in [1]: # set configuration_id
     
     duration = 49.0
     
-    tr = TRSL_specific.TRSL_spec(mRNAs, conf[i]['exome'], conf[i]['decay_constants'])
+    tr = TRSL_specific.TRSL_spec(mRNAs, conf[i]['exome'], conf[i]['decay_constants'], proteome={"YKR017C":0})
     #tr.tRNA = col.Counter({i:TRSL_specific.tRNA_types[i]['abundancy']*2 for i in TRSL_specific.tRNA_types}) # double tRNA inventory to prevent stalling
     tr.tRNA = col.Counter({i:TRSL_specific.tRNA_types[i]['abundancy'] for i in TRSL_specific.tRNA_types}) # do not double tRNA inventory to induce stalling
     tr.tRNA_free = col.Counter({i:int(tr.tRNA[i]) for i in TRSL_specific.tRNA_types})     # tRNA not bound to ribosomes

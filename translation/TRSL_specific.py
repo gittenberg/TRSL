@@ -170,8 +170,8 @@ wobble = {codon: 1.000 if codon_anticodon[codon] is not '*' and codon==revcom(co
 #############################################################################################################
 
 class TRSL_spec(TRSL.TRSL):
-    def __init__(self, mRNAs, gene_library, decay_constants=None, nribo=200000):
-        TRSL.TRSL.__init__(self, nribo)
+    def __init__(self, mRNAs, gene_library, decay_constants=None, nribo=200000, proteome=col.Counter({})):
+        TRSL.TRSL.__init__(self, nribo, proteome)
         #self.ribo_free = 200000                                                     # number of ribosomes
         #self.ribo_bound = 0
         self.tRNA = col.Counter({i:tRNA_types[i]['abundancy'] for i in tRNA_types})
@@ -271,7 +271,7 @@ class TRSL_spec(TRSL.TRSL):
         log.info("update_elongation: starting")
         for mRNA in self.mRNAs:
             self.elongate_mRNA_new(mRNA, deltat)
-            log.info("update_elongation: ribosomes: {}".format(mRNA.ribosomes)) 
+            #log.info("update_elongation: ribosomes: {}".format(mRNA.ribosomes)) 
 
     def elongate_mRNA_new(self, mRNA, deltat):
         #log.debug("update_elongation: ribosomes on this mRNA are: %s", mRNA.ribosomes)
