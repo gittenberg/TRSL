@@ -8,8 +8,6 @@ import logging as log
 import sys
 import cPickle as pkl
 import collections as col
-import cProfile
-import pstats
 
 #import MRNA_specific  # @UnresolvedImport
 #import TRSL_specific
@@ -93,9 +91,9 @@ for i in [1]: # set configuration_id
     
     tr = TRSL_specific.TRSL_spec(mRNAs, conf[i]['exome'], conf[i]['decay_constants'], proteome={"YKR017C":0})
     #tr.tRNA = col.Counter({i:TRSL_specific.tRNA_types[i]['abundancy']*2 for i in TRSL_specific.tRNA_types}) # double tRNA inventory to prevent stalling
-    tr.tRNA = col.Counter({i:TRSL_specific.tRNA_types[i]['abundancy'] for i in TRSL_specific.tRNA_types}) # do not double tRNA inventory to induce stalling
-    tr.tRNA_free = col.Counter({i:int(tr.tRNA[i]) for i in TRSL_specific.tRNA_types})     # tRNA not bound to ribosomes
-    tr.tRNA_bound = tr.tRNA - tr.tRNA_free                                # tRNA bound to ribosomes
+    tr._tRNA = col.Counter({i:TRSL_specific.tRNA_types[i]['abundancy'] for i in TRSL_specific.tRNA_types}) # do not double tRNA inventory to induce stalling
+    tr._tRNA_free = col.Counter({i:int(tr._tRNA[i]) for i in TRSL_specific.tRNA_types})     # tRNA not bound to ribosomes
+    tr._tRNA_bound = tr._tRNA - tr._tRNA_free                                # tRNA bound to ribosomes
     tr.solve_internal(0.0, duration, deltat=1.0)
     
     '''
