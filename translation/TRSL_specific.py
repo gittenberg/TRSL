@@ -9,18 +9,17 @@ Module inherits from generic module TRSL.
 @author: martin
 """
 
-import TRSL
 import sys
 import logging as log
 import collections as col
 import numpy.random as npr
 import random as ran
 import cPickle as pkl
-import cProfile
-import pstats
 
+import TRSL
 import MRNA
 import MRNA_specific
+
 
 #############################################################################################################
 # auxiliary data
@@ -171,12 +170,12 @@ wobble = {codon: 1.000 if codon_anticodon[codon] is not '*' and codon==revcom(co
 
 class TRSL_spec(TRSL.TRSL):
     def __init__(self, mRNAs, gene_library, decay_constants=None, nribo=200000, proteome=col.Counter({})):
-        TRSL.TRSL.__init__(self, nribo, proteome)
+        super(TRSL_spec, self).__init__(nribo, proteome)
         #self.ribo_free = 200000                                                     # number of ribosomes
         #self.ribo_bound = 0
-        self.tRNA = col.Counter({i:tRNA_types[i]['abundancy'] for i in tRNA_types})
-        self.tRNA_free = col.Counter({i:int(self.tRNA[i]) for i in tRNA_types})     # tRNA not bound to ribosomes
-        self.tRNA_bound = self.tRNA - self.tRNA_free                                # tRNA bound to ribosomes
+        self._tRNA = col.Counter({i:tRNA_types[i]['abundancy'] for i in tRNA_types})
+        self._tRNA_free = col.Counter({i:int(self._tRNA[i]) for i in tRNA_types})     # tRNA not bound to ribosomes
+        self._tRNA_bound = self._tRNA - self._tRNA_free                                # tRNA bound to ribosomes
         self.mRNAs = mRNAs
         self.modeldict = {}
         self.decay_constants = decay_constants
@@ -289,7 +288,7 @@ class TRSL_spec(TRSL.TRSL):
                     required_tRNA_type = anticodon_index[codon_anticodon[thiscodon]] # index of anticodon corresponding to first codon in mRNA
                     # type to be inserted at pos==1
                     tRNA_diffusion_probability = self.elong_rate * deltat * wobble[thiscodon]
-                    failure_probability = (1 - tRNA_diffusion_probability)**self.tRNA_free[required_tRNA_type]
+                    failure_probability = (1 - tRNA_diffusion_probability)**self._tRNA_free[required_tRNA_type]
                     randomnumber = ran.random()
                     # can also try Poisson approximation if faster
                     #log.debug("update_initiation: failure probability is %s at mRNA position 0", failure_probability)
@@ -309,7 +308,7 @@ class TRSL_spec(TRSL.TRSL):
                     tRNA_diffusion_probability = self.elong_rate * present_deltat * wobble[nextcodon]
                 
                     # 2. if no tRNA_free[present_tRNA_type] diffuses to elongation site in the interval, break
-                    failure_probability = (1 - tRNA_diffusion_probability)**self.tRNA_free[next_tRNA_type]
+                    failure_probability = (1 - tRNA_diffusion_probability)**self._tRNA_free[next_tRNA_type]
                     randomnumber = ran.random()
                     success = not (randomnumber<failure_probability or available_nucleotides < 3) # this means the required tRNA type has diffused to the site and there is a nucleotide available
                     # can also try Poisson approximation if faster
