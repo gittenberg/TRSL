@@ -186,6 +186,12 @@ class TRSL(object):
                     print "----------------------------------------------------------"
     
     def dump_results(self, description='results'):
+        """
+        Save results of the simulation to a pickle file in the ../results directory.
+        The name is generated using a timestamp.
+        @param description:
+        @return:
+        """
         results = {}
         results['proteome'] = self.proteins
         results['transcriptome'] = self.mRNAs
@@ -198,7 +204,9 @@ class TRSL(object):
         results["n_tRNA"] = sum(self._tRNA.values())
         duration = self.timerange[-1] - self.timerange[0]
         results["duration"] = duration
-        from cPickle import dump; dump(results, open("../results/results_" + now + "_" + str(int(duration)).zfill(4) + "s.p", "wb"))
+        from cPickle import dump
+        dump(results,
+             open("../results/{}_{}_{}s.p".format(description, now, str(int(duration)).zfill(4)), "wb"))
         print description
 
     def insert_tRNA(self, mRNA, pos, tRNA_type):
