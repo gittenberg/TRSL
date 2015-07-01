@@ -12,20 +12,21 @@ Parameters:
 
 import logging as log
 
-cr = 0 # ribosome footprint in codons. if this is > 0, the sequence needs to include a 3' UTR
+cr = 0  # ribosome footprint in codons. if this is > 0, the sequence needs to include a 3' UTR
+
 
 class MRNA:
     '''
     class representing a single polysome
     '''
-    def __init__(self, index=None, length=1251, geneID=None, ribosomes={}): # 1250, source: http://bionumbers.hms.harvard.edu/bionumber.aspx?id=107678
+    def __init__(self, index=None, length=1251, geneID=None, ribosomes={}):  # 1250, source: http://bionumbers.hms.harvard.edu/bionumber.aspx?id=107678
         '''
         initializes one mRNA molecule
         '''
-        self.index = index   # counts the unique mRNA molecules; no biological meaning
-        self.length = length # length of mRNA in nts # http://bionumbers.hms.harvard.edu//bionumber.aspx?id=107678&ver=1
-        self.geneID = geneID # corresponds to sequence and proteinID; there might be more than one mRNA with this geneID
-        self.ribosomes = ribosomes  # keys between 0 and self.length - 3*cr, value None: no AA-tRNA, <value>: AA-tRNA of type <value> 
+        self.index = index  # counts the unique mRNA molecules; no biological meaning
+        self.length = length  # length of mRNA in nts # http://bionumbers.hms.harvard.edu//bionumber.aspx?id=107678&ver=1
+        self.geneID = geneID  # corresponds to sequence and proteinID; there might be more than one mRNA with this geneID
+        self.ribosomes = ribosomes  # keys between 0 and self.length - 3*cr, value None: no AA-tRNA, <value>: AA-tRNA of type <value>
 
     def attach_ribosome(self, pos=0):
         '''
@@ -40,7 +41,7 @@ class MRNA:
             success = False
         else:
             self.ribosomes[pos] = None
-            #log.debug("attach_ribosome: successfully attached ribosome at pos %s", pos)
+            # log.debug("attach_ribosome: successfully attached ribosome at pos %s", pos)
             success = True
         return success
 
@@ -50,7 +51,7 @@ class MRNA:
         '''
         if pos in self.ribosomes:
             del self.ribosomes[pos]
-            #log.debug("detach_ribosome: successful at pos %s", pos)
+            # log.debug("detach_ribosome: successful at pos %s", pos)
             success = True
         else:
             self.ribosomes[pos] = None
@@ -62,9 +63,9 @@ class MRNA:
         '''
         attaches a ribosome without tRNA at position 0
         '''
-        if not self.ribosomes or min(self.ribosomes.keys())>3*cr:
+        if not self.ribosomes or min(self.ribosomes.keys()) > 3 * cr:
             self.ribosomes[0] = None
-            #log.debug("attach_ribosome_at_start: successfully attached ribosome at pos 0")
+            # log.debug("attach_ribosome_at_start: successfully attached ribosome at pos 0")
             success = True
         else:
             log.debug("attach_ribosome_at_start: unsuccessful")
@@ -75,9 +76,9 @@ class MRNA:
         '''
         returns True iff the first 30 nts of an mRNA are occupied by a ribosome
         '''
-        if self.ribosomes=={}: # no ribosomes
+        if self.ribosomes == {}:  # no ribosomes
             return False
-        elif min(self.ribosomes.keys())>3*cr: # ribosomes behind position 30 nt
+        elif min(self.ribosomes.keys()) > 3 * cr:  # ribosomes behind position 30 nt
             return False
         else:
             return True
@@ -86,20 +87,20 @@ class MRNA:
         '''
         returns True iff no ribosomes within the next by+3*cr positions from pos
         '''
-        return not any([ribo in range(pos+1, pos+1+by+3*cr) for ribo in self.ribosomes])
+        return not any([ribo in range(pos + 1, pos + 1 + by + 3 * cr) for ribo in self.ribosomes])
 
     def find_max_free_range(self, pos):
         '''
         returns maximum free range downstream from pos
         this range does not include the ribosome footprint
         '''
-        max_free_range = max(0, self.length - pos - 3) # theoretical maximum if no other ribosomes downstream
-        downstream_ribosomes = [ribo for ribo in self.ribosomes if ribo>pos]
+        max_free_range = max(0, self.length - pos - 3)  # theoretical maximum if no other ribosomes downstream
+        downstream_ribosomes = [ribo for ribo in self.ribosomes if ribo > pos]
         if downstream_ribosomes:
             next_ribo_pos = min(downstream_ribosomes)
-            #log.debug("find_max_free_range: next_ribo_pos, pos = %s, %s", max_free_range, pos)
+            # log.debug("find_max_free_range: next_ribo_pos, pos = %s, %s", max_free_range, pos)
             max_free_range = next_ribo_pos - pos
-        #log.debug("find_max_free_range: found %s free nucleotides downstream from position %s", max_free_range, pos)
+        # log.debug("find_max_free_range: found %s free nucleotides downstream from position %s", max_free_range, pos)
         return max_free_range
 
     def termination_condition(self):
@@ -119,7 +120,7 @@ class MRNA:
         '''
         returns True iff no ribosomes within the previous by+3*cr positions from pos
         '''
-        return not any([ribo in range(pos-1, pos-1-by-3*cr,-1) for ribo in self.ribosomes])
+        return not any([ribo in range(pos - 1, pos - 1 - by - 3 * cr, -1) for ribo in self.ribosomes])
 
     def translocate_ribosome(self, pos, by=3):
         '''
@@ -128,10 +129,10 @@ class MRNA:
         '''
         if pos in self.ribosomes:
             # we assume the next 3*by positions are free to translocate
-            self.ribosomes[pos+by] = self.ribosomes[pos]
+            self.ribosomes[pos + by] = self.ribosomes[pos]
             del self.ribosomes[pos]
             success = True
-            #log.debug("translocate_ribosome: successfully moved ribosome to position %s", pos+by)
+            # log.debug("translocate_ribosome: successfully moved ribosome to position %s", pos+by)
         else:
             log.warning("translocate_ribosome: cannot move ribosome: ribosome not found at %s", pos)
             success = False
