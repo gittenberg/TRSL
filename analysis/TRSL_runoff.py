@@ -43,8 +43,7 @@ for i in [2]:  # set configuration_id
                                                          sequence=conf[i]['exome'][gene],
                                                          geneID=gene,
                                                          ribosomes={},
-                                                         init_rate=conf[i]['init_rates'][
-                            gene]))  # do not just multiply the list
+                                                         init_rate=conf[i]['init_rates'][gene]))  # do not just multiply the list
                     counter += 1
         else:
             if gene in conf[i]['transcriptome']:
@@ -61,11 +60,6 @@ for i in [2]:  # set configuration_id
     duration = 5.0
 
     tr = TRSL_specific.TRSL_spec(mRNAs, conf[i]['exome'], conf[i]['decay_constants'])
-    # tr.tRNA = col.Counter({i:TRSL_specific.tRNA_types[i]['abundancy']*2 for i in TRSL_specific.tRNA_types}) # double tRNA inventory to prevent stalling
-    # do not double tRNA inventory to induce stalling
-    tr.tRNA = col.Counter({i: TRSL_specific.tRNA_types[i]['abundancy'] for i in
-                           TRSL_specific.tRNA_types})
-    tr.mRNAs = mRNAs
 
     proteins, mRNAs = tr.solve_internal(0.0, duration, deltat=1.0)
 
