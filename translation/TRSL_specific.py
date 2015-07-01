@@ -228,7 +228,7 @@ class TRSL_spec(TRSL.TRSL):
 
     def diffuse_ribosomes_to_initiation_site(self, mRNA, deltat):
         # test if ribosome can be inserted at 0
-        if self.ribo_free>0:
+        if self.ribo_free > 0:
             #k = npr.binomial(self.ribo_free, mRNA.init_rate*deltat, 1)[0]  # number of ribosomes that diffuse to the initiation site during deltat
             k = npr.poisson(self.ribo_free*mRNA.init_rate*deltat)  # number of ribosomes that diffuse to the initiation site during deltat
             #log.debug('update_initiation: %s ribosomes out of %s diffused to init site at mRNA %s with probability %s', k, self.ribo_free, mRNA.index, self.init_rate*deltat)
@@ -244,7 +244,7 @@ class TRSL_spec(TRSL.TRSL):
                             self.GDP += 1
                             self.ATP -= 2
                             self.AMP += 2
-                            
+
                         else:
                             log.warning("update_initiation: unsuccessful attempt to attach ribosome")
                     else:
@@ -284,7 +284,7 @@ class TRSL_spec(TRSL.TRSL):
                     required_tRNA_type = anticodon_index[codon_anticodon[thiscodon]] # index of anticodon corresponding to first codon in mRNA
                     # type to be inserted at pos==1
                     tRNA_diffusion_probability = self.elong_rate * deltat * wobble[thiscodon]
-                    failure_probability = (1 - tRNA_diffusion_probability)**self._tRNA_free[required_tRNA_type]
+                    failure_probability = (1 - tRNA_diffusion_probability)**self.tRNA_free[required_tRNA_type]
                     randomnumber = ran.random()
                     # can also try Poisson approximation if faster
                     #log.debug("update_initiation: failure probability is %s at mRNA position 0", failure_probability)
@@ -304,7 +304,7 @@ class TRSL_spec(TRSL.TRSL):
                     tRNA_diffusion_probability = self.elong_rate * present_deltat * wobble[nextcodon]
                 
                     # 2. if no tRNA_free[present_tRNA_type] diffuses to elongation site in the interval, break
-                    failure_probability = (1 - tRNA_diffusion_probability)**self._tRNA_free[next_tRNA_type]
+                    failure_probability = (1 - tRNA_diffusion_probability)**self.tRNA_free[next_tRNA_type]
                     randomnumber = ran.random()
                     success = not (randomnumber<failure_probability or available_nucleotides < 3) # this means the required tRNA type has diffused to the site and there is a nucleotide available
                     # can also try Poisson approximation if faster

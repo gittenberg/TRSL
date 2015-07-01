@@ -206,11 +206,11 @@ class TRSL(object):
         inserts a tRNA of type tRNA_type at position pos
         returns True iff successful
         '''
-        if pos in mRNA.ribosomes and self._tRNA_free[tRNA_type]>=1 and not mRNA.ribosomes[pos]:
+        if pos in mRNA.ribosomes and self.tRNA_free[tRNA_type]>=1 and not mRNA.ribosomes[pos]:
             # there has to be a ribosome at pos and there has to be tRNA of that type available and there cannot be a tRNA yet at pos on the position
             #log.debug("insert_tRNA: inserting tRNA %s on mRNA %s at position %s", tRNA_type, self.mRNAs.index(mRNA), pos)
-            self._tRNA_free[tRNA_type] -= 1
-            self._tRNA_bound[tRNA_type] += 1
+            self.tRNA_free[tRNA_type] -= 1
+            self.tRNA_bound[tRNA_type] += 1
             mRNA.ribosomes[pos] = tRNA_type  # tRNA now bound
             #log.debug("insert_tRNA: ribosomes: tRNA on mRNA %s are now %s", self.mRNAs.index(mRNA), mRNA.ribosomes)
             success = True
@@ -235,8 +235,8 @@ class TRSL(object):
         releases a tRNA molecule from mRNA
         '''
         if mRNA.ribosomes[pos]==tRNA_type and self._tRNA_bound[tRNA_type]>0:
-            self._tRNA_bound[tRNA_type] -= 1
-            self._tRNA_free[tRNA_type] += 1
+            self.tRNA_bound[tRNA_type] -= 1
+            self.tRNA_free[tRNA_type] += 1
             mRNA.ribosomes[pos] = None
             #log.debug("release_tRNA: successfully released tRNA %s from pos %s", tRNA_type, pos)
             success = True
@@ -319,8 +319,8 @@ class TRSL(object):
             #log.debug("update_elongation: ribosomes on this mRNA are: %s", mRNA.ribosomes)
             for ribo_pos in mRNA.ribosomes.keys():
                 present_tRNA_type = mRNA.ribosomes[ribo_pos]
-                k = npr.binomial(self._tRNA_free[present_tRNA_type], self.elong_rate*deltat, 1)[0]  # number of tRNA_free[present_tRNA_type] that diffuse to the ribosome during deltat
-                log.debug("update_elongation: %s tRNAs out of %s of type %s diffused to elongation site %s at mRNA %s", k, self._tRNA_free[present_tRNA_type], present_tRNA_type, ribo_pos, mRNA.index)
+                k = npr.binomial(self.tRNA_free[present_tRNA_type], self.elong_rate*deltat, 1)[0]  # number of tRNA_free[present_tRNA_type] that diffuse to the ribosome during deltat
+                log.debug("update_elongation: %s tRNAs out of %s of type %s diffused to elongation site %s at mRNA %s", k, self.tRNA_free[present_tRNA_type], present_tRNA_type, ribo_pos, mRNA.index)
                 current_pos = ribo_pos
                 self.elongate_while_possible(mRNA, k, current_pos)
 
@@ -361,7 +361,7 @@ class TRSL(object):
         fieldnames = ["protein", "ribos._bound", "ribos._free", "tRNA_bound", "tRNA_free", "ATP", "AMP", "GTP", "GDP"]
         self.timecourses = {fieldname: [] for fieldname in fieldnames}
 
-        for tRNA_type in self._tRNA_free:
+        for tRNA_type in self.tRNA_free:
             self.timecourses["tRNA_free_"+str(tRNA_type).zfill(2)] = []
         
         self.timerange = np.arange(start, end, deltat)
@@ -375,9 +375,9 @@ class TRSL(object):
             log.info("solve_internal: protein length:  %s", self.protein_length)
             log.info("solve_internal: bound ribosomes: %s", self.ribo_bound)
             log.info("solve_internal: free ribosomes:  %s", self.ribo_free)
-            log.info("solve_internal: bound tRNA:      %s", sum(self._tRNA_bound.values()))
-            log.info("solve_internal: free tRNA:       %s", sum(self._tRNA_free.values()))
-            fieldvalues = [self.protein_length, self.ribo_bound, self.ribo_free, sum(self._tRNA_bound.values()), sum(self._tRNA_free.values()), self.ATP, self.AMP, self.GTP, self.GDP]
+            log.info("solve_internal: bound tRNA:      %s", sum(self.tRNA_bound.values()))
+            log.info("solve_internal: free tRNA:       %s", sum(self.tRNA_free.values()))
+            fieldvalues = [self.protein_length, self.ribo_bound, self.ribo_free, sum(self.tRNA_bound.values()), sum(self.tRNA_free.values()), self.ATP, self.AMP, self.GTP, self.GDP]
 
             # update everything except proteins and specific tRNA_free
             for fieldname, fieldvalue in zip(fieldnames, fieldvalues):
@@ -395,8 +395,8 @@ class TRSL(object):
                     self.timecourses[gene_id].append(self.proteins[gene_id])
 
             # now update specific tRNA_free
-            for tRNA_type in self._tRNA_free:
-                self.timecourses["tRNA_free_"+str(tRNA_type).zfill(2)].append(self._tRNA_free[tRNA_type])
+            for tRNA_type in self.tRNA_free:
+                self.timecourses["tRNA_free_"+str(tRNA_type).zfill(2)].append(self.tRNA_free[tRNA_type])
                 #log.info("solve_internal: tRNA_free type %s: %s molecules", tRNA_type, self.tRNA_free[tRNA_type])
 
         #from time import gmtime, strftime; now = strftime("%Y%m%d_%H%M%S", gmtime())

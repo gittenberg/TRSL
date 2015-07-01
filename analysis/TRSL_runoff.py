@@ -42,7 +42,7 @@ for i in [2]:  # set configuration_id
                     mRNAs.append(MRNA_specific.mRNA_spec(index=counter,
                                                          sequence=conf[i]['exome'][gene],
                                                          geneID=gene,
-                                                         ribosomes={3: None, 9: None},
+                                                         ribosomes={},
                                                          init_rate=conf[i]['init_rates'][
                             gene]))  # do not just multiply the list
                     counter += 1
@@ -51,7 +51,7 @@ for i in [2]:  # set configuration_id
                 print "abundancies but no initiation rate available for gene:", gene
                 for instance in range(conf[i]['transcriptome'][gene]):
                     mRNAs.append(MRNA_specific.mRNA_spec(index=counter, sequence=conf[i]['exome'][gene], geneID=gene,
-                                                         ribosomes={3: None, 9: None}))  # do not just multiply the list
+                                                         ribosomes={}))  # do not just multiply the list
                     counter += 1
     print "built gene library, next: run TRSL_spec."
 
@@ -63,11 +63,9 @@ for i in [2]:  # set configuration_id
     tr = TRSL_specific.TRSL_spec(mRNAs, conf[i]['exome'], conf[i]['decay_constants'])
     # tr.tRNA = col.Counter({i:TRSL_specific.tRNA_types[i]['abundancy']*2 for i in TRSL_specific.tRNA_types}) # double tRNA inventory to prevent stalling
     # do not double tRNA inventory to induce stalling
-    tr._tRNA = col.Counter({i: TRSL_specific.tRNA_types[i]['abundancy'] for i in
+    tr.tRNA = col.Counter({i: TRSL_specific.tRNA_types[i]['abundancy'] for i in
                            TRSL_specific.tRNA_types})
-    # tRNA not bound to ribosomes
-    tr._tRNA_free = col.Counter({i: int(tr._tRNA[i]) for i in TRSL_specific.tRNA_types})
-    tr._tRNA_bound = tr._tRNA - tr._tRNA_free  # tRNA bound to ribosomes
+    tr.mRNAs = mRNAs
 
     proteins, mRNAs = tr.solve_internal(0.0, duration, deltat=1.0)
 
