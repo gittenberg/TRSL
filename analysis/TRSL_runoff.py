@@ -43,7 +43,7 @@ for i in [2]:  # set configuration_id
                                                          sequence=conf[i]['exome'][gene],
                                                          geneID=gene,
                                                          ribosomes={},
-                                                         init_rate=conf[i]['init_rates'][gene]))  # do not just multiply the list
+                                                         init_rate=conf[i]['init_rates'][gene]))
                     counter += 1
         else:
             if gene in conf[i]['transcriptome']:
@@ -57,7 +57,7 @@ for i in [2]:  # set configuration_id
     description = conf[i]['description']
     print description
 
-    duration = 5.0
+    duration = 90.0
 
     tr = TRSL_specific.TRSL_spec(mRNAs, conf[i]['exome'], conf[i]['decay_constants'])
 
@@ -67,17 +67,10 @@ for i in [2]:  # set configuration_id
         m.init_rate = 0
     tr.init_rate = 0
 
+    tr.dump_results('steady_state')
+
     tr.mRNAs = mRNAs
-    proteins, mRNAs = tr.solve_internal(0.0, 5, deltat=1.0)
-
-    '''
-    # Profiling:
-    cProfile.run('tr.solve_internal(0.0, '+str(duration)+', deltat=1.0)', 'trsl_profile')
-    p=pstats.Stats('trsl_profile')
-    p.strip_dirs().sort_stats('cumulative').print_stats()
-    #tr.inspect()
-    '''
-
-    #tr.dump_results(description)
+    proteins, mRNAs = tr.solve_internal(90, 100, deltat=1.0)
+    tr.dump_results("glucose_starvation_after_steady")
 
 print "done."
