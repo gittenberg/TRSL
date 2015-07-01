@@ -171,11 +171,7 @@ wobble = {codon: 1.000 if codon_anticodon[codon] is not '*' and codon==revcom(co
 class TRSL_spec(TRSL.TRSL):
     def __init__(self, mRNAs, gene_library, decay_constants=None, nribo=200000, proteome=col.Counter({})):
         super(TRSL_spec, self).__init__(nribo, proteome)
-        #self.ribo_free = 200000                                                     # number of ribosomes
-        #self.ribo_bound = 0
         self._tRNA = col.Counter({i:tRNA_types[i]['abundancy'] for i in tRNA_types})
-        self._tRNA_free = col.Counter({i:int(self._tRNA[i]) for i in tRNA_types})     # tRNA not bound to ribosomes
-        self._tRNA_bound = self._tRNA - self._tRNA_free                                # tRNA bound to ribosomes
         self.mRNAs = mRNAs
         self.modeldict = {}
         self.decay_constants = decay_constants
@@ -355,7 +351,7 @@ class TRSL_spec(TRSL.TRSL):
             self.insert_tRNA(mRNA, current_pos+3, new_type) # try to insert AA-tRNA in the ribosome
             #log.debug("elongate_one_step: self.tRNA_bound = %s", self.tRNA_bound)
             # translocation: elongate proteinlength
-            self.proteinlength += 1
+            self.protein_length += 1
             self.GTP -= 1
             self.GDP += 1
             return True

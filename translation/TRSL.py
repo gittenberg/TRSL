@@ -85,19 +85,17 @@ class TRSL(object):
         self.timecourses = {}
         self.ribo_bound = 0                # number of ribosomes bound to mRNA
         self._tRNA = col.Counter({i:int(0.5+n_tRNA/self.types_tRNA) for i in range(1, self.types_tRNA+1)}) # TODO: experimental values are in Ingolia (2009)
-        self._tRNA_free = col.Counter({i:int(self._tRNA[i]) for i in range(1, self.types_tRNA+1)}) # tRNA not bound to ribosomes
-        self._tRNA_bound = self._tRNA - self._tRNA_free                                             # tRNA bound to ribosomes
 
         self.mRNAs = [MRNA.MRNA(index=gene) for gene in [ran.randint(1, n_genes) for k in range(self.n_mRNA)]] # randomized gene expressions
         self.proteins = proteome  # contains protein IDs and counts not including polypeptides in statu nascendi 
-        self.proteinlength = sum(self.proteins.values())
+        self.protein_length = sum(self.proteins.values())
         
         self.init_rate = p_init/tau_ribo/num_pos_ribo               # 8.2e-07 s^-1 (yeast)
         self.elong_rate = competition/tau_tRNA/num_pos_tRNA         # 0.0001 s^-1  (yeast)
 
         self.modeldict = {'name': "TRSL:_discrete_translation",
                           'vars': ["protein", "ribos._bound", "ribos._free", "tRNA_bound", "tRNA_free", "ATP", "AMP", "GTP", "GDP"],
-                          'initvars': {"protein": 0, "ribos._bound": 0, "ribos._free": self.ribo_free, "tRNA_bound": 0, "tRNA_free": sum(self._tRNA_free.values()), 'GTP': self.GTP, 'GDP': self.GDP, 'ATP': self.ATP, 'AMP': self.AMP},
+                          'initvars': {"protein": 0, "ribos._bound": 0, "ribos._free": self.ribo_free, "tRNA_bound": 0, "tRNA_free": sum(self.tRNA_free.values()), 'GTP': self.GTP, 'GDP': self.GDP, 'ATP': self.ATP, 'AMP': self.AMP},
                           'pars': [],
                           'sp_annotations': {"protein": "CHEBI:36080",    # generic protein
                                              #"amino_acid": "CHEBI:15705", # generic amino acid
@@ -114,6 +112,29 @@ class TRSL(object):
                           'timecourses': self.timecourses
                           } # TODO: work in progress
 
+    @property
+    def ribo_bound(self):
+        return self._ribo_bound
+
+    @ribo_bound.setter
+    def ribo_bound(self, value):
+        self._ribo_bound = value
+
+    @property
+    def tRNA_bound(self):
+        return self._tRNA_bound
+
+    @tRNA_bound.setter
+    def tRNA_bound(self, value):
+        self._tRNA_bound = value
+
+    @property
+    def ribo_free(self):
+        return self._ribo_free
+
+    @ribo_free.setter
+    def ribo_free(self, value):
+        self._ribo_free = value
 
     @property
     def mRNAs(self):
@@ -127,6 +148,7 @@ class TRSL(object):
         @:var value: list of mRNA objects
         """
         all_ribos = self.ribo_bound + self.ribo_free
+        test = sum([len(m.ribosomes.keys()) for m in value])
         self.ribo_bound = sum([len(m.ribosomes) for m in value])  # all bound ribosomes
         self.ribo_free = all_ribos - self.ribo_bound
         # free tRNAs for new set of polysomes
@@ -136,8 +158,8 @@ class TRSL(object):
             for t in m_bound_tRNA:
                 trnas_in_polysomes[t] += 1
 
-        self._tRNA_free = self._tRNA - self._tRNA_bound
-        self._tRNA_bound = self._tRNA_bound
+        self.tRNA_free = self._tRNA - trnas_in_polysomes
+        self.tRNA_bound = trnas_in_polysomes
         self._mRNAs = value
 
     def __getitem__(self, i):
@@ -283,7 +305,7 @@ class TRSL(object):
                 #log.debug("elongate_while_possible: last position was %s, attempting to insert tRNA at position %s", current_pos, current_pos+3*codons)
                 self.insert_tRNA(mRNA, current_pos+3*codons, last_type) # try to insert AA-tRNA in the ribosome
                 # translocation: elongate proteinlength
-                self.proteinlength += codons
+                self.protein_length += codons
                 self.GTP -= codons
                 self.GDP += codons
         else:
@@ -350,12 +372,12 @@ class TRSL(object):
 
             self.update_processes(deltat)
             log.info("solve_internal: self.proteins = %s", self.proteins)
-            log.info("solve_internal: protein length:  %s", self.proteinlength)
+            log.info("solve_internal: protein length:  %s", self.protein_length)
             log.info("solve_internal: bound ribosomes: %s", self.ribo_bound)
             log.info("solve_internal: free ribosomes:  %s", self.ribo_free)
             log.info("solve_internal: bound tRNA:      %s", sum(self._tRNA_bound.values()))
             log.info("solve_internal: free tRNA:       %s", sum(self._tRNA_free.values()))
-            fieldvalues = [self.proteinlength, self.ribo_bound, self.ribo_free, sum(self._tRNA_bound.values()), sum(self._tRNA_free.values()), self.ATP, self.AMP, self.GTP, self.GDP]
+            fieldvalues = [self.protein_length, self.ribo_bound, self.ribo_free, sum(self._tRNA_bound.values()), sum(self._tRNA_free.values()), self.ATP, self.AMP, self.GTP, self.GDP]
 
             # update everything except proteins and specific tRNA_free
             for fieldname, fieldvalue in zip(fieldnames, fieldvalues):
