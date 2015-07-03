@@ -11,7 +11,7 @@ import sys
 import matplotlib.pyplot as plt
 import cPickle as pkl
 
-prot = pkl.load(open("../results/results_20150603_1414_7200s_Plotkin.p", "rb"))
+prot = pkl.load(open("../results/glucose_starvation_after_steady_20150701_2027_0009s.p", "rb"))
 
 print prot['description']
 

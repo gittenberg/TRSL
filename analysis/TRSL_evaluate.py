@@ -121,13 +121,13 @@ def plot3D(x, y, z, title, logscale):
     plt.show()
 
 if __name__=="__main__":
-    pkl_dir = os.listdir(os.path.join(os.getcwd(), "analysis_data"))
+    pkl_dir = os.listdir(os.path.join(os.getcwd(), "../results"))
     print pkl_dir
     x, y = [], []
     peptide_bonds, proteinrate = [], []
 
     for f in pkl_dir:
-        if f.endswith(".pkl"):
+        if f.endswith(".p"):
             #print f
             ribos, mRNAs = extract_ribos_mrnas(f)
             #print ribos, mRNAs 

@@ -5,12 +5,10 @@ Created on 20.01.2015
 '''
 import cPickle as pkl
 import matplotlib.pyplot as plt
-import TRSL_specific
-import numpy as np
 
 # get proteome_model and transcriptome data from pickle files 
 #proteome_model = pkl.load(open("results_20150204_1552_0600s.p", "rb"))
-proteome_model = pkl.load(open("results_20150418_1324_14400s.p", "rb"))
+proteome_model = pkl.load(open("../results/glucose_starvation_after_steady_20150701_2027_0009s.p", "rb"))
 print proteome_model['description']
 
 timerange = proteome_model['timerange']
