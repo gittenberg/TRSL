@@ -184,13 +184,12 @@ class TRSL(object):
                     print "\t\t", subkey, ":"
                     # print "\t\t", self.__dict__[key][subkey]
                     print "----------------------------------------------------------"
-    
-    def dump_results(self, description='results'):
+
+    def get_state(self):
         """
-        Save results of the simulation to a pickle file in the ../results directory.
-        The name is generated using a timestamp.
-        @param description:
-        @return:
+        Get a dictionary of all the defining properties of the simulation.
+
+        :return: dict
         """
         results = {}
         results['proteome'] = self.proteins
@@ -204,6 +203,16 @@ class TRSL(object):
         results["n_tRNA"] = sum(self._tRNA.values())
         duration = self.timerange[-1] - self.timerange[0]
         results["duration"] = duration
+        return results
+
+    def dump_results(self, description='results'):
+        """
+        Save results of the simulation to a pickle file in the ../results directory.
+        The name is generated using the given description and a timestamp.
+        @param description:
+        @return:
+        """
+        results = self.get_state()
         from cPickle import dump
         dump(results,
              open("../results/{}_{}_{}s.p".format(description, now, str(int(duration)).zfill(4)), "wb"))
@@ -409,8 +418,6 @@ class TRSL(object):
 
         # from time import gmtime, strftime; now = strftime("%Y%m%d_%H%M%S", gmtime())
         # import os.path; pickle.dump({'trange': self.timerange, "timecourses": self.timecourses}, open(os.path.join("..", now+"_timecourses_TRSL.pkl"), "wb"))
-
-        return self.proteins, self.mRNAs
 
 
 if __name__ == "__main__":

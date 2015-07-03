@@ -3,7 +3,6 @@ __author__ = 'Max Floettmann'
 import logging as log
 import sys
 import cPickle as pkl
-import collections as col
 
 from translation import MRNA_specific, TRSL_specific
 
@@ -61,16 +60,18 @@ for i in [2]:  # set configuration_id
 
     tr = TRSL_specific.TRSL_spec(mRNAs, conf[i]['exome'], conf[i]['decay_constants'])
 
-    proteins, mRNAs = tr.solve_internal(0.0, duration, deltat=1.0)
+    tr.solve_internal(0.0, duration, deltat=1.0)
+    mRNAs = tr.get_state()["transcriptome"] # get the polysomes from current simulation
+    tr.dump_results('steady_state')
 
+    # set all init rates to zero to simulate glucose starvation and runoff
     for m in mRNAs:
         m.init_rate = 0
     tr.init_rate = 0
 
-    tr.dump_results('steady_state')
-
+    # simulate for 10 minutes as in Presnyak 2015
     tr.mRNAs = mRNAs
-    proteins, mRNAs = tr.solve_internal(90, 100, deltat=1.0)
+    tr.solve_internal(90, 100, deltat=1.0)
     tr.dump_results("glucose_starvation_after_steady")
 
 print "done."
