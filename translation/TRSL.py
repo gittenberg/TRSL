@@ -86,7 +86,7 @@ class TRSL(object):
         self._tRNA = col.Counter({i: int(0.5 + n_tRNA / self.types_tRNA) for i in range(1, self.types_tRNA + 1)})  # TODO: experimental values are in Ingolia (2009)
 
         self.mRNAs = [MRNA.MRNA(index=gene) for gene in [ran.randint(1, n_genes) for k in range(self.n_mRNA)]]  # randomized gene expressions
-        self.ribo_bound = sum(len(mRNA.ribosomes) for mRNA in self.mRNAs)  # number of ribosomes bound to mRNA
+        # self.ribo_bound = sum(len(mRNA.ribosomes) for mRNA in self.mRNAs)  # number of ribosomes bound to mRNA
         self.proteins = proteome  # contains protein IDs and counts not including polypeptides in statu nascendi
         self.protein_length = sum(self.proteins.values())
 
@@ -139,10 +139,10 @@ class TRSL(object):
 
         @:var value: list of mRNA objects
         """
-        # all_ribos = self.ribo_bound + self.ribo_free
+        self.ribo_bound = sum([len(m.ribosomes) for m in value])  # all bound ribosomes
+        all_ribos = self.ribo_bound + self.ribo_free
         # test = sum([len(m.ribosomes.keys()) for m in value])
-        # self.ribo_bound = sum([len(m.ribosomes) for m in value])  # all bound ribosomes
-        # self.ribo_free = all_ribos - self.ribo_bound
+        self.ribo_free = all_ribos - self.ribo_bound
         # free tRNAs for new set of polysomes
         trnas_in_polysomes = col.Counter()
         for m in value:
