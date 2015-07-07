@@ -19,7 +19,7 @@ conf[1] = dict(exome={1: examplesequence_1, 2: examplesequence_2},
                description='test configuration with 2 genes in 3 transcripts')
 
 conf[2] = dict(exome=pkl.load(open("../parameters/orf_coding.p", "rb")),
-               transcriptome=pkl.load(open("../parameters/transcriptome.p", "rb")),
+               transcriptome=pkl.load(open("../parameters/transcriptome_60000.p", "rb")),
                init_rates={gene: 8.2e-07 for gene in pkl.load(open("../parameters/init_rates_plotkin.p", "rb"))},
                description='full transcriptome and exome, no decay, constant initiation rates')
 
@@ -56,7 +56,7 @@ for i in [2]:  # set configuration_id
     description = conf[i]['description']
     print description
 
-    duration = 90.0
+    duration = 2000.0
 
     tr = TRSL_specific.TRSL_spec(mRNAs, conf[i]['exome'], conf[i]['decay_constants'])
 
@@ -71,7 +71,7 @@ for i in [2]:  # set configuration_id
 
     # simulate for 10 minutes as in Presnyak 2015
     tr.mRNAs = mRNAs
-    tr.solve_internal(90, 100, deltat=1.0)
+    tr.solve_internal(2000, 2600, deltat=1.0)
     tr.dump_results("glucose_starvation_after_steady")
 
 print "done."

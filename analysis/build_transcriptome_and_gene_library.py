@@ -6,9 +6,10 @@ Created on 07.01.2015
 import os.path
 import csv
 import cPickle as pkl
+
 from Bio import SeqIO
 
-datadir = "../data"
+datadir = "data"
 # Transcriptome: http://www.ncbi.nlm.nih.gov/pubmed/19581875
 transcriptomefile = r"nbt.1551-S2.csv"
 # Exome: http://downloads.yeastgenome.org/sequence/S288C_reference/orf_dna/
