@@ -31,12 +31,13 @@ Total energy balance per protein:
 import sys
 import cProfile
 import pstats
-import numpy as np
-import numpy.random as npr
 import random as ran
 import collections as col
 import math
 import logging as log
+
+import numpy as np
+import numpy.random as npr
 
 import MRNA
 
@@ -196,7 +197,7 @@ class TRSL(object):
         results['transcriptome'] = self.mRNAs
         results['timerange'] = self.timerange
         results['timecourses'] = self.timecourses
-        results["description"] = description
+        results["description"] = ""
         import time; now = time.strftime("%Y%m%d_%H%M", time.gmtime())
         results["time_stamp"] = now
         results["n_ribosomes"] = self.ribo_bound + self.ribo_free
@@ -213,6 +214,7 @@ class TRSL(object):
         @return:
         """
         results = self.get_state()
+        results["description"] = description
         from cPickle import dump
         dump(results,
              open("../results/{}_{}_{}s.p".format(description, now, str(int(duration)).zfill(4)), "wb"))

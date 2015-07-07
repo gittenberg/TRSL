@@ -12,13 +12,15 @@ Module inherits from generic module TRSL.
 import sys
 import logging as log
 import collections as col
-import numpy.random as npr
 import random as ran
+
+import numpy.random as npr
 import cPickle as pkl
 
 import TRSL
 import MRNA
 import MRNA_specific
+
 
 
 #############################################################################################################
@@ -160,6 +162,8 @@ def complement(s):
 
 def revcom(s):
     ''' reverse complementary RNA'''
+    if s == "*":
+        return False
     return complement(s[::-1])
     
 wobble = {codon: 1.000 if codon_anticodon[codon] is not '*' and codon == revcom(codon_anticodon[codon]) else 0.625 for codon in codon_anticodon}
