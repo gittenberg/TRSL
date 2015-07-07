@@ -35,7 +35,6 @@ import random as ran
 import collections as col
 import math
 import logging as log
-
 import numpy as np
 import numpy.random as npr
 
@@ -217,7 +216,8 @@ class TRSL(object):
         results["description"] = description
         from cPickle import dump
         dump(results,
-             open("../results/{}_{}_{}s.p".format(description, now, str(int(duration)).zfill(4)), "wb"))
+             open("../results/{}_{}_{}s.p".format(description, results['time_stamp'],
+                                                  str(int(results["duration"])).zfill(4)), "wb"))
         print description
 
     def insert_tRNA(self, mRNA, pos, tRNA_type):
@@ -385,12 +385,12 @@ class TRSL(object):
 
         self.timerange = np.arange(start, end, deltat)
         for time in self.timerange:
-            log.info("########################################################################################################")
+            log.info("################################################################################################")
             log.info("solve: time: %s", time)
-            log.info("########################################################################################################")
+            log.info("################################################################################################")
 
             self.update_processes(deltat)
-            log.info("solve_internal: self.proteins = %s", self.proteins)
+            #log.info("solve_internal: self.proteins = %s", self.proteins)
             log.info("solve_internal: protein length:  %s", self.protein_length)
             log.info("solve_internal: bound ribosomes: %s", self.ribo_bound)
             log.info("solve_internal: free ribosomes:  %s", self.ribo_free)
