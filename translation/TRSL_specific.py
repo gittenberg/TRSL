@@ -23,6 +23,7 @@ import MRNA_specific
 
 
 
+
 #############################################################################################################
 # auxiliary data
 #############################################################################################################
@@ -261,17 +262,14 @@ class TRSL_spec(TRSL.TRSL):
             # log.warning("update_initiation: no free ribosomes left")
             pass
     
-    def update_initiation(self, deltat):
-        log.info('update_initiation: starting')
-        for mRNA in self.mRNAs:
-            # log.debug('update_initiation: found mRNA %s', mRNA)
-            self.diffuse_ribosomes_to_initiation_site(mRNA, deltat)
+    def update_initiation(self, deltat, mRNA):
+        #log.info('update_initiation: starting')
+        # log.debug('update_initiation: found mRNA %s', mRNA)
+        self.diffuse_ribosomes_to_initiation_site(mRNA, deltat)
 
-    def update_elongation(self, deltat):
-        log.info("update_elongation: starting")
-        for mRNA in self.mRNAs:
-            self.elongate_mRNA_new(mRNA, deltat)
-            # log.info("update_elongation: ribosomes: {}".format(mRNA.ribosomes)) 
+    def update_elongation(self, deltat, mRNA):
+        #log.info("update_elongation: starting")
+        self.elongate_mRNA_new(mRNA, deltat)
 
     def elongate_mRNA_new(self, mRNA, deltat):
         # log.debug("update_elongation: ribosomes on this mRNA are: %s", mRNA.ribosomes)
@@ -279,13 +277,13 @@ class TRSL_spec(TRSL.TRSL):
         for ribo_pos in ribopositions:
             present_pos = ribo_pos
             present_deltat = deltat
-            available_nucleotides = mRNA.find_max_free_range(present_pos) - 3 * MRNA.cr
+            available_nucleotides = max(mRNA.find_max_free_range(present_pos) - 3 * MRNA.cr, 0)
             success = True
             while success:
                 # all empty ribosomes may get occupied by a tRNA
+                thiscodon = mRNA.sequence[present_pos:present_pos + 3]
                 if mRNA.ribosomes[present_pos] is None:
                     # try to insert tRNA at ribosome
-                    thiscodon = mRNA.sequence[present_pos:present_pos + 3]
                     required_tRNA_type = anticodon_index[codon_anticodon[thiscodon]]  # index of anticodon corresponding to first codon in mRNA
                     # type to be inserted at pos==1
                     tRNA_diffusion_probability = self.elong_rate * deltat * wobble[thiscodon]
@@ -303,6 +301,8 @@ class TRSL_spec(TRSL.TRSL):
                 # all non-empty ribosomes may translocate by one codon
                 elif available_nucleotides > 0:  # if we got here, there is a tRNA in the present position so we translocate if there is space
                     # log.debug("elongate_mRNA_new: present_pos = %s, mRNA length = %s", present_pos, mRNA.length)
+                    if thiscodon in stopcodons:
+                        break
                     nextcodon = mRNA.sequence[present_pos + 3:present_pos + 6]
                     next_tRNA_type = anticodon_index[codon_anticodon[nextcodon]]  # index of anticodon corresponding to first codon in mRNA
                     # 1. find tRNA_diffusion_probability
@@ -368,18 +368,20 @@ class TRSL_spec(TRSL.TRSL):
 
     def update_protein_decay(self, deltat):
         if self.decay_constants:
-            log.info("update_protein_decay: starting")
+            #log.info("update_protein_decay: starting")
             for gene in self.proteins:
                 # print gene, self.decay_constants[gene]
                 self.proteins[gene] *= 1 - deltat * self.decay_constants[gene]  # percentage of surviving proteins (non-integer)
         else:
-            log.warning("update_protein_decay: skipping protein decay")
+            #log.warning("update_protein_decay: skipping protein decay")
+            pass
         
     def update_processes(self, deltat):
-        self.update_termination()
-        self.update_initiation(deltat)
-        self.update_elongation(deltat)
-        self.update_protein_decay(deltat)
+        for mRNA in self.mRNAs:
+            self.update_termination(mRNA)
+            self.update_initiation(deltat, mRNA)
+            self.update_elongation(deltat, mRNA)
+            self.update_protein_decay(deltat)
 
 if __name__ == "__main__":
     log.basicConfig(level=log.DEBUG, format='%(message)s', stream=sys.stdout)
