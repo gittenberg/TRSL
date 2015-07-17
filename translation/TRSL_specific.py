@@ -185,7 +185,7 @@ class TRSL_spec(TRSL.TRSL):
 
     def initialize_modeldict(self, mRNAs, gene_library):
         '''
-        Create the modeldict required for the WCM
+        Create the modeldict required for the WCM (TODO:)
         The tRNAs, mRNAs and proteins are added with additional indices for separate identification in the loops below
         '''
         self.modeldict['name'] = 'TRSL:_discrete_translation_gene_specific'
@@ -269,9 +269,29 @@ class TRSL_spec(TRSL.TRSL):
 
     def update_elongation(self, deltat, mRNA):
         #log.info("update_elongation: starting")
-        self.elongate_mRNA_new(mRNA, deltat)
+        self.fill_empty_ribosomes(mRNA, deltat)
+        self.elongate_mRNA(mRNA, deltat)
 
-    def elongate_mRNA_new(self, mRNA, deltat):
+    def fill_empty_ribosomes(self, mRNA, deltat):
+        ribopositions = mRNA.ribosomes.keys()
+        for ribo_pos in ribopositions:
+            # if there is no tRNA currently in this position, test for diffusion
+            if mRNA.ribosomes[ribo_pos] is None:
+                thiscodon = mRNA.sequence[ribo_pos: ribo_pos + 3]
+                required_tRNA_type = anticodon_index[codon_anticodon[thiscodon]]  # index of anticodon corresponding to first codon in mRNA
+                # type to be inserted at pos==1
+                tRNA_diffusion_probability = self.elong_rate * deltat * wobble[thiscodon]
+                failure_probability = (1 - tRNA_diffusion_probability) ** self.tRNA_free[required_tRNA_type]
+                randomnumber = ran.random()
+                # can also try Poisson approximation if faster
+                # log.debug("update_initiation: failure probability is %s at mRNA position 0", failure_probability)
+                success = not (randomnumber < failure_probability)  # this means the required tRNA type has diffused to the site
+                if success:
+                    # log.debug('update_initiation: matching tRNA diffused to initiation site')
+                    if not self.insert_tRNA(mRNA, ribo_pos, required_tRNA_type):
+                        log.warning("elongate_mRNA: unsuccessful attempt to insert tRNA")
+
+    def elongate_mRNA(self, mRNA, deltat):
         # log.debug("update_elongation: ribosomes on this mRNA are: %s", mRNA.ribosomes)
         ribopositions = mRNA.ribosomes.keys()
         for ribo_pos in ribopositions:
@@ -282,38 +302,26 @@ class TRSL_spec(TRSL.TRSL):
             while success:
                 # all empty ribosomes may get occupied by a tRNA
                 thiscodon = mRNA.sequence[present_pos:present_pos + 3]
-                if mRNA.ribosomes[present_pos] is None:
-                    # try to insert tRNA at ribosome
-                    required_tRNA_type = anticodon_index[codon_anticodon[thiscodon]]  # index of anticodon corresponding to first codon in mRNA
-                    # type to be inserted at pos==1
-                    tRNA_diffusion_probability = self.elong_rate * deltat * wobble[thiscodon]
-                    failure_probability = (1 - tRNA_diffusion_probability) ** self.tRNA_free[required_tRNA_type]
-                    randomnumber = ran.random()
-                    # can also try Poisson approximation if faster
-                    # log.debug("update_initiation: failure probability is %s at mRNA position 0", failure_probability)
-                    success = not (randomnumber < failure_probability)  # this means the required tRNA type has diffused to the site
-                    if success:
-                        # log.debug('update_initiation: matching tRNA diffused to initiation site')
-                        if not self.insert_tRNA(mRNA, present_pos, required_tRNA_type):
-                            log.warning("elongate_mRNA_new: unsuccessful attempt to insert tRNA")
-                            success = False
-    
+
                 # all non-empty ribosomes may translocate by one codon
-                elif available_nucleotides > 0:  # if we got here, there is a tRNA in the present position so we translocate if there is space
-                    # log.debug("elongate_mRNA_new: present_pos = %s, mRNA length = %s", present_pos, mRNA.length)
+                if available_nucleotides > 0:  # if we got here, there is a tRNA in the present position so we translocate if there is space
+                    # log.debug("elongate_mRNA: present_pos = %s, mRNA length = %s", present_pos, mRNA.length)
                     if thiscodon in stopcodons:
                         break
-                    nextcodon = mRNA.sequence[present_pos + 3:present_pos + 6]
-                    next_tRNA_type = anticodon_index[codon_anticodon[nextcodon]]  # index of anticodon corresponding to first codon in mRNA
-                    # 1. find tRNA_diffusion_probability
-                    tRNA_diffusion_probability = self.elong_rate * present_deltat * wobble[nextcodon]
-                
-                    # 2. if no tRNA_free[present_tRNA_type] diffuses to elongation site in the interval, break
-                    failure_probability = (1 - tRNA_diffusion_probability) ** self.tRNA_free[next_tRNA_type]
-                    randomnumber = ran.random()
-                    success = not (randomnumber < failure_probability or available_nucleotides < 3)  # this means the required tRNA type has diffused to the site and there is a nucleotide available
-                    # can also try Poisson approximation if faster
-                    # log.debug("update_elongation: failure probability is %s at mRNA position %s", failure_probability, present_pos)
+                    nextcodon = mRNA.sequence[present_pos + 3: present_pos + 6]
+                    if nextcodon in stopcodons:
+                        success = True
+                    else:
+                        next_tRNA_type = anticodon_index[codon_anticodon[nextcodon]]  # index of anticodon corresponding to first codon in mRNA
+                        # 1. find tRNA_diffusion_probability
+                        tRNA_diffusion_probability = self.elong_rate * present_deltat * wobble[nextcodon]
+
+                        # 2. if no tRNA_free[present_tRNA_type] diffuses to elongation site in the interval, break
+                        failure_probability = (1 - tRNA_diffusion_probability) ** self.tRNA_free[next_tRNA_type]
+                        randomnumber = ran.random()
+                        success = not (randomnumber < failure_probability or available_nucleotides < 3)  # this means the next_tRNA_type has diffused to the site and there is a nucleotide available
+                        # can also try Poisson approximation if faster
+                        # log.debug("update_elongation: failure probability is %s at mRNA position %s", failure_probability, present_pos)
                     if success:
                         # log.debug("update_elongation: random number = %s", randomnumber)
                         # log.debug("update_elongation: available nucleotides = %s", available_nucleotides)

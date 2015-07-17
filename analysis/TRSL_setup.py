@@ -60,7 +60,7 @@ conf[6] = {
            'description': 'full transcriptome and exome, specific best estimate initiation rates according to Stansfield'
            }
 
-for i in [5]:  # set configuration_id
+for i in [1]:  # set configuration_id
     if 'decay_constants' in conf[i]:
         genes = list(set(conf[i]['exome']) & set(conf[i]['transcriptome']) & set(conf[i]['init_rates']) & set(conf[i]['decay_constants']))
     else:
@@ -75,13 +75,13 @@ for i in [5]:  # set configuration_id
             if gene in conf[i]['transcriptome'] and gene in conf[i]['init_rates']:
                 # print "abundancies and initiation rates available for gene:", gene
                 for instance in range(conf[i]['transcriptome'][gene]):
-                    mRNAs.append(MRNA_specific.mRNA_spec(index=counter, sequence=conf[i]['exome'][gene], geneID=gene, ribosomes={3: None}, init_rate=conf[i]['init_rates'][gene]))  # do not just multiply the list
+                    mRNAs.append(MRNA_specific.mRNA_spec(index=counter, sequence=conf[i]['exome'][gene], geneID=gene, init_rate=conf[i]['init_rates'][gene]))  # do not just multiply the list
                     counter += 1
         else:
             if gene in conf[i]['transcriptome']:
                 print "abundancies but no initiation rate available for gene:", gene
                 for instance in range(conf[i]['transcriptome'][gene]):
-                    mRNAs.append(MRNA_specific.mRNA_spec(index=counter, sequence=conf[i]['exome'][gene], geneID=gene, ribosomes={3: None}))  # do not just multiply the list
+                    mRNAs.append(MRNA_specific.mRNA_spec(index=counter, sequence=conf[i]['exome'][gene], geneID=gene))  # do not just multiply the list
                     counter += 1
     print "built gene library, next: run TRSL_spec."
 
@@ -90,7 +90,7 @@ for i in [5]:  # set configuration_id
 
     duration = 49.0
 
-    tr = TRSL_specific.TRSL_spec(mRNAs, conf[i]['exome'], conf[i]['decay_constants'], proteome={"YKR017C": 0})
+    tr = TRSL_specific.TRSL_spec(mRNAs, conf[i]['exome'], conf[i]['decay_constants'])
 
     tr._tRNA = col.Counter({i: TRSL_specific.tRNA_types[i]['abundancy'] for i in TRSL_specific.tRNA_types})
     tr._tRNA_free = col.Counter({i: int(tr._tRNA[i]) for i in TRSL_specific.tRNA_types})  # tRNA not bound to ribosomes
