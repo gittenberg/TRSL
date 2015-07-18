@@ -28,4 +28,4 @@ with open(half_lifes_filepath, mode='r') as infile:
 
 #print decay_constants
 print len(decay_constants)
-pkl.dump(decay_constants, open("decay_constants.p", "wb"))
+pkl.dump(decay_constants, open("../parameters/decay_constants.p", "wb"))

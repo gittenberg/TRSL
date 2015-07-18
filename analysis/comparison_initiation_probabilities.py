@@ -25,12 +25,12 @@ with open(plotkinfilepath, mode='r') as infile:
             print "found missing value, skipping..."
 plotkin_ips = {key: plotkin_ips[key] for key in plotkin_ips if plotkin_ips[key]>1e-60}
 #print plotkin_ips
-pkl.dump(plotkin_ips, open("init_rates_plotkin.p", "wb"))
+pkl.dump(plotkin_ips, open("../parameters/init_rates_plotkin.p", "wb"))
 
 # http://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1002866
 # 10.1371/journal.pcbi.1002866
 # PLoS Comput Biol 9(1): e1002866. 
-stansfield_ips = pkl.load(open("init_rates_stansfield.p"))
+stansfield_ips = pkl.load(open("../parameters/init_rates_stansfield.p"))
 #print stansfield_ips
 
 plotkeys = stansfield_ips.viewkeys() & plotkin_ips.viewkeys() # intersection

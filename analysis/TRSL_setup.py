@@ -27,12 +27,7 @@ conf[1] = {
            'init_rates': {1: 0.1, 2: 0.1},
            'description': 'test configuration with 2 genes in 3 transcripts'
            }
-conf[2] = {
-           'exome': pkl.load(open("../parameters/orf_coding.p", "rb")),
-           'transcriptome': pkl.load(open("../parameters/transcriptome.p", "rb")),
-           'init_rates': pkl.load(open("../parameters/init_rates_stansfield.p", "rb")),
-           'description': 'full transcriptome and exome, specific best estimate initiation rates according to Stansfield'
-           }
+conf[2] = {}
 conf[3] = {
            'exome': pkl.load(open("../parameters/orf_coding.p", "rb")),
            'transcriptome': pkl.load(open("../parameters/transcriptome.p", "rb")),
