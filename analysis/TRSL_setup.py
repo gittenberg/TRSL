@@ -23,7 +23,7 @@ examplesequence_2 = "aug aaa cug ccc gag ggg uuu uca uca uuu gag gac aaa cug ccc
 conf = {}
 conf[1] = {
            'exome': {1: examplesequence_1, 2: examplesequence_2},
-           'transcriptome': {1: 1, 2: 2},
+           'transcriptome': {1: 2, 2: 2},
            'init_rates': {1: 0.1, 2: 0.1},
            'description': 'test configuration with 2 genes in 3 transcripts'
            }
@@ -83,7 +83,7 @@ for i in [1]:  # set configuration_id
     description = conf[i]['description']
     print description
 
-    duration = 49.0
+    duration = 99.0
 
     tr = TRSL_specific.TRSL_spec(mRNAs, conf[i]['exome'], conf[i]['decay_constants'])
 
