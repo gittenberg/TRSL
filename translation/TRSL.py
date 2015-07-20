@@ -222,10 +222,10 @@ class TRSL(object):
         print description
 
     def insert_tRNA(self, mRNA, pos, tRNA_type):
-        '''
+        """
         inserts a tRNA of type tRNA_type at position pos
         returns True iff successful
-        '''
+        """
         if pos in mRNA.ribosomes and self.tRNA_free[tRNA_type] >= 1 and not mRNA.ribosomes[pos]:
             # there has to be a ribosome at pos and there has to be tRNA of that type available and there cannot be a tRNA yet at pos on the position
             # log.debug("insert_tRNA: inserting tRNA %s on mRNA %s at position %s", tRNA_type, self.mRNAs.index(mRNA), pos)
@@ -350,7 +350,7 @@ class TRSL(object):
                 release_pos = max(mRNA.ribosomes.keys())
                 release_type = mRNA.ribosomes[release_pos]
                 # log.debug("update_termination: terminating translation at mRNA %s, release position %s, release type %s", mRNA.index, release_pos, release_type)
-                self.release_tRNA(mRNA, release_pos, release_type)
+                # self.release_tRNA(mRNA, release_pos, release_type)  # commented because there is no tRNA at the stop codon
                 mRNA.detach_ribosome(release_pos)
                 self.ribo_bound -= 1
                 self.ribo_free += 1
@@ -389,7 +389,7 @@ class TRSL(object):
             log.info("################################################################################################")
 
             self.update_processes(deltat)
-            log.info("solve_internal: self.proteins = %s", len(self.proteins))
+            log.info("solve_internal: self.proteins = %s", self.proteins)
             log.info("solve_internal: protein length:  %s", self.protein_length)
             log.info("solve_internal: bound ribosomes: %s", self.ribo_bound)
             log.info("solve_internal: free ribosomes:  %s", self.ribo_free)

@@ -284,19 +284,20 @@ class TRSL_spec(TRSL.TRSL):
         self.diffuse_ribosomes_to_initiation_site(mRNA, deltat)
 
     def update_elongation(self, deltat, mRNA):
-        # log.info("update_elongation: starting")
+        # log.info("update_elongation: starting mRNA %s, geneID %s", mRNA.index, mRNA.geneID)
         # while a change occurs:
-        # update all empty ribosomes by tRNA diffusion
-        # if possible:
-        #   all occupied ribosomes move by one step
-        #   after the move they lose bound tRNA
-        # halve time interval and continue
+        #   update all empty ribosomes by tRNA diffusion
+        #   if possible:
+        #     all occupied ribosomes move by one step
+        #     after the move they lose bound tRNA
+        #   halve time interval and continue
         change_flag = True
         available_time = deltat
         while change_flag:  # while there is a change in tRNA or ribosome position
             change_flag = self.fill_empty_ribosomes(mRNA, available_time)  # if a tRNA bound this becomes True
-            change_flag = change_flag or self.elongate_mRNA(mRNA)  # if a ribosome translocated this becomes True
+            self.elongate_mRNA(mRNA)  # translocate all ribosomes as far as possible
             available_time *= 0.5
+            # log.debug("halving time, available time is now %s", available_time)
 
     def fill_empty_ribosomes(self, mRNA, deltat):
         """Walk through every empty ribosome and try to diffuse the required tRNA into the site."""
@@ -306,15 +307,13 @@ class TRSL_spec(TRSL.TRSL):
             thiscodon = mRNA.sequence[ribo_pos: ribo_pos + 3]
             if thiscodon in stopcodons:
                 continue
-            print ribo_pos
-            print "thiscodon:", thiscodon
-            print "codon_anticodon[thiscodon]:", codon_anticodon[thiscodon]
-            #import time; time.sleep(50.0 / 1000.0)
+            #print ribo_pos
+            #print "thiscodon:", thiscodon
+            #print "codon_anticodon[thiscodon]:", codon_anticodon[thiscodon]
             required_tRNA_type = anticodon_index[codon_anticodon[thiscodon]]  # index of anticodon corresponding to next codon in mRNA
             tRNA_diffusion_probability = self.elong_rate * deltat * wobble[thiscodon]
             failure_probability = (1 - tRNA_diffusion_probability) ** self.tRNA_free[required_tRNA_type]
-            randomnumber = ran.random()
-            # can also try Poisson approximation if faster
+            randomnumber = ran.random()  # TODO: try Poisson approximation if faster
             # log.debug("update_initiation: failure probability is %s at mRNA position 0", failure_probability)
             success = not (randomnumber < failure_probability)  # this means the required tRNA type has diffused to the site
             if success:
@@ -327,34 +326,28 @@ class TRSL_spec(TRSL.TRSL):
         return change_occurred
 
     def elongate_mRNA(self, mRNA):
+        """translocates all ribosomes on mRNA by one step"""
         # log.debug("update_elongation: ribosomes on this mRNA are: %s", mRNA.ribosomes)
-        change_occurred = False
-        occupied_ribos = [key for key in mRNA.ribosomes if mRNA.ribosomes[key]]
-        for ribo_pos in occupied_ribos:
+        occupied_ribos = [key for key in mRNA.ribosomes if mRNA.ribosomes[key] is not None]
+        for ribo_pos in occupied_ribos:  # TODO: test reverse list and other sort orders
             present_pos = ribo_pos
-            available_nucleotides = max(mRNA.find_max_free_range(present_pos) - 3 * MRNA.cr, 0)
-            # all empty ribosomes may get occupied by a tRNA
-            thiscodon = mRNA.sequence[present_pos: present_pos + 3]
+            thiscodon = mRNA.sequence[present_pos: present_pos + 3]  # TODO: is this redundant because elongate_one_step or translocate_ribosome are testing the same?
             if thiscodon in stopcodons:
                 log.warning("elongate_mRNA: encountered stop codon during elongation step")
                 continue
             else:
-                change_occurred = self.elongate_one_step(mRNA, present_pos)
-        return change_occurred
+                self.elongate_one_step(mRNA, present_pos)
 
     def elongate_one_step(self, mRNA, current_pos):
-        '''
+        """
         attempts to elongate the protein on mRNA by one AA at current_pos
-        stops if steric hindrance by another ribosome , or end of mRNA is encountered
-        '''
-        free_range = mRNA.find_max_free_range(current_pos)
+        stops if steric hindrance by another ribosome or end of mRNA is encountered
+        """
+        free_codons = (mRNA.find_max_free_range(current_pos) - 3 * MRNA.cr) / 3  # integer division on purpose
         # log.debug("elongate_one_step: found free range of %s nts downstream of %s", free_range, current_pos)
-        codons = min(1, free_range / 3)  # integer division on purpose
-        codons = min((mRNA.length - current_pos) / 3, codons)  # cannot translate behind end of mRNA
         # log.debug("elongate_one_step: free range of %s nts, trying to elongate by %s codons", free_range, codons)
-        if self.GTP >= codons and codons == 1:
-            # log.debug("elongate_one_step: possible to translocate by %s codons", codons)
-            # elongation: release tRNA
+        if self.GTP >= 1 and free_codons > 0:
+            # log.debug("elongate_one_step: possible to translocate")
             previous_type = mRNA.ribosomes[current_pos]  # type to be released at ribo_pos
             # log.debug("elongate_one_step: mRNA.ribosomes = %s", mRNA.ribosomes)
             # log.debug("elongate_one_step: self.tRNA_bound = %s", self.tRNA_bound)
@@ -367,7 +360,11 @@ class TRSL_spec(TRSL.TRSL):
             self.GDP += 1
             return True
         else:
-            log.warning("elongate_one_step: not possible: not enough GTP or no codon")
+            if free_codons <= 0:
+                # log.warning("elongate_one_step: not possible: no free codon")
+                pass
+            else:
+                log.warning("elongate_one_step: not possible: not enough GTP or other reason")
             return False
             # log.debug("elongate_one_step: ribosomes: tRNA is now %s", mRNA.ribosomes)
             # log.debug("elongate_one_step: protein length is now %s", self.proteinlength)
@@ -394,30 +391,6 @@ class TRSL_spec(TRSL.TRSL):
 if __name__ == "__main__":
     log.basicConfig(level=log.DEBUG, format='%(message)s', stream=sys.stdout)
 
-    examplesequence_1 = "ggg uuu uca uca uuu gag gac gau gua ggg uuu uca uca uuu gag gac gau gua ggg uuu uca uca uuu gag gac gau gua uaa".replace(
-        ' ', '')
-    examplesequence_2 = "aug aaa cug ccc gag ggg uuu uca uca uuu gag gac aaa cug ccc gag ggg uuu uca uca uuu gag gac aaa cug ccc gag ggg uuu uca uca uaa".replace(
-        ' ', '')
-    '''
-    # demo configuration 1: 1 mRNA
-    gene_library = {1: examplesequence_1}
-    mRNAs = [MRNA_specific.mRNA_spec(index=0, sequence=examplesequence_1, geneID=1)]
-
-    # demo configuration 2: 3 mRNAs of 2 genes
-    # all genes that exist and their indices
-    gene_library = {
-                        1: examplesequence_1,
-                        2: examplesequence_2
-                        }
-
-    # how many mRNAs there are of a given type
-    mRNA_abundancies = {
-                        1: 1,
-                        2: 2
-                        }
-    '''
-
-    # demo configuration 3: (part of full-scale) simulation
     # load sequences, transcriptome and initiation rates from pickle file
     mRNA_abundancies = pkl.load(open("../parameters/transcriptome.p", "rb"))
     gene_library = pkl.load(open("../parameters/orf_coding.p", "rb"))

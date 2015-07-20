@@ -90,14 +90,14 @@ class MRNA:
         return not any([ribo in range(pos + 1, pos + 1 + by + 3 * cr) for ribo in self.ribosomes])
 
     def find_max_free_range(self, pos):
-        '''
+        """
         returns maximum free range downstream from pos
         this range does not include the ribosome footprint
-        '''
+        """
         downstream_ribosomes = [ribo for ribo in self.ribosomes if ribo > pos]
         if downstream_ribosomes:
             next_ribo_pos = min(downstream_ribosomes)
-            # log.debug("find_max_free_range: next_ribo_pos, pos = %s, %s", max_free_range, pos)
+            # log.debug("find_max_free_range: next_ribo_pos, pos = %s, %s", next_ribo_pos, pos)
             max_free_range = next_ribo_pos - pos
         # log.debug("find_max_free_range: found %s free nucleotides downstream from position %s", max_free_range, pos)
         else:
