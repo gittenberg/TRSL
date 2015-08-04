@@ -18,9 +18,9 @@ import MRNA
 
 class mRNA_spec(MRNA.MRNA):
     def __init__(self, index, sequence, geneID, ribosomes={}, init_rate=8.2e-07): 
-        '''
+        """
         initializes one mRNA molecule
-        '''
+        """
         self.sequence = sequence
         self.init_rate = init_rate        # ORF-specific initiation rate # TODO: use this in TRSL_specific.update_initiation
         MRNA.MRNA.__init__(self, index=index, length=len(self.sequence), geneID=geneID, ribosomes=ribosomes)

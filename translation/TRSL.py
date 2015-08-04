@@ -35,6 +35,7 @@ import random as ran
 import collections as col
 import math
 import logging as log
+
 import numpy as np
 import numpy.random as npr
 
@@ -221,10 +222,10 @@ class TRSL(object):
         print description
 
     def insert_tRNA(self, mRNA, pos, tRNA_type):
-        '''
+        """
         inserts a tRNA of type tRNA_type at position pos
         returns True iff successful
-        '''
+        """
         if pos in mRNA.ribosomes and self.tRNA_free[tRNA_type] >= 1 and not mRNA.ribosomes[pos]:
             # there has to be a ribosome at pos and there has to be tRNA of that type available and there cannot be a tRNA yet at pos on the position
             # log.debug("insert_tRNA: inserting tRNA %s on mRNA %s at position %s", tRNA_type, self.mRNAs.index(mRNA), pos)
@@ -266,38 +267,37 @@ class TRSL(object):
             success = False
         return success
     
-    def update_initiation(self, deltat):
+    def update_initiation(self, deltat, mRNA):
         # log.info("update_initiation: starting")
-        for mRNA in self.mRNAs:
-            # log.debug("update_initiation: found mRNA %s", j)
-            if self.ribo_free > 0:
-                k = npr.binomial(self.ribo_free, self.init_rate * deltat, 1)[0]  # number of ribosomes that diffuse to the initiation site during deltat
-                # log.debug("update_initiation: %s ribosomes diffused to init site at mRNA %s", k, mRNA.index)
-                for i in range(k):  # currently k>1 will not attach k ribosomes, perhaps after parallelization?
-                    if not mRNA.first_position_occupied():
-                        # log.debug("update_initiation: found mRNA with free first position")
-                        if self.GTP > 0 and self.ATP > 0:
-                            if mRNA.attach_ribosome_at_start():
-                                # log.debug("update_initiation: attaching ribosome at start of mRNA %s", mRNA.index)
-                                self.ribo_bound += 1
-                                self.ribo_free -= 1
-                                self.GTP -= 1
-                                self.GDP += 1
-                                self.ATP -= 2
-                                self.AMP += 2
-                                init_type = ran.choice(self._tRNA.keys())  # type to be inserted at pos==0
-                                if not self.insert_tRNA(mRNA, 0, init_type):
-                                    log.warning("update_initiation: unsuccessful attempt to insert tRNA")
-                            else:
-                                log.warning("update_initiation: unsuccessful attempt to attach ribosome")
+        # log.debug("update_initiation: found mRNA %s", j)
+        if self.ribo_free > 0:
+            k = npr.binomial(self.ribo_free, self.init_rate * deltat, 1)[0]  # number of ribosomes that diffuse to the initiation site during deltat
+            # log.debug("update_initiation: %s ribosomes diffused to init site at mRNA %s", k, mRNA.index)
+            for i in range(k):  # currently k>1 will not attach k ribosomes, perhaps after parallelization?
+                if not mRNA.first_position_occupied():
+                    # log.debug("update_initiation: found mRNA with free first position")
+                    if self.GTP > 0 and self.ATP > 0:
+                        if mRNA.attach_ribosome_at_start():
+                            # log.debug("update_initiation: attaching ribosome at start of mRNA %s", mRNA.index)
+                            self.ribo_bound += 1
+                            self.ribo_free -= 1
+                            self.GTP -= 1
+                            self.GDP += 1
+                            self.ATP -= 2
+                            self.AMP += 2
+                            init_type = ran.choice(self._tRNA.keys())  # type to be inserted at pos==0
+                            if not self.insert_tRNA(mRNA, 0, init_type):
+                                log.warning("update_initiation: unsuccessful attempt to insert tRNA")
                         else:
-                            log.warning("update_initiation: no GTP or no ATP")
-                    else: 
-                        # log.warning("update_initiation: unsuccessful attempt to attach ribosome: first position occupied")
-                        pass
-            else: 
-                # log.warning("update_initiation: no free ribosomes left")
-                pass
+                            log.warning("update_initiation: unsuccessful attempt to attach ribosome")
+                    else:
+                        log.warning("update_initiation: no GTP or no ATP")
+                else:
+                    # log.warning("update_initiation: unsuccessful attempt to attach ribosome: first position occupied")
+                    pass
+        else:
+            # log.warning("update_initiation: no free ribosomes left")
+            pass
             
     def elongate_while_possible(self, mRNA, k, current_pos):
         '''
@@ -332,44 +332,43 @@ class TRSL(object):
         # log.debug("elongate_while_possible: ribosomes: tRNA is now %s", mRNA.ribosomes)
         # log.debug("elongate_while_possible: protein length is now %s", self.proteinlength)
 
-    def update_elongation(self, deltat):
-        for mRNA in self.mRNAs:
-            # for ribo_pos in npr.permutation(mRNA.ribosomes.keys()):  # random permutation of the ribosomes # slow!
-            # log.debug("update_elongation: ribosomes on this mRNA are: %s", mRNA.ribosomes)
-            for ribo_pos in mRNA.ribosomes.keys():
-                present_tRNA_type = mRNA.ribosomes[ribo_pos]
-                k = npr.binomial(self.tRNA_free[present_tRNA_type], self.elong_rate * deltat, 1)[0]  # number of tRNA_free[present_tRNA_type] that diffuse to the ribosome during deltat
-                log.debug("update_elongation: %s tRNAs out of %s of type %s diffused to elongation site %s at mRNA %s", k, self.tRNA_free[present_tRNA_type], present_tRNA_type, ribo_pos, mRNA.index)
-                current_pos = ribo_pos
-                self.elongate_while_possible(mRNA, k, current_pos)
+    def update_elongation(self, deltat, mRNA):
+        # for ribo_pos in npr.permutation(mRNA.ribosomes.keys()):  # random permutation of the ribosomes # slow!
+        # log.debug("update_elongation: ribosomes on this mRNA are: %s", mRNA.ribosomes)
+        for ribo_pos in mRNA.ribosomes.keys():
+            present_tRNA_type = mRNA.ribosomes[ribo_pos]
+            k = npr.binomial(self.tRNA_free[present_tRNA_type], self.elong_rate * deltat, 1)[0]  # number of tRNA_free[present_tRNA_type] that diffuse to the ribosome during deltat
+            log.debug("update_elongation: %s tRNAs out of %s of type %s diffused to elongation site %s at mRNA %s", k, self.tRNA_free[present_tRNA_type], present_tRNA_type, ribo_pos, mRNA.index)
+            current_pos = ribo_pos
+            self.elongate_while_possible(mRNA, k, current_pos)
 
-    def update_termination(self):
-        log.info("update_termination: starting")
-        for mRNA in self.mRNAs:
-            if self.GTP >= 1:
-                if mRNA.termination_condition():
-                    # log.debug("update_termination: mRNA.ribosomes = %s", mRNA.ribosomes)
-                    release_pos = max(mRNA.ribosomes.keys())
-                    release_type = mRNA.ribosomes[release_pos]
-                    # log.debug("update_termination: terminating translation at mRNA %s, release position %s, release type %s", mRNA.index, release_pos, release_type)
-                    self.release_tRNA(mRNA, release_pos, release_type)
-                    mRNA.detach_ribosome(release_pos)
-                    self.ribo_bound -= 1
-                    self.ribo_free += 1
-                    if not mRNA.geneID in self.proteins:
-                        self.proteins[mRNA.geneID] = 1  # add first protein of type mRNA.geneID
-                    else:
-                        self.proteins[mRNA.geneID] += 1  # add another protein of type mRNA.geneID
-                    self.GTP -= 1
-                    self.GDP += 1
-            else:
-                log.warning("update_termination: not enough GTP")
+    def update_termination(self, mRNA):
+        #log.info("update_termination: starting")
+        if self.GTP >= 1:
+            if mRNA.termination_condition():
+                # log.debug("update_termination: mRNA.ribosomes = %s", mRNA.ribosomes)
+                release_pos = max(mRNA.ribosomes.keys())
+                release_type = mRNA.ribosomes[release_pos]
+                # log.debug("update_termination: terminating translation at mRNA %s, release position %s, release type %s", mRNA.index, release_pos, release_type)
+                # self.release_tRNA(mRNA, release_pos, release_type)  # commented because there is no tRNA at the stop codon
+                mRNA.detach_ribosome(release_pos)
+                self.ribo_bound -= 1
+                self.ribo_free += 1
+                if not mRNA.geneID in self.proteins:
+                    self.proteins[mRNA.geneID] = 1  # add first protein of type mRNA.geneID
+                else:
+                    self.proteins[mRNA.geneID] += 1  # add another protein of type mRNA.geneID
+                self.GTP -= 1
+                self.GDP += 1
+        else:
+            log.warning("update_termination: not enough GTP")
     
     def update_processes(self, deltat):
-        self.update_termination()
-        self.update_initiation(deltat)
-        self.update_elongation(deltat)
-        # self.update_protein_decay(deltat)
+        for mRNA in self.mRNAs:
+            self.update_termination(mRNA)
+            self.update_initiation(deltat, mRNA)
+            self.update_elongation(deltat, mRNA)
+            # self.update_protein_decay(deltat)
         
     def solve_internal(self, start, end, deltat):
         '''
@@ -390,7 +389,7 @@ class TRSL(object):
             log.info("################################################################################################")
 
             self.update_processes(deltat)
-            #log.info("solve_internal: self.proteins = %s", self.proteins)
+            log.info("solve_internal: self.proteins = %s", self.proteins)
             log.info("solve_internal: protein length:  %s", self.protein_length)
             log.info("solve_internal: bound ribosomes: %s", self.ribo_bound)
             log.info("solve_internal: free ribosomes:  %s", self.ribo_free)

@@ -12,7 +12,7 @@ Parameters:
 
 import logging as log
 
-cr = 0  # ribosome footprint in codons. if this is > 0, the sequence needs to include a 3' UTR
+cr = 10  # ribosome footprint in codons. if this is > 0, the sequence needs to include a 3' UTR
 
 
 class MRNA:
@@ -90,17 +90,18 @@ class MRNA:
         return not any([ribo in range(pos + 1, pos + 1 + by + 3 * cr) for ribo in self.ribosomes])
 
     def find_max_free_range(self, pos):
-        '''
+        """
         returns maximum free range downstream from pos
         this range does not include the ribosome footprint
-        '''
-        max_free_range = max(0, self.length - pos - 3)  # theoretical maximum if no other ribosomes downstream
+        """
         downstream_ribosomes = [ribo for ribo in self.ribosomes if ribo > pos]
         if downstream_ribosomes:
             next_ribo_pos = min(downstream_ribosomes)
-            # log.debug("find_max_free_range: next_ribo_pos, pos = %s, %s", max_free_range, pos)
+            # log.debug("find_max_free_range: next_ribo_pos, pos = %s, %s", next_ribo_pos, pos)
             max_free_range = next_ribo_pos - pos
         # log.debug("find_max_free_range: found %s free nucleotides downstream from position %s", max_free_range, pos)
+        else:
+            max_free_range = 3 * cr + 3  # effectively infinite if no downstream ribosomes due to 3'utr
         return max_free_range
 
     def termination_condition(self):

@@ -2,6 +2,7 @@ __author__ = 'Max Floettmann'
 
 import logging as log
 import sys
+
 import cPickle as pkl
 
 from translation import MRNA_specific, TRSL_specific
@@ -20,7 +21,7 @@ conf[1] = dict(exome={1: examplesequence_1, 2: examplesequence_2},
 
 conf[2] = dict(exome=pkl.load(open("../parameters/orf_coding.p", "rb")),
                transcriptome=pkl.load(open("../parameters/transcriptome_60000.p", "rb")),
-               init_rates={gene: 8.2e-07 for gene in pkl.load(open("../parameters/init_rates_plotkin.p", "rb"))},
+               init_rates=pkl.load(open("../parameters/init_rates_plotkin.p", "rb")),
                description='full transcriptome and exome, no decay, constant initiation rates')
 
 for i in [1]:  # set configuration_id
@@ -56,22 +57,23 @@ for i in [1]:  # set configuration_id
     description = conf[i]['description']
     print description
 
-    duration = 2000.0
+    duration = 1500.0
+
 
     tr = TRSL_specific.TRSL_spec(mRNAs, conf[i]['exome'], conf[i]['decay_constants'])
 
-    tr.solve_internal(0.0, duration, deltat=1.0)
+    tr.solve_internal(0.0, duration, deltat=.1)
     mRNAs = tr.get_state()["transcriptome"] # get the polysomes from current simulation
     tr.dump_results('steady_state')
 
     # set all init rates to zero to simulate glucose starvation and runoff
-    for m in mRNAs:
-        m.init_rate = 0
-    tr.init_rate = 0
+    #for m in mRNAs:
+    #    m.init_rate = 0
+    #tr.init_rate = 0
 
     # simulate for 10 minutes as in Presnyak 2015
-    tr.mRNAs = mRNAs
-    tr.solve_internal(2000, 2600, deltat=1.0)
-    tr.dump_results("glucose_starvation_after_steady")
+    #tr.mRNAs = mRNAs
+    #tr.solve_internal(2000, 2600, deltat=1.0)
+    #tr.dump_results("glucose_starvation_after_steady")
 
 print "done."
