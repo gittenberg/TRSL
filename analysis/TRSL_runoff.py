@@ -23,7 +23,7 @@ conf[2] = dict(exome=pkl.load(open("../parameters/orf_coding.p", "rb")),
                init_rates={gene: 8.2e-07 for gene in pkl.load(open("../parameters/init_rates_plotkin.p", "rb"))},
                description='full transcriptome and exome, no decay, constant initiation rates')
 
-for i in [2]:  # set configuration_id
+for i in [1]:  # set configuration_id
     if 'decay_constants' in conf[i]:
         genes = list(set(conf[i]['exome']) & set(conf[i]['transcriptome']) & set(conf[i]['init_rates']) & set(
             conf[i]['decay_constants']))
