@@ -76,7 +76,7 @@ class MRNA:
 
     def first_position_occupied(self):
         '''
-        returns True iff the first 30 nts of an mRNA are occupied by a ribosome
+        returns True iff the first 3*cr nts of an mRNA are occupied by a ribosome
         '''
         if self.ribosomes == {}:  # no ribosomes
             return False

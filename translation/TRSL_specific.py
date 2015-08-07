@@ -283,22 +283,6 @@ class TRSL_spec(TRSL.TRSL):
         # log.debug('update_initiation: found mRNA %s', mRNA)
         self.diffuse_ribosomes_to_initiation_site(mRNA, deltat)
 
-    def update_elongation(self, deltat, mRNA):
-        # log.info("update_elongation: starting mRNA %s, geneID %s", mRNA.index, mRNA.geneID)
-        # while a change occurs:
-        #   update all empty ribosomes by tRNA diffusion
-        #   if possible:
-        #     all occupied ribosomes move by one step
-        #     after the move they lose bound tRNA
-        #   halve time interval and continue
-        change_flag = True
-        available_time = deltat
-        while change_flag:  # while there is a change in tRNA or ribosome position
-            change_flag = self.fill_empty_ribosomes(mRNA, available_time)  # if a tRNA bound this becomes True
-            self.elongate_mRNA(mRNA)  # translocate all ribosomes as far as possible
-            available_time *= 0.5
-            # log.debug("halving time, available time is now %s", available_time)
-
     def fill_empty_ribosomes(self, mRNA, deltat):
         """Walk through every empty ribosome and try to diffuse the required tRNA into the site."""
         change_occurred = False
@@ -337,37 +321,6 @@ class TRSL_spec(TRSL.TRSL):
                 continue
             else:
                 self.elongate_one_step(mRNA, present_pos)
-
-    def elongate_one_step(self, mRNA, current_pos):
-        """
-        attempts to elongate the protein on mRNA by one AA at current_pos
-        stops if steric hindrance by another ribosome or end of mRNA is encountered
-        """
-        free_codons = (mRNA.find_max_free_range(current_pos) - 3 * MRNA.cr) / 3  # integer division on purpose
-        # log.debug("elongate_one_step: found free range of %s nts downstream of %s", free_range, current_pos)
-        # log.debug("elongate_one_step: free range of %s nts, trying to elongate by %s codons", free_range, codons)
-        if self.GTP >= 1 and free_codons > 0:
-            # log.debug("elongate_one_step: possible to translocate")
-            previous_type = mRNA.ribosomes[current_pos]  # type to be released at ribo_pos
-            # log.debug("elongate_one_step: mRNA.ribosomes = %s", mRNA.ribosomes)
-            # log.debug("elongate_one_step: self.tRNA_bound = %s", self.tRNA_bound)
-            # translocation: move ribosome
-            mRNA.translocate_ribosome(current_pos, by=3)
-            self.release_tRNA(mRNA, current_pos+3, previous_type)
-            # translocation: elongate proteinlength
-            self.protein_length += 1
-            self.GTP -= 1
-            self.GDP += 1
-            return True
-        else:
-            if free_codons <= 0:
-                # log.warning("elongate_one_step: not possible: no free codon")
-                pass
-            else:
-                log.warning("elongate_one_step: not possible: not enough GTP or other reason")
-            return False
-            # log.debug("elongate_one_step: ribosomes: tRNA is now %s", mRNA.ribosomes)
-            # log.debug("elongate_one_step: protein length is now %s", self.proteinlength)
 
     def update_protein_decay(self, deltat):
         if self.decay_constants:
