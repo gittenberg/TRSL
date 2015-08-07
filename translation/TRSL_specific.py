@@ -9,6 +9,8 @@ Module inherits from generic module TRSL.
 @author: martin
 """
 
+# TODO: fix __main__
+
 import sys
 import logging as log
 import collections as col

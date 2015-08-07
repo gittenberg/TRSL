@@ -28,6 +28,10 @@ Total energy balance per protein:
 (2 + 2*length) GTP -> (2 + 2*length) GDP 
 """
 
+# TODO: after running, all mRNAs are empty
+# is this an error or is it because elongation is instantaneous?
+# if latter then fix instantaneous elongation
+
 import sys
 import cProfile
 import pstats
@@ -273,34 +277,6 @@ class TRSL(object):
             success = False
         return success
     
-    def update_initiation(self, deltat, mRNA):
-        # log.info("update_initiation: starting")
-        # log.debug("update_initiation: found mRNA %s", j)
-        k = npr.binomial(self.ribo_free, self.init_rate * deltat, 1)[0]  # number of ribosomes that diffuse to the initiation site during deltat
-        # log.debug("update_initiation: %s ribosomes diffused to init site at mRNA %s", k, mRNA.index)
-        for i in range(k):  # currently k>1 will not attach k ribosomes, TODO:
-            if not mRNA.first_position_occupied():
-                # log.debug("update_initiation: found mRNA with free first position")
-                if self.GTP > 0 and self.ATP > 0:
-                    if mRNA.attach_ribosome_at_start():
-                        # log.debug("update_initiation: attaching ribosome at start of mRNA %s", mRNA.index)
-                        self.ribo_bound += 1
-                        self.ribo_free -= 1
-                        self.GTP -= 1
-                        self.GDP += 1
-                        self.ATP -= 2
-                        self.AMP += 2
-                        #init_type = ran.choice(self._tRNA.keys())  # random type to be inserted at pos==0
-                        #if not self.insert_tRNA(mRNA, 0, init_type):
-                        #    log.warning("update_initiation: unsuccessful attempt to insert tRNA")
-                    else:
-                        log.warning("update_initiation: unsuccessful attempt to attach ribosome")
-                else:
-                    log.warning("update_initiation: no GTP or no ATP")
-            else:
-                # log.warning("update_initiation: unsuccessful attempt to attach ribosome: first position occupied")
-                pass
-
     def elongate_while_possible(self, mRNA, k, current_pos):
         '''
         attempts to elongate the protein on mRNA by at most k AAs starting at current_pos
@@ -321,7 +297,6 @@ class TRSL(object):
                 # translocation: move ribosome
                 mRNA.translocate_ribosome(current_pos, by=3 * codons)
                 # bind AA-tRNA
-                # last_type = ran.choice(range(1, self.types_tRNA+1)) # type to be inserted at ribo_pos
                 last_type = ran.choice(self._tRNA.keys())  # type to be inserted at current_pos
                 # log.debug("elongate_while_possible: last position was %s, attempting to insert tRNA at position %s", current_pos, current_pos+3*codons)
                 self.insert_tRNA(mRNA, current_pos + 3 * codons, last_type)  # try to insert AA-tRNA in the ribosome
@@ -391,6 +366,46 @@ class TRSL(object):
         occupied_ribos = [key for key in mRNA.ribosomes if mRNA.ribosomes[key] is not None]
         for ribo_pos in occupied_ribos:  # TODO: test reverse list and other sort orders
             self.elongate_one_step(mRNA, ribo_pos)
+
+    # functions used for process control
+    ##################################################################################################################################
+
+    def update_initiation(self, deltat, mRNA):
+        '''
+        performs random experiment to attach ribosome (not the initial tRNA)
+
+        :param deltat: duration parameter driving the initiation probability
+        :param mRNA:   mRNA object to which ribosome is attached
+        :return:
+        '''
+        '''
+        :param deltat:
+        :param mRNA:
+        :return:
+        '''
+        # log.info("update_initiation: starting")
+        # log.debug("update_initiation: found mRNA %s", j)
+        k = npr.binomial(self.ribo_free, self.init_rate * deltat, 1)[0]  # number of ribosomes that diffuse to the initiation site during deltat
+        # log.debug("update_initiation: %s ribosomes diffused to init site at mRNA %s", k, mRNA.index)
+        for i in range(k):  # currently k>1 will not attach k ribosomes, TODO:
+            if not mRNA.first_position_occupied():
+                # log.debug("update_initiation: found mRNA with free first position")
+                if self.GTP > 0 and self.ATP > 0:
+                    if mRNA.attach_ribosome_at_start():
+                        # log.debug("update_initiation: attaching ribosome at start of mRNA %s", mRNA.index)
+                        self.ribo_bound += 1
+                        self.ribo_free -= 1
+                        self.GTP -= 1
+                        self.GDP += 1
+                        self.ATP -= 2
+                        self.AMP += 2
+                    else:
+                        log.warning("update_initiation: unsuccessful attempt to attach ribosome")
+                else:
+                    log.warning("update_initiation: no GTP or no ATP")
+            else:
+                # log.warning("update_initiation: unsuccessful attempt to attach ribosome: first position occupied")
+                pass
 
     def update_elongation(self, deltat, mRNA):
         # log.info("update_elongation: starting mRNA %s, geneID %s", mRNA.index, mRNA.geneID)
@@ -489,7 +504,7 @@ class TRSL(object):
 
 if __name__ == "__main__":
     log.basicConfig(level=log.DEBUG, format='%(message)s', stream=sys.stdout)
-    trsl = TRSL()
+    trsl = TRSL(nribo=200)
     '''
     trsl.solve_internal(0.0, 60.0, deltat=1.0)
     '''
