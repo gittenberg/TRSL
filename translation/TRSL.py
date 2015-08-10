@@ -509,6 +509,6 @@ if __name__ == "__main__":
     trsl.solve_internal(0.0, 60.0, deltat=1.0)
     '''
     # Profiling:
-    cProfile.run('trsl.solve_internal(0.0, 60.0, deltat=1.0)', 'trsl_profile')
+    cProfile.run('trsl.solve_internal(0.0, 20.0, deltat=1.0)', 'trsl_profile')
     p = pstats.Stats('trsl_profile')
     p.strip_dirs().sort_stats('cumulative').print_stats('TRSL')

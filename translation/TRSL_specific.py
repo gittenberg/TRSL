@@ -293,9 +293,7 @@ class TRSL_spec(TRSL.TRSL):
             thiscodon = mRNA.sequence[ribo_pos: ribo_pos + 3]
             if thiscodon in stopcodons:
                 continue
-            #print ribo_pos
-            #print "thiscodon:", thiscodon
-            #print "codon_anticodon[thiscodon]:", codon_anticodon[thiscodon]
+
             required_tRNA_type = anticodon_index[codon_anticodon[thiscodon]]  # index of anticodon corresponding to next codon in mRNA
             tRNA_diffusion_probability = self.elong_rate * deltat * wobble[thiscodon]
             failure_probability = (1 - tRNA_diffusion_probability) ** self.tRNA_free[required_tRNA_type]
@@ -346,25 +344,41 @@ class TRSL_spec(TRSL.TRSL):
 if __name__ == "__main__":
     log.basicConfig(level=log.DEBUG, format='%(message)s', stream=sys.stdout)
 
-    # load sequences, transcriptome and initiation rates from pickle file
-    mRNA_abundancies = pkl.load(open("../parameters/transcriptome.p", "rb"))
-    gene_library = pkl.load(open("../parameters/orf_coding.p", "rb"))
-    init_rates = pkl.load(open("../parameters/init_rates_plotkin.p", "rb"))
+    conf = {
+           'exome': pkl.load(open("../parameters/orf_coding.p", "rb")),
+           'transcriptome': pkl.load(open("../parameters/transcriptome_plotkin.p", "rb")),
+           'init_rates': pkl.load(open("../parameters/init_rates_plotkin.p", "rb")),
+           'decay_constants': pkl.load(open("../parameters/decay_constants.p", "rb")),
+           'description': 'full transcriptome and exome, with decay, specific best estimate initiation rates according to Plotkin'
+           }
+
+    genes = list(set(conf['exome']) & set(conf['transcriptome']) & set(conf['init_rates']) & set(conf['decay_constants']))
+    print "found %s genes in common." % len(genes)
 
     mRNAs = []
     counter = 0
-    for gene in gene_library.keys()[0:100]:  # shortened for demo purposes
-        print "found gene:", gene
-        if gene in mRNA_abundancies and gene in init_rates:
-            print "abundancies and initiation probabilities available for gene:", gene
-            for instance in range(mRNA_abundancies[gene]):
-                mRNAs.append(MRNA_specific.mRNA_spec(index=counter, sequence=gene_library[gene], geneID=gene,
-                                                     init_rate=init_rates[gene]))  # do not just multiply the list
-                counter += 1
+    for gene in genes:
+        # print "abundancies and initiation rates available for gene:", gene
+        for instance in range(conf['transcriptome'][gene]):
+            mRNAs.append(MRNA_specific.mRNA_spec(index=counter, sequence=conf['exome'][gene], geneID=gene, ribosomes={}, init_rate=conf['init_rates'][gene]))  # do not just multiply the list
+            counter += 1
     print "built gene library, next: run TRSL_spec."
 
-    tr = TRSL_spec(mRNAs, gene_library, nribo=200000)
+    description = conf['description']
+    print description
 
-    duration = 80.0
-    tr.solve_internal(0.0, duration, deltat=1.0)
-    # tr.inspect()
+    duration = 20.0
+
+    tr = TRSL_spec(mRNAs, conf['exome'], conf['decay_constants'])
+
+    tr._tRNA = col.Counter({i: tRNA_types[i]['abundancy'] for i in tRNA_types})
+    tr._tRNA_free = col.Counter({i: int(tr._tRNA[i]) for i in tRNA_types})  # tRNA not bound to ribosomes
+    tr._tRNA_bound = tr._tRNA - tr._tRNA_free  # tRNA bound to ribosomes
+    # tr.solve_internal(0.0, duration, deltat=1.0)
+
+    # Profiling:
+    import cProfile
+    cProfile.run('tr.solve_internal(0.0, '+str(duration)+', deltat=1.0)', 'trsl_profile')
+    import pstats
+    p=pstats.Stats('trsl_profile')
+    p.strip_dirs().sort_stats('cumulative').print_stats()
