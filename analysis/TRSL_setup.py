@@ -86,7 +86,7 @@ if __name__ == "__main__":
         description = conf[i]['description']
         print description
 
-        duration = 3600.0
+        duration = 7200.0
 
         tr = TRSL_specific.TRSL_spec(mRNAs, conf[i]['exome'], conf[i]['decay_constants'])
 
