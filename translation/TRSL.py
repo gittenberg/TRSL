@@ -84,9 +84,9 @@ class TRSL(object):
         self.n_mRNA = 60000            # 60000 # number of mRNAs
         self.ribo_free = nribo         # 200000; number of ribosomes # http://bionumbers.hms.harvard.edu/bionumber.aspx?&id=100267&ver=13&trm=ribosomes/cell
 
-        self.GTP = 1e2 * avogadro * V  # GTP molecules (made up)
+        self.GTP = 1e3 * avogadro * V  # GTP molecules (made up)
         self.GDP = 0                   # GDP molecules
-        self.ATP = 1e2 * avogadro * V  # ATP molecules (made up)
+        self.ATP = 1e3 * avogadro * V  # ATP molecules (made up)
         self.AMP = 0                   # AMP molecules
 
         self.timerange = []
@@ -353,10 +353,10 @@ class TRSL(object):
         else:
             if free_codons <= 0:
                 # log.warning("elongate_one_step: not possible: no free codon")
-                pass
+                return False
             else:
-                log.warning("elongate_one_step: not possible: not enough GTP or other reason")
-            return False
+                # log.warning("elongate_one_step: not possible: not enough GTP or other reason")
+                return False
             # log.debug("elongate_one_step: ribosomes: tRNA is now %s", mRNA.ribosomes)
             # log.debug("elongate_one_step: protein length is now %s", self.proteinlength)
 
@@ -449,7 +449,7 @@ class TRSL(object):
             self.update_termination(mRNA)
             self.update_initiation(deltat, mRNA)
             self.update_elongation(deltat, mRNA)
-            # self.update_protein_decay(deltat)
+        # self.update_protein_decay(deltat)
         
     def solve_internal(self, start, end, deltat):
         '''
@@ -504,11 +504,11 @@ class TRSL(object):
 
 if __name__ == "__main__":
     log.basicConfig(level=log.DEBUG, format='%(message)s', stream=sys.stdout)
-    trsl = TRSL(nribo=200)
+    trsl = TRSL(nribo=2000)
     '''
     trsl.solve_internal(0.0, 60.0, deltat=1.0)
     '''
     # Profiling:
-    cProfile.run('trsl.solve_internal(0.0, 20.0, deltat=1.0)', 'trsl_profile')
+    cProfile.run('trsl.solve_internal(0.0, 30.0, deltat=1.0)', 'trsl_profile')
     p = pstats.Stats('trsl_profile')
     p.strip_dirs().sort_stats('cumulative').print_stats('TRSL')

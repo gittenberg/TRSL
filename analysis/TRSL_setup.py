@@ -86,22 +86,22 @@ if __name__ == "__main__":
         description = conf[i]['description']
         print description
 
-        duration = 7200.0
+        duration = 1200.0
 
-        tr = TRSL_specific.TRSL_spec(mRNAs, conf[i]['exome'], conf[i]['decay_constants'])
+        tr = TRSL_specific.TRSL_spec(mRNAs, conf[i]['exome'], conf[i]['decay_constants'], nribo=200000)
 
         tr._tRNA = col.Counter({i: TRSL_specific.tRNA_types[i]['abundancy'] for i in TRSL_specific.tRNA_types})
         tr._tRNA_free = col.Counter({i: int(tr._tRNA[i]) for i in TRSL_specific.tRNA_types})  # tRNA not bound to ribosomes
         tr._tRNA_bound = tr._tRNA - tr._tRNA_free  # tRNA bound to ribosomes
-        tr.solve_internal(0.0, duration, deltat=1.0)
+        #tr.solve_internal(0.0, duration, deltat=1.0)
 
-        '''
         # Profiling:
+        import cProfile
         cProfile.run('tr.solve_internal(0.0, '+str(duration)+', deltat=1.0)', 'trsl_profile')
+        import pstats
         p=pstats.Stats('trsl_profile')
         p.strip_dirs().sort_stats('cumulative').print_stats()
         #tr.inspect()
-        '''
 
         tr.dump_results(description)
 

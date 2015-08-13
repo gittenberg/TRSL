@@ -78,10 +78,10 @@ class MRNA:
         '''
         returns True iff the first 3*cr nts of an mRNA are occupied by a ribosome
         '''
-        if not self.ribosomes:  # no ribosomes
-            return False
-        elif min(self.ribosomes.keys()) > 3 * cr:  # ribosomes behind position 30 nt
+        if min(self.ribosomes.keys()) > 3 * cr:  # ribosomes behind position 30 nt
             # log.debug("first_position_occupied: ribosomes = %s", self.ribosomes)
+            return False
+        elif not self.ribosomes:  # no ribosomes
             return False
         else:
             return True

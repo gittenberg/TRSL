@@ -14,13 +14,14 @@ Module inherits from generic module TRSL.
 import sys
 import logging as log
 import collections as col
-import random as ran
+# import random as ran
+import numpy as np
 
 import numpy.random as npr
 import cPickle as pkl
 
 import TRSL
-import MRNA
+# import MRNA
 import MRNA_specific
 
 
@@ -254,10 +255,9 @@ class TRSL_spec(TRSL.TRSL):
             # k = npr.binomial(self.ribo_free, mRNA.init_rate*deltat, 1)[0]  # number of ribosomes that diffuse to the initiation site during deltat
             k = npr.poisson(
                 self.ribo_free * mRNA.init_rate * deltat)  # number of ribosomes that diffuse to the initiation site during deltat
-            # log.debug('update_initiation: %s ribosomes out of %s diffused to init site at mRNA %s with probability %s',
-            # k, self.ribo_free, mRNA.index, self.init_rate*deltat)
+            # log.debug('update_initiation: %s ribosomes out of %s diffused to init site at mRNA %s with probability %s', k, self.ribo_free, mRNA.index, self.init_rate*deltat)
             for i in range(k):  # currently k>1 will not attach k ribosomes, TODO:
-                if not mRNA.first_position_occupied():
+                if not mRNA.ribosomes or not mRNA.first_position_occupied():
                     # log.debug("update_initiation: found mRNA with free first position")
                     if self.GTP > 0 and self.ATP > 0:
                         if mRNA.attach_ribosome_at_start():
@@ -297,7 +297,7 @@ class TRSL_spec(TRSL.TRSL):
             required_tRNA_type = anticodon_index[codon_anticodon[thiscodon]]  # index of anticodon corresponding to next codon in mRNA
             tRNA_diffusion_probability = self.elong_rate * deltat * wobble[thiscodon]
             failure_probability = (1 - tRNA_diffusion_probability) ** self.tRNA_free[required_tRNA_type]
-            randomnumber = ran.random()  # TODO: try Poisson approximation if faster
+            randomnumber = np.random.ranf()  # TODO: try Poisson approximation if faster
             # log.debug("update_initiation: failure probability is %s at mRNA position 0", failure_probability)
             success = not (randomnumber < failure_probability)  # this means the required tRNA type has diffused to the site
             if success:
@@ -369,7 +369,7 @@ if __name__ == "__main__":
 
     duration = 20.0
 
-    tr = TRSL_spec(mRNAs, conf['exome'], conf['decay_constants'])
+    tr = TRSL_spec(mRNAs, conf['exome'], conf['decay_constants'], nribo=200)
 
     tr._tRNA = col.Counter({i: tRNA_types[i]['abundancy'] for i in tRNA_types})
     tr._tRNA_free = col.Counter({i: int(tr._tRNA[i]) for i in tRNA_types})  # tRNA not bound to ribosomes
