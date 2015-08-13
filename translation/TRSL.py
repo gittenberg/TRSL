@@ -512,3 +512,4 @@ if __name__ == "__main__":
     cProfile.run('trsl.solve_internal(0.0, 30.0, deltat=1.0)', 'trsl_profile')
     p = pstats.Stats('trsl_profile')
     p.strip_dirs().sort_stats('cumulative').print_stats('TRSL')
+
