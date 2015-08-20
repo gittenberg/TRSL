@@ -27,7 +27,12 @@ conf[1] = {
            'init_rates': {1: 0.1, 2: 0.1},
            'description': 'test configuration with 2 genes in 3 transcripts'
            }
-conf[2] = {}
+conf[2] = {
+           'exome': pkl.load(open("../parameters/orf_coding.p", "rb")),
+           'transcriptome': pkl.load(open("../parameters/transcriptome_plotkin_20000.p", "rb")),
+           'init_rates': pkl.load(open("../parameters/init_rates_plotkin.p", "rb")),
+           'description': '20000 transcriptome, full exome, no decay, Plotkin initiation probabilities'
+          }
 conf[3] = {
            'exome': pkl.load(open("../parameters/orf_coding.p", "rb")),
            'transcriptome': pkl.load(open("../parameters/transcriptome_plotkin.p", "rb")),
@@ -58,7 +63,7 @@ conf[6] = {
 if __name__ == "__main__":
     log.basicConfig(level=log.DEBUG, format='%(message)s', stream=sys.stdout)
 
-    for i in [4]:  # set configuration_id
+    for i in [2]:  # set configuration_id
         if 'decay_constants' in conf[i]:
             genes = list(set(conf[i]['exome']) & set(conf[i]['transcriptome']) & set(conf[i]['init_rates']) & set(conf[i]['decay_constants']))
         else:
@@ -86,9 +91,9 @@ if __name__ == "__main__":
         description = conf[i]['description']
         print description
 
-        duration = 10.0
+        duration = 1800.0
 
-        tr = TRSL_specific.TRSL_spec(mRNAs, conf[i]['exome'], conf[i]['decay_constants'], nribo=200000)
+        tr = TRSL_specific.TRSL_spec(mRNAs, conf[i]['exome'], conf[i]['decay_constants'], nribo=200000, detail=False)
 
         tr._tRNA = col.Counter({i: TRSL_specific.tRNA_types[i]['abundancy'] for i in TRSL_specific.tRNA_types})
         tr._tRNA_free = col.Counter({i: int(tr._tRNA[i]) for i in TRSL_specific.tRNA_types})  # tRNA not bound to ribosomes

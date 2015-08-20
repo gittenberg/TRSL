@@ -54,7 +54,7 @@ class TRSL(object):
     # initiation and auxiliary functions
     ##################################################################################################################################
 
-    def __init__(self, nribo=200000, proteome=col.Counter({})):
+    def __init__(self, nribo=200000, proteome=col.Counter({}), detail=False):
         '''
         initializes the parameters of the translation process
         '''
@@ -81,7 +81,7 @@ class TRSL(object):
 
         # Initial values
         ##################################################################################################################################
-        self.n_mRNA = 60000            # 60000 # number of mRNAs
+        self.n_mRNA = 60000            # 60000 # number of mRNAs (or 20000: http://book.bionumbers.org/how-many-mrnas-are-in-a-cell/)
         self.ribo_free = nribo         # 200000; number of ribosomes # http://bionumbers.hms.harvard.edu/bionumber.aspx?&id=100267&ver=13&trm=ribosomes/cell
 
         self.GTP = 1e3 * avogadro * V  # GTP molecules (made up)
@@ -100,6 +100,8 @@ class TRSL(object):
 
         self.init_rate = p_init / tau_ribo / num_pos_ribo        # 8.157e-07 s^-1 (yeast)
         self.elong_rate = competition / tau_tRNA / num_pos_tRNA  # 0.000140 s^-1  (yeast)
+
+        self.detail = detail  # whether details are saved (e.g. ribosomes for every time step)
 
         self.modeldict = {'name': "TRSL:_discrete_translation",
                           'vars': ["protein", "ribos._bound", "ribos._free", "tRNA_bound", "tRNA_free", "ATP", "AMP", "GTP", "GDP"],
@@ -463,6 +465,11 @@ class TRSL(object):
         for tRNA_type in self.tRNA_free:
             self.timecourses["tRNA_free_" + str(tRNA_type).zfill(2)] = []
 
+        # if detail option, then initiate timecourse for every polysome
+        if self.detail:
+            for mRNA in self._mRNAs:
+                self.timecourses["mRNA_" + str(mRNA.index).zfill(5)] = []
+
         self.timerange = np.arange(start, end, deltat)
         for time in self.timerange:
             log.info("################################################################################################")
@@ -498,13 +505,16 @@ class TRSL(object):
                 self.timecourses["tRNA_free_" + str(tRNA_type).zfill(2)].append(self.tRNA_free[tRNA_type])
                 # log.info("solve_internal: tRNA_free type %s: %s molecules", tRNA_type, self.tRNA_free[tRNA_type])
 
-        # from time import gmtime, strftime; now = strftime("%Y%m%d_%H%M%S", gmtime())
-        # import os.path; pickle.dump({'trange': self.timerange, "timecourses": self.timecourses}, open(os.path.join("..", now+"_timecourses_TRSL.pkl"), "wb"))
+            # if detail option, then also update every polysome
+            if self.detail:
+                import copy
+                for mRNA in self._mRNAs:
+                    self.timecourses["mRNA_" + str(mRNA.index).zfill(5)].append(copy.copy(mRNA.ribosomes))
 
 
 if __name__ == "__main__":
     log.basicConfig(level=log.DEBUG, format='%(message)s', stream=sys.stdout)
-    trsl = TRSL(nribo=2000)
+    trsl = TRSL(nribo=200000)
     '''
     trsl.solve_internal(0.0, 60.0, deltat=1.0)
     '''
