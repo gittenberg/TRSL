@@ -507,6 +507,7 @@ class TRSL(object):
 
             # if detail option, then also update every polysome
             if self.detail:
+
                 import copy
                 for mRNA in self._mRNAs:
                     self.timecourses["mRNA_" + str(mRNA.index).zfill(5)].append(copy.copy(mRNA.ribosomes))
