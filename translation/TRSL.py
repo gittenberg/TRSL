@@ -467,8 +467,10 @@ class TRSL(object):
 
         # if detail option, then initiate timecourse for every polysome
         if self.detail:
+            import shelve
+            ribosomes_database = shelve.open('../results/ribosome_timecourses.db', writeback=True)
             for mRNA in self._mRNAs:
-                self.timecourses["mRNA_" + str(mRNA.index).zfill(5)] = []
+                ribosomes_database["mRNA_" + str(mRNA.index).zfill(5)] = []
 
         self.timerange = np.arange(start, end, deltat)
         for time in self.timerange:
@@ -507,10 +509,12 @@ class TRSL(object):
 
             # if detail option, then also update every polysome
             if self.detail:
-
                 import copy
                 for mRNA in self._mRNAs:
-                    self.timecourses["mRNA_" + str(mRNA.index).zfill(5)].append(copy.copy(mRNA.ribosomes))
+                    ribosomes_database["mRNA_" + str(mRNA.index).zfill(5)].append(mRNA.ribosomes)
+
+        if self.detail:
+            ribosomes_database.close()
 
 
 if __name__ == "__main__":
