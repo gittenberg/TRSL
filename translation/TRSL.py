@@ -39,6 +39,7 @@ import random as ran
 import collections as col
 import math
 import logging as log
+import gc
 
 import numpy as np
 import numpy.random as npr
@@ -468,7 +469,9 @@ class TRSL(object):
         # if detail option, then initiate timecourse for every polysome
         if self.detail:
             import shelve
-            ribosomes_database = shelve.open('../results/ribosome_timecourses.db', writeback=True)
+            import time; now = time.strftime("%Y%m%d_%H%M", time.gmtime())
+            timestamp = now
+            ribosomes_database = shelve.open('../results/ribosome_timecourses_{}.db'.format(timestamp), writeback=True)
             for mRNA in self._mRNAs:
                 ribosomes_database["mRNA_" + str(mRNA.index).zfill(5)] = []
 
@@ -511,7 +514,10 @@ class TRSL(object):
             if self.detail:
                 import copy
                 for mRNA in self._mRNAs:
-                    ribosomes_database["mRNA_" + str(mRNA.index).zfill(5)].append(mRNA.ribosomes)
+                    temp_ribos = copy.copy(mRNA.ribosomes)
+                    ribosomes_database["mRNA_" + str(mRNA.index).zfill(5)].append(temp_ribos)
+
+            gc.collect()
 
         if self.detail:
             ribosomes_database.close()

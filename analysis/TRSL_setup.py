@@ -91,9 +91,9 @@ if __name__ == "__main__":
         description = conf[i]['description']
         print description
 
-        duration = 200.0
+        duration = 100.0
 
-        tr = TRSL_specific.TRSL_spec(mRNAs, conf[i]['exome'], conf[i]['decay_constants'], nribo=200000, detail=False)
+        tr = TRSL_specific.TRSL_spec(mRNAs, conf[i]['exome'], conf[i]['decay_constants'], nribo=200000, detail=True)
 
         tr._tRNA = col.Counter({i: TRSL_specific.tRNA_types[i]['abundancy'] for i in TRSL_specific.tRNA_types})
         tr._tRNA_free = col.Counter({i: int(tr._tRNA[i]) for i in TRSL_specific.tRNA_types})  # tRNA not bound to ribosomes
