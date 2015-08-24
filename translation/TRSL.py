@@ -374,18 +374,13 @@ class TRSL(object):
     ##################################################################################################################################
 
     def update_initiation(self, deltat, mRNA):
-        '''
+        """
         performs random experiment to attach ribosome (not the initial tRNA)
 
         :param deltat: duration parameter driving the initiation probability
         :param mRNA:   mRNA object to which ribosome is attached
         :return:
-        '''
-        '''
-        :param deltat:
-        :param mRNA:
-        :return:
-        '''
+        """
         # log.info("update_initiation: starting")
         # log.debug("update_initiation: found mRNA %s", j)
         k = npr.binomial(self.ribo_free, self.init_rate * deltat, 1)[0]  # number of ribosomes that diffuse to the initiation site during deltat
@@ -449,9 +444,10 @@ class TRSL(object):
     
     def update_processes(self, deltat):
         for mRNA in self.mRNAs:
-            self.update_termination(mRNA)
+            if mRNA.ribosomes != {}:  # mRNAs without ribosomes do not need the following
+                self.update_termination(mRNA)
+                self.update_elongation(deltat, mRNA)
             self.update_initiation(deltat, mRNA)
-            self.update_elongation(deltat, mRNA)
         # self.update_protein_decay(deltat)
         
     def solve_internal(self, start, end, deltat):
@@ -516,8 +512,6 @@ class TRSL(object):
                 for mRNA in self._mRNAs:
                     temp_ribos = copy.copy(mRNA.ribosomes)
                     ribosomes_database["mRNA_" + str(mRNA.index).zfill(5)].append(temp_ribos)
-
-            gc.collect()
 
         if self.detail:
             ribosomes_database.close()

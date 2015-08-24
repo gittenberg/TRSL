@@ -23,6 +23,8 @@ class mRNA_spec(MRNA.MRNA):
         """
         self.sequence = sequence
         self.init_rate = init_rate        # ORF-specific initiation rate # TODO: use this in TRSL_specific.update_initiation
+        self.initiation_success = False   # ribosome initiation time
+        self.termination_success = False   # ribosome termination time
         MRNA.MRNA.__init__(self, index=index, length=len(self.sequence), geneID=geneID, ribosomes=ribosomes)
 
     def termination_condition(self):
