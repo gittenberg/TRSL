@@ -31,6 +31,7 @@ class MRNA:
         self.ribosomes = ribosomes  # keys between 0 and self.length - 3*cr, value None: no AA-tRNA, <value>: AA-tRNA of type <value>
         self.tic = False            # initiation time for a certain ribosome on this mRNA
         self.toc = False            # termination time for a certain ribosome on this mRNA
+        self.tic_toc = []           # list of measured (tic, toc) pairs for this mRNA
 
     def attach_ribosome(self, pos=0):
         '''

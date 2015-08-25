@@ -421,7 +421,7 @@ class TRSL(object):
             available_time *= 0.5
             # log.debug("halving time, available time is now %s", available_time)
 
-    def update_termination(self, mRNA):
+    def update_termination(self, mRNA, time):
         #log.info("update_termination: starting")
         if self.GTP >= 1:
             if mRNA.termination_condition():
@@ -439,10 +439,16 @@ class TRSL(object):
                     self.proteins[mRNA.geneID] += 1  # add another protein of type mRNA.geneID
                 self.GTP -= 1
                 self.GDP += 1
+                if mRNA.tic and mRNA.toc:
+                    mRNA.toc -= 1                             # one ribosome falls off the mRNA
+                if mRNA.tic and mRNA.toc==1:                  # time measurement ongoing and the last ribosome just fell off
+                    mRNA.tic_toc.append((mRNA.tic, time))
+                    mRNA.tic = False                          # reset time measurement
+                    mRNA.toc = False
         else:
             log.warning("update_termination: not enough GTP")
     
-    def update_processes(self, deltat):
+    def update_processes(self, deltat, time):
         for mRNA in self.mRNAs:
             if mRNA.ribosomes != {}:  # mRNAs without ribosomes do not need the following
                 self.update_termination(mRNA)
@@ -459,7 +465,7 @@ class TRSL(object):
         # if detail option, then initiate timecourse for every polysome
         if self.detail:
             import shelve
-            import time;
+            import time
 
             now = time.strftime("%Y%m%d_%H%M", time.gmtime())
             timestamp = now
@@ -512,7 +518,7 @@ class TRSL(object):
             log.info("solve: time: %s", time)
             log.info("################################################################################################")
 
-            self.update_processes(deltat)
+            self.update_processes(deltat, time)
 
             log.info("solve_internal: self.proteins = %s", self.proteins)
             log.info("solve_internal: protein length:  %s", self.protein_length)
@@ -527,6 +533,8 @@ class TRSL(object):
         if self.detail:
             ribosomes_database.close()
 
+        for mRNA in self.mRNAs:
+            print mRNA.tic_toc
 
 if __name__ == "__main__":
     log.basicConfig(level=log.DEBUG, format='%(message)s', stream=sys.stdout)

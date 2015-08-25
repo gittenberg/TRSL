@@ -63,7 +63,7 @@ conf[6] = {
 if __name__ == "__main__":
     log.basicConfig(level=log.DEBUG, format='%(message)s', stream=sys.stdout)
 
-    for i in [1]:  # set configuration_id
+    for i in [2]:  # set configuration_id
         if 'decay_constants' in conf[i]:
             genes = list(set(conf[i]['exome']) & set(conf[i]['transcriptome']) & set(conf[i]['init_rates']) & set(conf[i]['decay_constants']))
         else:
@@ -91,7 +91,7 @@ if __name__ == "__main__":
         description = conf[i]['description']
         print description
 
-        duration = 1800.0
+        duration = 100.0
 
         tr = TRSL_specific.TRSL_spec(mRNAs, conf[i]['exome'], conf[i]['decay_constants'], nribo=200000, detail=False)
 

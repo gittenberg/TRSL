@@ -250,7 +250,7 @@ class TRSL_spec(TRSL.TRSL):
         self.modeldict['timerange'] = self.timerange
         self.modeldict['timecourses'] = self.timecourses
 
-    def diffuse_ribosomes_to_initiation_site(self, mRNA, deltat):
+    def diffuse_ribosomes_to_initiation_site(self, mRNA, deltat, time):
         """Perform Poisson experiment to test how many ribosomes make it initiation site and try to attach."""
         if self.ribo_free > 0:
             # k = npr.binomial(self.ribo_free, mRNA.init_rate*deltat, 1)[0]  # number of ribosomes that diffuse to the initiation site during deltat
@@ -269,7 +269,9 @@ class TRSL_spec(TRSL.TRSL):
                             self.GDP += 1
                             self.ATP -= 2
                             self.AMP += 2
-
+                            if not mRNA.tic:  # no time measurement ongoing on this mRNA
+                                mRNA.tic = time
+                                mRNA.toc = len(mRNA.ribosomes) + 1  # number of ribos + 1 to countdown to end of time measurement
                         else:
                             log.warning("update_initiation: unsuccessful attempt to attach ribosome")
                     else:
@@ -281,10 +283,10 @@ class TRSL_spec(TRSL.TRSL):
             # log.warning("update_initiation: no free ribosomes left")
             pass
 
-    def update_initiation(self, deltat, mRNA):
+    def update_initiation(self, deltat, mRNA, time):
         # log.info('update_initiation: starting')
         # log.debug('update_initiation: found mRNA %s', mRNA)
-        self.diffuse_ribosomes_to_initiation_site(mRNA, deltat)
+        self.diffuse_ribosomes_to_initiation_site(mRNA, deltat, time)  # tic = True if an initiation occurred
 
     def fill_empty_ribosomes(self, mRNA, deltat):
         """Walk through every empty ribosome and try to diffuse the required tRNA into the site."""
@@ -334,11 +336,12 @@ class TRSL_spec(TRSL.TRSL):
             # log.warning("update_protein_decay: skipping protein decay")
             pass
 
-    def update_processes(self, deltat):
+    def update_processes(self, deltat, time):
         for mRNA in self.mRNAs:
-            self.update_termination(mRNA)
-            self.update_initiation(deltat, mRNA)
-            self.update_elongation(deltat, mRNA)
+            if mRNA.ribosomes != {}:  # mRNAs without ribosomes do not need the following
+                self.update_termination(mRNA, time)
+                self.update_elongation(deltat, mRNA)
+            self.update_initiation(deltat, mRNA, time)
             self.update_protein_decay(deltat)
 
 
