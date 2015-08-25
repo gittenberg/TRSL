@@ -25,10 +25,12 @@ class MRNA:
         '''
         initializes one mRNA molecule
         '''
-        self.index = index  # counts the unique mRNA molecules; no biological meaning
-        self.length = length  # length of mRNA in nts # http://bionumbers.hms.harvard.edu//bionumber.aspx?id=107678&ver=1
-        self.geneID = geneID  # corresponds to sequence and proteinID; there might be more than one mRNA with this geneID
+        self.index = index          # counts the unique mRNA molecules; no biological meaning
+        self.length = length        # length of mRNA in nts # http://bionumbers.hms.harvard.edu//bionumber.aspx?id=107678&ver=1
+        self.geneID = geneID        # corresponds to sequence and proteinID; there might be more than one mRNA with this geneID
         self.ribosomes = ribosomes  # keys between 0 and self.length - 3*cr, value None: no AA-tRNA, <value>: AA-tRNA of type <value>
+        self.tic = False            # initiation time for a certain ribosome on this mRNA
+        self.toc = False            # termination time for a certain ribosome on this mRNA
 
     def attach_ribosome(self, pos=0):
         '''

@@ -450,13 +450,7 @@ class TRSL(object):
             self.update_initiation(deltat, mRNA)
         # self.update_protein_decay(deltat)
         
-    def solve_internal(self, start, end, deltat):
-        '''
-        solves TRSL for the interval [start, end[, iterating through several steps
-        '''
-        log.info("solve: simulation from %s to %s", start, end)
-
-        fieldnames = ["protein", "ribos._bound", "ribos._free", "tRNA_bound", "tRNA_free", "ATP", "AMP", "GTP", "GDP"]
+    def initialize_solve_internal(self, fieldnames):
         self.timecourses = {fieldname: [] for fieldname in fieldnames}
 
         for tRNA_type in self.tRNA_free:
@@ -465,11 +459,52 @@ class TRSL(object):
         # if detail option, then initiate timecourse for every polysome
         if self.detail:
             import shelve
-            import time; now = time.strftime("%Y%m%d_%H%M", time.gmtime())
+            import time;
+
+            now = time.strftime("%Y%m%d_%H%M", time.gmtime())
             timestamp = now
             ribosomes_database = shelve.open('../results/ribosome_timecourses_{}.db'.format(timestamp), writeback=True)
             for mRNA in self._mRNAs:
                 ribosomes_database["mRNA_" + str(mRNA.index).zfill(5)] = []
+            return ribosomes_database
+        else:
+            return None
+
+    def update_solve_internal(self, deltat, fieldnames, fieldvalues, ribosomes_database, start, time):
+        # update everything except proteins and specific tRNA_free
+        for fieldname, fieldvalue in zip(fieldnames, fieldvalues):
+            self.timecourses[fieldname].append(fieldvalue)
+
+        # now update proteins
+        for gene_id in self.proteins:
+            if gene_id in self.timecourses:  # if there is already protein of this ID
+                # then append the protein count
+                self.timecourses[gene_id].append(self.proteins[gene_id])
+            else:  # if this is the first time protein of this ID terminated
+                # create zeros for the first (time-start)/deltat values
+                self.timecourses[gene_id] = [0] * int((time - start) / deltat)
+                # only then append the protein count
+                self.timecourses[gene_id].append(self.proteins[gene_id])
+
+        # now update specific tRNA_free
+        for tRNA_type in self.tRNA_free:
+            self.timecourses["tRNA_free_" + str(tRNA_type).zfill(2)].append(self.tRNA_free[tRNA_type])
+            # log.info("solve_internal: tRNA_free type %s: %s molecules", tRNA_type, self.tRNA_free[tRNA_type])
+        # if detail option, then also update every polysome
+        if self.detail:
+            import copy
+            for mRNA in self._mRNAs:
+                temp_ribos = copy.copy(mRNA.ribosomes)
+                ribosomes_database["mRNA_" + str(mRNA.index).zfill(5)].append(temp_ribos)
+
+    def solve_internal(self, start, end, deltat):
+        '''
+        solves TRSL for the interval [start, end[, iterating through several steps
+        '''
+        log.info("solve: simulation from %s to %s", start, end)
+
+        fieldnames = ["protein", "ribos._bound", "ribos._free", "tRNA_bound", "tRNA_free", "ATP", "AMP", "GTP", "GDP"]
+        ribosomes_database = self.initialize_solve_internal(fieldnames)
 
         self.timerange = np.arange(start, end, deltat)
         for time in self.timerange:
@@ -478,6 +513,7 @@ class TRSL(object):
             log.info("################################################################################################")
 
             self.update_processes(deltat)
+
             log.info("solve_internal: self.proteins = %s", self.proteins)
             log.info("solve_internal: protein length:  %s", self.protein_length)
             log.info("solve_internal: bound ribosomes: %s", self.ribo_bound)
@@ -486,32 +522,7 @@ class TRSL(object):
             log.info("solve_internal: free tRNA:       %s", sum(self.tRNA_free.values()))
             fieldvalues = [self.protein_length, self.ribo_bound, self.ribo_free, sum(self.tRNA_bound.values()), sum(self.tRNA_free.values()), self.ATP, self.AMP, self.GTP, self.GDP]
 
-            # update everything except proteins and specific tRNA_free
-            for fieldname, fieldvalue in zip(fieldnames, fieldvalues):
-                self.timecourses[fieldname].append(fieldvalue)
-
-            # now update proteins
-            for gene_id in self.proteins:
-                if gene_id in self.timecourses:  # if there is already protein of this ID
-                    # then append the protein count
-                    self.timecourses[gene_id].append(self.proteins[gene_id])
-                else:  # if this is the first time protein of this ID terminated
-                    # create zeros for the first (time-start)/deltat values
-                    self.timecourses[gene_id] = [0] * int((time - start) / deltat)
-                    # only then append the protein count
-                    self.timecourses[gene_id].append(self.proteins[gene_id])
-
-            # now update specific tRNA_free
-            for tRNA_type in self.tRNA_free:
-                self.timecourses["tRNA_free_" + str(tRNA_type).zfill(2)].append(self.tRNA_free[tRNA_type])
-                # log.info("solve_internal: tRNA_free type %s: %s molecules", tRNA_type, self.tRNA_free[tRNA_type])
-
-            # if detail option, then also update every polysome
-            if self.detail:
-                import copy
-                for mRNA in self._mRNAs:
-                    temp_ribos = copy.copy(mRNA.ribosomes)
-                    ribosomes_database["mRNA_" + str(mRNA.index).zfill(5)].append(temp_ribos)
+            self.update_solve_internal(deltat, fieldnames, fieldvalues, ribosomes_database, start, time)
 
         if self.detail:
             ribosomes_database.close()

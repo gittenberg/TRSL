@@ -63,7 +63,7 @@ conf[6] = {
 if __name__ == "__main__":
     log.basicConfig(level=log.DEBUG, format='%(message)s', stream=sys.stdout)
 
-    for i in [2]:  # set configuration_id
+    for i in [1]:  # set configuration_id
         if 'decay_constants' in conf[i]:
             genes = list(set(conf[i]['exome']) & set(conf[i]['transcriptome']) & set(conf[i]['init_rates']) & set(conf[i]['decay_constants']))
         else:
