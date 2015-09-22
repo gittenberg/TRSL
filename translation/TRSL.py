@@ -73,7 +73,7 @@ class TRSL(object):
         D_tRNA = 8.42e-11                          # m^2/s # diffusion coefficient of tRNA
         tau_tRNA = lambda_tRNA ** 2 / 6. / D_tRNA  # s # char. time for tRNA
         num_pos_tRNA = V / lambda_tRNA ** 3        # number of discrete positions for tRNA
-        lambda_ribo = 3e-8                         # m # characteristic length tRNA
+        lambda_ribo = 3e-8                         # m # characteristic length ribosomes
         D_ribo = 3e-13                             # m^2/s # diffusion coefficient of ribosomes
         tau_ribo = lambda_ribo ** 2 / 6. / D_ribo  # s # char. time for ribosomes
         num_pos_ribo = V / lambda_ribo ** 3        # number of discrete positions for ribosomes
@@ -212,7 +212,7 @@ class TRSL(object):
         results["time_stamp"] = now
         results["n_ribosomes"] = self.ribo_bound + self.ribo_free
         results["n_tRNA"] = sum(self._tRNA.values())
-        duration = self.timerange[-1] - self.timerange[0]
+        duration = self.timerange[-1] - self.timerange[0] + 1
         results["duration"] = duration
         return results
 
@@ -462,21 +462,7 @@ class TRSL(object):
         for tRNA_type in self.tRNA_free:
             self.timecourses["tRNA_free_" + str(tRNA_type).zfill(2)] = []
 
-        # if detail option, then initiate timecourse for every polysome
-        if self.detail:
-            import shelve
-            import time
-
-            now = time.strftime("%Y%m%d_%H%M", time.gmtime())
-            timestamp = now
-            ribosomes_database = shelve.open('../results/ribosome_timecourses_{}.db'.format(timestamp), writeback=True)
-            for mRNA in self._mRNAs:
-                ribosomes_database["mRNA_" + str(mRNA.index).zfill(5)] = []
-            return ribosomes_database
-        else:
-            return None
-
-    def update_solve_internal(self, deltat, fieldnames, fieldvalues, ribosomes_database, start, time):
+    def update_solve_internal(self, deltat, fieldnames, fieldvalues, start, time):
         # update everything except proteins and specific tRNA_free
         for fieldname, fieldvalue in zip(fieldnames, fieldvalues):
             self.timecourses[fieldname].append(fieldvalue)
@@ -496,12 +482,22 @@ class TRSL(object):
         for tRNA_type in self.tRNA_free:
             self.timecourses["tRNA_free_" + str(tRNA_type).zfill(2)].append(self.tRNA_free[tRNA_type])
             # log.info("solve_internal: tRNA_free type %s: %s molecules", tRNA_type, self.tRNA_free[tRNA_type])
-        # if detail option, then also update every polysome
+
+    def write_last_polysome(self, description):
+        # this is a legacy of the old version when all polysomes were saved (now only last polysome)
+        # if detail option, then initiate timecourse for every polysome
         if self.detail:
+            import shelve
+            import time
             import copy
+
+            now = time.strftime("%Y%m%d_%H%M", time.gmtime())
+            timestamp = now
+            ribosomes_database = shelve.open('../results/ribosome_timecourses_{}_{}.db'.format(description, timestamp), writeback=True)
             for mRNA in self._mRNAs:
                 temp_ribos = copy.copy(mRNA.ribosomes)
-                ribosomes_database["mRNA_" + str(mRNA.index).zfill(5)].append(temp_ribos)
+                ribosomes_database["mRNA_" + str(mRNA.index).zfill(5)] = [temp_ribos]
+            ribosomes_database.close()
 
     def solve_internal(self, start, end, deltat):
         '''
@@ -510,7 +506,7 @@ class TRSL(object):
         log.info("solve: simulation from %s to %s", start, end)
 
         fieldnames = ["protein", "ribos._bound", "ribos._free", "tRNA_bound", "tRNA_free", "ATP", "AMP", "GTP", "GDP"]
-        ribosomes_database = self.initialize_solve_internal(fieldnames)
+        self.initialize_solve_internal(fieldnames)
 
         self.timerange = np.arange(start, end, deltat)
         for time in self.timerange:
@@ -528,13 +524,8 @@ class TRSL(object):
             log.info("solve_internal: free tRNA:       %s", sum(self.tRNA_free.values()))
             fieldvalues = [self.protein_length, self.ribo_bound, self.ribo_free, sum(self.tRNA_bound.values()), sum(self.tRNA_free.values()), self.ATP, self.AMP, self.GTP, self.GDP]
 
-            self.update_solve_internal(deltat, fieldnames, fieldvalues, ribosomes_database, start, time)
+            self.update_solve_internal(deltat, fieldnames, fieldvalues, start, time)
 
-        if self.detail:
-            ribosomes_database.close()
-
-        for mRNA in self.mRNAs:
-            print mRNA.tic_toc
 
 if __name__ == "__main__":
     log.basicConfig(level=log.DEBUG, format='%(message)s', stream=sys.stdout)

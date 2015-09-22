@@ -59,11 +59,17 @@ conf[6] = {
            'decay_constants': pkl.load(open("../parameters/decay_constants.p", "rb")),
            'description': 'full transcriptome and exome, specific best estimate initiation rates according to Stansfield'
            }
+conf[7] = {
+           'exome': pkl.load(open("../parameters/orf_coding.p", "rb")),
+           'transcriptome': pkl.load(open("../parameters/transcriptome_plotkin.p", "rb")),
+           'init_rates': pkl.load(open("../parameters/init_rates_plotkin_old.p", "rb")),
+           'description': 'full transcriptome and exome, no decay, old (buggy) initiation rates according to Plotkin'
+           }
 
 if __name__ == "__main__":
     log.basicConfig(level=log.DEBUG, format='%(message)s', stream=sys.stdout)
 
-    for i in [2]:  # set configuration_id
+    for i in [7, 4]:  # set configuration_id
         if 'decay_constants' in conf[i]:
             genes = list(set(conf[i]['exome']) & set(conf[i]['transcriptome']) & set(conf[i]['init_rates']) & set(conf[i]['decay_constants']))
         else:
@@ -109,5 +115,9 @@ if __name__ == "__main__":
         #tr.inspect()
 
         tr.dump_results(description)
+
+        # write last polysomes to shelve database
+        tr.write_last_polysome(description)
+
 
     print "done."
