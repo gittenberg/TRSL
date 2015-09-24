@@ -339,8 +339,8 @@ class TRSL_spec(TRSL.TRSL):
     def update_processes(self, deltat, time):
         for mRNA in self.mRNAs:
             if mRNA.ribosomes != {}:  # mRNAs without ribosomes do not need the following
-                self.update_termination(mRNA, time)
                 self.update_elongation(deltat, mRNA)
+                self.update_termination(mRNA, time)
             self.update_initiation(deltat, mRNA, time)
             self.update_protein_decay(deltat)
 
