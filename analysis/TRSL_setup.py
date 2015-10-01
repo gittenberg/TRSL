@@ -97,7 +97,7 @@ if __name__ == "__main__":
         description = conf[i]['description']
         print description
 
-        duration = 3600.0
+        duration = 1800.0
 
         tr = TRSL_specific.TRSL_spec(mRNAs, conf[i]['exome'], conf[i]['decay_constants'], nribo=200000, detail=True)
 
@@ -108,7 +108,7 @@ if __name__ == "__main__":
 
         # Profiling:
         import cProfile
-        cProfile.run('tr.solve_internal(0.0, '+str(duration)+', deltat=0.025)', 'trsl_profile')
+        cProfile.run('tr.solve_internal(0.0, '+str(duration)+', deltat=0.1)', 'trsl_profile')
         import pstats
         p=pstats.Stats('trsl_profile')
         p.strip_dirs().sort_stats('cumulative').print_stats()
