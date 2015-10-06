@@ -6,6 +6,8 @@ The proteins are sequence-specific.
 
 Module inherits from generic module TRSL.
 
+Branch: model review
+
 @author: martin
 """
 
