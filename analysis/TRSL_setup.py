@@ -1,6 +1,8 @@
 '''
 Created on 29.01.2015
 
+Branch: nmodel review
+
 @author: MJS
 '''
 print "TRSL_setup: starting"
@@ -62,7 +64,7 @@ conf[6] = {
 conf[7] = {
            'exome': pkl.load(open("../parameters/orf_coding.p", "rb")),
            'transcriptome': pkl.load(open("../parameters/transcriptome_plotkin.p", "rb")),
-           'init_rates': pkl.load(open("../parameters/init_rates_plotkin_old.p", "rb")),
+           'init_rates': pkl.load(open("../parameters/init_rates_plotkin_old_1.p", "rb")),
            'description': 'full transcriptome and exome, no decay, old (buggy) initiation rates according to Plotkin'
            }
 conf[8] = {
