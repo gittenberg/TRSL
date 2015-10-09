@@ -11,9 +11,6 @@ import sys
 import cPickle as pkl
 import collections as col
 
-# import MRNA_specific  # @UnresolvedImport
-# import TRSL_specific
-
 from translation import MRNA_specific, TRSL_specific
 
 log.basicConfig(level=log.DEBUG, format='%(message)s', stream=sys.stdout)
