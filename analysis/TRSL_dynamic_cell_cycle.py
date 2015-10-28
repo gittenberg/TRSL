@@ -3,6 +3,9 @@ Script to simulate a cell cycle with varying transcriptomes
 
 The cell cycle genes Sic1, Cln2 and Clb5 are turned on and off in different phases of the cell cycle
 
+# This file is obsolete but might be reused for running another "dynamical transcriptome"
+# TODO: Einschwingvorgang
+
 __author__ = 'martin'
 """
 
