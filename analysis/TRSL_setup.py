@@ -70,11 +70,18 @@ conf[8] = {
            'init_rates': pkl.load(open("../parameters/init_rates_plotkin.p", "rb")),
            'description': 'updated Shah transcriptome, full exome, no decay, updated initiation rates according to Shah'
            }
+conf[9] = {
+           'exome': pkl.load(open("../parameters/orf_coding.p", "rb")),
+           'transcriptome': pkl.load(open("../parameters/transcriptome_shah.p", "rb")),
+           'init_rates': pkl.load(open("../parameters/init_rates_plotkin.p", "rb")),
+           'decay_constants': pkl.load(open("../parameters/decay_constants.p", "rb")),
+           'description': 'updated Shah transcriptome, full exome, with decay, updated initiation rates according to Shah'
+           }
 
 if __name__ == "__main__":
     log.basicConfig(level=log.DEBUG, format='%(message)s', stream=sys.stdout)
 
-    for i in [8]:  # set configuration_id
+    for i in [9]:  # set configuration_id
         if 'decay_constants' in conf[i]:
             genes = list(set(conf[i]['exome']) & set(conf[i]['transcriptome']) & set(conf[i]['init_rates']) & set(conf[i]['decay_constants']))
         else:
