@@ -2,6 +2,8 @@
 Created on 07.01.2015
 
 @author: MJS
+
+TODO: convert to ipython notebook!!
 '''
 import os.path
 import csv
@@ -30,5 +32,5 @@ handle.close()
 orf_genomic_dict = {key:str(record_dict[key].seq).lower().replace('t', 'u') for key in record_dict}
 #print orf_genomic_dict["YAL008W"] 
 
-pkl.dump(transcriptome, open("transcriptome.p", "wb"))
+#pkl.dump(transcriptome, open("transcriptome.p", "wb")) # we now get the transcriptome from Premal Shah!
 pkl.dump(orf_genomic_dict, open("orf_coding.p", "wb"))
