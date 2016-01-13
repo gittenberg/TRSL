@@ -1,13 +1,13 @@
 """
 Script to simulate a cell cycle with varying transcriptomes
 
-The cell cycle genes Sic1, Cln2 and Clb5 are turned on and off in different phases of the cell cycle
-
 # This file is obsolete but might be reused for running another "dynamical transcriptome"
 # TODO: Einschwingvorgang
 
 __author__ = 'martin'
 """
+
+# TODO: find way to save protein timecourses
 
 import cPickle as pkl
 import collections as col
@@ -15,18 +15,26 @@ from translation import MRNA_specific, TRSL_specific
 
 transcriptomes_dict = pkl.load((open('../parameters/transcriptomes_cell_cycle.p')))
 
+# when are new transcriptomes loaded:
+# TODO: not 129 minutes
 switch_times = sorted(transcriptomes_dict.keys())
 switch_times.append(129 * 60)  # cell cycle takes 129 minutes
 
+# load other data and initial transctiptome
+# TODO: nribo to be made time-dependent
 exome = pkl.load(open("../parameters/orf_coding.p", "rb"))
 init_rates = pkl.load(open("../parameters/init_rates_plotkin.p", "rb"))
 decay_constants = pkl.load(open("../parameters/decay_constants.p", "rb"))
 transcriptome = transcriptomes_dict[0]
 nribo = 200000
 
+# find common data set
+# TODO: genes without transcripts should be encoded as 0
 genes = list(set(exome) & set(transcriptome) & set(init_rates) & set(decay_constants))
 print "{} genes found.".format(len(genes))
 
+# run simulation
+# TODO: Einschwingvorgang
 for start, stop in zip(switch_times[:-1], switch_times[1:]):
     print "simulating from {} to {}...".format(start, stop)
 
@@ -48,10 +56,9 @@ for start, stop in zip(switch_times[:-1], switch_times[1:]):
     tr._tRNA_free = col.Counter({i: int(tr._tRNA[i]) for i in TRSL_specific.tRNA_types})  # tRNA not bound to ribosomes
     tr._tRNA_bound = tr._tRNA - tr._tRNA_free  # tRNA bound to ribosomes
 
-    # TODO: carry over correct number of ribosomes
-
     # Profiling:
     import cProfile
+    # TODO: Einschwingvorgang
     cProfile.run('tr.solve_internal('+str(start)+', '+str(stop)+', deltat=1.0)', 'trsl_profile')
     import pstats
     p=pstats.Stats('trsl_profile')
