@@ -13,12 +13,10 @@ import cPickle as pkl
 import collections as col
 from translation import MRNA_specific, TRSL_specific
 
-transcriptomes_dict = pkl.load((open('../parameters/transcriptomes_cell_cycle.p')))
+transcriptomes_dict = pkl.load((open('../parameters/transcriptome_time_dependent.p')))
 
 # when are new transcriptomes loaded:
-# TODO: not 129 minutes
-switch_times = sorted(transcriptomes_dict.keys())
-switch_times.append(129 * 60)  # cell cycle takes 129 minutes
+switch_times = [key * 60 for key in sorted(transcriptomes_dict.keys())]
 
 # load other data and initial transctiptome
 # TODO: nribo to be made time-dependent
@@ -30,7 +28,7 @@ nribo = 200000
 
 # find common data set
 # TODO: genes without transcripts should be encoded as 0
-genes = list(set(exome) & set(transcriptome) & set(init_rates) & set(decay_constants))
+genes = list(set(exome) & set(transcriptome) & set(init_rates) & set(decay_constants)) # TODO: only 3000-ish genes: adjust
 print "{} genes found.".format(len(genes))
 
 # run simulation
@@ -38,7 +36,7 @@ print "{} genes found.".format(len(genes))
 for start, stop in zip(switch_times[:-1], switch_times[1:]):
     print "simulating from {} to {}...".format(start, stop)
 
-    transcriptome = transcriptomes_dict[start]
+    transcriptome = transcriptomes_dict[start/60]
     mRNAs = []
     counter = 0
     description = 'polyphasic cell cycle from {} to {}, updated Shah transcriptome, full exome, no decay, updated initiation rates according to Shah'.format(start, stop)
@@ -58,8 +56,7 @@ for start, stop in zip(switch_times[:-1], switch_times[1:]):
 
     # Profiling:
     import cProfile
-    # TODO: Einschwingvorgang
-    cProfile.run('tr.solve_internal('+str(start)+', '+str(stop)+', deltat=1.0)', 'trsl_profile')
+    cProfile.run('tr.solve_internal('+str(start)+', '+str(stop+300)+', deltat=1.0)', 'trsl_profile') # 300 s burn-in # TODO: needs to be removed after simulation
     import pstats
     p=pstats.Stats('trsl_profile')
     p.strip_dirs().sort_stats('cumulative').print_stats()
