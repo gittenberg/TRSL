@@ -18,8 +18,7 @@ transcriptomes_dict = pkl.load((open('../parameters/transcriptome_time_dependent
 # when are new transcriptomes loaded:
 switch_times = [key * 60 for key in sorted(transcriptomes_dict.keys())]
 
-# load other data and initial transctiptome
-# TODO: nribo to be made time-dependent
+# load other data and initial transcriptome
 exome = pkl.load(open("../parameters/orf_coding.p", "rb"))
 init_rates = pkl.load(open("../parameters/init_rates_plotkin.p", "rb"))
 decay_constants = pkl.load(open("../parameters/decay_constants.p", "rb"))
