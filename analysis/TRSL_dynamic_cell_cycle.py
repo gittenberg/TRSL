@@ -24,7 +24,10 @@ exome = pkl.load(open("../parameters/orf_coding.p", "rb"))
 init_rates = pkl.load(open("../parameters/init_rates_plotkin.p", "rb"))
 decay_constants = pkl.load(open("../parameters/decay_constants.p", "rb"))
 transcriptome = transcriptomes_dict[0]
-nribo = 200000
+
+# create a growing number of ribosomes
+nribo_start = 200000
+nsribo = range(nribo_start, int(1.5*nribo_start), int((1.5-1.0)*nribo_start/len(switch_times)))
 
 # find common data set
 # TODO: genes without transcripts should be encoded as 0
@@ -33,7 +36,7 @@ print "{} genes found.".format(len(genes))
 
 # run simulation
 # TODO: Einschwingvorgang
-for start, stop in zip(switch_times[:-1], switch_times[1:]):
+for start, stop, nribo in zip(switch_times[:-1], switch_times[1:], nsribo):
     print "simulating from {} to {}...".format(start, stop)
 
     transcriptome = transcriptomes_dict[start/60]
