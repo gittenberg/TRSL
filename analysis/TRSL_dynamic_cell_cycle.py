@@ -7,8 +7,6 @@ Script to simulate a cell cycle with varying transcriptomes
 __author__ = 'martin'
 """
 
-# TODO: find way to save protein timecourses
-
 import cPickle as pkl
 import collections as col
 from translation import MRNA_specific, TRSL_specific
@@ -34,7 +32,7 @@ genes = list(set(exome) & set(transcriptome) & set(init_rates) & set(decay_const
 print "{} genes found.".format(len(genes))
 
 # run simulation
-# TODO: Einschwingvorgang
+# TODO: Einschwingvorgang: reichen 300 s?
 for start, stop, nribo in zip(switch_times[:-1], switch_times[1:], nsribo):
     print "simulating from {} to {}...".format(start, stop)
 
