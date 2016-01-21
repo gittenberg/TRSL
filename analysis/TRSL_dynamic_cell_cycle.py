@@ -22,14 +22,14 @@ init_rates = pkl.load(open("../parameters/init_rates_plotkin.p", "rb"))
 decay_constants = pkl.load(open("../parameters/decay_constants.p", "rb"))
 transcriptome = transcriptomes_dict[0]
 
-# create a growing number of ribosomes
-nribo_start = 200000
-nsribo = range(nribo_start, int(1.5*nribo_start), int((1.5-1.0)*nribo_start/len(switch_times)))
-
 # find common data set
-# TODO: genes without transcripts should be encoded as 0
-genes = list(set(exome) & set(transcriptome) & set(init_rates) & set(decay_constants)) # TODO: only 3000-ish genes: adjust
+#genes = list(set(exome) & set(transcriptome) & set(init_rates) & set(decay_constants)) # with decay # TODO: only 3000-ish genes: adjust
+genes = list(set(exome) & set(transcriptome) & set(init_rates)) # without decay # TODO: only 4682-ish genes: adjust
 print "{} genes found.".format(len(genes))
+
+# create a growing number of ribosomes
+nribo_start = 200000 * len(genes) / len(exome) # scaled to make ribosome count more realistic
+nsribo = range(nribo_start, int(1.5*nribo_start), int((1.5-1.0)*nribo_start/len(switch_times)))
 
 # run simulation
 # TODO: Einschwingvorgang: reichen 300 s?
@@ -50,15 +50,19 @@ for start, stop, nribo in zip(switch_times[:-1], switch_times[1:], nsribo):
 
     tr = TRSL_specific.TRSL_spec(mRNAs, exome, decay_constants, nribo, detail=True)
 
-    tr._tRNA = col.Counter({i: TRSL_specific.tRNA_types[i]['abundancy'] for i in TRSL_specific.tRNA_types})
+    #tr._tRNA = col.Counter({i: TRSL_specific.tRNA_types[i]['abundancy'] for i in TRSL_specific.tRNA_types})
+    tr._tRNA = col.Counter({i: TRSL_specific.tRNA_types[i]['abundancy'] * len(genes) / len(exome) for i in TRSL_specific.tRNA_types})
     tr._tRNA_free = col.Counter({i: int(tr._tRNA[i]) for i in TRSL_specific.tRNA_types})  # tRNA not bound to ribosomes
     tr._tRNA_bound = tr._tRNA - tr._tRNA_free  # tRNA bound to ribosomes
 
-    # Profiling:
+    # Run without profiling:
+    tr.solve_internal(start, stop+300, deltat=1.0)
+    '''
+    # Run with profiling:
     import cProfile
     cProfile.run('tr.solve_internal('+str(start)+', '+str(stop+300)+', deltat=1.0)', 'trsl_profile') # 300 s burn-in # TODO: needs to be removed after simulation
     import pstats
     p=pstats.Stats('trsl_profile')
     p.strip_dirs().sort_stats('cumulative').print_stats()
-
+    '''
     tr.dump_results(description)

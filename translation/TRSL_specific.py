@@ -344,7 +344,7 @@ class TRSL_spec(TRSL.TRSL):
                 self.update_elongation(deltat, mRNA)
                 self.update_termination(mRNA, time)
             self.update_initiation(deltat, mRNA, time)
-            self.update_protein_decay(deltat)
+            #self.update_protein_decay(deltat)
 
 
 if __name__ == "__main__":
