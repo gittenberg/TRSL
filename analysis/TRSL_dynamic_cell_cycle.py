@@ -32,7 +32,9 @@ nribo_start = 200000 * len(genes) / len(exome) # scaled to make ribosome count m
 nsribo = range(nribo_start, int(1.5*nribo_start), int((1.5-1.0)*nribo_start/len(switch_times)))
 
 # run simulation
-# TODO: Einschwingvorgang: reichen 300 s?
+# Einschwingvorgang: reichen 900 s?
+burnin = 900
+tr = {}
 for start, stop, nribo in zip(switch_times[:-1], switch_times[1:], nsribo):
     print "simulating from {} to {}...".format(start, stop)
 
@@ -48,15 +50,15 @@ for start, stop, nribo in zip(switch_times[:-1], switch_times[1:], nsribo):
 
     print "created transcriptome at time {}.".format(start)
 
-    tr = TRSL_specific.TRSL_spec(mRNAs, exome, decay_constants, nribo, detail=True)
+    tr[start] = TRSL_specific.TRSL_spec(mRNAs, exome, decay_constants, nribo, detail=True)
 
     #tr._tRNA = col.Counter({i: TRSL_specific.tRNA_types[i]['abundancy'] for i in TRSL_specific.tRNA_types})
-    tr._tRNA = col.Counter({i: TRSL_specific.tRNA_types[i]['abundancy'] * len(genes) / len(exome) for i in TRSL_specific.tRNA_types})
-    tr._tRNA_free = col.Counter({i: int(tr._tRNA[i]) for i in TRSL_specific.tRNA_types})  # tRNA not bound to ribosomes
-    tr._tRNA_bound = tr._tRNA - tr._tRNA_free  # tRNA bound to ribosomes
+    tr[start]._tRNA = col.Counter({i: TRSL_specific.tRNA_types[i]['abundancy'] * len(genes) / len(exome) for i in TRSL_specific.tRNA_types})
+    tr[start]._tRNA_free = col.Counter({i: int(tr[start]._tRNA[i]) for i in TRSL_specific.tRNA_types})  # tRNA not bound to ribosomes
+    tr[start]._tRNA_bound = tr[start]._tRNA - tr[start]._tRNA_free  # tRNA bound to ribosomes
 
     # Run without profiling:
-    tr.solve_internal(start, stop+300, deltat=1.0)
+    tr[start].solve_internal(start, stop+burnin, deltat=1.0)
     '''
     # Run with profiling:
     import cProfile
@@ -65,4 +67,4 @@ for start, stop, nribo in zip(switch_times[:-1], switch_times[1:], nsribo):
     p=pstats.Stats('trsl_profile')
     p.strip_dirs().sort_stats('cumulative').print_stats()
     '''
-    tr.dump_results(description)
+    tr[start].dump_results(description)
