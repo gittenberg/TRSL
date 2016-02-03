@@ -33,7 +33,7 @@ nsribo = range(nribo_start, int(1.5*nribo_start), int((1.5-1.0)*nribo_start/len(
 
 # run simulation
 # Einschwingvorgang: reichen 900 s?
-burnin = 300
+burnin = 900
 for start, stop, nribo in zip(switch_times[:-1], switch_times[1:], nsribo):
     print "simulating from {} to {}...".format(start, stop)
 
