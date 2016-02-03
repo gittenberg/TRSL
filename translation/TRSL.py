@@ -510,6 +510,8 @@ class TRSL(object):
 
         self.timerange = np.arange(start, end, deltat)
         for time in self.timerange:
+            if not int(time) % 100:
+                print "reached time {} sec.".format(int(time))
             log.info("################################################################################################")
             log.info("solve: time: %s", time)
             log.info("################################################################################################")
