@@ -49,7 +49,7 @@ for start, stop, nribo in zip(switch_times[:-1], switch_times[1:], nsribo):
 
     print "created transcriptome at time {}.".format(start)
 
-    tr = TRSL_specific.TRSL_spec(mRNAs, exome, decay_constants, nribo, detail=True)
+    tr = TRSL_specific.TRSL_spec(mRNAs, exome, decay_constants, nribo, proteome=col.Counter({}), detail=True)
 
     #tr._tRNA = col.Counter({i: TRSL_specific.tRNA_types[i]['abundancy'] for i in TRSL_specific.tRNA_types})
     tr._tRNA = col.Counter({i: TRSL_specific.tRNA_types[i]['abundancy'] * len(genes) / len(exome) for i in TRSL_specific.tRNA_types})
@@ -67,4 +67,3 @@ for start, stop, nribo in zip(switch_times[:-1], switch_times[1:], nsribo):
     p.strip_dirs().sort_stats('cumulative').print_stats()
     '''
     tr.dump_results(description)
-    tr.timecourses = {} # not sure if works or necessary

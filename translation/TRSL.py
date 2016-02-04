@@ -206,7 +206,7 @@ class TRSL(object):
         results['proteome'] = self.proteins
         results['transcriptome'] = self.mRNAs
         results['timerange'] = self.timerange
-        results['timecourses'] = self.timecourses
+        results["timecourses"] = self.timecourses
         results["description"] = ""
         import time; now = time.strftime("%Y%m%d_%H%M", time.gmtime())
         results["time_stamp"] = now
