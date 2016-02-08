@@ -18,13 +18,14 @@ switch_times = [key * 60 for key in sorted(transcriptomes_dict.keys())]
 
 # load other data and initial transcriptome
 exome = pkl.load(open("../parameters/orf_coding.p", "rb"))
-init_rates = pkl.load(open("../parameters/init_rates_plotkin.p", "rb"))
+#init_rates = pkl.load(open("../parameters/init_rates_plotkin.p", "rb"))
+init_rates = pkl.load(open("../parameters/init_rates_enhanced_median.p", "rb"))
 decay_constants = pkl.load(open("../parameters/decay_constants.p", "rb"))
 transcriptome = transcriptomes_dict[0]
 
 # find common data set
 #genes = list(set(exome) & set(transcriptome) & set(init_rates) & set(decay_constants)) # with decay # TODO: only 3000-ish genes: adjust
-genes = list(set(exome) & set(transcriptome) & set(init_rates)) # without decay # TODO: only 4682-ish genes: adjust
+genes = list(set(exome) & set(transcriptome) & set(init_rates)) # without decay # TODO: only 4700-ish genes: adjust
 print "{} genes found.".format(len(genes))
 
 # create a growing number of ribosomes

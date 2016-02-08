@@ -11,11 +11,12 @@ import cPickle as pkl
 
 from Bio import SeqIO
 
-datadir = "data"
+datadir = "../data"
 # Transcriptome: http://www.ncbi.nlm.nih.gov/pubmed/19581875
 transcriptomefile = r"nbt.1551-S2.csv"
 # Exome: http://downloads.yeastgenome.org/sequence/S288C_reference/orf_dna/
-sequencefile = "orf_coding.fasta"
+#sequencefile = "orf_coding.fasta"
+sequencefile = "orf_coding_all.fasta"
 transcriptomefilepath = os.path.join(datadir, transcriptomefile)
 sequencefile = os.path.join(datadir, sequencefile)
 
@@ -30,7 +31,7 @@ handle = open(sequencefile, "rU")
 record_dict = SeqIO.to_dict(SeqIO.parse(handle, "fasta"))
 handle.close()
 orf_genomic_dict = {key:str(record_dict[key].seq).lower().replace('t', 'u') for key in record_dict}
-#print orf_genomic_dict["YAL008W"] 
+print len(orf_genomic_dict)
 
 #pkl.dump(transcriptome, open("transcriptome.p", "wb")) # we now get the transcriptome from Premal Shah!
-pkl.dump(orf_genomic_dict, open("orf_coding.p", "wb"))
+pkl.dump(orf_genomic_dict, open("../parameters/orf_coding.p", "wb"))
