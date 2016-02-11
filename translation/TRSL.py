@@ -44,10 +44,11 @@ import gc
 import numpy as np
 import numpy.random as npr
 
+from stochasticSolverInterface import StochasticSolverInterface
 import MRNA
 
 
-class TRSL(object):
+class TRSL(StochasticSolverInterface, object):
     '''
     class representing a translational network
     '''
@@ -527,6 +528,10 @@ class TRSL(object):
             fieldvalues = [self.protein_length, self.ribo_bound, self.ribo_free, sum(self.tRNA_bound.values()), sum(self.tRNA_free.values()), self.ATP, self.AMP, self.GTP, self.GDP]
 
             self.update_solve_internal(deltat, fieldnames, fieldvalues, start, time)
+
+    def execute(self, trange, x0 = None):
+        #TODO: implement method
+        return None
 
 
 if __name__ == "__main__":
