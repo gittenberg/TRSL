@@ -188,6 +188,7 @@ wobble = {codon: 1.000 if codon_anticodon[codon] is not '*' and codon == revcom(
 
 
 class TRSL_spec(TRSL.TRSL):
+
     def __init__(self, mRNAs, gene_library, decay_constants=None, nribo=200000, proteome=col.Counter({}), detail=False):
         super(TRSL_spec, self).__init__(nribo, proteome, detail)
         self._tRNA = col.Counter({i: tRNA_types[i]['abundancy'] for i in tRNA_types})
@@ -380,11 +381,13 @@ if __name__ == "__main__":
     tr._tRNA = col.Counter({i: tRNA_types[i]['abundancy'] for i in tRNA_types})
     tr._tRNA_free = col.Counter({i: int(tr._tRNA[i]) for i in tRNA_types})  # tRNA not bound to ribosomes
     tr._tRNA_bound = tr._tRNA - tr._tRNA_free  # tRNA bound to ribosomes
-    # tr.solve_internal(0.0, duration, deltat=1.0)
+    tr.solve_internal(0.0, duration, deltat=1.0)
 
+    '''
     # Profiling:
     import cProfile
     cProfile.run('tr.solve_internal(0.0, '+str(duration)+', deltat=1.0)', 'trsl_profile')
     import pstats
     p=pstats.Stats('trsl_profile')
     p.strip_dirs().sort_stats('cumulative').print_stats()
+    '''

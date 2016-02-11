@@ -452,7 +452,7 @@ class TRSL(StochasticSolverInterface, object):
     def update_processes(self, deltat, time):
         for mRNA in self.mRNAs:
             if mRNA.ribosomes != {}:  # mRNAs without ribosomes do not need the following
-                self.update_termination(mRNA)
+                self.update_termination(mRNA, time)
                 self.update_elongation(deltat, mRNA)
             self.update_initiation(deltat, mRNA)
         # self.update_protein_decay(deltat)
@@ -529,19 +529,70 @@ class TRSL(StochasticSolverInterface, object):
 
             self.update_solve_internal(deltat, fieldnames, fieldvalues, start, time)
 
+    def solve_internal_new(self, trange):
+        '''
+        solves TRSL for the interval [start, end[, iterating through several steps
+        updated to conform with stochasticSolverInterface
+        '''
+        log.info("solve: simulation from %s to %s", trange[0], trange[-1])
+
+        fieldnames = ["protein", "ribos._bound", "ribos._free", "tRNA_bound", "tRNA_free", "ATP", "AMP", "GTP", "GDP"]
+        self.initialize_solve_internal(fieldnames)
+
+        self.timerange = trange
+        for time in self.timerange:
+            if not int(time) % 100:
+                print "reached time {} sec.".format(int(time))
+            log.info("################################################################################################")
+            log.info("solve: time: %s", time)
+            log.info("################################################################################################")
+
+            # we assume that trange is evenly spaced:
+            self.update_processes(trange[1]-trange[0], time)
+
+            log.info("solve_internal: self.proteins = %s", self.proteins)
+            log.info("solve_internal: protein length:  %s", self.protein_length)
+            log.info("solve_internal: bound ribosomes: %s", self.ribo_bound)
+            log.info("solve_internal: free ribosomes:  %s", self.ribo_free)
+            log.info("solve_internal: bound tRNA:      %s", sum(self.tRNA_bound.values()))
+            log.info("solve_internal: free tRNA:       %s", sum(self.tRNA_free.values()))
+            fieldvalues = [self.protein_length, self.ribo_bound, self.ribo_free, sum(self.tRNA_bound.values()), sum(self.tRNA_free.values()), self.ATP, self.AMP, self.GTP, self.GDP]
+
+            # we assume that trange is evenly spaced:
+            self.update_solve_internal(trange[1]-trange[0], fieldnames, fieldvalues, trange[0], time)
+
     def execute(self, trange, x0 = None):
+        """
+        :param trange: list of time steps, depending on step size.
+                       eg: starttime = 0
+                           endtime = 1
+                           step size = 0.1
+                           --> trange list = [0, 0.1, 0.2, 0.3,....,1.0]
+                x0:    initial state vector as a dictionary. It's not given at first call
+                       units is number of particles.
+                       eg. x0 = {'ATP': 100, 'NADH':5000, 'GLC':700}
+
+        :return  return stateVector, info
+                        stateVector: same type as x0 with last particle numbers
+                        info:        status message for solverstep
+                                     it's a  dictionary like info = {'message': 'everythings fine'}
+
+
+        :raise NotImplementedError:
+        """
+
         #TODO: implement method
         return None
 
 
 if __name__ == "__main__":
     log.basicConfig(level=log.DEBUG, format='%(message)s', stream=sys.stdout)
-    trsl = TRSL(nribo=200000)
-    '''
-    trsl.solve_internal(0.0, 60.0, deltat=1.0)
+    trsl = TRSL(nribo=2000)
+    trsl.solve_internal(0.0, 20.0, deltat=1.0)
     '''
     # Profiling:
-    cProfile.run('trsl.solve_internal(0.0, 30.0, deltat=1.0)', 'trsl_profile')
+    cProfile.run('trsl.solve_internal(0.0, 20.0, deltat=1.0)', 'trsl_profile')
     p = pstats.Stats('trsl_profile')
     p.strip_dirs().sort_stats('cumulative').print_stats('TRSL')
+    '''
 
