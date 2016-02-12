@@ -9,6 +9,7 @@ __author__ = 'martin'
 
 import cPickle as pkl
 import collections as col
+import numpy as np
 from translation import MRNA_specific, TRSL_specific
 
 transcriptomes_dict = pkl.load((open('../parameters/transcriptome_time_dependent.p')))
@@ -28,14 +29,14 @@ transcriptome = transcriptomes_dict[0]
 genes = list(set(exome) & set(transcriptome) & set(init_rates)) # without decay # TODO: only 4700-ish genes: adjust
 print "{} genes found.".format(len(genes))
 
-# create a growing number of ribosomes
-nribo_start = 200000 * len(genes) / len(exome) # scaled to make ribosome count more realistic
-nsribo = range(nribo_start, int(1.5*nribo_start), int((1.5-1.0)*nribo_start/len(switch_times)))
+# to create a growing number of ribosomes and tRNAs
+nribo_start = 200000 * len(genes) / len(exome)  # scaled to make ribosome count more realistic
+growth_factor_range = np.arange(1., 1.5, (1.5-1.0)/len(switch_times))  # by how much they grow in each interval
 
 # run simulation
 # Einschwingvorgang: reichen 900 s?
 burnin = 900
-for start, stop, nribo in zip(switch_times[:-1], switch_times[1:], nsribo):
+for start, stop, growth_factor in zip(switch_times[:-1], switch_times[1:], growth_factor_range):
     print "simulating from {} to {}...".format(start, stop)
 
     transcriptome = transcriptomes_dict[start/60]
@@ -50,10 +51,10 @@ for start, stop, nribo in zip(switch_times[:-1], switch_times[1:], nsribo):
 
     print "created transcriptome at time {}.".format(start)
 
-    tr = TRSL_specific.TRSL_spec(mRNAs, exome, decay_constants, nribo, proteome=col.Counter({}), detail=True)
+    tr = TRSL_specific.TRSL_spec(mRNAs, exome, decay_constants, int(nribo_start*growth_factor), proteome=col.Counter({}), detail=True)
 
     #tr._tRNA = col.Counter({i: TRSL_specific.tRNA_types[i]['abundancy'] for i in TRSL_specific.tRNA_types})
-    tr._tRNA = col.Counter({i: TRSL_specific.tRNA_types[i]['abundancy'] * len(genes) / len(exome) for i in TRSL_specific.tRNA_types})
+    tr._tRNA = col.Counter({i: int(TRSL_specific.tRNA_types[i]['abundancy'] * len(genes) / len(exome) * growth_factor) for i in TRSL_specific.tRNA_types})
     tr._tRNA_free = col.Counter({i: int(tr._tRNA[i]) for i in TRSL_specific.tRNA_types})  # tRNA not bound to ribosomes
     tr._tRNA_bound = tr._tRNA - tr._tRNA_free  # tRNA bound to ribosomes
 
