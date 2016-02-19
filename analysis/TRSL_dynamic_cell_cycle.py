@@ -1,9 +1,6 @@
 """
 Script to simulate a cell cycle with varying transcriptomes
 
-# This file is obsolete but might be reused for running another "dynamical transcriptome"
-# TODO: Einschwingvorgang
-
 __author__ = 'martin'
 """
 
@@ -14,19 +11,20 @@ from translation import MRNA_specific, TRSL_specific
 
 transcriptomes_dict = pkl.load((open('../parameters/transcriptome_time_dependent.p')))
 
-# when are new transcriptomes loaded:
+# when are new transcriptomes loaded (conversion from minutes to seconds):
 switch_times = [key * 60 for key in sorted(transcriptomes_dict.keys())]
 
-# load other data and initial transcriptome
+# load other data
 exome = pkl.load(open("../parameters/orf_coding.p", "rb"))
-#init_rates = pkl.load(open("../parameters/init_rates_plotkin.p", "rb"))
-init_rates = pkl.load(open("../parameters/init_rates_enhanced_median.p", "rb"))
+# init_rates = pkl.load(open("../parameters/init_rates_plotkin.p", "rb"))
+init_rates = pkl.load(open("../parameters/init_rates_enhanced_median.p", "rb"))  # missing replaced by median
 decay_constants = pkl.load(open("../parameters/decay_constants.p", "rb"))
+# load initial transcriptome
 transcriptome = transcriptomes_dict[0]
 
 # find common data set
-#genes = list(set(exome) & set(transcriptome) & set(init_rates) & set(decay_constants)) # with decay # TODO: only 3000-ish genes: adjust
-genes = list(set(exome) & set(transcriptome) & set(init_rates)) # without decay # TODO: only 4700-ish genes: adjust
+# genes = list(set(exome) & set(transcriptome) & set(init_rates) & set(decay_constants)) # with decay
+genes = list(set(exome) & set(transcriptome) & set(init_rates)) # without decay
 print "{} genes found.".format(len(genes))
 
 # to create a growing number of ribosomes and tRNAs
@@ -53,7 +51,7 @@ for start, stop, growth_factor in zip(switch_times[:-1], switch_times[1:], growt
 
     tr = TRSL_specific.TRSL_spec(mRNAs, exome, decay_constants, int(nribo_start*growth_factor), proteome=col.Counter({}), detail=True)
 
-    #tr._tRNA = col.Counter({i: TRSL_specific.tRNA_types[i]['abundancy'] for i in TRSL_specific.tRNA_types})
+    # tr._tRNA = col.Counter({i: TRSL_specific.tRNA_types[i]['abundancy'] for i in TRSL_specific.tRNA_types})
     tr._tRNA = col.Counter({i: int(TRSL_specific.tRNA_types[i]['abundancy'] * len(genes) / len(exome) * growth_factor) for i in TRSL_specific.tRNA_types})
     tr._tRNA_free = col.Counter({i: int(tr._tRNA[i]) for i in TRSL_specific.tRNA_types})  # tRNA not bound to ribosomes
     tr._tRNA_bound = tr._tRNA - tr._tRNA_free  # tRNA bound to ribosomes
@@ -63,7 +61,7 @@ for start, stop, growth_factor in zip(switch_times[:-1], switch_times[1:], growt
     '''
     # Run with profiling:
     import cProfile
-    cProfile.run('tr.solve_internal('+str(start)+', '+str(stop+300)+', deltat=1.0)', 'trsl_profile') # 300 s burn-in # TODO: needs to be removed after simulation
+    cProfile.run('tr.solve_internal('+str(start)+', '+str(stop+900)+', deltat=1.0)', 'trsl_profile') # 900 s burn-in
     import pstats
     p=pstats.Stats('trsl_profile')
     p.strip_dirs().sort_stats('cumulative').print_stats()
