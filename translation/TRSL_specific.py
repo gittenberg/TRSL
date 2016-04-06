@@ -333,8 +333,7 @@ class TRSL_spec(TRSL.TRSL):
             # log.info("update_protein_decay: starting")
             for gene in self.proteins:
                 # print gene, self.decay_constants[gene]
-                self.proteins[gene] *= 1 - deltat * self.decay_constants[
-                    gene]  # percentage of surviving proteins (non-integer)
+                self.proteins[gene] *= 1 - deltat * self.decay_constants[gene]  # percentage of surviving proteins (non-integer)
         else:
             # log.warning("update_protein_decay: skipping protein decay")
             pass
