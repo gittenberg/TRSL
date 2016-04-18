@@ -3,7 +3,7 @@ setwd("~/git/TRSL/parameters")
 # load data from csv
 data = read.csv("regression_data.csv", sep=",")
 # rename columns
-colnames(data) = c("X", "gene", "translation.rate", "transcript.abundance", "initiation.rate", "ORF.length", "CAI")
+colnames(data) = c("X", "gene", "translation.rate.exp", "translation.rate.model", "transcript.abundance", "initiation.rate", "ORF.length", "CAI")
 
 ###################################################################################################################
 # unnormalized model

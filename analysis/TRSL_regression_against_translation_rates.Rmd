@@ -11,16 +11,27 @@ setwd("~/git/TRSL/parameters")
 # load data from csv
 data = read.csv("regression_data.csv", sep=",")
 # rename columns
-colnames(data) = c("X", "gene", "translation.rate", "transcript.abundance", "initiation.rate", "ORF.length", "CAI")
+colnames(data) = c("X", "gene", "translation.rate.exp", "translation.rate.sim", "transcript.abundance", "initiation.rate", "ORF.length", "CAI")
 ```
-## Unnormalized model
+## Unnormalized models
+
+### Simulated translation rates
 
 ```{r}
-model_unnorm = lm(data$translation.rate ~ data$initiation.rate + data$CAI)
-summary(model_unnorm)
+model.unnorm.sim = lm(data$translation.rate.sim ~ data$initiation.rate + data$CAI)
+summary(model.unnorm.sim)
+```
+
+### Experimental translation rates
+
+```{r}
+model.unnorm.exp = lm(data$translation.rate.exp ~ data$initiation.rate + data$CAI)
+summary(model.unnorm.exp)
 ```
 
 The coefficients are not comparable because the factors have different orders of magnitude.
+
+Main problem: poor fit.
 
 We scale (standard normalize) the variables:
 ```{r}
@@ -28,23 +39,52 @@ IR_norm = scale(data$initiation.rate)
 CAI_norm = scale(data$CAI)
 ```
 
-## Normalized model
+## Normalized models
+
+### Simulated translation rates
 
 ```{r}
-model = lm(data$translation.rate ~ IR_norm + CAI_norm)
-summary(model)
+model.sim = lm(data$translation.rate.sim ~ IR_norm + CAI_norm)
+summary(model.sim)
 ```
-Not surprisingly, same quality ($p$, $R^2$) as the unnormalized model.
 
-## Slide with R Code and Output
+### Experimental translation rates
 
 ```{r}
-summary(cars)
+model.exp = lm(data$translation.rate.exp ~ IR_norm + CAI_norm)
+summary(model.exp)
 ```
 
-## Slide with Plot
+Unsurprisingly, same quality ($p$, $R^2$) as for the unnormalized models.
 
-```{r, echo=FALSE}
-plot(cars)
+Create matrix of values, only complete cases. We include the dependent variables for later plotting.
+
+```{r}
+factors_norm = cbind(IR_norm, CAI_norm, data$translation.rate.sim, data$translation.rate.exp)[complete.cases(cbind(IR_norm, CAI_norm)),]
+# add vector of ones for score calculation
+factors_norm = cbind(rep(1, nrow(factors_norm)), factors_norm)
+colnames(factors_norm) = c('const', 'IR_norm', 'CAI_norm', 'translation.rate.sim', 'translation.rate.exp')
 ```
+
+Define a score $s = t + b_1 \cdot x_1 + b_2 \cdot x_2$:
+
+```{r}
+scores.sim = factors_norm[, c('const', 'IR_norm', 'CAI_norm')] %*% model.sim$coefficients
+plot.new()
+curve(x^1, from=0, to=20, col="red", xlab="score", ylab="translation rate")
+points(scores.sim, factors_norm[, "translation.rate.sim"], ylim=c(0,50), main="", pch=1, col='blue')
+```
+
+```{r}
+scores.exp = factors_norm[, c('const', 'IR_norm', 'CAI_norm')] %*% model.exp$coefficients
+plot.new()
+curve(x^1, from=0, to=20, col="red", xlab="score", ylab="translation rate")
+points(scores.exp, factors_norm[, "translation.rate.exp"], ylim=c(0,50), main="", pch=1, col='blue')
+```
+
+This is obviously not a good model.
+
+Next we plot against log(translation rate):
+
+
 
