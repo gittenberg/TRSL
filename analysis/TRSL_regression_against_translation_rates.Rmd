@@ -7,7 +7,7 @@ output: html_document
 
 ```{r, echo=FALSE}
 # prepare data frame
-setwd("~/git/TRSL/parameters")
+#setwd("~/git/TRSL/parameters")
 # load data from csv
 data = read.csv("regression_data.csv", sep=",")
 # rename columns
