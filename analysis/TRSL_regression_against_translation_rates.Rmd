@@ -24,6 +24,8 @@ summary(model.unnorm.sim)
 
 ### Experimental translation rates
 
+Data from [Arava et al.](http://www.pnas.org/content/100/7/3889.full#ref-list-1):
+
 ```{r}
 model.unnorm.exp = lm(data$translation.rate.exp ~ data$initiation.rate + data$CAI)
 summary(model.unnorm.exp)
@@ -71,20 +73,17 @@ Define a score $s = t + b_1 \cdot x_1 + b_2 \cdot x_2$:
 ```{r}
 scores.sim = factors_norm[, c('const', 'IR_norm', 'CAI_norm')] %*% model.sim$coefficients
 plot.new()
-curve(x^1, from=0, to=20, col="red", xlab="score", ylab="translation rate")
+curve(x^1, from=0, to=0.5, col="red", xlab="score", ylab="translation rate (sim.)")
 points(scores.sim, factors_norm[, "translation.rate.sim"], ylim=c(0,50), main="", pch=1, col='blue')
 ```
 
 ```{r}
 scores.exp = factors_norm[, c('const', 'IR_norm', 'CAI_norm')] %*% model.exp$coefficients
 plot.new()
-curve(x^1, from=0, to=20, col="red", xlab="score", ylab="translation rate")
+curve(x^1, from=0, to=0.5, col="red", xlab="score", ylab="translation rate (exp.)")
 points(scores.exp, factors_norm[, "translation.rate.exp"], ylim=c(0,50), main="", pch=1, col='blue')
 ```
 
 This is obviously not a good model.
-
-Next we plot against log(translation rate):
-
 
 
