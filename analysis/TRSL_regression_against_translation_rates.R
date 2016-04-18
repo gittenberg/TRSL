@@ -75,3 +75,14 @@ plot.new()
 curve(x^1, from=0, to=150, col="red", xlab="score", ylab="transformed translation rate")
 points(scores, factors_transf[, "transformed.translation.rate"], main="", pch=1, col='blue')
 # looks good!
+
+# The formula that was fitted was:
+# TR = (score - min(score))^2
+# TR = (log(14.5*IR_norm + 4.1*CAI_norm + 24.4) - 6.38)^2
+
+###################################################################################################################
+# are CAI and IR dependent on one another?
+###################################################################################################################
+plot.new()
+plot(data$CAI, data$initiation.rate, main="", pch=1, col='blue')
+

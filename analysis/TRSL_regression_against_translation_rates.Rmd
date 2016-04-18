@@ -1,0 +1,50 @@
+---
+title: "TRSL: regression against translation rates"
+author: "Martin Seeger"
+date: "18. April 2016"
+output: html_document
+---
+
+```{r, echo=FALSE}
+# prepare data frame
+setwd("~/git/TRSL/parameters")
+# load data from csv
+data = read.csv("regression_data.csv", sep=",")
+# rename columns
+colnames(data) = c("X", "gene", "translation.rate", "transcript.abundance", "initiation.rate", "ORF.length", "CAI")
+```
+## Unnormalized model
+
+```{r}
+model_unnorm = lm(data$translation.rate ~ data$initiation.rate + data$CAI)
+summary(model_unnorm)
+```
+
+The coefficients are not comparable because the factors have different orders of magnitude.
+
+We scale (standard normalize) the variables:
+```{r}
+IR_norm = scale(data$initiation.rate)
+CAI_norm = scale(data$CAI)
+```
+
+## Normalized model
+
+```{r}
+model = lm(data$translation.rate ~ IR_norm + CAI_norm)
+summary(model)
+```
+Not surprisingly, same quality ($p$, $R^2$) as the unnormalized model.
+
+## Slide with R Code and Output
+
+```{r}
+summary(cars)
+```
+
+## Slide with Plot
+
+```{r, echo=FALSE}
+plot(cars)
+```
+
