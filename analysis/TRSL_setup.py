@@ -77,11 +77,19 @@ conf[9] = {
            'decay_constants': pkl.load(open("../parameters/decay_constants.p", "rb")),
            'description': 'updated Shah transcriptome, full exome, with decay, updated initiation rates according to Shah'
            }
+conf[10] = {
+           'exome': pkl.load(open("../parameters/orf_coding.p", "rb")),
+           'transcriptome': pkl.load(open("../parameters/transcriptome_shah.p", "rb")),
+           'init_rates': pkl.load(open("../parameters/init_rates_plotkin.p", "rb")),
+           'decay_constants': pkl.load(open("../parameters/decay_constants.p", "rb")),
+           'description': 'updated Shah transcriptome, full exome, with decay, rare tRNAs reduced 90%, updated initiation rates according to Shah',
+           'tRNA': col.Counter({i: TRSL_specific.tRNA_types[i]['abundancy'] if TRSL_specific.tRNA_types[i]['abundancy']>11070 else 1107 for i in TRSL_specific.tRNA_types})
+           }
 
 if __name__ == "__main__":
     log.basicConfig(level=log.DEBUG, format='%(message)s', stream=sys.stdout)
 
-    for i in [9]:  # set configuration_id
+    for i in [10]:  # set configuration_id
         if 'decay_constants' in conf[i]:
             genes = list(set(conf[i]['exome']) & set(conf[i]['transcriptome']) & set(conf[i]['init_rates']) & set(conf[i]['decay_constants']))
         else:
@@ -113,16 +121,22 @@ if __name__ == "__main__":
 
         tr = TRSL_specific.TRSL_spec(mRNAs, conf[i]['exome'], conf[i]['decay_constants'], nribo=200000, detail=True)
 
-        tr._tRNA = col.Counter({i: TRSL_specific.tRNA_types[i]['abundancy'] for i in TRSL_specific.tRNA_types})
+        # overwrite tRNA:
+        # tr._tRNA = col.Counter({i: TRSL_specific.tRNA_types[i]['abundancy'] for i in TRSL_specific.tRNA_types}) # full tRNA
+        tr._tRNA = conf[i]['tRNA']
+        # print tr._tRNA
         tr._tRNA_free = col.Counter({i: int(tr._tRNA[i]) for i in TRSL_specific.tRNA_types})  # tRNA not bound to ribosomes
         tr._tRNA_bound = tr._tRNA - tr._tRNA_free  # tRNA bound to ribosomes
+
+        '''
         #tr.solve_internal(0.0, duration, deltat=1.0)
+        '''
 
         # Profiling:
         import cProfile
         cProfile.run('tr.solve_internal(0.0, '+str(duration)+', deltat=0.1)', 'trsl_profile')
         import pstats
-        p=pstats.Stats('trsl_profile')
+        p = pstats.Stats('trsl_profile')
         p.strip_dirs().sort_stats('cumulative').print_stats()
         #tr.inspect()
 
@@ -130,6 +144,5 @@ if __name__ == "__main__":
 
         # write last polysomes to shelve database
         tr.write_last_polysome(description)
-
 
     print "done."
