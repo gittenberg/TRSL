@@ -29,7 +29,7 @@ transcriptomes_dict = {phases[key]: transcriptomes_dict[key] for key in transcri
 exome = pkl.load(open("../parameters/orf_coding.p", "rb"))
 init_rates = pkl.load(open("../parameters/init_rates_enhanced_median.p", "rb"))  # missing replaced by median
 
-duration = 36.0
+duration = 1200.0  # should be sufficent to saturate
 ribonumbers = [100000, 200000, 300000]
 
 for ribonumber in ribonumbers:
@@ -56,4 +56,14 @@ for ribonumber in ribonumbers:
         tr._tRNA_bound = tr._tRNA - tr._tRNA_free  # tRNA bound to ribosomes
 
         # Run without profiling:
-        tr.solve_internal(0, duration, deltat=0.2)
+        # tr.solve_internal(0, duration, deltat=0.2)
+
+        # Run with profiling:
+        import cProfile
+        cProfile.run('tr.solve_internal(0, '+str(duration)+', deltat=0.2)', 'trsl_profile')
+        import pstats
+        p=pstats.Stats('trsl_profile')
+        p.strip_dirs().sort_stats('cumulative').print_stats()
+
+        tr.dump_results(description)
+
