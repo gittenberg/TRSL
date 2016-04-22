@@ -1,8 +1,6 @@
 '''
 Created on 29.01.2015
 
-Branch: nmodel review
-
 @author: MJS
 '''
 print "TRSL_setup: starting"

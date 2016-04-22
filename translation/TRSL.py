@@ -519,7 +519,7 @@ class TRSL(StochasticSolverInterface, object):
 
             self.update_processes(deltat, time)
 
-            log.info("solve_internal: self.proteins = %s", self.proteins)
+            # log.info("solve_internal: self.proteins = %s", self.proteins)
             log.info("solve_internal: protein length:  %s", self.protein_length)
             log.info("solve_internal: bound ribosomes: %s", self.ribo_bound)
             log.info("solve_internal: free ribosomes:  %s", self.ribo_free)
