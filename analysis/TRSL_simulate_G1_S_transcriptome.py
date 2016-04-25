@@ -34,36 +34,37 @@ ribonumbers = [100000, 200000, 300000]
 
 for ribonumber in ribonumbers:
     for phase_ID in transcriptomes_dict:
-        mRNAs = []
-        description = '{} ribosomes, {} phase transcriptome, full exome, no decay, median-enhanced initiation rates according to Shah'.format(ribonumber, phase_ID)
+        if ribonumber==100000 and phase_ID=="early G1": # remove after use
+            mRNAs = []
+            description = '{} ribosomes, {} phase transcriptome, full exome, no decay, median-enhanced initiation rates according to Shah'.format(ribonumber, phase_ID)
 
-        counter = 0
-        genes = list(set(exome) & set(transcriptomes_dict[phase_ID]) & set(init_rates))
-        print "found %s genes in common." % len(genes)
+            counter = 0
+            genes = list(set(exome) & set(transcriptomes_dict[phase_ID]) & set(init_rates))
+            print "found %s genes in common." % len(genes)
 
-        for gene in genes:
-            for transcript in range(transcriptomes_dict[phase_ID][gene]):
-                mRNAs.append(MRNA_specific.mRNA_spec(index=counter, sequence=exome[gene], geneID=gene, ribosomes={}, init_rate=init_rates[gene]))  # do not just multiply the list
-                counter += 1
+            for gene in genes:
+                for transcript in range(transcriptomes_dict[phase_ID][gene]):
+                    mRNAs.append(MRNA_specific.mRNA_spec(index=counter, sequence=exome[gene], geneID=gene, ribosomes={}, init_rate=init_rates[gene]))  # do not just multiply the list
+                    counter += 1
 
-        print "created transcriptome: {}.".format(description)
+            print "created transcriptome: {}.".format(description)
 
-        tr = TRSL_specific.TRSL_spec(mRNAs, exome, decay_constants=None, nribo=ribonumber, proteome=col.Counter({}), detail=False)
+            tr = TRSL_specific.TRSL_spec(mRNAs, exome, decay_constants=None, nribo=ribonumber, proteome=col.Counter({}), detail=False)
 
-        # tr._tRNA = col.Counter({i: TRSL_specific.tRNA_types[i]['abundancy'] for i in TRSL_specific.tRNA_types})
-        tr._tRNA = col.Counter({i: int(TRSL_specific.tRNA_types[i]['abundancy'] * len(genes) / len(exome)) for i in TRSL_specific.tRNA_types})  # we do not let tRNA vary like the ribosomes
-        tr._tRNA_free = col.Counter({i: int(tr._tRNA[i]) for i in TRSL_specific.tRNA_types})  # tRNA not bound to ribosomes
-        tr._tRNA_bound = tr._tRNA - tr._tRNA_free  # tRNA bound to ribosomes
+            # tr._tRNA = col.Counter({i: TRSL_specific.tRNA_types[i]['abundancy'] for i in TRSL_specific.tRNA_types})
+            tr._tRNA = col.Counter({i: int(TRSL_specific.tRNA_types[i]['abundancy'] * len(genes) / len(exome)) for i in TRSL_specific.tRNA_types})  # we do not let tRNA vary like the ribosomes
+            tr._tRNA_free = col.Counter({i: int(tr._tRNA[i]) for i in TRSL_specific.tRNA_types})  # tRNA not bound to ribosomes
+            tr._tRNA_bound = tr._tRNA - tr._tRNA_free  # tRNA bound to ribosomes
 
-        # Run without profiling:
-        # tr.solve_internal(0, duration, deltat=0.2)
+            # Run without profiling:
+            # tr.solve_internal(0, duration, deltat=0.2)
 
-        # Run with profiling:
-        import cProfile
-        cProfile.run('tr.solve_internal(0, '+str(duration)+', deltat=0.2)', 'trsl_profile')
-        import pstats
-        p=pstats.Stats('trsl_profile')
-        p.strip_dirs().sort_stats('cumulative').print_stats()
+            # Run with profiling:
+            import cProfile
+            cProfile.run('tr.solve_internal(0, '+str(duration)+', deltat=0.2)', 'trsl_profile')
+            import pstats
+            p = pstats.Stats('trsl_profile')
+            p.strip_dirs().sort_stats('cumulative').print_stats()
 
-        tr.dump_results(description)
+            tr.dump_results(description)
 
