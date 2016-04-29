@@ -21,9 +21,18 @@ from translation import MRNA_specific, TRSL_specific
 log.basicConfig(level=log.DEBUG, format='%(message)s', stream=sys.stdout)
 
 # load the two transcriptomes
+#######################################################################################################################
+# setup 1: S phase transcriptome (ca. 72000 transcripts) and 50% of it
+'''
 transcriptomes_dict = pkl.load((open('../parameters/transcriptome_time_dependent.p')))
 transcriptome_scaled = {key: int(round(transcriptomes_dict[25][key]*0.5, ndigits=0)) for key in transcriptomes_dict[25]}  # S phase is at 25 minutes
 transcriptomes_dict = {'S': transcriptomes_dict[25], 'S_scaled': transcriptome_scaled}
+'''
+#######################################################################################################################
+# setup 2: average transcriptome (60000 transcripts) and 50% of it
+transcriptome_plotkin = pkl.load((open('../parameters/transcriptome_plotkin.p')))
+transcriptome_scaled = {key: int(transcriptome_plotkin[key]*0.534) for key in transcriptome_plotkin}  # the 0.534 to compensate for the rounding down
+transcriptomes_dict = {60000: transcriptome_plotkin, 30061: transcriptome_scaled}
 
 for transcriptome in transcriptomes_dict:
     print "found {} transcripts in transcriptome {}...".format(sum(transcriptomes_dict[transcriptome].values()), transcriptome)
@@ -36,16 +45,16 @@ duration = 1200.0  # should be sufficent to saturate
 ribonumbers = range(50000, 550000, 50000)
 
 for ribonumber in ribonumbers:
-    for phase_ID in transcriptomes_dict:
+    for transcriptome_ID in transcriptomes_dict:
         mRNAs = []
-        description = '{} ribosomes, {} phase transcriptome, full exome, no decay, median-enhanced initiation rates according to Shah'.format(ribonumber, phase_ID)
+        description = '{} ribosomes, {} phase transcriptome, full exome, no decay, median-enhanced initiation rates according to Shah'.format(ribonumber, transcriptome_ID)
 
         counter = 0
-        genes = list(set(exome) & set(transcriptomes_dict[phase_ID]) & set(init_rates))
+        genes = list(set(exome) & set(transcriptomes_dict[transcriptome_ID]) & set(init_rates))
         print "found %s genes in common." % len(genes)
 
         for gene in genes:
-            for transcript in range(transcriptomes_dict[phase_ID][gene]):
+            for transcript in range(transcriptomes_dict[transcriptome_ID][gene]):
                 mRNAs.append(MRNA_specific.mRNA_spec(index=counter, sequence=exome[gene], geneID=gene, ribosomes={}, init_rate=init_rates[gene]))  # do not just multiply the list
                 counter += 1
 
