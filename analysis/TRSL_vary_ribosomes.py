@@ -33,7 +33,7 @@ exome = pkl.load(open("../parameters/orf_coding.p", "rb"))
 init_rates = pkl.load(open("../parameters/init_rates_enhanced_median.p", "rb"))  # missing replaced by median
 
 duration = 1200.0  # should be sufficent to saturate
-ribonumbers = range(50000, 500000, 50000)
+ribonumbers = range(50000, 550000, 50000)
 
 for ribonumber in ribonumbers:
     for phase_ID in transcriptomes_dict:
