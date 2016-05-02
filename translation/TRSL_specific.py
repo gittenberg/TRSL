@@ -6,27 +6,19 @@ The proteins are sequence-specific.
 
 Module inherits from generic module TRSL.
 
-Branch: model review
-
 @author: martin
 """
-
-# TODO: fix __main__
 
 import sys
 import logging as log
 import collections as col
-# import random as ran
 import numpy as np
 
 import numpy.random as npr
 import cPickle as pkl
 
 import TRSL
-# import MRNA
 import MRNA_specific
-
-
 
 
 #############################################################################################################
@@ -186,7 +178,6 @@ wobble = {codon: 1.000 if codon_anticodon[codon] is not '*' and codon == revcom(
 # TRSL class definition
 #############################################################################################################
 
-
 class TRSL_spec(TRSL.TRSL):
 
     def __init__(self, mRNAs, gene_library, decay_constants=None, nribo=200000, proteome=col.Counter({}), detail=False):
@@ -196,8 +187,9 @@ class TRSL_spec(TRSL.TRSL):
         self.n_mRNA = len(self.mRNAs)
         self.modeldict = {}
         self.decay_constants = decay_constants
-        self.initialize_modeldict(mRNAs, gene_library)
+        #self.initialize_modeldict(mRNAs, gene_library)
 
+    """
     def initialize_modeldict(self, mRNAs, gene_library):
         '''
         Create the modeldict required for the WCM (TODO:)
@@ -252,6 +244,7 @@ class TRSL_spec(TRSL.TRSL):
         self.modeldict['solver'] = self.solve_internal
         self.modeldict['timerange'] = self.timerange
         self.modeldict['timecourses'] = self.timecourses
+    """
 
     def diffuse_ribosomes_to_initiation_site(self, mRNA, deltat, time):
         """Perform Poisson experiment to test how many ribosomes make it initiation site and try to attach."""
@@ -291,6 +284,7 @@ class TRSL_spec(TRSL.TRSL):
         # log.debug('update_initiation: found mRNA %s', mRNA)
         self.diffuse_ribosomes_to_initiation_site(mRNA, deltat, time)  # tic = True if an initiation occurred
 
+    '''
     def fill_empty_ribosomes(self, mRNA, deltat):
         """Walk through every empty ribosome and try to diffuse the required tRNA into the site."""
         change_occurred = False
@@ -314,16 +308,17 @@ class TRSL_spec(TRSL.TRSL):
                     # log.debug("elongate_mRNA: successful attempt to insert tRNA")
                     change_occurred = True
         return change_occurred
+    '''
 
     def elongate_mRNA(self, mRNA):
         """translocates all ribosomes on mRNA by one step"""
         # log.debug("update_elongation: ribosomes on this mRNA are: %s", mRNA.ribosomes)
         occupied_ribos = [key for key in mRNA.ribosomes if mRNA.ribosomes[key] is not None]
-        for ribo_pos in occupied_ribos:  # TODO: test reverse list and other sort orders
+        for ribo_pos in occupied_ribos:
             present_pos = ribo_pos
             thiscodon = mRNA.sequence[present_pos: present_pos + 3]  # TODO: is this redundant because elongate_one_step or translocate_ribosome are testing the same?
             if thiscodon in stopcodons:
-                log.warning("elongate_mRNA: encountered stop codon during elongation step")
+                log.warning("elongate_mRNA: encountered stop codon during elongation step, not elongating this one")
                 continue
             else:
                 self.elongate_one_step(mRNA, present_pos)
@@ -375,7 +370,7 @@ if __name__ == "__main__":
 
     duration = 20.0
 
-    tr = TRSL_spec(mRNAs, conf['exome'], conf['decay_constants'], nribo=200)
+    tr = TRSL_spec(mRNAs, conf['exome'], conf['decay_constants'], nribo=20000)
 
     tr._tRNA = col.Counter({i: tRNA_types[i]['abundancy'] for i in tRNA_types})
     tr._tRNA_free = col.Counter({i: int(tr._tRNA[i]) for i in tRNA_types})  # tRNA not bound to ribosomes
