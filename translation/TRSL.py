@@ -316,7 +316,7 @@ class TRSL(StochasticSolverInterface, object):
     def fill_empty_ribosomes(self, mRNA, deltat):
         """Walk through every empty ribosome and try to diffuse the required tRNA into the site."""
         change_occurred = False
-        empty_ribos = [key for key in mRNA.ribosomes if mRNA.ribosomes[key] is None]  # TODO: test if termination position must be excluded here
+        empty_ribos = [key for key in mRNA.ribosomes if mRNA.ribosomes[key] is None]  # I think termination position must not be excluded here - tRNA becomes termination factor
         for ribo_pos in empty_ribos:
             required_tRNA_type = ran.choice(self._tRNA.keys())  # random type to be inserted
             tRNA_diffusion_probability = self.elong_rate * deltat  # ignoring wobble in the unspecific model

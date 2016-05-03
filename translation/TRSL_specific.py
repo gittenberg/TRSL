@@ -318,7 +318,7 @@ class TRSL_spec(TRSL.TRSL):
             present_pos = ribo_pos
             thiscodon = mRNA.sequence[present_pos: present_pos + 3]  # TODO: is this redundant because elongate_one_step or translocate_ribosome are testing the same?
             if thiscodon in stopcodons:
-                log.warning("elongate_mRNA: encountered stop codon during elongation step, not elongating this one")
+                #log.warning("elongate_mRNA: encountered stop codon during elongation step, not elongating this one")
                 continue
             else:
                 self.elongate_one_step(mRNA, present_pos)
