@@ -284,7 +284,6 @@ class TRSL_spec(TRSL.TRSL):
         # log.debug('update_initiation: found mRNA %s', mRNA)
         self.diffuse_ribosomes_to_initiation_site(mRNA, deltat, time)  # tic = True if an initiation occurred
 
-    '''
     def fill_empty_ribosomes(self, mRNA, deltat):
         """Walk through every empty ribosome and try to diffuse the required tRNA into the site."""
         change_occurred = False
@@ -308,11 +307,10 @@ class TRSL_spec(TRSL.TRSL):
                     # log.debug("elongate_mRNA: successful attempt to insert tRNA")
                     change_occurred = True
         return change_occurred
-    '''
 
     def elongate_mRNA(self, mRNA):
         """translocates all ribosomes on mRNA by one step"""
-        # log.debug("update_elongation: ribosomes on this mRNA are: %s", mRNA.ribosomes)
+        # log.debug("elongate_mRNA: ribosomes on this mRNA are: %s", mRNA.ribosomes)
         occupied_ribos = [key for key in mRNA.ribosomes if mRNA.ribosomes[key] is not None]
         for ribo_pos in occupied_ribos:
             present_pos = ribo_pos

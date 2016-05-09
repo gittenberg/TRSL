@@ -48,7 +48,7 @@ for ribonumber in ribonumbers:
     scaling_factor = ribonumber * 1.0 / 200000
     for transcriptome_ID in transcriptomes_dict:
         mRNAs = []
-        description = '{} ribosomes, {} phase transcriptome, full exome, no decay, median-enhanced initiation rates according to Shah'.format(ribonumber, transcriptome_ID)
+        description = '{} ribosomes, {} phase transcriptome, varying tRNAs, full exome, no decay, median-enhanced initiation rates according to Shah'.format(ribonumber, transcriptome_ID)
 
         counter = 0
         genes = list(set(exome) & set(transcriptomes_dict[transcriptome_ID]) & set(init_rates))
