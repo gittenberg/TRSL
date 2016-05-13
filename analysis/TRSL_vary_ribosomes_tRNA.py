@@ -15,6 +15,7 @@ import logging as log
 import sys
 import cPickle as pkl
 import collections as col
+import unittest
 
 from translation import MRNA_specific, TRSL_specific
 
@@ -80,6 +81,5 @@ for ribonumber in ribonumbers:
         p.strip_dirs().sort_stats('cumulative').print_stats()
 
         tr.dump_results(description)
-
 
 
