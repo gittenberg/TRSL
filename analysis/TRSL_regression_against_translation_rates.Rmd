@@ -52,6 +52,15 @@ summary(model.sim)
 
 ### Experimental translation rates
 
+Model just with IR:
+
+```{r}
+model.exp = lm(data$translation.rate.exp ~ IR_norm)
+summary(model.exp)
+```
+
+Model with IR and CAI:
+
 ```{r}
 model.exp = lm(data$translation.rate.exp ~ IR_norm + CAI_norm)
 summary(model.exp)
