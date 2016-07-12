@@ -119,15 +119,17 @@ if __name__ == "__main__":
         tr = TRSL_specific.TRSL_spec(mRNAs, conf[i]['exome'], conf[i]['decay_constants'], nribo=200000, detail=True)
 
         # overwrite tRNA:
-        # tr._tRNA = col.Counter({i: TRSL_specific.tRNA_types[i]['abundancy'] for i in TRSL_specific.tRNA_types}) # full tRNA
-        tr._tRNA = conf[i]['tRNA']
+        if 'tRNA' not in conf[i]:
+            tr._tRNA = col.Counter({i: TRSL_specific.tRNA_types[i]['abundancy'] for i in TRSL_specific.tRNA_types}) # full tRNA
+        else:
+            tr._tRNA = conf[i]['tRNA']
         # print tr._tRNA
         tr._tRNA_free = col.Counter({i: int(tr._tRNA[i]) for i in TRSL_specific.tRNA_types})  # tRNA not bound to ribosomes
         tr._tRNA_bound = tr._tRNA - tr._tRNA_free  # tRNA bound to ribosomes
 
         print "found {} mRNAs".format(len(mRNAs))
-        print "found {} genes".format(conf[i]['exome'])
-        print "found {} tRNA molecules".format(sum(conf[i]['tRNA'].values))
+        print "found {} genes".format(len(conf[i]['exome']))
+        print "found {} tRNA molecules".format(sum(tr._tRNA.values()))
         print "solving..."
 
         '''
