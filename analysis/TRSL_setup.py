@@ -75,12 +75,18 @@ conf = {1: {
     'tRNA': col.Counter(
             {i: TRSL_specific.tRNA_types[i]['abundancy'] if TRSL_specific.tRNA_types[i]['abundancy'] > 11070 else 1107
              for i in TRSL_specific.tRNA_types})
+}, 11: {
+    'exome': pkl.load(open("../parameters/orf_coding.p", "rb")),
+    'transcriptome': pkl.load(open("../parameters/transcriptome_shah.p", "rb")),
+    'init_rates': pkl.load(open("../parameters/init_rates_plotkin_old_1.p", "rb")),
+    #'decay_constants': pkl.load(open("../parameters/decay_constants.p", "rb")),
+    'description': 'updated Shah transcriptome, full exome, without decay, OLD initiation rates according to Shah',
 }}
 
 if __name__ == "__main__":
     log.basicConfig(level=log.DEBUG, format='%(message)s', stream=sys.stdout)
 
-    for i in [10]:  # set configuration_id
+    for i in [11]:  # set configuration_id
         if 'decay_constants' in conf[i]:
             genes = list(set(conf[i]['exome']) & set(conf[i]['transcriptome']) & set(conf[i]['init_rates']) & set(conf[i]['decay_constants']))
         else:
@@ -118,6 +124,11 @@ if __name__ == "__main__":
         # print tr._tRNA
         tr._tRNA_free = col.Counter({i: int(tr._tRNA[i]) for i in TRSL_specific.tRNA_types})  # tRNA not bound to ribosomes
         tr._tRNA_bound = tr._tRNA - tr._tRNA_free  # tRNA bound to ribosomes
+
+        print "found {} mRNAs".format(len(mRNAs))
+        print "found {} genes".format(conf[i]['exome'])
+        print "found {} tRNA molecules".format(sum(conf[i]['tRNA'].values))
+        print "solving..."
 
         '''
         #tr.solve_internal(0.0, duration, deltat=1.0)
