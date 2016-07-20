@@ -136,6 +136,7 @@ if __name__ == "__main__":
         #tr.solve_internal(0.0, duration, deltat=1.0)
         '''
 
+        '''
         # Profiling:
         import cProfile
         cProfile.run('tr.solve_internal(0.0, '+str(duration)+', deltat=0.1)', 'trsl_profile')
@@ -148,5 +149,5 @@ if __name__ == "__main__":
 
         # write last polysomes to shelve database
         tr.write_last_polysome(description)
-
+        '''
     print "done."
