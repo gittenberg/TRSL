@@ -29,7 +29,8 @@ print "{} genes found.".format(len(genes))
 
 # to create a growing number of ribosomes and tRNAs
 nribo_start = 200000 * len(genes) / len(exome)  # scaled to make ribosome count more realistic
-growth_factor_range = np.arange(1., 1.5, (1.5-1.0)/len(switch_times))  # by how much they grow in each interval
+#growth_factor_range = np.arange(1., 1.5, (1.5-1.0)/len(switch_times))  # by how much they grow in each interval
+growth_factor_range = [1.0] * len(switch_times))                        # no growth of ribos or tRNAs
 
 # run simulation
 # Einschwingvorgang: reichen 900 s?
@@ -40,7 +41,8 @@ for start, stop, growth_factor in zip(switch_times[:-1], switch_times[1:], growt
     transcriptome = transcriptomes_dict[start/60]
     mRNAs = []
     counter = 0
-    description = 'polyphasic cell cycle from {} to {}, updated Shah transcriptome, full exome, no decay, updated initiation rates according to Shah'.format(start, stop)
+    #description = 'polyphasic cell cycle from {} to {}, updated Shah transcriptome, full exome, no decay, with ribo growth factor updated initiation rates according to Shah'.format(start, stop)
+    description = 'polyphasic cell cycle from {} to {}, updated Shah transcriptome, full exome, no decay, without ribo growth factor updated initiation rates according to Shah'.format(start, stop)
 
     for gene in genes:
         for transcript in range(transcriptome[gene]):
