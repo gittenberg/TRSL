@@ -56,6 +56,7 @@ conf = {1: {
     'init_rates': pkl.load(open("../parameters/init_rates_plotkin_old_1.p", "rb")),
     'description': 'full transcriptome and exome, no decay, old (buggy) initiation rates according to Plotkin'
 }, 8: {
+    # base case run with reduced number of genes (limited by availability of initiation rates)
     'exome': pkl.load(open("../parameters/orf_coding.p", "rb")),
     'transcriptome': pkl.load(open("../parameters/transcriptome_shah.p", "rb")),
     'init_rates': pkl.load(open("../parameters/init_rates_plotkin.p", "rb")),
@@ -86,7 +87,7 @@ conf = {1: {
 if __name__ == "__main__":
     log.basicConfig(level=log.DEBUG, format='%(message)s', stream=sys.stdout)
 
-    for i in [11]:  # set configuration_id
+    for i in [8]:  # set configuration_id
         if 'decay_constants' in conf[i]:
             genes = list(set(conf[i]['exome']) & set(conf[i]['transcriptome']) & set(conf[i]['init_rates']) & set(conf[i]['decay_constants']))
         else:
@@ -114,7 +115,7 @@ if __name__ == "__main__":
         description = conf[i]['description']
         print description
 
-        duration = 3600.0
+        duration = 1800.0
 
         tr = TRSL_specific.TRSL_spec(mRNAs, conf[i]['exome'], conf[i]['decay_constants'], nribo=200000, detail=True)
 
@@ -132,9 +133,7 @@ if __name__ == "__main__":
         print "found {} tRNA molecules".format(sum(tr._tRNA.values()))
         print "solving..."
 
-        '''
-        #tr.solve_internal(0.0, duration, deltat=1.0)
-        '''
+        tr.solve_internal(0.0, duration, deltat=0.2)
 
         '''
         # Profiling:
