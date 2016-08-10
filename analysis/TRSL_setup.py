@@ -143,10 +143,10 @@ if __name__ == "__main__":
         p = pstats.Stats('trsl_profile')
         p.strip_dirs().sort_stats('cumulative').print_stats()
         #tr.inspect()
+        '''
 
         tr.dump_results(description)
 
         # write last polysomes to shelve database
         tr.write_last_polysome(description)
-        '''
     print "done."
