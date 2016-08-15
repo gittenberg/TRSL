@@ -65,7 +65,7 @@ class TRSL(StochasticSolverInterface, object):
         # Parameters
         ##################################################################################################################################
         self.types_tRNA = 42  # number of types of tRNAs, including termination factor
-        V = 4.2e-17           # m^3 # cell volume
+        V = 4.2e-17           # m^3 # cell volume # http://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1000865
         n_genes = 3795        # number of protein-coding genes in the experiment
         n_tRNA = 3300000      # number of tRNAs # http://nar.oxfordjournals.org/content/suppl/2011/04/23/gkr300.DC1/Supplemental_File_S2.pdf gives 2984788
 
