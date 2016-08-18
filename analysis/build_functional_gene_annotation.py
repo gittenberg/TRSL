@@ -9,7 +9,7 @@ import cPickle as pkl
 
 datadir = "../data"
 # http://www.proteomaps.net/data_sets/sce_Nagaraj/sce_Nagaraj.csv
-annotations_file = r"proteomaps_rich_medium_1_sce_Nagaraj.sbt"
+annotations_file = r"../data/proteomaps_rich_medium_1_sce_Nagaraj.sbt"
 annotations_filepath = os.path.join(datadir, annotations_file)
 
 annotations = {}
@@ -29,5 +29,5 @@ print annotations
 print len(annotations)
 print proteome
 print len(proteome)
-pkl.dump(annotations, open("annotations_Liebermeister.p", "wb"))
-pkl.dump(proteome, open("proteome_Nagaraj.p", "wb"))
+pkl.dump(annotations, open("../parameters/annotations_liebermeister.p", "wb"))
+pkl.dump(proteome, open("../parameters/prot_nagaraj.p", "wb"))
