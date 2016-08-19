@@ -34,7 +34,7 @@ proteome_exp = pkl.load(open("proteome_Nagaraj.p", "rb"))
 proteome_model = pkl.load(open("results_20150204_1552_0600s.p", "rb"))
 print proteome_model['description']                          # features of the underlying transcriptome
 
-annotations = pkl.load(open("annotations_Liebermeister.p", "rb"))
+annotations = pkl.load(open("../parameters/annotations_Liebermeister.p", "rb"))
 functional_categories = col.Counter(annotations.values())
 '''
 for i, j in enumerate(functional_categories.most_common()):
