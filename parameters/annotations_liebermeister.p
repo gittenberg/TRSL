@@ -418,3355 +418,3353 @@ S''
 sS'YNR021W'
 p182
 S''
-sS'YJL003W'
+sS'YPL067C'
 p183
 S''
-sS'YPL067C'
-p184
-S''
 sS'YDR380W'
-p185
+p184
 S'Amino acid metabolism'
-p186
+p185
 sS'YGR191W'
-p187
+p186
 S''
 sS'YBR094W'
-p188
+p187
 S''
 sS'YHR112C'
-p189
+p188
 S''
 sS'YDR035W'
-p190
+p189
 S'Amino acid metabolism'
-p191
+p190
 sS'YMR224C'
-p192
+p191
 S'DNA replication control'
-p193
+p192
 sS'YPL156C'
-p194
+p193
 S''
 sS'YDR485C'
-p195
+p194
 S'Chromosome-related'
-p196
+p195
 sS'YGR077C'
-p197
+p196
 S''
 sS'YNL321W'
-p198
+p197
 S''
 sS'YIL044C'
-p199
+p198
 S'Endocytosis'
-p200
+p199
 sS'YPL239W'
-p201
+p200
 S''
 sS'YNL197C'
-p202
+p201
 S''
 sS'YPR183W'
-p203
+p202
 S'Glycan metabolism'
-p204
+p203
 sS'YOR206W'
-p205
+p204
 S''
 sS'YOR018W'
-p206
+p205
 S''
 sS'YLR133W'
-p207
+p206
 S'Lipid and steroid metabolism'
-p208
+p207
 sS'YNL091W'
-p209
+p208
 S''
 sS'YCR046C'
-p210
+p209
 S''
 sS'YLR059C'
-p211
+p210
 S'Ribosome biogenesis in eukaryotes'
-p212
+p211
 sS'YLR075W'
-p213
+p212
 S'Ribosome'
-p214
+p213
 sS'YBR054W'
-p215
+p214
 S''
 sS'YDR507C'
-p216
+p215
 S'Cell cycle'
-p217
+p216
 sS'YPL224C'
-p218
+p217
 S''
 sS'YEL007W'
-p219
+p218
 S''
 sS'YLR020C'
-p220
+p219
 S''
 sS'YNL217W'
-p221
+p220
 S''
 sS'YKL204W'
-p222
+p221
 S''
 sS'YER067W'
-p223
+p222
 S''
 sS'YDL042C'
-p224
+p223
 S'Cofactor biosynthesis'
-p225
+p224
 sS'YBR096W'
-p226
+p225
 S''
 sS'YDR531W'
-p227
+p226
 S'Cofactor biosynthesis'
-p228
+p227
 sS'YMR233W'
-p229
+p228
 S''
 sS'YPL206C'
-p230
+p229
 S'Lipid and steroid metabolism'
+p230
+sS'YLR406C'
 p231
-sS'YDL060W'
+S'Ribosome'
 p232
-S''
-sS'YLR002C'
+sS'YDL060W'
 p233
 S''
-sS'YDR393W'
+sS'YLR002C'
 p234
 S''
-sS'YGL171W'
+sS'YDR393W'
 p235
 S''
-sS'YIR022W'
+sS'YGL171W'
 p236
-S'Protein export'
-p237
-sS'YNR052C'
-p238
-S'RNA degradation'
-p239
-sS'YGR019W'
-p240
-S'Butanoate metabolism'
-p241
-sS'YMR194W'
-p242
-S'Ribosome'
-p243
-sS'YEL032W'
-p244
-S'DNA replication'
-p245
-sS'YOL076W'
-p246
 S''
-sS'YER145C'
+sS'YIR022W'
+p237
+S'Protein export'
+p238
+sS'YNR052C'
+p239
+S'RNA degradation'
+p240
+sS'YGR019W'
+p241
+S'Butanoate metabolism'
+p242
+sS'YMR194W'
+p243
+S'Ribosome'
+p244
+sS'YEL032W'
+p245
+S'DNA replication'
+p246
+sS'YOL076W'
 p247
 S''
-sS'YER110C'
+sS'YER145C'
 p248
 S''
-sS'YOR236W'
+sS'YER110C'
 p249
-S'Other central metabolism enzymes'
+S''
+sS'YOR236W'
 p250
-sS'YBL033C'
+S'Other central metabolism enzymes'
 p251
-S'Cofactor biosynthesis'
+sS'YBL033C'
 p252
-sS'YKL074C'
+S'Cofactor biosynthesis'
 p253
+sS'YKL074C'
+p254
 S''
 sS'YPL266W'
-p254
-S'Ribosome biogenesis'
 p255
-sS'YMR026C'
+S'Ribosome biogenesis'
 p256
-S'Peroxisome'
+sS'YMR026C'
 p257
-sS'YHR203C'
+S'Peroxisome'
 p258
-S'Ribosome'
+sS'YHR203C'
 p259
-sS'YER050C'
+S'Ribosome'
 p260
-S''
-sS'YOR304W'
+sS'YER050C'
 p261
 S''
-sS'YBR212W'
+sS'YOR304W'
 p262
 S''
-sS'YJR133W'
+sS'YBR212W'
 p263
 S''
-sS'YER129W'
+sS'YJR133W'
 p264
-S'Other enzymes'
+S''
+sS'YER129W'
 p265
-sS'YML112W'
-p266
 S'Other enzymes'
+p266
+sS'YML112W'
 p267
-sS'YGL062W'
+S'Other enzymes'
 p268
-S'TCA cycle and anaplerotic enzymes'
+sS'YGL062W'
 p269
-sS'YGR183C'
+S'TCA cycle and anaplerotic enzymes'
 p270
-S'Oxidative phosphorylation'
+sS'YGR183C'
 p271
-sS'YER169W'
+S'Oxidative phosphorylation'
 p272
+sS'YER169W'
+p273
 S''
 sS'YOL016C'
-p273
-S'Other enzymes'
 p274
-sS'YOR226C'
+S'Other enzymes'
 p275
-S''
-sS'YGL241W'
+sS'YOR226C'
 p276
 S''
-sS'YNL277W'
+sS'YGL241W'
 p277
-S'Amino acid metabolism'
+S''
+sS'YNL277W'
 p278
-sS'YLR108C'
+S'Amino acid metabolism'
 p279
+sS'YLR108C'
+p280
 S''
 sS'YNL186W'
-p280
-S'Ubiquitin labeling'
 p281
-sS'YPR176C'
+S'Ubiquitin labeling'
 p282
-S'Cofactor biosynthesis'
+sS'YPR176C'
 p283
-sS'YCL044C'
+S'Cofactor biosynthesis'
 p284
+sS'YCL044C'
+p285
 S''
 sS'YKR008W'
-p285
-S'Chromosome-related'
 p286
-sS'YMR146C'
+S'Chromosome-related'
 p287
-S'Translation factors'
+sS'YMR146C'
 p288
-sS'YPR165W'
+S'Translation factors'
 p289
-S'GTP-binding signaling proteins'
+sS'YPR165W'
 p290
-sS'YDR226W'
+S'GTP-binding signaling proteins'
 p291
-S'Purine metabolism'
+sS'YDR226W'
 p292
-sS'YMR266W'
+S'Purine metabolism'
 p293
-S''
-sS'YKL100C'
+sS'YMR266W'
 p294
 S''
-sS'YGL159W'
+sS'YKL100C'
 p295
 S''
-sS'YCR060W'
+sS'YGL159W'
 p296
 S''
-sS'YJL036W'
+sS'YCR060W'
 p297
 S''
-sS'YGR277C'
+sS'YJL036W'
 p298
-S'Cofactor biosynthesis'
-p299
-sS'YER009W'
-p300
 S''
-sS'YBR036C'
+sS'YGR277C'
+p299
+S'Cofactor biosynthesis'
+p300
+sS'YER009W'
 p301
 S''
-sS'YLR292C'
+sS'YBR036C'
 p302
-S'Secretion system'
-p303
-sS'YDL139C'
-p304
 S''
-sS'YDR246W'
+sS'YLR292C'
+p303
+S'Secretion system'
+p304
+sS'YDL139C'
 p305
 S''
-sS'YOR288C'
+sS'YDR246W'
 p306
-S'Chaperones and folding catalysts'
-p307
-sS'YGR241C'
-p308
 S''
-sS'YMR079W'
+sS'YOR288C'
+p307
+S'Chaperones and folding catalysts'
+p308
+sS'YGR241C'
 p309
 S''
-sS'YLR115W'
+sS'YMR079W'
 p310
-S'mRNA surveillance pathway'
-p311
-sS'YNL288W'
-p312
-S'RNA degradation'
-p313
-sS'YGR056W'
-p314
-S'Chromosome-related'
-p315
-sS'YML054C'
-p316
-S'Glycolysis'
-p317
-sS'YLR179C'
-p318
 S''
-sS'YGL014W'
+sS'YLR115W'
+p311
+S'mRNA surveillance pathway'
+p312
+sS'YNL288W'
+p313
+S'RNA degradation'
+p314
+sS'YGR056W'
+p315
+S'Chromosome-related'
+p316
+sS'YML054C'
+p317
+S'Glycolysis'
+p318
+sS'YLR179C'
 p319
 S''
-sS'YOR301W'
+sS'YGL014W'
 p320
 S''
-sS'YLR068W'
+sS'YOR301W'
 p321
 S''
-sS'YOR245C'
+sS'YLR068W'
 p322
 S''
-sS'YER007W'
+sS'YOR245C'
 p323
 S''
-sS'YOR141C'
+sS'YER007W'
 p324
-S'Chromosome-related'
+S''
+sS'YOR141C'
 p325
-sS'YER027C'
+S'Chromosome-related'
 p326
+sS'YER027C'
+p327
 S''
 sS'YMR104C'
-p327
-S'Other enzymes'
 p328
-sS'YPR056W'
+S'Other enzymes'
 p329
-S'Basal transcription factors'
+sS'YPR056W'
 p330
-sS'YER107C'
+S'Basal transcription factors'
 p331
-S'RNA transport'
+sS'YER107C'
 p332
-sS'YDL195W'
+S'RNA transport'
 p333
-S'Protein processing in endoplasmic reticulum'
+sS'YDL195W'
 p334
-sS'YNL199C'
+S'Protein processing in endoplasmic reticulum'
 p335
-S''
-sS'YJR011C'
+sS'YNL199C'
 p336
 S''
-sS'YDR117C'
+sS'YJR011C'
 p337
 S''
-sS'YOR196C'
+sS'YDR117C'
 p338
-S'Cofactor biosynthesis'
+S''
+sS'YOR196C'
 p339
-sS'YMR246W'
+S'Cofactor biosynthesis'
 p340
-S'Other enzymes'
+sS'YMR246W'
 p341
-sS'YGL173C'
+S'Other enzymes'
 p342
-S'Ribosome biogenesis in eukaryotes'
+sS'YGL173C'
 p343
-sS'YEL047C'
+S'Ribosome biogenesis in eukaryotes'
 p344
+sS'YEL047C'
+p345
 S''
 sS'YPR036W'
-p345
-S'Phagosome'
 p346
-sS'YPR016C'
+S'Phagosome'
 p347
-S'Translation factors'
+sS'YPR016C'
 p348
-sS'YCR087C-A'
+S'Translation factors'
 p349
-S''
-sS'YGR235C'
+sS'YCR087C-A'
 p350
 S''
-sS'YDR068W'
+sS'YGR235C'
 p351
 S''
-sS'YDL055C'
+sS'YDR068W'
 p352
-S'Carbohydrate metabolism'
-p353
-sS'YBR009C'
-p354
-S'Chromosome-related'
-p355
-sS'YEL043W'
-p356
 S''
-sS'YML009C'
+sS'YDL055C'
+p353
+S'Carbohydrate metabolism'
+p354
+sS'YBR009C'
+p355
+S'Chromosome-related'
+p356
+sS'YEL043W'
 p357
 S''
-sS'YML072C'
+sS'YML009C'
 p358
 S''
-sS'YHR052W'
+sS'YML072C'
 p359
 S''
-sS'YDR142C'
+sS'YHR052W'
 p360
-S'Peroxisome'
+S''
+sS'YDR142C'
 p361
-sS'YKR026C'
+S'Peroxisome'
 p362
-S'Translation factors'
+sS'YKR026C'
 p363
-sS'YFL044C'
+S'Translation factors'
 p364
-S'Protein processing in endoplasmic reticulum'
+sS'YFL044C'
 p365
-sS'YJR043C'
+S'Protein processing in endoplasmic reticulum'
 p366
-S'DNA replication complex'
+sS'YJR043C'
 p367
-sS'YPL263C'
+S'DNA replication complex'
 p368
+sS'YPL263C'
+p369
 S''
 sS'YKL019W'
-p369
-S'Cofactor biosynthesis'
 p370
-sS'YJL130C'
+S'Cofactor biosynthesis'
 p371
-S'Pyrimidine metabolism'
+sS'YJL130C'
 p372
-sS'YKL060C'
+S'Pyrimidine metabolism'
 p373
-S'Glycolysis'
+sS'YKL060C'
 p374
-sS'YBL085W'
+S'Glycolysis'
 p375
+sS'YBL085W'
+p376
 S''
 sS'YKL173W'
-p376
-S'Spliceosome'
 p377
-sS'YGR200C'
+S'Spliceosome'
 p378
-S'Chromosome-related'
+sS'YGR200C'
 p379
-sS'YLR383W'
+S'Chromosome-related'
 p380
+sS'YLR383W'
+p381
 S''
 sS'YKL035W'
-p381
-S'Carbohydrate metabolism'
 p382
-sS'YIL127C'
+S'Carbohydrate metabolism'
 p383
-S''
-sS'YDR348C'
+sS'YIL127C'
 p384
 S''
-sS'YLR388W'
+sS'YDR348C'
 p385
-S'Ribosome'
-p386
-sS'YKL182W'
-p387
-S'Lipid and steroid metabolism'
-p388
-sS'YDR469W'
-p389
 S''
-sS'YDR333C'
+sS'YLR388W'
+p386
+S'Ribosome'
+p387
+sS'YKL182W'
+p388
+S'Lipid and steroid metabolism'
+p389
+sS'YDR469W'
 p390
 S''
-sS'YKL018C-A'
+sS'YDR333C'
 p391
 S''
-sS'YNL160W'
+sS'YKL018C-A'
 p392
 S''
-sS'YDR143C'
+sS'YNL160W'
 p393
 S''
-sS'YMR013C'
+sS'YDR143C'
 p394
-S'Glycan metabolism'
-p395
-sS'YLR223C'
-p396
 S''
-sS'YKL135C'
+sS'YMR013C'
+p395
+S'Glycan metabolism'
+p396
+sS'YLR223C'
 p397
 S''
-sS'YDR326C'
+sS'YKL135C'
 p398
 S''
-sS'YLR363C'
+sS'YDR326C'
 p399
 S''
-sS'YJL046W'
+sS'YLR363C'
 p400
-S'Cofactor biosynthesis'
+S''
+sS'YJL046W'
 p401
-sS'YNR046W'
+S'Cofactor biosynthesis'
 p402
+sS'YNR046W'
+p403
 S''
 sS'YJL014W'
-p403
-S'Chaperones and folding catalysts'
 p404
-sS'YDR219C'
+S'Chaperones and folding catalysts'
 p405
-S''
-sS'YCR011C'
+sS'YDR219C'
 p406
 S''
-sS'YKR046C'
+sS'YCR011C'
 p407
 S''
-sS'YNL055C'
+sS'YKR046C'
 p408
-S'Transport'
-p409
-sS'YJR005W'
-p410
 S''
-sS'YMR031C'
+sS'YNL055C'
+p409
+S'Transport'
+p410
+sS'YJR005W'
 p411
 S''
-sS'YNL072W'
+sS'YMR031C'
 p412
-S'DNA replication complex'
-p413
-sS'YBL098W'
-p414
-S'Amino acid metabolism'
-p415
-sS'YDL095W'
-p416
-S'Glycan metabolism'
-p417
-sS'YOR174W'
-p418
 S''
-sS'YDR466W'
+sS'YNL072W'
+p413
+S'DNA replication complex'
+p414
+sS'YBL098W'
+p415
+S'Amino acid metabolism'
+p416
+sS'YDL095W'
+p417
+S'Glycan metabolism'
+p418
+sS'YOR174W'
 p419
 S''
-sS'YFL002C'
+sS'YDR466W'
 p420
 S''
-sS'YDR155C'
+sS'YFL002C'
 p421
-S'Other enzymes'
-p422
-sS'YIR026C'
-p423
-S'Other enzymes'
-p424
-sS'YJL176C'
-p425
-S'Chromosome-related'
-p426
-sS'YJR072C'
-p427
 S''
-sS'YDR515W'
+sS'YDR155C'
+p422
+S'Other enzymes'
+p423
+sS'YIR026C'
+p424
+S'Other enzymes'
+p425
+sS'YJL176C'
+p426
+S'Chromosome-related'
+p427
+sS'YJR072C'
 p428
 S''
-sS'YKR039W'
+sS'YDR515W'
 p429
 S''
-sS'YNL015W'
+sS'YKR039W'
 p430
 S''
-sS'YCR084C'
+sS'YNL015W'
 p431
-S'Cell cycle'
-p432
-sS'YPL065W'
-p433
-S'Endocytosis'
-p434
-sS'YDR389W'
-p435
 S''
-sS'YJL054W'
+sS'YCR084C'
+p432
+S'Cell cycle'
+p433
+sS'YPL065W'
+p434
+S'Endocytosis'
+p435
+sS'YDR389W'
 p436
 S''
-sS'YOR118W'
+sS'YJL054W'
 p437
 S''
-sS'YLR069C'
+sS'YOR118W'
 p438
-S'Translation factors'
+S''
+sS'YLR069C'
 p439
-sS'YDR268W'
+S'Translation factors'
 p440
-S'tRNA loading'
+sS'YDR268W'
 p441
-sS'YMR022W'
+S'tRNA loading'
 p442
-S'Protein processing in endoplasmic reticulum'
+sS'YMR022W'
 p443
-sS'YPL170W'
+S'Protein processing in endoplasmic reticulum'
 p444
+sS'YPL170W'
+p445
 S''
 sS'YPR001W'
-p445
-S'TCA cycle and anaplerotic enzymes'
 p446
-sS'YFL059W'
+S'TCA cycle and anaplerotic enzymes'
 p447
-S'Cofactor biosynthesis'
+sS'YFL059W'
 p448
-sS'YML094W'
+S'Cofactor biosynthesis'
 p449
-S'Chaperones and folding catalysts'
+sS'YML094W'
 p450
-sS'YKR006C'
+S'Chaperones and folding catalysts'
 p451
-S''
-sS'YDL117W'
+sS'YKR006C'
 p452
 S''
-sS'YMR131C'
+sS'YDL117W'
 p453
 S''
-sS'YPR154W'
+sS'YMR131C'
 p454
 S''
-sS'YBR085C-A'
+sS'YPR154W'
 p455
 S''
-sS'YJL109C'
+sS'YBR085C-A'
 p456
-S'Ribosome biogenesis in eukaryotes'
+S''
+sS'YJL109C'
 p457
-sS'YMR293C'
+S'Ribosome biogenesis in eukaryotes'
 p458
-S'tRNA loading'
+sS'YMR293C'
 p459
-sS'YER089C'
+S'tRNA loading'
 p460
-S'Other enzymes'
+sS'YER089C'
 p461
-sS'YIL005W'
+S'Other enzymes'
 p462
-S'Chaperones and folding catalysts'
+sS'YIL005W'
 p463
-sS'YIL105C'
+S'Chaperones and folding catalysts'
 p464
+sS'YIL105C'
+p465
 S''
 sS'YNL119W'
-p465
-S'Sulfur relay system'
 p466
-sS'YML126C'
+S'Sulfur relay system'
 p467
-S'Butanoate metabolism'
+sS'YML126C'
 p468
-sS'YDR347W'
+S'Butanoate metabolism'
 p469
-S'Other enzymes'
+sS'YDR347W'
 p470
-sS'YIL150C'
+S'Other enzymes'
 p471
-S'DNA replication control'
+sS'YIL150C'
 p472
-sS'YNR040W'
+S'DNA replication control'
 p473
+sS'YNR040W'
+p474
 S''
 sS'YNR019W'
-p474
-S'Lipid and steroid metabolism'
 p475
-sS'YGR158C'
+S'Lipid and steroid metabolism'
 p476
-S'RNA degradation'
+sS'YGR158C'
 p477
-sS'YKL077W'
+S'RNA degradation'
 p478
+sS'YKL077W'
+p479
 S''
 sS'YPL050C'
-p479
-S'Glycan metabolism'
 p480
-sS'YJR109C'
+S'Glycan metabolism'
 p481
-S'Pyrimidine metabolism'
+sS'YJR109C'
 p482
-sS'YKL025C'
+S'Pyrimidine metabolism'
 p483
-S'RNA degradation'
+sS'YKL025C'
 p484
-sS'YGR085C'
+S'RNA degradation'
 p485
-S'Ribosome'
+sS'YGR085C'
 p486
-sS'YIL169C'
+S'Ribosome'
 p487
-S''
-sS'YPL105C'
+sS'YIL169C'
 p488
 S''
-sS'YHR121W'
+sS'YPL105C'
 p489
 S''
-sS'YOL097C'
+sS'YHR121W'
 p490
-S'tRNA loading'
-p491
-sS'YJL096W'
-p492
 S''
-sS'YGR145W'
+sS'YOL097C'
+p491
+S'tRNA loading'
+p492
+sS'YJL096W'
 p493
 S''
-sS'YLR354C'
+sS'YGR145W'
 p494
-S'Pentose phosphate metabolism'
-p495
-sS'YNR020C'
-p496
 S''
-sS'YGL197W'
+sS'YLR354C'
+p495
+S'Pentose phosphate metabolism'
+p496
+sS'YNR020C'
 p497
 S''
-sS'YBR258C'
+sS'YGL197W'
 p498
 S''
-sS'YLR457C'
+sS'YBR258C'
 p499
 S''
-sS'YLR301W'
+sS'YLR457C'
 p500
 S''
-sS'YFR019W'
+sS'YLR301W'
 p501
-S'Phosphatidylinositol signaling system'
-p502
-sS'YLR262C-A'
-p503
 S''
-sS'YHR142W'
+sS'YFR019W'
+p502
+S'Phosphatidylinositol signaling system'
+p503
+sS'YLR262C-A'
 p504
 S''
-sS'YPL129W'
+sS'YHR142W'
 p505
-S'Basal transcription factors'
-p506
-sS'YNL241C'
-p507
-S'Pentose phosphate metabolism'
-p508
-sS'YJL154C'
-p509
 S''
-sS'YDR091C'
+sS'YPL129W'
+p506
+S'Basal transcription factors'
+p507
+sS'YNL241C'
+p508
+S'Pentose phosphate metabolism'
+p509
+sS'YJL154C'
 p510
 S''
-sS'YJL123C'
+sS'YDR091C'
 p511
 S''
-sS'YLR196W'
+sS'YJL123C'
 p512
 S''
-sS'YJL203W'
+sS'YLR196W'
 p513
 S''
-sS'YER086W'
+sS'YJL203W'
 p514
-S'Amino acid metabolism'
+S''
+sS'YER086W'
 p515
-sS'YBR129C'
+S'Amino acid metabolism'
 p516
+sS'YBR129C'
+p517
 S''
 sS'YDL160C'
-p517
-S'RNA degradation'
 p518
-sS'YBR176W'
+S'RNA degradation'
 p519
-S'Cofactor biosynthesis'
+sS'YBR176W'
 p520
-sS'YOR359W'
+S'Cofactor biosynthesis'
 p521
+sS'YOR359W'
+p522
 S''
 sS'YJR123W'
-p522
-S'Ribosome'
 p523
-sS'YGR167W'
+S'Ribosome'
 p524
-S''
-sS'YKL099C'
+sS'YGR167W'
 p525
 S''
-sS'YJL143W'
+sS'YKL099C'
 p526
 S''
-sS'YLR264W'
+sS'YJL143W'
 p527
-S'Ribosome'
+S''
+sS'YLR264W'
 p528
-sS'YNL002C'
-p529
 S'Ribosome'
+p529
+sS'YNL002C'
 p530
-sS'YIL108W'
+S'Ribosome'
 p531
+sS'YIL108W'
+p532
 S''
 sS'YNL104C'
-p532
-S'Amino acid metabolism'
 p533
-sS'YPL145C'
+S'Amino acid metabolism'
 p534
+sS'YPL145C'
+p535
 S''
 sS'YIL118W'
-p535
-S'GTP-binding signaling proteins'
 p536
-sS'YDR322W'
+S'GTP-binding signaling proteins'
 p537
+sS'YDR322W'
+p538
 S''
 sS'YNL151C'
-p538
-S'RNA polymerase'
 p539
-sS'YPL190C'
+S'RNA polymerase'
 p540
-S''
-sS'YKL191W'
+sS'YPL190C'
 p541
 S''
-sS'YNR006W'
+sS'YKL191W'
 p542
-S'Endocytosis'
-p543
-sS'YGL154C'
-p544
-S'Cofactor biosynthesis'
-p545
-sS'YIL045W'
-p546
 S''
-sS'YHR120W'
+sS'YNR006W'
+p543
+S'Endocytosis'
+p544
+sS'YGL154C'
+p545
+S'Cofactor biosynthesis'
+p546
+sS'YIL045W'
 p547
 S''
-sS'YDR443C'
+sS'YHR120W'
 p548
 S''
-sS'YGR106C'
+sS'YDR443C'
 p549
 S''
-sS'YHR025W'
+sS'YGR106C'
 p550
-S'Amino acid metabolism'
+S''
+sS'YHR025W'
 p551
-sS'YNL083W'
+S'Amino acid metabolism'
 p552
+sS'YNL083W'
+p553
 S''
 sS'YBL018C'
-p553
-S'Ribosome biogenesis in eukaryotes'
 p554
-sS'YOR267C'
+S'Ribosome biogenesis in eukaryotes'
 p555
-S''
-sS'YOR357C'
+sS'YOR267C'
 p556
 S''
-sS'YDR530C'
+sS'YOR357C'
 p557
-S'Purine metabolism'
-p558
-sS'YHR033W'
-p559
 S''
-sS'YEL031W'
+sS'YDR530C'
+p558
+S'Purine metabolism'
+p559
+sS'YHR033W'
 p560
 S''
-sS'YOL071W'
+sS'YEL031W'
 p561
 S''
-sS'YNR053C'
+sS'YOL071W'
 p562
-S'Ribosome biogenesis in eukaryotes'
+S''
+sS'YNR053C'
 p563
-sS'YDL063C'
+S'Ribosome biogenesis in eukaryotes'
 p564
+sS'YDL063C'
+p565
 S''
 sS'YER144C'
-p565
-S'Ubiquitin labeling'
 p566
-sS'YOL039W'
+S'Ubiquitin labeling'
 p567
-S'Ribosome'
+sS'YOL039W'
 p568
-sS'YOR385W'
+S'Ribosome'
 p569
+sS'YOR385W'
+p570
 S''
 sS'YGR185C'
-p570
-S'tRNA loading'
 p571
-sS'YPR137C-B'
+S'tRNA loading'
 p572
+sS'YPR137C-B'
+p573
 S''
 sS'YMR238W'
-p573
-S'Other enzymes'
 p574
-sS'YER168C'
+S'Other enzymes'
 p575
-S'RNA transport'
+sS'YER168C'
 p576
-sS'YPL265W'
+S'RNA transport'
 p577
+sS'YPL265W'
+p578
 S''
 sS'YIL083C'
-p578
-S'Cofactor biosynthesis'
 p579
-sS'YOR081C'
+S'Cofactor biosynthesis'
 p580
+sS'YOR081C'
+p581
 S''
 sS'YBR243C'
-p581
-S'Glycan metabolism'
 p582
-sS'YLL050C'
+S'Glycan metabolism'
 p583
-S'Regulation of actin cytoskeleton'
+sS'YLL050C'
 p584
-sS'YCL014W'
+S'Regulation of actin cytoskeleton'
 p585
+sS'YCL014W'
+p586
 S''
 sS'YGL172W'
-p586
-S'RNA transport'
 p587
-sS'YLR180W'
+S'RNA transport'
 p588
-S'Amino acid metabolism'
+sS'YLR180W'
 p589
-sS'YNL274C'
+S'Amino acid metabolism'
 p590
+sS'YNL274C'
+p591
 S''
 sS'YDR021W'
-p591
-S'Spliceosome'
 p592
-sS'YHL011C'
+S'Spliceosome'
 p593
-S'Pentose phosphate metabolism'
+sS'YHL011C'
 p594
-sS'YPL212C'
+S'Pentose phosphate metabolism'
 p595
-S'Other enzymes'
+sS'YPL212C'
 p596
-sS'YLR208W'
+S'Other enzymes'
 p597
-S'RNA transport'
+sS'YLR208W'
 p598
-sS'YFR011C'
+S'RNA transport'
 p599
+sS'YFR011C'
+p600
 S''
 sS'YOR101W'
-p600
-S'GTP-binding signaling proteins'
 p601
-sS'YHR008C'
+S'GTP-binding signaling proteins'
 p602
-S'Other enzymes'
+sS'YHR008C'
 p603
-sS'YGR081C'
+S'Other enzymes'
 p604
-S''
-sS'YLR330W'
+sS'YGR081C'
 p605
 S''
-sS'YOR310C'
+sS'YLR330W'
 p606
-S'Ribosome biogenesis in eukaryotes'
-p607
-sS'YFR051C'
-p608
 S''
-sS'YOR063W'
+sS'YOR310C'
+p607
+S'Ribosome biogenesis in eukaryotes'
+p608
+sS'YFR051C'
 p609
-S'Ribosome'
+S''
+sS'YHR024C'
 p610
-sS'YDR188W'
+S'Peptidases'
 p611
-S'Chaperones and folding catalysts'
+sS'YDR188W'
 p612
-sS'YGL236C'
+S'Chaperones and folding catalysts'
 p613
-S'Chromosome-related'
+sS'YGL236C'
 p614
-sS'YOL057W'
+S'Chromosome-related'
 p615
+sS'YOL057W'
+p616
 S''
 sS'YFR004W'
-p616
-S'Ubiquitin labeling'
 p617
-sS'YHR133C'
+S'Ubiquitin labeling'
 p618
-S''
-sS'YDR017C'
+sS'YHR133C'
 p619
 S''
-sS'YMR303C'
+sS'YDR017C'
 p620
-S'Glycolysis'
-p621
-sS'YOR369C'
-p622
-S'Ribosome'
-p623
-sS'YDR334W'
-p624
-S'Chromosome-related'
-p625
-sS'YNL054W-B'
-p626
 S''
-sS'YML128C'
+sS'YMR303C'
+p621
+S'Glycolysis'
+p622
+sS'YOR369C'
+p623
+S'Ribosome'
+p624
+sS'YDR334W'
+p625
+S'Chromosome-related'
+p626
+sS'YNL054W-B'
 p627
 S''
-sS'YDR411C'
+sS'YML128C'
 p628
-S'Protein processing in endoplasmic reticulum'
+S''
+sS'YDR411C'
 p629
-sS'YBR283C'
+S'Protein processing in endoplasmic reticulum'
 p630
-S'Protein export'
+sS'YBR283C'
 p631
-sS'YIL090W'
+S'Protein export'
 p632
+sS'YIL090W'
+p633
 S''
 sS'YBR205W'
-p633
-S'Glycan metabolism'
 p634
-sS'YOR321W'
-p635
 S'Glycan metabolism'
+p635
+sS'YOR321W'
 p636
-sS'YML114C'
+S'Glycan metabolism'
 p637
-S'Basal transcription factors'
+sS'YML114C'
 p638
-sS'YNR033W'
+S'Basal transcription factors'
 p639
-S'Cofactor biosynthesis'
+sS'YNR033W'
 p640
-sS'YDL004W'
-p641
-S'Oxidative phosphorylation'
-p642
-sS'YMR186W'
-p643
-S'Chaperones and folding catalysts'
-p644
-sS'YDR195W'
-p645
-S'mRNA surveillance pathway'
-p646
-sS'YNL256W'
-p647
 S'Cofactor biosynthesis'
+p641
+sS'YDL004W'
+p642
+S'Oxidative phosphorylation'
+p643
+sS'YMR186W'
+p644
+S'Chaperones and folding catalysts'
+p645
+sS'YDR195W'
+p646
+S'mRNA surveillance pathway'
+p647
+sS'YNL256W'
 p648
-sS'YGR126W'
+S'Cofactor biosynthesis'
 p649
+sS'YGR126W'
+p650
 S''
 sS'YMR278W'
-p650
-S'Glycolysis'
 p651
-sS'YGR072W'
+S'Glycolysis'
 p652
+sS'YGR072W'
+p653
 S''
 sS'YPR094W'
-p653
-S'Spliceosome'
 p654
-sS'YML039W'
+S'Spliceosome'
 p655
-S''
-sS'YMR207C'
+sS'YML039W'
 p656
 S''
-sS'YML015C'
+sS'YMR207C'
 p657
-S'Basal transcription factors'
-p658
-sS'YOR197W'
-p659
 S''
-sS'YKR072C'
+sS'YML015C'
+p658
+S'Basal transcription factors'
+p659
+sS'YOR197W'
 p660
 S''
-sS'YDL014W'
+sS'YKR072C'
 p661
-S'Ribosome biogenesis in eukaryotes'
-p662
-sS'YLL032C'
-p663
 S''
-sS'YJL020C'
+sS'YDL014W'
+p662
+S'Ribosome biogenesis in eukaryotes'
+p663
+sS'YLL032C'
 p664
 S''
-sS'YBR039W'
+sS'YJL020C'
 p665
-S'Oxidative phosphorylation'
-p666
-sS'YER024W'
-p667
 S''
-sS'YDR116C'
+sS'YBR039W'
+p666
+S'Oxidative phosphorylation'
+p667
+sS'YER024W'
 p668
 S''
-sS'YOR230W'
+sS'YDR116C'
 p669
-S'Cell cycle'
-p670
-sS'YBR068C'
-p671
 S''
-sS'YLR090W'
+sS'YOR230W'
+p670
+S'Cell cycle'
+p671
+sS'YBR068C'
 p672
 S''
-sS'YDL056W'
+sS'YLR090W'
 p673
-S'Cell cycle'
-p674
-sS'YGR234W'
-p675
-S'Other enzymes'
-p676
-sS'YJL112W'
-p677
 S''
-sS'YMR178W'
+sS'YDL056W'
+p674
+S'Cell cycle'
+p675
+sS'YGR234W'
+p676
+S'Other enzymes'
+p677
+sS'YJL112W'
 p678
 S''
-sS'YPR017C'
+sS'YMR178W'
 p679
 S''
-sS'YGL115W'
+sS'YPR017C'
 p680
 S''
-sS'YEL044W'
+sS'YGL115W'
 p681
-S'Chromosome-related'
+S''
+sS'YEL044W'
 p682
-sS'YMR247C'
+S'Chromosome-related'
 p683
+sS'YMR247C'
+p684
 S''
 sS'YDR427W'
-p684
-S'Proteasome'
 p685
-sS'YML071C'
+S'Proteasome'
 p686
-S''
-sS'YBR077C'
+sS'YML071C'
 p687
 S''
-sS'YDR176W'
+sS'YBR077C'
 p688
 S''
-sS'YPL177C'
+sS'YDR176W'
 p689
 S''
-sS'YDR122W'
+sS'YPL177C'
 p690
-S'Other enzymes'
+S''
+sS'YDR122W'
 p691
-sS'YER120W'
+S'Other enzymes'
 p692
+sS'YER120W'
+p693
 S''
 sS'YNL090W'
-p693
-S'GTP-binding signaling proteins'
 p694
-sS'YBR042C'
+S'GTP-binding signaling proteins'
 p695
-S''
-sS'YOL062C'
+sS'YBR042C'
 p696
 S''
-sS'YDR381W'
+sS'YOL062C'
 p697
-S'Spliceosome'
+S''
+sS'YDR381W'
 p698
-sS'YGL103W'
+S'Spliceosome'
 p699
-S'Ribosome'
+sS'YGL103W'
 p700
-sS'YDR484W'
+S'Ribosome'
 p701
+sS'YDR484W'
+p702
 S''
 sS'YOR207C'
-p702
-S'RNA polymerase'
 p703
-sS'YMR098C'
+S'RNA polymerase'
 p704
-S''
-sS'YOL022C'
+sS'YMR098C'
 p705
 S''
-sS'YGR192C'
+sS'YOL022C'
 p706
-S'Glycolysis'
+S''
+sS'YGR192C'
 p707
-sS'YBR095C'
+S'Glycolysis'
 p708
+sS'YBR095C'
+p709
 S''
 sS'YHR111W'
-p709
-S'Ubiquitin labeling'
 p710
-sS'YBL045C'
+S'Ubiquitin labeling'
 p711
-S'Oxidative phosphorylation'
+sS'YBL045C'
 p712
-sS'YGL178W'
+S'Oxidative phosphorylation'
 p713
+sS'YGL178W'
+p714
 S''
 sS'YDR036C'
-p714
-S'Amino acid metabolism'
 p715
-sS'YGR043C'
+S'Amino acid metabolism'
 p716
-S'Pentose phosphate metabolism'
+sS'YGR043C'
 p717
-sS'YPR184W'
+S'Pentose phosphate metabolism'
 p718
-S'Carbohydrate metabolism'
+sS'YPR184W'
 p719
-sS'YOR224C'
+S'Carbohydrate metabolism'
 p720
-S'RNA polymerase'
+sS'YOR224C'
 p721
-sS'YDL070W'
+S'RNA polymerase'
 p722
-S'Chromosome-related'
+sS'YDL070W'
 p723
-sS'YCR047C'
+S'Chromosome-related'
 p724
+sS'YCR047C'
+p725
 S''
 sS'YNL261W'
-p725
-S'DNA replication control'
 p726
-sS'YOR241W'
+S'DNA replication control'
 p727
-S'Cofactor biosynthesis'
+sS'YOR241W'
 p728
-sS'YOL002C'
+S'Cofactor biosynthesis'
 p729
-S''
-sS'YML111W'
+sS'YOL002C'
 p730
 S''
-sS'YER142C'
+sS'YML111W'
 p731
-S'Base excision repair'
+S''
+sS'YER142C'
 p732
-sS'YLL021W'
+S'Base excision repair'
 p733
+sS'YLL021W'
+p734
 S''
 sS'YKL205W'
-p734
-S'RNA transport'
 p735
-sS'YLR407W'
+S'RNA transport'
 p736
+sS'YLR407W'
+p737
 S''
 sS'YBR088C'
-p737
-S'DNA replication complex'
 p738
-sS'YBR055C'
+S'DNA replication complex'
 p739
-S'Spliceosome'
+sS'YBR055C'
 p740
-sS'YOR175C'
+S'Spliceosome'
 p741
-S'Lipid and steroid metabolism'
+sS'YOR175C'
 p742
-sS'YNL329C'
+S'Lipid and steroid metabolism'
 p743
-S'Peroxisome'
+sS'YNL329C'
 p744
-sS'YFL005W'
+S'Peroxisome'
 p745
-S'GTP-binding signaling proteins'
+sS'YFL005W'
 p746
-sS'YCR010C'
+S'GTP-binding signaling proteins'
 p747
-S''
-sS'YKL110C'
+sS'YCR010C'
 p748
 S''
-sS'YPR040W'
+sS'YKL110C'
 p749
 S''
-sS'YHR040W'
+sS'YPR040W'
 p750
 S''
-sS'YMR152W'
+sS'YHR040W'
 p751
 S''
-sS'YML057W'
+sS'YMR152W'
 p752
-S'MAPK signaling pathway'
-p753
-sS'YDR178W'
-p754
-S'TCA cycle and anaplerotic enzymes'
-p755
-sS'YKR038C'
-p756
-S'Peptidases'
-p757
-sS'YLR432W'
-p758
-S'Purine metabolism'
-p759
-sS'YJR031C'
-p760
 S''
-sS'YCL026C-A'
+sS'YML057W'
+p753
+S'MAPK signaling pathway'
+p754
+sS'YDR178W'
+p755
+S'TCA cycle and anaplerotic enzymes'
+p756
+sS'YKR038C'
+p757
+S'Peptidases'
+p758
+sS'YLR432W'
+p759
+S'Purine metabolism'
+p760
+sS'YJR031C'
 p761
 S''
-sS'YPR070W'
+sS'YCL026C-A'
 p762
 S''
-sS'YJL115W'
+sS'YPR070W'
 p763
-S'Chromosome-related'
+S''
+sS'YJL115W'
 p764
-sS'YGL004C'
+S'Chromosome-related'
 p765
+sS'YGL004C'
+p766
 S''
 sS'YNL225C'
-p766
-S'Cytoskeleton proteins'
 p767
-sS'YML097C'
+S'Cytoskeleton proteins'
 p768
-S''
-sS'YGR223C'
+sS'YML097C'
 p769
 S''
-sS'YLR055C'
+sS'YGR223C'
 p770
-S'Chromosome-related'
+S''
+sS'YLR055C'
 p771
-sS'YJL055W'
+S'Chromosome-related'
 p772
+sS'YJL055W'
+p773
 S''
 sS'YHR193C'
-p773
-S'Translation factors'
 p774
-sS'YMR292W'
+S'Translation factors'
 p775
+sS'YMR292W'
+p776
 S''
 sS'YBL099W'
-p776
-S'Oxidative phosphorylation'
 p777
-sS'YMR132C'
+S'Oxidative phosphorylation'
 p778
+sS'YMR132C'
+p779
 S''
 sS'YDR303C'
-p779
-S'Chromosome-related'
 p780
-sS'YPL086C'
-p781
 S'Chromosome-related'
+p781
+sS'YPL086C'
 p782
-sS'YDL116W'
+S'Chromosome-related'
 p783
-S'RNA transport'
+sS'YDL116W'
 p784
-sS'YPL184C'
+S'RNA transport'
 p785
-S''
-sS'YLR435W'
+sS'YPL184C'
 p786
 S''
-sS'YOR119C'
+sS'YLR435W'
 p787
-S'Ribosome biogenesis in eukaryotes'
+S''
+sS'YOR119C'
 p788
-sS'YJR076C'
+S'Ribosome biogenesis in eukaryotes'
 p789
+sS'YJR076C'
+p790
 S''
 sS'YER042W'
-p790
-S'Other enzymes'
 p791
-sS'YLR409C'
+S'Other enzymes'
 p792
-S'Ribosome biogenesis in eukaryotes'
+sS'YLR409C'
 p793
-sS'YOR157C'
+S'Ribosome biogenesis in eukaryotes'
 p794
-S'Proteasome'
+sS'YOR157C'
 p795
-sS'YMR268C'
+S'Proteasome'
 p796
-S''
-sS'YCL045C'
+sS'YMR268C'
 p797
 S''
-sS'YKR065C'
+sS'YCL045C'
 p798
 S''
-sS'YMR041C'
+sS'YKR065C'
 p799
-S'Other enzymes'
+S''
+sS'YMR041C'
 p800
-sS'YDR221W'
+S'Other enzymes'
 p801
+sS'YDR221W'
+p802
 S''
 sS'YMR267W'
-p802
-S'Oxidative phosphorylation'
 p803
-sS'YLR109W'
+S'Oxidative phosphorylation'
 p804
-S'Sulfur relay system'
+sS'YLR109W'
 p805
-sS'YKR009C'
+S'Sulfur relay system'
 p806
-S'Carbohydrate metabolism'
+sS'YKR009C'
 p807
-sS'YKL103C'
+S'Carbohydrate metabolism'
 p808
-S'Peptidases'
+sS'YKL103C'
 p809
-sS'YMR109W'
+S'Peptidases'
 p810
+sS'YMR109W'
+p811
 S''
 sS'YMR078C'
-p811
-S'Chromosome-related'
 p812
-sS'YER043C'
+S'Chromosome-related'
 p813
-S'Amino acid metabolism'
+sS'YER043C'
 p814
-sS'YDR232W'
-p815
 S'Amino acid metabolism'
+p815
+sS'YDR232W'
 p816
-sS'YDR245W'
+S'Amino acid metabolism'
 p817
-S'Glycan metabolism'
+sS'YDR245W'
 p818
-sS'YHR088W'
+S'Glycan metabolism'
 p819
-S''
-sS'YLR114C'
+sS'YHR088W'
 p820
 S''
-sS'YBR017C'
+sS'YLR114C'
 p821
 S''
-sS'YER100W'
+sS'YBR017C'
 p822
-S'Protein processing in endoplasmic reticulum'
+S''
+sS'YER100W'
 p823
-sS'YJR060W'
+S'Protein processing in endoplasmic reticulum'
 p824
-S'Transcription factors'
+sS'YJR060W'
 p825
-sS'YOR289W'
+S'Transcription factors'
 p826
+sS'YOR289W'
+p827
 S''
 sS'YPR162C'
-p827
-S'DNA replication control'
 p828
-sS'YLR178C'
+S'DNA replication control'
 p829
-S''
-sS'YGR166W'
+sS'YLR178C'
 p830
 S''
-sS'YDL161W'
+sS'YGR166W'
 p831
 S''
-sS'YOR191W'
+sS'YDL161W'
 p832
 S''
-sS'YBR102C'
+sS'YOR191W'
 p833
 S''
-sS'YNL161W'
+sS'YBR102C'
 p834
 S''
-sS'YDR096W'
+sS'YNL161W'
 p835
 S''
-sS'YIR006C'
+sS'YDR096W'
 p836
 S''
-sS'YPL046C'
+sS'YIR006C'
 p837
-S'Ubiquitin mediated proteolysis'
-p838
-sS'YGL099W'
-p839
-S'Ribosome biogenesis in eukaryotes'
-p840
-sS'YFL030W'
-p841
-S'Peroxisome'
-p842
-sS'YIL119C'
-p843
 S''
-sS'YIL002W-A'
+sS'YPL046C'
+p838
+S'Ubiquitin mediated proteolysis'
+p839
+sS'YGL099W'
+p840
+S'Ribosome biogenesis in eukaryotes'
+p841
+sS'YFL030W'
+p842
+S'Peroxisome'
+p843
+sS'YIL119C'
 p844
 S''
-sS'YPL193W'
+sS'YIL002W-A'
 p845
 S''
-sS'YNL005C'
+sS'YPL193W'
 p846
 S''
-sS'YIL036W'
+sS'YNL005C'
 p847
 S''
-sS'YLR231C'
+sS'YIL036W'
 p848
-S'Amino acid metabolism'
-p849
-sS'YDR255C'
-p850
 S''
-sS'YFR021W'
+sS'YLR231C'
+p849
+S'Amino acid metabolism'
+p850
+sS'YDR255C'
 p851
 S''
-sS'YNL129W'
+sS'YFR021W'
 p852
-S'Cofactor biosynthesis'
+S''
+sS'YNL129W'
 p853
-sS'YJR139C'
+S'Cofactor biosynthesis'
 p854
-S'Amino acid metabolism'
+sS'YJR139C'
 p855
-sS'YKL016C'
-p856
-S'Oxidative phosphorylation'
-p857
-sS'YPL111W'
-p858
 S'Amino acid metabolism'
+p856
+sS'YKL016C'
+p857
+S'Oxidative phosphorylation'
+p858
+sS'YPL111W'
 p859
-sS'YFL049W'
+S'Amino acid metabolism'
 p860
-S'Chromosome-related'
+sS'YFL049W'
 p861
-sS'YBR162C'
+S'Chromosome-related'
 p862
+sS'YBR162C'
+p863
 S''
 sS'YIL004C'
-p863
-S'SNARE interactions in vesicular transport'
 p864
-sS'YDR279W'
+S'SNARE interactions in vesicular transport'
 p865
-S''
-sS'YKL174C'
+sS'YDR279W'
 p866
 S''
-sS'YJR013W'
+sS'YKL174C'
 p867
-S'Glycan metabolism'
+S''
+sS'YJR013W'
 p868
-sS'YOR130C'
+S'Glycan metabolism'
 p869
+sS'YOR130C'
+p870
 S''
 sS'YBL084C'
-p870
-S'Ubiquitin mediated proteolysis'
 p871
-sS'YPR072W'
+S'Ubiquitin mediated proteolysis'
 p872
+sS'YPR072W'
+p873
 S''
 sS'YBR111C'
-p873
-S'Purine metabolism'
 p874
-sS'YPR037C'
+S'Purine metabolism'
 p875
-S''
-sS'YKL121W'
+sS'YPR037C'
 p876
 S''
-sS'YML036W'
+sS'YKL121W'
 p877
 S''
-sS'YKR027W'
+sS'YML036W'
 p878
 S''
-sS'YFL047W'
+sS'YKR027W'
 p879
 S''
-sS'R0040C'
+sS'YFL047W'
 p880
 S''
-sS'YPR122W'
+sS'R0040C'
 p881
 S''
-sS'YLR380W'
+sS'YPR122W'
 p882
 S''
-sS'YKL034W'
+sS'YLR380W'
 p883
 S''
-sS'YKL061W'
+sS'YKL034W'
 p884
 S''
-sS'YJR042W'
+sS'YKL061W'
 p885
 S''
-sS'YMR281W'
+sS'YJR042W'
 p886
-S'Glycan metabolism'
+S''
+sS'YMR281W'
 p887
-sS'YMR012W'
+S'Glycan metabolism'
 p888
+sS'YMR012W'
+p889
 S''
 sS'YPL160W'
-p889
-S'tRNA loading'
 p890
-sS'YBR215W'
+S'tRNA loading'
 p891
-S''
-sS'YNL023C'
+sS'YBR215W'
 p892
 S''
-sS'YOR171C'
+sS'YNL023C'
 p893
-S'VEGF signaling pathway'
+S''
+sS'YOR171C'
 p894
-sS'YDR214W'
+S'VEGF signaling pathway'
 p895
+sS'YDR214W'
+p896
 S''
 sS'YLR222C'
-p896
-S'Ribosome biogenesis in eukaryotes'
 p897
-sS'YIL106W'
+S'Ribosome biogenesis in eukaryotes'
 p898
-S'Hippo signaling pathway'
+sS'YIL106W'
 p899
-sS'YLR201C'
+S'Hippo signaling pathway'
 p900
+sS'YLR201C'
+p901
 S''
 sS'YLR295C'
-p901
-S'Oxidative phosphorylation'
 p902
-sS'YDL201W'
+S'Oxidative phosphorylation'
 p903
-S'Other enzymes'
+sS'YDL201W'
 p904
-sS'YDR468C'
+S'Other enzymes'
 p905
-S'SNARE interactions in vesicular transport'
+sS'YDR468C'
 p906
-sS'YBL005W-B'
+S'SNARE interactions in vesicular transport'
 p907
-S''
-sS'YHR168W'
+sS'YBL005W-B'
 p908
 S''
-sS'YOL102C'
+sS'YHR168W'
 p909
-S'Other enzymes'
+S''
+sS'YOL102C'
 p910
-sS'YOR064C'
+S'Other enzymes'
 p911
-S'Chromosome-related'
+sS'YOR064C'
 p912
-sS'YKL017C'
+S'Chromosome-related'
 p913
+sS'YKL017C'
+p914
 S''
 sS'YOR159C'
-p914
-S'Spliceosome'
 p915
-sS'YBR130C'
+S'Spliceosome'
 p916
-S''
-sS'YNL297C'
+sS'YBR130C'
 p917
 S''
-sS'YIL033C'
+sS'YNL297C'
 p918
 S''
-sS'YOL036W'
+sS'YIL033C'
 p919
 S''
-sS'YGL148W'
+sS'YOL036W'
 p920
-S'Amino acid metabolism'
+S''
+sS'YGL148W'
 p921
-sS'YNR041C'
+S'Amino acid metabolism'
 p922
-S'Cofactor biosynthesis'
+sS'YNR041C'
 p923
-sS'YIL048W'
+S'Cofactor biosynthesis'
 p924
-S'Other enzymes'
+sS'YIL048W'
 p925
-sS'YDR189W'
+S'Other enzymes'
 p926
+sS'YDR189W'
+p927
 S''
 sS'YLR441C'
-p927
-S'Ribosome'
 p928
-sS'YOL056W'
+S'Ribosome'
 p929
-S'Glycolysis'
+sS'YOL056W'
 p930
-sS'YBR225W'
+S'Glycolysis'
 p931
-S''
-sS'YHL034C'
+sS'YBR225W'
 p932
 S''
-sS'YMR302C'
+sS'YHL034C'
 p933
 S''
-sS'YBR282W'
+sS'YMR302C'
 p934
 S''
-sS'YOR079C'
+sS'YBR282W'
 p935
 S''
-sS'YDR404C'
+sS'YOR079C'
 p936
-S'RNA polymerase'
+S''
+sS'YDR404C'
 p937
-sS'YHR132C'
+S'RNA polymerase'
 p938
-S'Peptidases'
+sS'YHR132C'
 p939
-sS'YGR088W'
+S'Peptidases'
 p940
-S'Other enzymes'
+sS'YGR088W'
 p941
-sS'YGL133W'
+S'Other enzymes'
 p942
+sS'YGL133W'
+p943
 S''
 sS'YLR188W'
-p943
-S'Transport'
 p944
-sS'YGL073W'
+S'Transport'
 p945
-S'Transcription factors'
+sS'YGL073W'
 p946
-sS'YBR257W'
+S'Transcription factors'
 p947
-S'RNA transport'
+sS'YBR257W'
 p948
-sS'YDR204W'
+S'RNA transport'
 p949
-S''
-sS'YDR194C'
+sS'YDR204W'
 p950
 S''
-sS'YOL049W'
+sS'YDR194C'
 p951
-S'Amino acid metabolism'
+S''
+sS'YOL049W'
 p952
-sS'YMR244C-A'
+S'Amino acid metabolism'
 p953
+sS'YMR244C-A'
+p954
 S''
 sS'YNR030W'
-p954
-S'Glycan metabolism'
 p955
-sS'YMR189W'
+S'Glycan metabolism'
 p956
-S'Amino acid metabolism'
+sS'YMR189W'
 p957
-sS'YIL093C'
+S'Amino acid metabolism'
 p958
-S''
-sS'YBR204C'
+sS'YIL093C'
 p959
 S''
-sS'YJL145W'
+sS'YBR204C'
 p960
 S''
-sS'YLR397C'
+sS'YJL145W'
 p961
-S'Ribosome biogenesis in eukaryotes'
-p962
-sS'YFR045W'
-p963
 S''
-sS'YIL104C'
+sS'YLR397C'
+p962
+S'Ribosome biogenesis in eukaryotes'
+p963
+sS'YFR045W'
 p964
 S''
-sS'YOR076C'
+sS'YIL104C'
 p965
-S'mRNA surveillance pathway'
+S''
+sS'YOR076C'
 p966
-sS'YGL086W'
+S'mRNA surveillance pathway'
 p967
-S'Chromosome-related'
+sS'YGL086W'
 p968
-sS'YGR159C'
+S'Chromosome-related'
 p969
-S'Ribosome biogenesis'
+sS'YGR159C'
 p970
-sS'YDL223C'
+S'Ribosome biogenesis'
 p971
+sS'YDL223C'
+p972
 S''
 sS'YAL044C'
-p972
-S'Amino acid metabolism'
 p973
-sS'YNL234W'
+S'Amino acid metabolism'
 p974
-S''
-sS'YLR369W'
+sS'YNL234W'
 p975
 S''
-sS'YNL118C'
+sS'YLR369W'
 p976
-S'RNA degradation'
-p977
-sS'YNR023W'
-p978
-S'Chromosome-related'
-p979
-sS'YOL096C'
-p980
-S'Cofactor biosynthesis'
-p981
-sS'YGL228W'
-p982
 S''
-sS'YDR284C'
+sS'YNL118C'
+p977
+S'RNA degradation'
+p978
+sS'YNR023W'
+p979
+S'Chromosome-related'
+p980
+sS'YOL096C'
+p981
+S'Cofactor biosynthesis'
+p982
+sS'YGL228W'
 p983
 S''
-sS'YJR117W'
+sS'YDR284C'
 p984
-S'Peptidases'
+S''
+sS'YJR117W'
 p985
-sS'YJL097W'
+S'Peptidases'
 p986
-S'Lipid and steroid metabolism'
+sS'YJL097W'
 p987
-sS'YNL302C'
+S'Lipid and steroid metabolism'
 p988
-S'Ribosome'
+sS'YNL302C'
 p989
-sS'YGR111W'
+S'Ribosome'
 p990
+sS'YGR111W'
+p991
 S''
 sS'YMR305C'
-p991
-S'Cell wall'
 p992
-sS'YOL019W'
+S'Cell wall'
 p993
-S''
-sS'YDL157C'
+sS'YOL019W'
 p994
 S''
-sS'YOR048C'
+sS'YDL157C'
 p995
-S'Ribosome biogenesis in eukaryotes'
+S''
+sS'YOR048C'
 p996
-sS'YJR101W'
+S'Ribosome biogenesis in eukaryotes'
 p997
-S'Other enzymes'
+sS'YJR101W'
 p998
-sS'YNL147W'
+S'Other enzymes'
 p999
-S'Spliceosome'
+sS'YNL147W'
 p1000
-sS'YDR233C'
+S'Spliceosome'
 p1001
-S'Protein processing in endoplasmic reticulum'
+sS'YDR233C'
 p1002
-sS'YHR143W'
+S'Protein processing in endoplasmic reticulum'
 p1003
-S'Cell wall'
+sS'YHR143W'
 p1004
-sS'YBR222C'
+S'Cell wall'
 p1005
+sS'YBR222C'
+p1006
 S''
 sS'YLR131C'
-p1006
-S'Transcription factors'
 p1007
-sS'YER034W'
+S'Transcription factors'
 p1008
-S''
-sS'YPR101W'
+sS'YER034W'
 p1009
 S''
-sS'YER127W'
+sS'YPR101W'
 p1010
 S''
-sS'YHR069C'
+sS'YER127W'
 p1011
-S'RNA degradation'
-p1012
-sS'YER025W'
-p1013
-S'Translation factors'
-p1014
-sS'YMR037C'
-p1015
-S'Transcription factors'
-p1016
-sS'YKR095W-A'
-p1017
 S''
-sS'YMR226C'
+sS'YHR069C'
+p1012
+S'RNA degradation'
+p1013
+sS'YER025W'
+p1014
+S'Translation factors'
+p1015
+sS'YMR037C'
+p1016
+S'Transcription factors'
+p1017
+sS'YKR095W-A'
 p1018
 S''
-sS'YJR093C'
+sS'YMR226C'
 p1019
-S'mRNA surveillance pathway'
+S''
+sS'YJR093C'
 p1020
-sS'YNL281W'
+S'mRNA surveillance pathway'
 p1021
+sS'YNL281W'
+p1022
 S''
 sS'YLR017W'
-p1022
-S'Amino acid metabolism'
 p1023
-sS'YHR110W'
+S'Amino acid metabolism'
 p1024
-S''
-sS'YBR041W'
+sS'YHR110W'
 p1025
 S''
-sS'YDR430C'
+sS'YBR041W'
 p1026
 S''
-sS'YGR193C'
+sS'YDR430C'
 p1027
 S''
-sS'YDR487C'
+sS'YGR193C'
 p1028
-S'Cofactor biosynthesis'
-p1029
-sS'YPR185W'
-p1030
-S'Regulation of autophagy'
-p1031
-sS'YPL273W'
-p1032
-S'Amino acid metabolism'
-p1033
-sS'YNL327W'
-p1034
-S'Cell wall'
-p1035
-sS'YBR280C'
-p1036
 S''
-sS'YBR185C'
+sS'YDR487C'
+p1029
+S'Cofactor biosynthesis'
+p1030
+sS'YPR185W'
+p1031
+S'Regulation of autophagy'
+p1032
+sS'YPL273W'
+p1033
+S'Amino acid metabolism'
+p1034
+sS'YNL327W'
+p1035
+S'Cell wall'
+p1036
+sS'YBR280C'
 p1037
 S''
-sS'YER065C'
+sS'YBR185C'
 p1038
-S'TCA cycle and anaplerotic enzymes'
-p1039
-sS'YLR077W'
-p1040
 S''
-sS'YBR056W'
+sS'YER065C'
+p1039
+S'TCA cycle and anaplerotic enzymes'
+p1040
+sS'YLR077W'
 p1041
 S''
-sS'YNL219C'
+sS'YBR056W'
 p1042
-S'Glycan metabolism'
+S''
+sS'YNL219C'
 p1043
-sS'YDR037W'
+S'Glycan metabolism'
 p1044
-S'tRNA loading'
+sS'YDR037W'
 p1045
-sS'YGR040W'
+S'tRNA loading'
 p1046
-S'MAPK signaling pathway'
+sS'YGR040W'
 p1047
-sS'YER178W'
+S'MAPK signaling pathway'
 p1048
-S'Glycolysis'
+sS'YER178W'
 p1049
-sS'YLR057W'
+S'Glycolysis'
 p1050
-S'Carbohydrate metabolism'
+sS'YLR057W'
 p1051
-sS'YPL222W'
+S'Carbohydrate metabolism'
 p1052
+sS'YPL222W'
+p1053
 S''
 sS'YJL140W'
-p1053
-S'RNA polymerase'
 p1054
-sS'YFR014C'
+S'RNA polymerase'
 p1055
-S'Other enzymes'
+sS'YFR014C'
 p1056
-sS'YOR320C'
+S'Other enzymes'
 p1057
+sS'YOR320C'
+p1058
 S''
 sS'YDR473C'
-p1058
-S'Spliceosome'
 p1059
-sS'YHR034C'
+S'Spliceosome'
 p1060
-S''
-sS'YMR231W'
+sS'YHR034C'
 p1061
 S''
-sS'YOL070C'
+sS'YMR231W'
 p1062
 S''
-sS'YOL138C'
+sS'YOL070C'
 p1063
 S''
-sS'YJL085W'
+sS'YOL138C'
 p1064
 S''
-sS'YDR533C'
+sS'YJL085W'
 p1065
 S''
-sS'YOL148C'
+sS'YDR533C'
 p1066
-S'Chromosome-related'
-p1067
-sS'YLR452C'
-p1068
 S''
-sS'YNR054C'
+sS'YOL148C'
+p1067
+S'Chromosome-related'
+p1068
+sS'YLR452C'
 p1069
 S''
-sS'YBL029C-A'
+sS'YNR054C'
 p1070
 S''
-sS'YIL015W'
+sS'YBL029C-A'
 p1071
-S'Peptidases'
+S''
+sS'YIL015W'
 p1072
-sS'YPR082C'
+S'Peptidases'
 p1073
-S'Spliceosome'
+sS'YPR082C'
 p1074
-sS'YGR184C'
+S'Spliceosome'
 p1075
-S'Ubiquitin labeling'
+sS'YGR184C'
 p1076
-sS'YCR034W'
+S'Ubiquitin labeling'
 p1077
-S'Lipid and steroid metabolism'
+sS'YCR034W'
 p1078
-sS'YOL038W'
+S'Lipid and steroid metabolism'
 p1079
-S'Proteasome'
+sS'YOL038W'
 p1080
-sS'YLR393W'
+S'Proteasome'
 p1081
+sS'YLR393W'
+p1082
 S''
 sS'YAR015W'
-p1082
-S'Purine metabolism'
 p1083
-sS'YOR086C'
+S'Purine metabolism'
 p1084
-S''
-sS'YDR020C'
+sS'YOR086C'
 p1085
 S''
-sS'YHR201C'
+sS'YDR020C'
 p1086
-S'Purine metabolism'
+S''
+sS'YHR201C'
 p1087
-sS'YPL213W'
+S'Purine metabolism'
 p1088
-S'Spliceosome'
+sS'YPL213W'
 p1089
-sS'YPR170W-B'
+S'Spliceosome'
 p1090
+sS'YPR170W-B'
+p1091
 S''
 sS'YOR347C'
-p1091
-S'Glycolysis'
 p1092
-sS'YDR395W'
+S'Glycolysis'
 p1093
-S''
-sS'YOR279C'
+sS'YDR395W'
 p1094
 S''
-sS'YGR008C'
+sS'YOR279C'
 p1095
 S''
-sS'YKL211C'
+sS'YGR008C'
 p1096
-S'Amino acid metabolism'
-p1097
-sS'YGL060W'
-p1098
 S''
-sS'YNL311C'
+sS'YKL211C'
+p1097
+S'Amino acid metabolism'
+p1098
+sS'YGL060W'
 p1099
 S''
-sS'YJL030W'
+sS'YNL311C'
 p1100
-S'Chromosome-related'
+S''
+sS'YJL030W'
 p1101
-sS'YMR093W'
+S'Chromosome-related'
 p1102
-S'Ribosome biogenesis in eukaryotes'
+sS'YMR093W'
 p1103
-sS'YKR066C'
+S'Ribosome biogenesis in eukaryotes'
 p1104
-S'Other enzymes'
+sS'YKR066C'
 p1105
-sS'YDR079W'
+S'Other enzymes'
 p1106
+sS'YDR079W'
+p1107
 S''
 sS'YGR248W'
-p1107
-S'Pentose phosphate metabolism'
 p1108
-sS'YML070W'
+S'Pentose phosphate metabolism'
 p1109
-S'Methane metabolism'
+sS'YML070W'
 p1110
-sS'YBR074W'
+S'Methane metabolism'
 p1111
+sS'YBR074W'
+p1112
 S''
 sS'YGL100W'
-p1112
-S'RNA transport'
 p1113
-sS'YOR150W'
+S'RNA transport'
 p1114
-S'Ribosome'
+sS'YOR150W'
 p1115
-sS'YMR106C'
+S'Ribosome'
 p1116
-S'Non-homologous end-joining'
+sS'YMR106C'
 p1117
-sS'YDR055W'
+S'Non-homologous end-joining'
 p1118
-S'Cell wall'
+sS'YDR055W'
 p1119
-sS'YBL061C'
+S'Cell wall'
 p1120
+sS'YBL061C'
+p1121
 S''
 sS'YGL203C'
-p1121
-S'Peptidases'
 p1122
-sS'YMR140W'
+S'Peptidases'
 p1123
-S''
-sS'YLR095C'
+sS'YMR140W'
 p1124
 S''
-sS'YBR034C'
+sS'YLR095C'
 p1125
-S'Chromosome-related'
-p1126
-sS'YMR108W'
-p1127
-S'Amino acid metabolism'
-p1128
-sS'YER062C'
-p1129
-S'Lipid and steroid metabolism'
-p1130
-sS'YPR114W'
-p1131
 S''
-sS'YDL088C'
+sS'YBR034C'
+p1126
+S'Chromosome-related'
+p1127
+sS'YMR108W'
+p1128
+S'Amino acid metabolism'
+p1129
+sS'YER062C'
+p1130
+S'Lipid and steroid metabolism'
+p1131
+sS'YPR114W'
 p1132
 S''
-sS'YHR096C'
+sS'YDL088C'
 p1133
-S'Transport'
+S''
+sS'YHR096C'
 p1134
-sS'YDL137W'
+S'Transport'
 p1135
-S'GTP-binding signaling proteins'
+sS'YDL137W'
 p1136
-sS'YJR063W'
+S'GTP-binding signaling proteins'
 p1137
-S'RNA polymerase'
+sS'YJR063W'
 p1138
-sS'YLR113W'
+S'RNA polymerase'
 p1139
-S'MAPK signaling pathway'
+sS'YLR113W'
 p1140
-sS'YMR161W'
+S'MAPK signaling pathway'
 p1141
-S'Chaperones and folding catalysts'
+sS'YMR161W'
 p1142
-sS'YLR142W'
+S'Chaperones and folding catalysts'
 p1143
-S'Amino acid metabolism'
+sS'YLR142W'
 p1144
-sS'YPR163C'
+S'Amino acid metabolism'
 p1145
-S'Translation factors'
+sS'YPR163C'
 p1146
-sS'YJL184W'
+S'Translation factors'
 p1147
+sS'YJL184W'
+p1148
 S''
 sS'YDL040C'
-p1148
-S'Other enzymes'
 p1149
-sS'YDL015C'
+S'Other enzymes'
 p1150
-S'Lipid and steroid metabolism'
+sS'YDL015C'
 p1151
-sS'YOR242C'
+S'Lipid and steroid metabolism'
 p1152
+sS'YOR242C'
+p1153
 S''
 sS'YKR086W'
-p1153
-S'Spliceosome'
 p1154
-sS'YCR004C'
+S'Spliceosome'
 p1155
+sS'YCR004C'
+p1156
 S''
 sS'YER078C'
-p1156
-S'Amino acid metabolism'
 p1157
-sS'YDR115W'
+S'Amino acid metabolism'
 p1158
-S''
-sS'YDL160C-A'
+sS'YDR115W'
 p1159
 S''
-sS'YER165W'
+sS'YDL160C-A'
 p1160
-S'RNA degradation'
-p1161
-sS'YML038C'
-p1162
 S''
-sS'YCL059C'
+sS'YER165W'
+p1161
+S'RNA degradation'
+p1162
+sS'YML038C'
 p1163
 S''
-sS'YML014W'
+sS'YCL059C'
 p1164
 S''
-sS'YKR071C'
+sS'YML014W'
 p1165
 S''
-sS'YGL112C'
+sS'YKR071C'
 p1166
-S'Basal transcription factors'
-p1167
-sS'YGR196C'
-p1168
 S''
-sS'YOR233W'
+sS'YGL112C'
+p1167
+S'Basal transcription factors'
+p1168
+sS'YGR196C'
 p1169
 S''
-sS'YLR011W'
+sS'YOR233W'
 p1170
 S''
-sS'YPR049C'
+sS'YLR011W'
 p1171
-S'Regulation of autophagy'
+S''
+sS'YPR049C'
 p1172
-sS'YGR257C'
+S'Regulation of autophagy'
 p1173
-S'Transport'
+sS'YGR257C'
 p1174
-sS'YNL070W'
+S'Transport'
 p1175
+sS'YNL070W'
+p1176
 S''
 sS'YIL078W'
-p1176
-S'tRNA loading'
 p1177
-sS'YPL235W'
+S'tRNA loading'
 p1178
-S'Chromosome-related'
+sS'YPL235W'
 p1179
-sS'YBL042C'
+S'Chromosome-related'
 p1180
+sS'YBL042C'
+p1181
 S''
 sS'YDL008W'
-p1181
-S'Ubiquitin mediated proteolysis'
 p1182
-sS'YBL050W'
+S'Ubiquitin mediated proteolysis'
 p1183
-S''
-sS'YGR102C'
+sS'YBL050W'
 p1184
 S''
-sS'YGR280C'
+sS'YGR102C'
 p1185
-S'Ribosome biogenesis'
+S''
+sS'YGR280C'
 p1186
-sS'YGR237C'
+S'Ribosome biogenesis'
 p1187
+sS'YGR237C'
+p1188
 S''
 sS'YDL159W'
-p1188
-S'MAPK signaling pathway'
 p1189
-sS'YBL087C'
+S'MAPK signaling pathway'
 p1190
-S'Ribosome'
+sS'YBL087C'
 p1191
-sS'YJR014W'
+S'Ribosome'
 p1192
-S''
-sS'YLR205C'
+sS'YJR014W'
 p1193
 S''
-sS'YGL190C'
+sS'YLR205C'
 p1194
-S'mRNA surveillance pathway'
+S''
+sS'YGL190C'
 p1195
-sS'YBR110W'
+S'mRNA surveillance pathway'
 p1196
-S'Glycan metabolism'
+sS'YBR110W'
 p1197
-sS'YDR144C'
+S'Glycan metabolism'
 p1198
-S'Chaperones and folding catalysts'
+sS'YDR144C'
 p1199
-sS'YOR180C'
+S'Chaperones and folding catalysts'
 p1200
+sS'YOR180C'
+p1201
 S''
 sS'YGL018C'
-p1201
-S'Chaperones and folding catalysts'
 p1202
-sS'YLR240W'
+S'Chaperones and folding catalysts'
 p1203
-S'Phosphatidylinositol signaling system'
-p1204
 sS'YMR075W'
-p1205
+p1204
 S''
 sS'YGR202C'
-p1206
+p1205
 S'Lipid and steroid metabolism'
-p1207
+p1206
 sS'YKL120W'
-p1208
+p1207
 S''
 sS'YJR041C'
-p1209
+p1208
 S''
 sS'YKR028W'
-p1210
+p1209
 S''
 sS'YFL046W'
-p1211
+p1210
 S''
 sS'YDR379W'
-p1212
+p1211
 S''
 sS'YHR169W'
-p1213
+p1212
 S'Other enzymes'
-p1214
+p1213
 sS'YDL073W'
-p1215
+p1214
 S''
 sS'YOR103C'
-p1216
+p1215
 S'Protein processing in endoplasmic reticulum'
-p1217
+p1216
 sS'YMR011W'
-p1218
+p1217
 S'Transport'
-p1219
+p1218
 sS'YCR059C'
-p1220
+p1219
 S''
 sS'YGL246C'
-p1221
+p1220
 S''
 sS'YDR447C'
-p1222
+p1221
 S'Ribosome'
-p1223
+p1222
 sS'YNL059C'
-p1224
+p1223
 S'Chromosome-related'
-p1225
+p1224
 sS'YIR012W'
-p1226
+p1225
 S''
 sS'YNL022C'
-p1227
+p1226
 S''
 sS'YDL102W'
-p1228
+p1227
 S'DNA replication complex'
-p1229
+p1228
 sS'YJR009C'
-p1230
+p1229
 S'Glycolysis'
-p1231
+p1230
 sS'YPR145W'
-p1232
+p1231
 S'Peptidases'
-p1233
+p1232
 sS'YJL063C'
-p1234
+p1233
 S''
 sS'YLR214W'
-p1235
+p1234
 S''
 sS'YMR149W'
-p1236
+p1235
 S'Protein processing in endoplasmic reticulum'
-p1237
+p1236
 sS'YLR278C'
-p1238
+p1237
 S''
 sS'YML056C'
-p1239
+p1238
 S'Purine metabolism'
-p1240
+p1239
 sS'YGL029W'
-p1241
+p1240
 S''
 sS'YFL004W'
-p1242
+p1241
 S''
 sS'YOR040W'
-p1243
+p1242
 S'Glycolysis'
-p1244
+p1243
 sS'YCR069W'
-p1245
+p1244
 S'Other enzymes'
-p1246
+p1245
 sS'YDL128W'
-p1247
+p1246
 S''
 sS'YLR433C'
-p1248
+p1247
 S'MAPK signaling pathway'
-p1249
+p1248
 sS'YPL098C'
-p1250
+p1249
 S''
 sS'YMR153W'
-p1251
+p1250
 S''
 sS'YMR124W'
-p1252
+p1251
 S''
 sS'YBL103C'
-p1253
+p1252
 S''
 sS'YJL041W'
-p1254
+p1253
 S''
 sS'YJR070C'
-p1255
+p1254
 S'Other enzymes'
-p1256
+p1255
 sS'YMR033W'
-p1257
+p1256
 S'Chromosome-related'
-p1258
+p1257
 sS'YDL097C'
-p1259
+p1258
 S'Proteasome'
-p1260
+p1259
 sS'YGL005C'
-p1261
+p1260
 S''
 sS'YPL085W'
-p1262
+p1261
 S''
 sS'YDL111C'
-p1263
+p1262
 S'RNA degradation'
-p1264
+p1263
 sS'YDR202C'
-p1265
+p1264
 S''
 sS'YJL052W'
-p1266
+p1265
 S'Glycolysis'
-p1267
+p1266
 sS'YDR495C'
-p1268
+p1267
 S''
 sS'YLR203C'
-p1269
+p1268
 S''
 sS'YKL159C'
-p1270
+p1269
 S''
 sS'YGR215W'
-p1271
+p1270
 S''
 sS'YJR046W'
-p1272
+p1271
 S'Cell cycle'
-p1273
+p1272
 sS'YDR363W-A'
-p1274
+p1273
 S'Proteasome'
-p1275
+p1274
 sS'YML096W'
-p1276
+p1275
 S''
 sS'YHR192W'
-p1277
+p1276
 S''
 sS'YOR132W'
-p1278
+p1277
 S''
 sS'YDR300C'
-p1279
+p1278
 S'Amino acid metabolism'
-p1280
+p1279
 sS'YJL158C'
-p1281
+p1280
 S'Cell wall'
-p1282
+p1281
 sS'YOR001W'
-p1283
+p1282
 S'RNA degradation'
-p1284
+p1283
 sS'YIL003W'
-p1285
+p1284
 S''
 sS'YDR240C'
-p1286
+p1285
 S''
 sS'YBR245C'
-p1287
+p1286
 S''
 sS'YMR299C'
-p1288
+p1287
 S''
 sS'YDR465C'
-p1289
+p1288
 S'Amino acid metabolism'
-p1290
+p1289
 sS'YLR276C'
-p1291
+p1290
 S'Other enzymes'
-p1292
+p1291
 sS'YDL222C'
-p1293
+p1292
 S''
 sS'YKL079W'
-p1294
+p1293
 S''
 sS'YFR044C'
-p1295
+p1294
 S'Peptidases'
-p1296
+p1295
 sS'YGR105W'
-p1297
+p1296
 S''
 sS'YPL103C'
-p1298
+p1297
 S''
 sS'YIL103W'
-p1299
+p1298
 S''
 sS'YBR269C'
-p1300
+p1299
 S''
 sS'YFR033C'
-p1301
+p1300
 S'Oxidative phosphorylation'
-p1302
+p1301
 sS'YDR283C'
-p1303
+p1302
 S'Protein processing in endoplasmic reticulum'
-p1304
+p1303
 sS'YJR096W'
-p1305
+p1304
 S''
 sS'YAL010C'
-p1306
+p1305
 S''
 sS'YBR192W'
-p1307
+p1306
 S''
 sS'YGR143W'
-p1308
+p1307
 S''
 sS'YER007C-A'
-p1309
+p1308
 S''
 sS'YGR112W'
-p1310
+p1309
 S''
 sS'YNR022C'
-p1311
+p1310
 S''
 sS'YLR256W'
-p1312
+p1311
 S'Transcription factors'
-p1313
+p1312
 sS'YBL060W'
-p1314
+p1313
 S''
 sS'YBR125C'
-p1315
+p1314
 S'Other enzymes'
-p1316
+p1315
 sS'YLR356W'
-p1317
+p1316
 S''
 sS'YBR221C'
-p1318
+p1317
 S'Glycolysis'
-p1319
+p1318
 sS'YAL005C'
-p1320
+p1319
 S'Chaperones and folding catalysts'
-p1321
+p1320
 sS'YJL094C'
-p1322
+p1321
 S''
 sS'YKL057C'
-p1323
+p1322
 S''
 sS'YGL098W'
-p1324
+p1323
 S'SNARE interactions in vesicular transport'
-p1325
+p1324
 sS'YHR174W'
-p1326
+p1325
 S'Glycolysis'
-p1327
+p1326
 sS'YJL121C'
-p1328
+p1327
 S'Pentose phosphate metabolism'
-p1329
+p1328
 sS'YKL008C'
-p1330
+p1329
 S'Lipid and steroid metabolism'
-p1331
+p1330
 sS'YLR192C'
-p1332
+p1331
 S'Translation factors'
-p1333
+p1332
 sS'YPL069C'
-p1334
+p1333
 S'Cofactor biosynthesis'
-p1335
+p1334
 sS'YDL213C'
-p1336
+p1335
 S''
 sS'YIL145C'
-p1337
+p1336
 S'Amino acid metabolism'
-p1338
+p1337
 sS'YBR149W'
-p1339
+p1338
 S'Other enzymes'
-p1340
+p1339
 sS'YLR378C'
-p1341
+p1340
 S'Protein export'
-p1342
+p1341
 sS'YPL271W'
-p1343
+p1342
 S'Oxidative phosphorylation'
-p1344
+p1343
 sS'YPL032C'
-p1345
+p1344
 S''
 sS'YHR064C'
-p1346
+p1345
 S'Chaperones and folding catalysts'
-p1347
+p1346
 sS'YGL210W'
-p1348
+p1347
 S'GTP-binding signaling proteins'
-p1349
+p1348
 sS'YPL110C'
-p1350
+p1349
 S''
 sS'YGR083C'
-p1351
+p1350
 S'Translation factors'
-p1352
+p1351
 sS'YPL045W'
-p1353
+p1352
 S''
 sS'YLR314C'
-p1354
+p1353
 S''
 sS'YLR153C'
-p1355
+p1354
 S'Glycolysis'
-p1356
+p1355
 sS'YNL126W'
-p1357
+p1356
 S'Cytoskeleton proteins'
-p1358
+p1357
 sS'YBR132C'
-p1359
+p1358
 S''
 sS'YKL040C'
-p1360
+p1359
 S''
 sS'YLR249W'
-p1361
+p1360
 S'Translation factors'
-p1362
+p1361
 sS'YNL004W'
-p1363
+p1362
 S''
 sS'YOR327C'
-p1364
+p1363
 S'SNARE interactions in vesicular transport'
-p1365
+p1364
 sS'YFR015C'
-p1366
+p1365
 S'Carbohydrate metabolism'
-p1367
+p1366
 sS'YCR020C-A'
-p1368
+p1367
 S''
 sS'YOR265W'
-p1369
+p1368
 S''
 sS'YOL139C'
-p1370
+p1369
 S'RNA transport'
-p1371
+p1370
 sS'YBR207W'
-p1372
+p1371
 S''
 sS'YLR321C'
-p1373
+p1372
 S'Chromosome-related'
-p1374
+p1373
 sS'YOR266W'
-p1375
+p1374
 S''
 sS'YDR532C'
-p1376
+p1375
 S'RNA transport'
-p1377
+p1376
 sS'YHR200W'
-p1378
+p1377
 S'Proteasome'
-p1379
+p1378
 sS'YCL012C'
-p1380
+p1379
 S''
 sS'YDR184C'
-p1381
+p1380
 S''
 sS'YNR011C'
+p1381
+S'Spliceosome'
 p1382
-S'Spliceosome'
-p1383
 sS'YNL167C'
-p1384
+p1383
 S'Transcription factors'
-p1385
+p1384
 sS'YBR244W'
+p1385
+S'Cofactor biosynthesis'
 p1386
-S'Cofactor biosynthesis'
-p1387
 sS'YKL210W'
-p1388
+p1387
 S'Ubiquitin mediated proteolysis'
-p1389
+p1388
 sS'YNL221C'
-p1390
+p1389
 S'RNA transport'
-p1391
+p1390
 sS'YOR278W'
-p1392
+p1391
 S'Cofactor biosynthesis'
-p1393
+p1392
 sS'YER146W'
-p1394
+p1393
 S'Spliceosome'
-p1395
+p1394
 sS'YDL244W'
-p1396
+p1395
 S''
 sS'YNL085W'
-p1397
+p1396
 S''
 sS'YGL061C'
-p1398
+p1397
 S'Cytoskeleton proteins'
-p1399
+p1398
 sS'YDR394W'
-p1400
+p1399
 S'Proteasome'
-p1401
+p1400
 sS'YPL210C'
-p1402
+p1401
 S'Protein export'
-p1403
+p1402
 sS'YBL097W'
-p1404
+p1403
 S'Chromosome-related'
-p1405
+p1404
 sS'YAR014C'
-p1406
+p1405
 S''
 sS'YOR087W'
-p1407
+p1406
 S''
 sS'YHR159W'
-p1408
+p1407
 S''
 sS'YPL132W'
-p1409
+p1408
 S'Oxidative phosphorylation'
-p1410
+p1409
 sS'YIL114C'
-p1411
+p1410
 S''
 sS'YGL234W'
-p1412
+p1411
 S'Purine metabolism'
-p1413
+p1412
 sS'YOL055C'
-p1414
+p1413
 S'Cofactor biosynthesis'
-p1415
+p1414
 sS'YAL029C'
-p1416
+p1415
 S''
 sS'YKL013C'
-p1417
+p1416
 S'Regulation of actin cytoskeleton'
-p1418
+p1417
 sS'YOR148C'
-p1419
+p1418
 S''
 sS'YNL108C'
-p1420
+p1419
 S''
 sS'YFR053C'
-p1421
+p1420
 S'Glycolysis'
-p1422
+p1421
 sS'YOR065W'
-p1423
+p1422
 S'Oxidative phosphorylation'
-p1424
+p1423
 sS'YMR286W'
-p1425
+p1424
 S''
 sS'YMR301C'
-p1426
+p1425
 S'Transport'
-p1427
+p1426
 sS'YGR186W'
-p1428
+p1427
 S'Basal transcription factors'
-p1429
+p1428
 sS'YDR294C'
-p1430
+p1429
 S'Lipid and steroid metabolism'
-p1431
+p1430
 sS'YGR271W'
+p1431
+S'Other enzymes'
 p1432
-S'Other enzymes'
-p1433
 sS'YFR002W'
-p1434
+p1433
 S'RNA transport'
-p1435
+p1434
 sS'YHR135C'
-p1436
+p1435
 S'Other enzymes'
-p1437
+p1436
 sS'YNL250W'
-p1438
+p1437
 S'DNA replication control'
-p1439
+p1438
 sS'YDL175C'
-p1440
+p1439
 S'RNA degradation'
-p1441
+p1440
 sS'YOR027W'
-p1442
+p1441
 S'Chaperones and folding catalysts'
-p1443
+p1442
 sS'YDR325W'
-p1444
+p1443
 S'Chromosome-related'
-p1445
+p1444
 sS'YBR181C'
-p1446
+p1445
 S'Ribosome'
-p1447
+p1446
 sS'YMR188C'
-p1448
+p1447
 S''
 sS'YNL131W'
-p1449
+p1448
 S''
 sS'YEL020W-A'
-p1450
+p1449
 S''
 sS'YKL137W'
-p1451
+p1450
 S''
 sS'YOR078W'
+p1451
+S''
+sS'YNL048W'
 p1452
-S''
-sS'YOL125W'
+S'Glycan metabolism'
 p1453
-S''
-sS'YKL003C'
+sS'YOL125W'
 p1454
 S''
-sS'YOR243C'
+sS'YKL003C'
 p1455
 S''
-sS'YER022W'
+sS'YOR243C'
 p1456
 S''
-sS'YBR057C'
+sS'YER022W'
 p1457
 S''
-sS'YDR513W'
+sS'YBR057C'
 p1458
 S''
-sS'YGL047W'
+sS'YDR513W'
 p1459
-S'Glycan metabolism'
+S''
+sS'YGL047W'
 p1460
-sS'YMR165C'
+S'Glycan metabolism'
 p1461
-S'Lipid and steroid metabolism'
+sS'YMR165C'
 p1462
-sS'YKR070W'
+S'Lipid and steroid metabolism'
 p1463
+sS'YKR070W'
+p1464
 S''
 sS'YMR205C'
-p1464
-S'Glycolysis'
 p1465
-sS'YGL225W'
+S'Glycolysis'
 p1466
+sS'YGL225W'
+p1467
 S''
 sS'YCR005C'
-p1467
-S'TCA cycle and anaplerotic enzymes'
 p1468
-sS'YGR296W'
+S'TCA cycle and anaplerotic enzymes'
 p1469
+sS'YGR296W'
+p1470
 S''
 sS'YER164W'
-p1470
-S'Chromosome-related'
 p1471
-sS'YBL101C'
+S'Chromosome-related'
 p1472
-S''
-sS'YPR055W'
+sS'YBL101C'
 p1473
 S''
-sS'YML017W'
+sS'YPR055W'
 p1474
 S''
-sS'YIL016W'
+sS'YML017W'
 p1475
-S'Protein processing in endoplasmic reticulum'
+S''
+sS'YIL016W'
 p1476
-sS'YPL236C'
+S'Protein processing in endoplasmic reticulum'
 p1477
+sS'YPL236C'
+p1478
 S''
 sS'YOR274W'
-p1478
-S'Cofactor biosynthesis'
 p1479
-sS'YOR232W'
+S'Cofactor biosynthesis'
 p1480
-S'Chaperones and folding catalysts'
+sS'YOR232W'
 p1481
-sS'YGR281W'
+S'Chaperones and folding catalysts'
 p1482
+sS'YGR281W'
+p1483
 S''
 sS'YLR089C'
-p1483
-S'Carbon fixation in photosynthetic organisms'
 p1484
-sS'YHR123W'
+S'Carbon fixation in photosynthetic organisms'
 p1485
-S'Lipid and steroid metabolism'
+sS'YHR123W'
 p1486
-sS'YPL161C'
+S'Lipid and steroid metabolism'
 p1487
-S''
-sS'YNL115C'
+sS'YPL161C'
 p1488
 S''
-sS'YGR256W'
+sS'YNL115C'
 p1489
-S'Pentose phosphate metabolism'
+S''
+sS'YGR256W'
 p1490
-sS'YEL042W'
+S'Pentose phosphate metabolism'
 p1491
-S'Other enzymes'
+sS'YEL042W'
 p1492
-sS'YPR048W'
+S'Other enzymes'
 p1493
+sS'YPR048W'
+p1494
 S''
 sS'YBL027W'
-p1494
-S'Ribosome'
 p1495
-sS'YHL013C'
+S'Ribosome'
 p1496
-S''
-sS'YOL060C'
+sS'YHL013C'
 p1497
 S''
-sS'YGR009C'
+sS'YOL060C'
 p1498
-S'SNARE interactions in vesicular transport'
-p1499
-sS'YNR047W'
-p1500
 S''
-sS'YGL105W'
+sS'YGR009C'
+p1499
+S'SNARE interactions in vesicular transport'
+p1500
+sS'YNR047W'
 p1501
 S''
-sS'YBR097W'
+sS'YGL105W'
 p1502
-S'Regulation of autophagy'
+S''
+sS'YBR097W'
 p1503
-sS'YDL076C'
+S'Regulation of autophagy'
 p1504
+sS'YDL076C'
+p1505
 S''
 sS'YDR120C'
-p1505
-S'Other enzymes'
 p1506
-sS'YER126C'
+S'Other enzymes'
 p1507
+sS'YER126C'
+p1508
 S''
 sS'YMR227C'
-p1508
-S'Basal transcription factors'
 p1509
-sS'YOR113W'
+S'Basal transcription factors'
 p1510
+sS'YOR113W'
+p1511
 S''
 sS'YGR194C'
-p1511
-S'Carbohydrate metabolism'
 p1512
-sS'YJL192C'
+S'Carbohydrate metabolism'
 p1513
-S''
-sS'YHR117W'
+sS'YJL192C'
 p1514
 S''
-sS'YHR053C'
+sS'YHR117W'
 p1515
 S''
-sS'YOL130W'
+sS'YHR053C'
 p1516
 S''
-sS'YOR152C'
+sS'YOL130W'
 p1517
 S''
-sS'YOR238W'
+sS'YOR152C'
 p1518
 S''
-sS'YPL274W'
+sS'YOR238W'
 p1519
 S''
-sS'YNL257C'
+sS'YPL274W'
 p1520
 S''
-sS'YBL047C'
+sS'YNL257C'
 p1521
 S''
-sS'YNL293W'
+sS'YBL047C'
 p1522
 S''
-sS'YEL051W'
+sS'YNL293W'
 p1523
-S'Phagosome'
+S''
+sS'YEL051W'
 p1524
-sS'YLR207W'
+S'Phagosome'
 p1525
-S'Protein processing in endoplasmic reticulum'
+sS'YLR207W'
 p1526
-sS'YLL023C'
+S'Protein processing in endoplasmic reticulum'
 p1527
+sS'YLL023C'
+p1528
 S''
 sS'YKL203C'
-p1528
-S'ErbB signaling pathway'
 p1529
-sS'YOL004W'
+S'ErbB signaling pathway'
 p1530
-S'Chromosome-related'
+sS'YOL004W'
 p1531
-sS'YPL209C'
-p1532
 S'Chromosome-related'
+p1532
+sS'YPL209C'
 p1533
-sS'YHR017W'
+S'Chromosome-related'
 p1534
-S''
-sS'YGL050W'
+sS'YHR017W'
 p1535
 S''
-sS'YDL036C'
+sS'YGL050W'
 p1536
 S''
-sS'YAR027W'
+sS'YDL036C'
 p1537
 S''
-sS'YNR065C'
+sS'YAR027W'
 p1538
 S''
-sS'YFL007W'
+sS'YNR065C'
 p1539
-S'Proteasome'
-p1540
-sS'YML059C'
-p1541
-S'Lipid and steroid metabolism'
-p1542
-sS'YGL219C'
-p1543
 S''
-sS'YDR063W'
+sS'YFL007W'
+p1540
+S'Proteasome'
+p1541
+sS'YML059C'
+p1542
+S'Lipid and steroid metabolism'
+p1543
+sS'YGL219C'
 p1544
 S''
-sS'YPL099C'
+sS'YDR063W'
 p1545
 S''
-sS'YCR012W'
+sS'YPL099C'
 p1546
-S'Glycolysis'
-p1547
-sS'YGL026C'
-p1548
-S'Amino acid metabolism'
-p1549
-sS'YDR201W'
-p1550
-S'Cytoskeleton proteins'
-p1551
-sS'YDR254W'
-p1552
-S'Chromosome-related'
-p1553
-sS'YPR128C'
-p1554
 S''
-sS'YGR263C'
+sS'YCR012W'
+p1547
+S'Glycolysis'
+p1548
+sS'YGL026C'
+p1549
+S'Amino acid metabolism'
+p1550
+sS'YDR201W'
+p1551
+S'Cytoskeleton proteins'
+p1552
+sS'YDR254W'
+p1553
+S'Chromosome-related'
+p1554
+sS'YPR128C'
 p1555
 S''
-sS'YNL045W'
+sS'YGR263C'
 p1556
-S'Peptidases'
-p1557
-sS'YPL084W'
-p1558
 S''
-sS'YNL010W'
+sS'YNL045W'
+p1557
+S'Peptidases'
+p1558
+sS'YPL084W'
 p1559
 S''
-sS'YDR354W'
+sS'YNL010W'
 p1560
-S'Amino acid metabolism'
+S''
+sS'YDR354W'
 p1561
-sS'YMR134W'
+S'Amino acid metabolism'
 p1562
+sS'YMR134W'
+p1563
 S''
 sS'YDR301W'
-p1563
-S'mRNA surveillance pathway'
 p1564
-sS'YJL053W'
+S'mRNA surveillance pathway'
 p1565
-S''
-sS'YPR104C'
+sS'YJL053W'
 p1566
 S''
-sS'YHR042W'
+sS'YPR104C'
 p1567
-S'Other enzymes'
-p1568
-sS'YPR002W'
-p1569
-S'Other central metabolism enzymes'
-p1570
-sS'YGL006W'
-p1571
-S'Transport'
-p1572
-sS'YPL006W'
-p1573
 S''
-sS'YCR083W'
+sS'YHR042W'
+p1568
+S'Other enzymes'
+p1569
+sS'YPR002W'
+p1570
+S'Other central metabolism enzymes'
+p1571
+sS'YGL006W'
+p1572
+S'Transport'
+p1573
+sS'YPL006W'
 p1574
 S''
-sS'YKR067W'
+sS'YCR083W'
 p1575
-S'Lipid and steroid metabolism'
+S''
+sS'YKR067W'
 p1576
-sS'YOR151C'
+S'Lipid and steroid metabolism'
 p1577
-S'RNA polymerase'
+sS'YOR151C'
 p1578
-sS'YML028W'
+S'RNA polymerase'
 p1579
-S'Other enzymes'
+sS'YML028W'
 p1580
-sS'YEL039C'
+S'Other enzymes'
 p1581
+sS'YEL039C'
+p1582
 S''
 sS'YLL001W'
-p1582
-S'Endocytosis'
 p1583
-sS'YOR168W'
+S'Endocytosis'
 p1584
-S'tRNA loading'
+sS'YOR168W'
 p1585
-sS'YNL189W'
+S'tRNA loading'
 p1586
+sS'YNL189W'
+p1587
 S''
 sS'YPR173C'
-p1587
-S'Endocytosis'
 p1588
-sS'YCL047C'
+S'Endocytosis'
 p1589
+sS'YCL047C'
+p1590
 S''
 sS'YJL031C'
-p1590
-S'Cofactor biosynthesis'
 p1591
-sS'YML077W'
+S'Cofactor biosynthesis'
 p1592
+sS'YML077W'
+p1593
 S''
 sS'YER068W'
-p1593
-S'Ubiquitin labeling'
 p1594
-sS'YER013W'
+S'Ubiquitin labeling'
 p1595
-S'Spliceosome'
+sS'YER013W'
 p1596
-sS'YMR269W'
+S'Spliceosome'
 p1597
-S''
-sS'YKL053C-A'
+sS'YMR269W'
 p1598
 S''
-sS'YMR092C'
+sS'YKL053C-A'
 p1599
 S''
-sS'YDL021W'
+sS'YMR092C'
 p1600
-S'Glycolysis'
+S''
+sS'YDL021W'
 p1601
-sS'YLR143W'
+S'Glycolysis'
 p1602
+sS'YLR143W'
+p1603
 S''
 sS'YLR043C'
-p1603
-S'Chaperones and folding catalysts'
 p1604
-sS'YJL008C'
-p1605
 S'Chaperones and folding catalysts'
+p1605
+sS'YJL008C'
 p1606
-sS'YDL018C'
+S'Chaperones and folding catalysts'
 p1607
-S''
-sS'YBR271W'
+sS'YDL018C'
 p1608
 S''
-sS'YML060W'
+sS'YNR008W'
 p1609
-S'Base excision repair'
+S'Lipid and steroid metabolism'
 p1610
 sS'YJR062C'
 p1611
@@ -4194,4399 +4192,4399 @@ p1793
 sS'YOR006C'
 p1794
 S''
-sS'YJL146W'
+sS'YML060W'
 p1795
+S'Base excision repair'
+p1796
+sS'YJL146W'
+p1797
 S''
 sS'YLR277C'
-p1796
-S'mRNA surveillance pathway'
-p1797
-sS'YAL011W'
 p1798
-S'Chromosome-related'
+S'mRNA surveillance pathway'
 p1799
-sS'YGR173W'
+sS'YAL011W'
 p1800
+S'Chromosome-related'
+p1801
+sS'YGR173W'
+p1802
 S''
 sS'YIL055C'
-p1801
+p1803
 S''
 sS'YPL053C'
-p1802
-S'Glycan metabolism'
-p1803
-sS'YKR092C'
 p1804
-S''
-sS'YBR179C'
+S'Glycan metabolism'
 p1805
-S''
-sS'YDR282C'
+sS'YKR092C'
 p1806
 S''
-sS'YJR097W'
+sS'YBR179C'
 p1807
 S''
-sS'YLR351C'
+sS'YDR282C'
 p1808
 S''
-sS'YOL094C'
+sS'YJR097W'
 p1809
-S'DNA replication complex'
+S''
+sS'YLR351C'
 p1810
-sS'YPR116W'
+S''
+sS'YOL094C'
 p1811
+S'DNA replication complex'
+p1812
+sS'YPR116W'
+p1813
 S''
 sS'YHR018C'
-p1812
-S'Amino acid metabolism'
-p1813
-sS'YDR408C'
 p1814
-S'Other central metabolism enzymes'
+S'Amino acid metabolism'
 p1815
-sS'YBR126C'
+sS'YDR408C'
 p1816
-S'Carbohydrate metabolism'
+S'Other central metabolism enzymes'
 p1817
-sS'YOL149W'
+sS'YBR126C'
 p1818
-S'RNA degradation'
+S'Carbohydrate metabolism'
 p1819
-sS'YLR257W'
+sS'YOL149W'
 p1820
+S'RNA degradation'
+p1821
+sS'YLR257W'
+p1822
 S''
 sS'YGL202W'
-p1821
-S'Amino acid metabolism'
-p1822
-sS'YOR046C'
 p1823
-S'Other enzymes'
+S'Amino acid metabolism'
 p1824
-sS'YKR035W-A'
+sS'YOR046C'
 p1825
-S'Endocytosis'
+S'Other enzymes'
 p1826
-sS'YNL141W'
+sS'YKR035W-A'
 p1827
-S'Purine metabolism'
+S'Endocytosis'
 p1828
-sS'YBL026W'
+sS'YNL141W'
 p1829
-S'Spliceosome'
+S'Purine metabolism'
 p1830
-sS'YMR220W'
+sS'YBL026W'
 p1831
-S'Cofactor biosynthesis'
+S'Spliceosome'
 p1832
-sS'YPR187W'
+sS'YMR220W'
 p1833
-S'RNA polymerase'
+S'Cofactor biosynthesis'
 p1834
-sS'YGL087C'
+sS'YPR187W'
 p1835
-S'DNA repair and recombination proteins'
+S'RNA polymerase'
 p1836
-sS'YDR121W'
+sS'YGL087C'
 p1837
-S'DNA replication complex'
+S'DNA repair and recombination proteins'
 p1838
-sS'YER125W'
+sS'YDR121W'
 p1839
-S'Ubiquitin mediated proteolysis'
+S'DNA replication complex'
 p1840
-sS'YDR432W'
+sS'YER125W'
 p1841
-S''
-sS'YNL233W'
+S'Ubiquitin mediated proteolysis'
 p1842
-S''
-sS'YPL211W'
+sS'YDR432W'
 p1843
 S''
-sS'YDL077C'
+sS'YNL233W'
 p1844
 S''
-sS'YOR222W'
+sS'YPL211W'
 p1845
 S''
-sS'YEL021W'
+sS'YDL077C'
 p1846
-S'Pyrimidine metabolism'
+S''
+sS'YOR222W'
 p1847
-sS'YOL061W'
+S''
+sS'YEL021W'
 p1848
-S'Pentose phosphate metabolism'
+S'Pyrimidine metabolism'
 p1849
-sS'YER152C'
+sS'YOL061W'
 p1850
+S'Pentose phosphate metabolism'
+p1851
+sS'YER152C'
+p1852
 S''
 sS'YLR015W'
-p1851
-S''
-sS'YNR008W'
-p1852
-S'Lipid and steroid metabolism'
 p1853
-sS'YPL259C'
+S''
+sS'YHR116W'
 p1854
 S''
-sS'YOL100W'
+sS'YPL259C'
 p1855
 S''
-sS'YNL283C'
+sS'YOL100W'
 p1856
-S'MAPK signaling pathway'
+S''
+sS'YNL283C'
 p1857
-sS'YLR008C'
+S'MAPK signaling pathway'
 p1858
-S'Chaperones and folding catalysts'
+sS'YLR008C'
 p1859
-sS'YJL191W'
+S'Chaperones and folding catalysts'
 p1860
-S'Ribosome'
+sS'YJL191W'
 p1861
-sS'YMR219W'
+S'Ribosome'
 p1862
+sS'YMR219W'
+p1863
 S''
 sS'YLL022C'
-p1863
-S'Chromosome-related'
 p1864
-sS'YGR017W'
+S'Chromosome-related'
 p1865
-S''
-sS'YDR031W'
+sS'YGR017W'
 p1866
 S''
-sS'YOR198C'
+sS'YDR031W'
 p1867
 S''
-sS'YOL005C'
+sS'YOR198C'
 p1868
-S'RNA polymerase'
-p1869
-sS'YOR039W'
-p1870
-S'Ribosome biogenesis in eukaryotes'
-p1871
-sS'YEL050C'
-p1872
 S''
-sS'YLR177W'
+sS'YOL005C'
+p1869
+S'RNA polymerase'
+p1870
+sS'YOR039W'
+p1871
+S'Ribosome biogenesis in eukaryotes'
+p1872
+sS'YEL050C'
 p1873
 S''
-sS'YFR016C'
+sS'YLR177W'
 p1874
 S''
-sS'YHR016C'
+sS'YFR016C'
 p1875
 S''
-sS'YLR450W'
+sS'YHR016C'
 p1876
-S'Cofactor biosynthesis'
-p1877
-sS'YLR442C'
-p1878
-S'DNA replication control'
-p1879
-sS'YKL088W'
-p1880
-S'Cofactor biosynthesis'
-p1881
-sS'YHR084W'
-p1882
-S'Transcription factors'
-p1883
-sS'YGL224C'
-p1884
 S''
-sS'YOR326W'
+sS'YLR450W'
+p1877
+S'Cofactor biosynthesis'
+p1878
+sS'YLR442C'
+p1879
+S'DNA replication control'
+p1880
+sS'YKL088W'
+p1881
+S'Cofactor biosynthesis'
+p1882
+sS'YHR084W'
+p1883
+S'Transcription factors'
+p1884
+sS'YGL224C'
 p1885
 S''
-sS'YDR527W'
+sS'YOR326W'
 p1886
 S''
-sS'YLR396C'
+sS'YDR527W'
 p1887
 S''
-sS'YOL123W'
+sS'YLR396C'
 p1888
-S'mRNA surveillance pathway'
+S''
+sS'YOL123W'
 p1889
-sS'YDR132C'
+S'mRNA surveillance pathway'
 p1890
+sS'YDR132C'
+p1891
 S''
 sS'YML116W'
-p1891
-S'Transport'
 p1892
-sS'YNL084C'
+S'Transport'
 p1893
+sS'YNL084C'
+p1894
 S''
 sS'YGL066W'
-p1894
-S'Chromosome-related'
 p1895
-sS'YGR156W'
+S'Chromosome-related'
 p1896
-S'mRNA surveillance pathway'
+sS'YGR156W'
 p1897
-sS'YHR089C'
+S'mRNA surveillance pathway'
 p1898
-S'Ribosome biogenesis in eukaryotes'
+sS'YHR089C'
 p1899
-sS'YOR386W'
+S'Ribosome biogenesis in eukaryotes'
 p1900
-S'DNA repair and recombination proteins'
+sS'YOR386W'
 p1901
-sS'YAR042W'
+S'DNA repair and recombination proteins'
 p1902
-S''
-sS'YHR207C'
+sS'YAR042W'
 p1903
 S''
-sS'YHL038C'
+sS'YHR207C'
 p1904
 S''
-sS'YBR131W'
+sS'YHL038C'
 p1905
 S''
-sS'YOR051C'
+sS'YBR131W'
 p1906
 S''
-sS'YKL213C'
+sS'YOR051C'
 p1907
-S'Protein processing in endoplasmic reticulum'
+S''
+sS'YKL213C'
 p1908
-sS'YNL220W'
+S'Protein processing in endoplasmic reticulum'
 p1909
-S'Purine metabolism'
+sS'YNL220W'
 p1910
-sS'YGL169W'
+S'Purine metabolism'
 p1911
+sS'YGL169W'
+p1912
 S''
 sS'YGR060W'
-p1912
-S'Lipid and steroid metabolism'
 p1913
-sS'YCL064C'
+S'Lipid and steroid metabolism'
 p1914
-S'Amino acid metabolism'
+sS'YCL064C'
 p1915
-sS'YML076C'
+S'Amino acid metabolism'
 p1916
-S''
-sS'YER174C'
+sS'YML076C'
 p1917
 S''
-sS'YML029W'
+sS'YER174C'
 p1918
-S'Protein processing in endoplasmic reticulum'
-p1919
-sS'YNL313C'
-p1920
 S''
-sS'YDL240W'
+sS'YML029W'
+p1919
+S'Protein processing in endoplasmic reticulum'
+p1920
+sS'YNL313C'
 p1921
 S''
-sS'YMR142C'
+sS'YDL240W'
 p1922
-S'Ribosome'
+S''
+sS'YMR142C'
 p1923
-sS'YGL031C'
-p1924
 S'Ribosome'
+p1924
+sS'YGL031C'
 p1925
-sS'YKL006C-A'
+S'Ribosome'
 p1926
-S'SNARE interactions in vesicular transport'
+sS'YKL006C-A'
 p1927
-sS'YDL182W'
+S'SNARE interactions in vesicular transport'
 p1928
-S'Pyruvate metabolism'
+sS'YDL182W'
 p1929
-sS'YER069W'
+S'Pyruvate metabolism'
 p1930
-S'Amino acid metabolism'
+sS'YER069W'
 p1931
-sS'YMR091C'
+S'Amino acid metabolism'
 p1932
-S'Chromosome-related'
+sS'YMR091C'
 p1933
-sS'YER012W'
+S'Chromosome-related'
 p1934
-S'Proteasome'
+sS'YER012W'
 p1935
-sS'YPR172W'
+S'Proteasome'
 p1936
+sS'YPR172W'
+p1937
 S''
 sS'YBL067C'
-p1937
-S'Ubiquitin labeling'
 p1938
-sS'YHR098C'
+S'Ubiquitin labeling'
 p1939
-S''
-sS'YDL019C'
+sS'YHR098C'
 p1940
 S''
-sS'YML034W'
+sS'YDL019C'
 p1941
 S''
-sS'YDL135C'
+sS'YML034W'
 p1942
 S''
-sS'YPR023C'
+sS'YDL135C'
 p1943
-S'Chromosome-related'
+S''
+sS'YPR023C'
 p1944
-sS'YOR035C'
+S'Chromosome-related'
 p1945
+sS'YOR035C'
+p1946
 S''
 sS'YCR093W'
-p1946
-S'RNA degradation'
 p1947
-sS'YLR144C'
+S'RNA degradation'
 p1948
-S''
-sS'YMR273C'
+sS'YLR144C'
 p1949
 S''
-sS'YPR058W'
+sS'YMR273C'
 p1950
 S''
-sS'YLL035W'
+sS'YPR058W'
 p1951
 S''
-sS'YDR168W'
+sS'YLL035W'
 p1952
-S'Chaperones and folding catalysts'
-p1953
-sS'YML061C'
-p1954
 S''
-sS'YGL080W'
+sS'YDR168W'
+p1953
+S'Chaperones and folding catalysts'
+p1954
+sS'YML061C'
 p1955
 S''
-sS'YNL202W'
+sS'YGL080W'
 p1956
-S'Peroxisome'
+S''
+sS'YNL202W'
 p1957
-sS'YOR093C'
+S'Peroxisome'
 p1958
+sS'YOR093C'
+p1959
 S''
 sS'YJL186W'
-p1959
-S'Glycan metabolism'
 p1960
-sS'YER023W'
+S'Glycan metabolism'
 p1961
-S'Amino acid metabolism'
+sS'YER023W'
 p1962
-sS'YER163C'
+S'Amino acid metabolism'
 p1963
+sS'YER163C'
+p1964
 S''
 sS'YLR344W'
-p1964
-S'Ribosome'
 p1965
-sS'YBR069C'
+S'Ribosome'
 p1966
+sS'YBR069C'
+p1967
 S''
 sS'YML016C'
-p1967
-S'Other enzymes'
 p1968
-sS'YGL040C'
+S'Other enzymes'
 p1969
-S'Cofactor biosynthesis'
+sS'YGL040C'
 p1970
-sS'YKR084C'
+S'Cofactor biosynthesis'
 p1971
-S'Translation factors'
+sS'YKR084C'
 p1972
-sS'YDL017W'
+S'Translation factors'
 p1973
-S'DNA replication control'
+sS'YDL017W'
 p1974
-sS'YDR040C'
+S'DNA replication control'
 p1975
+sS'YDR040C'
+p1976
 S''
 sS'YDR113C'
-p1976
-S'Cell cycle'
 p1977
-sS'YLL031C'
+S'Cell cycle'
 p1978
-S'Glycan metabolism'
+sS'YLL031C'
 p1979
-sS'YLR033W'
-p1980
-S'Chromosome-related'
-p1981
-sS'YLR088W'
-p1982
 S'Glycan metabolism'
+p1980
+sS'YLR033W'
+p1981
+S'Chromosome-related'
+p1982
+sS'YLR088W'
 p1983
-sS'YLR438C-A'
+S'Glycan metabolism'
 p1984
-S'Spliceosome'
+sS'YLR438C-A'
 p1985
-sS'YGR255C'
+S'Spliceosome'
 p1986
-S'Cofactor biosynthesis'
+sS'YGR255C'
 p1987
-sS'YGL110C'
+S'Cofactor biosynthesis'
 p1988
-S''
-sS'YDL051W'
+sS'YGL110C'
 p1989
 S''
-sS'YMR242C'
+sS'YDL051W'
 p1990
-S'Ribosome'
+S''
+sS'YMR242C'
 p1991
-sS'YPL237W'
+S'Ribosome'
 p1992
-S'Translation factors'
+sS'YPL237W'
 p1993
-sS'YGR282C'
+S'Translation factors'
 p1994
-S'Cell wall'
+sS'YGR282C'
 p1995
-sS'YBR187W'
+S'Cell wall'
 p1996
+sS'YBR187W'
+p1997
 S''
 sS'YBR079C'
-p1997
-S'Translation factors'
 p1998
-sS'YMR077C'
+S'Translation factors'
 p1999
-S'Endocytosis'
+sS'YMR077C'
 p2000
-sS'YPL183C'
+S'Endocytosis'
 p2001
-S''
-sS'YDR166C'
+sS'YPL183C'
 p2002
 S''
-sS'YKR088C'
+sS'YDR166C'
 p2003
 S''
-sS'YPR118W'
+sS'YKR088C'
 p2004
-S'Amino acid metabolism'
+S''
+sS'YPR118W'
 p2005
-sS'YPL186C'
+S'Amino acid metabolism'
 p2006
+sS'YPL186C'
+p2007
 S''
 sS'YGR204W'
-p2007
-S'Other central metabolism enzymes'
 p2008
-sS'YJR080C'
+S'Other central metabolism enzymes'
 p2009
+sS'YJR080C'
+p2010
 S''
 sS'YJL005W'
-p2010
-S'Meiosis'
 p2011
-sS'YJL050W'
+S'Meiosis'
 p2012
-S'Ribosome biogenesis'
+sS'YJL050W'
 p2013
-sS'YCR017C'
+S'Ribosome biogenesis'
 p2014
-S''
-sS'YDR182W'
+sS'YCR017C'
 p2015
 S''
-sS'YKR063C'
+sS'YDR182W'
 p2016
 S''
-sS'YHR056C'
+sS'YKR063C'
 p2017
-S'Chromosome-related'
+S''
+sS'YHR056C'
 p2018
-sS'YBR112C'
+S'Chromosome-related'
 p2019
-S'Cell cycle'
+sS'YBR112C'
 p2020
-sS'YDR248C'
+S'Cell cycle'
 p2021
-S'Pentose phosphate metabolism'
+sS'YDR248C'
 p2022
-sS'YJR016C'
+S'Pentose phosphate metabolism'
 p2023
-S'Amino acid metabolism'
+sS'YJR016C'
 p2024
-sS'YDL202W'
+S'Amino acid metabolism'
 p2025
+sS'YDL202W'
+p2026
 S''
 sS'YDL100C'
-p2026
-S'Other enzymes'
 p2027
-sS'YFL008W'
+S'Other enzymes'
 p2028
-S'Chromosome-related'
+sS'YFL008W'
 p2029
-sS'YDR337W'
+S'Chromosome-related'
 p2030
+sS'YDR337W'
+p2031
 S''
 sS'YGL055W'
-p2031
-S'Lipid and steroid metabolism'
 p2032
-sS'YJL061W'
+S'Lipid and steroid metabolism'
 p2033
+sS'YJL061W'
+p2034
 S''
 sS'YLR216C'
-p2034
-S'Chaperones and folding catalysts'
 p2035
-sS'YPR147C'
+S'Chaperones and folding catalysts'
 p2036
+sS'YPR147C'
+p2037
 S''
 sS'YDR441C'
-p2037
-S'Purine metabolism'
 p2038
-sS'YPL094C'
+S'Purine metabolism'
 p2039
-S'Protein export'
+sS'YPL094C'
 p2040
-sS'YNL020C'
+S'Protein export'
 p2041
+sS'YNL020C'
+p2042
 S''
 sS'YPL023C'
-p2042
-S'Other central metabolism enzymes'
 p2043
-sS'YLR290C'
+S'Other central metabolism enzymes'
 p2044
+sS'YLR290C'
+p2045
 S''
 sS'YER090W'
-p2045
-S'Amino acid metabolism'
 p2046
-sS'YIL123W'
+S'Amino acid metabolism'
 p2047
-S'Cell wall'
+sS'YIL123W'
 p2048
-sS'YPR161C'
+S'Cell wall'
 p2049
-S'Other enzymes'
+sS'YPR161C'
 p2050
-sS'YOR291W'
+S'Other enzymes'
 p2051
+sS'YOR291W'
+p2052
 S''
 sS'YKL117W'
-p2052
-S'Chaperones and folding catalysts'
 p2053
-sS'YCR015C'
+S'Chaperones and folding catalysts'
 p2054
-S''
-sS'YDR159W'
+sS'YCR015C'
 p2055
 S''
-sS'YML005W'
+sS'YDR159W'
 p2056
 S''
-sS'YNL193W'
+sS'YML005W'
 p2057
 S''
-sS'YMR059W'
+sS'YNL193W'
 p2058
-S'Other enzymes'
+S''
+sS'YMR059W'
 p2059
-sS'YDR062W'
+S'Other enzymes'
 p2060
-S'Lipid and steroid metabolism'
+sS'YDR062W'
 p2061
-sS'YBR268W'
+S'Lipid and steroid metabolism'
 p2062
+sS'YBR268W'
+p2063
 S''
 sS'YFL026W'
-p2063
-S'MAPK signaling pathway'
 p2064
-sS'YBR188C'
+S'MAPK signaling pathway'
 p2065
+sS'YBR188C'
+p2066
 S''
 sS'YGL027C'
-p2066
-S'Protein processing in endoplasmic reticulum'
 p2067
-sS'YOR165W'
+S'Protein processing in endoplasmic reticulum'
 p2068
+sS'YOR165W'
+p2069
 S''
 sS'YHR190W'
-p2069
-S'Lipid and steroid metabolism'
 p2070
-sS'YLR106C'
+S'Lipid and steroid metabolism'
 p2071
-S'Ribosome biogenesis in eukaryotes'
+sS'YLR106C'
 p2072
-sS'YKL157W'
+S'Ribosome biogenesis in eukaryotes'
 p2073
-S'Peptidases'
+sS'YKL157W'
 p2074
-sS'YKR002W'
+S'Peptidases'
 p2075
-S'mRNA surveillance pathway'
+sS'YKR002W'
 p2076
-sS'YBR003W'
+S'mRNA surveillance pathway'
 p2077
-S'Cofactor biosynthesis'
+sS'YBR003W'
 p2078
-sS'YDR200C'
+S'Cofactor biosynthesis'
 p2079
-S''
-sS'YPR105C'
+sS'YDR200C'
 p2080
 S''
-sS'YPR129W'
+sS'YPR105C'
 p2081
 S''
-sS'YDL113C'
+sS'YPR129W'
 p2082
 S''
-sS'YLR271W'
+sS'YDL113C'
 p2083
 S''
-sS'YDL099W'
+sS'YLR271W'
 p2084
 S''
-sS'YGL226C-A'
+sS'YDR538W'
 p2085
-S'Protein processing in endoplasmic reticulum'
+S'Biosynthesis of other secondary metabolites'
 p2086
-sS'YNL166C'
+sS'YDL099W'
 p2087
 S''
-sS'YHR082C'
+sS'YGL226C-A'
 p2088
-S''
-sS'YLR274W'
+S'Protein processing in endoplasmic reticulum'
 p2089
-S'DNA replication complex'
+sS'YNL166C'
 p2090
-sS'YBR247C'
+S''
+sS'YHR082C'
 p2091
 S''
-sS'YLR185W'
+sS'YLR274W'
 p2092
-S'Ribosome'
+S'DNA replication complex'
 p2093
-sS'YJL210W'
+sS'YBR247C'
 p2094
-S'Peroxisome'
-p2095
-sS'YDR235W'
-p2096
 S''
-sS'YLR398C'
+sS'YLR185W'
+p2095
+S'Ribosome'
+p2096
+sS'YJL210W'
 p2097
-S'RNA degradation'
+S'Peroxisome'
 p2098
-sS'YIL154C'
+sS'YDR235W'
 p2099
 S''
-sS'YOR007C'
+sS'YLR398C'
 p2100
+S'RNA degradation'
+p2101
+sS'YIL154C'
+p2102
+S''
+sS'YOR007C'
+p2103
 S''
 sS'YHR097C'
-p2101
+p2104
 S''
 sS'YDL220C'
-p2102
-S'DNA replication control'
-p2103
-sS'YLR239C'
-p2104
-S'Cofactor biosynthesis'
 p2105
-sS'YBR038W'
+S'DNA replication control'
 p2106
-S'Other central metabolism enzymes'
+sS'YLR239C'
 p2107
-sS'YNL142W'
+S'Cofactor biosynthesis'
 p2108
+sS'YBR038W'
+p2109
+S'Other central metabolism enzymes'
+p2110
+sS'YNL142W'
+p2111
 S''
 sS'YGR076C'
-p2109
+p2112
 S''
 sS'YGR099W'
-p2110
+p2113
 S''
 sS'YFR031C'
-p2111
-S'Chromosome-related'
-p2112
-sS'YPL154C'
-p2113
-S'Peptidases'
 p2114
-sS'YHR019C'
+S'Chromosome-related'
 p2115
-S'tRNA loading'
+sS'YPL154C'
 p2116
-sS'YOR367W'
+S'Peptidases'
 p2117
+sS'YHR019C'
+p2118
+S'tRNA loading'
+p2119
+sS'YOR367W'
+p2120
 S''
 sS'YAL003W'
-p2118
-S'Translation factors'
-p2119
-sS'YIL149C'
-p2120
-S'RNA transport'
 p2121
-sS'YPL101W'
+S'Translation factors'
 p2122
-S'Chromosome-related'
+sS'YIL149C'
 p2123
-sS'YLR258W'
+S'RNA transport'
 p2124
-S'Carbohydrate metabolism'
+sS'YPL101W'
 p2125
-sS'YNR015W'
+S'Chromosome-related'
 p2126
-S'Other enzymes'
+sS'YLR258W'
 p2127
-sS'YJR098C'
+S'Carbohydrate metabolism'
 p2128
-S''
-sS'YBR127C'
+sS'YNR015W'
 p2129
-S'Phagosome'
+S'Other enzymes'
 p2130
-sS'YLR350W'
+sS'YJR098C'
 p2131
 S''
-sS'YGL009C'
+sS'YBR127C'
 p2132
-S'Amino acid metabolism'
+S'Phagosome'
 p2133
-sS'YHR176W'
+sS'YLR350W'
 p2134
 S''
-sS'YGR163W'
+sS'YGL009C'
 p2135
+S'Amino acid metabolism'
+p2136
+sS'YHR176W'
+p2137
+S''
+sS'YGR163W'
+p2138
 S''
 sS'YDR497C'
-p2136
-S'Transport'
-p2137
-sS'YKL022C'
-p2138
-S'Ubiquitin mediated proteolysis'
 p2139
-sS'YEL040W'
+S'Transport'
 p2140
-S'Cell wall'
+sS'YKL022C'
 p2141
-sS'YIL130W'
+S'Ubiquitin mediated proteolysis'
 p2142
+sS'YEL040W'
+p2143
+S'Cell wall'
+p2144
+sS'YIL130W'
+p2145
 S''
 sS'YBL092W'
-p2143
-S'Ribosome'
-p2144
-sS'YDR368W'
-p2145
-S'Carbohydrate metabolism'
 p2146
-sS'YBR101C'
+S'Ribosome'
 p2147
+sS'YDR368W'
+p2148
+S'Carbohydrate metabolism'
+p2149
+sS'YBR101C'
+p2150
 S''
 sS'YLR147C'
-p2148
-S'Spliceosome'
-p2149
-sS'YDL164C'
-p2150
-S'DNA replication complex'
 p2151
-sS'YDR177W'
+S'Spliceosome'
 p2152
-S'Ubiquitin mediated proteolysis'
+sS'YDL164C'
 p2153
-sS'YER061C'
+S'DNA replication complex'
 p2154
-S'Lipid and steroid metabolism'
+sS'YDR177W'
 p2155
-sS'YDR375C'
+S'Ubiquitin mediated proteolysis'
 p2156
-S''
-sS'YJL167W'
+sS'YER061C'
 p2157
-S'Cofactor biosynthesis'
+S'Lipid and steroid metabolism'
 p2158
-sS'YKL195W'
+sS'YDR375C'
 p2159
 S''
-sS'YKL179C'
+sS'YJL167W'
 p2160
-S'Transcription factors'
+S'Cofactor biosynthesis'
 p2161
-sS'YDR088C'
+sS'YKL195W'
 p2162
-S'Spliceosome'
+S''
+sS'YKL179C'
 p2163
-sS'YDR320C'
+S'Transcription factors'
 p2164
+sS'YDR088C'
+p2165
+S'Spliceosome'
+p2166
+sS'YDR320C'
+p2167
 S''
 sS'YKL042W'
-p2165
-S'Cytoskeleton proteins'
-p2166
-sS'YNL066W'
-p2167
-S'Cell wall'
 p2168
-sS'YPL112C'
+S'Cytoskeleton proteins'
 p2169
+sS'YNL066W'
+p2170
+S'Cell wall'
+p2171
+sS'YPL112C'
+p2172
 S''
 sS'YPL030W'
-p2170
+p2173
 S''
 sS'YAL058W'
-p2171
-S'Chaperones and folding catalysts'
-p2172
-sS'YDR452W'
-p2173
-S'Other enzymes'
 p2174
-sS'YLR316C'
+S'Chaperones and folding catalysts'
 p2175
+sS'YDR452W'
+p2176
+S'Other enzymes'
+p2177
+sS'YLR316C'
+p2178
 S''
 sS'YKL101W'
-p2176
-S'Cell cycle'
-p2177
-sS'YFL033C'
-p2178
-S'Meiosis'
 p2179
-sS'YNL124W'
+S'Cell cycle'
 p2180
+sS'YFL033C'
+p2181
+S'Meiosis'
+p2182
+sS'YNL124W'
+p2183
 S''
 sS'YIL094C'
-p2181
-S'Amino acid metabolism'
-p2182
-sS'YHR037W'
-p2183
-S'Amino acid metabolism'
 p2184
-sS'YJL098W'
+S'Amino acid metabolism'
 p2185
-S''
-sS'YIR021W'
+sS'YHR037W'
 p2186
-S''
-sS'YML108W'
+S'Amino acid metabolism'
 p2187
-S''
-sS'YIL076W'
+sS'YJL098W'
 p2188
 S''
-sS'YNR034W-A'
+sS'YIR021W'
 p2189
 S''
-sS'YOR352W'
+sS'YML108W'
 p2190
 S''
-sS'YHR148W'
+sS'YIL076W'
 p2191
-S'Ribosome biogenesis in eukaryotes'
+S''
+sS'YNR034W-A'
 p2192
-sS'YLR323C'
+S''
+sS'YOR352W'
 p2193
 S''
-sS'YBL038W'
+sS'YHR148W'
 p2194
-S''
-sS'YML117W'
+S'Ribosome biogenesis in eukaryotes'
 p2195
-S''
-sS'YGR054W'
+sS'YLR323C'
 p2196
 S''
-sS'YHL039W'
+sS'YBL038W'
 p2197
 S''
-sS'YGR189C'
+sS'YML117W'
 p2198
-S'Cell wall'
+S''
+sS'YGR054W'
 p2199
-sS'YOR332W'
+S''
+sS'YHL039W'
 p2200
-S'Phagosome'
+S''
+sS'YGR189C'
 p2201
-sS'YOR069W'
+S'Cell wall'
 p2202
-S''
-sS'YGR038W'
+sS'YOR332W'
 p2203
-S''
-sS'YNL087W'
+S'Phagosome'
 p2204
-S''
-sS'YBR104W'
+sS'YOR069W'
 p2205
 S''
-sS'YBR227C'
+sS'YGR038W'
 p2206
-S'Chaperones and folding catalysts'
+S''
+sS'YNL087W'
 p2207
-sS'YOR341W'
+S''
+sS'YBR104W'
 p2208
-S'RNA polymerase'
+S''
+sS'YBR227C'
 p2209
-sS'YNL024C-A'
+S'Chaperones and folding catalysts'
 p2210
-S''
-sS'YDR296W'
+sS'YOR341W'
 p2211
-S''
-sS'YGL232W'
+S'RNA polymerase'
 p2212
-S''
-sS'YPR091C'
+sS'YNL024C-A'
 p2213
 S''
-sS'YGR141W'
+sS'YDR296W'
 p2214
 S''
-sS'YNL173C'
+sS'YGL232W'
 p2215
 S''
-sS'YIL116W'
+sS'YPR091C'
 p2216
-S'Amino acid metabolism'
+S''
+sS'YGR141W'
 p2217
-sS'YDR478W'
+S''
+sS'YNL173C'
 p2218
 S''
-sS'YGR094W'
+sS'YIL116W'
 p2219
-S'tRNA loading'
+S'Amino acid metabolism'
 p2220
-sS'YJR138W'
+sS'YDR478W'
 p2221
 S''
-sS'YDR377W'
+sS'YGR094W'
 p2222
-S'Oxidative phosphorylation'
+S'tRNA loading'
 p2223
-sS'YNL133C'
+sS'YJR138W'
 p2224
 S''
-sS'YJR103W'
+sS'YDR377W'
 p2225
-S'Pyrimidine metabolism'
+S'Oxidative phosphorylation'
 p2226
-sS'YHR028C'
+sS'YNL133C'
 p2227
 S''
-sS'YBR265W'
+sS'YJR103W'
 p2228
-S'Lipid and steroid metabolism'
+S'Pyrimidine metabolism'
 p2229
-sS'YBL007C'
+sS'YHR028C'
 p2230
 S''
-sS'YNR037C'
+sS'YBR265W'
 p2231
-S''
-sS'YEL001C'
+S'Lipid and steroid metabolism'
 p2232
-S''
-sS'YCL024W'
+sS'YBL007C'
 p2233
 S''
-sS'YMR307W'
+sS'YNR037C'
 p2234
-S'Cell wall'
-p2235
-sS'YAL032C'
-p2236
-S'Spliceosome'
-p2237
-sS'YGL145W'
-p2238
 S''
-sS'YHR137W'
+sS'YEL001C'
+p2235
+S''
+sS'YCL024W'
+p2236
+S''
+sS'YMR307W'
+p2237
+S'Cell wall'
+p2238
+sS'YAL032C'
 p2239
-S'Amino acid metabolism'
+S'Spliceosome'
 p2240
-sS'YOR021C'
+sS'YGL145W'
 p2241
 S''
-sS'YBR230C'
+sS'YHR137W'
 p2242
-S''
-sS'YNL252C'
+S'Amino acid metabolism'
 p2243
-S''
-sS'YKL021C'
+sS'YOR021C'
 p2244
 S''
-sS'YER133W'
+sS'YBR230C'
 p2245
-S'Regulation of actin cytoskeleton'
+S''
+sS'YNL252C'
 p2246
-sS'YGL248W'
+S''
+sS'YKL021C'
 p2247
-S'Purine metabolism'
+S''
+sS'YER133W'
 p2248
-sS'YKL197C'
+S'Regulation of actin cytoskeleton'
 p2249
-S'Peroxisome'
+sS'YGL248W'
 p2250
-sS'YOL006C'
+S'Purine metabolism'
 p2251
-S'DNA replication control'
+sS'YKL197C'
 p2252
-sS'YDL066W'
+S'Peroxisome'
 p2253
-S'TCA cycle and anaplerotic enzymes'
+sS'YOL006C'
 p2254
-sS'YER020W'
+S'DNA replication control'
 p2255
-S'GTP-binding signaling proteins'
+sS'YDL066W'
 p2256
-sS'YER162C'
+S'TCA cycle and anaplerotic enzymes'
 p2257
-S'Nucleotide excision repair'
+sS'YER020W'
 p2258
-sS'YOR020W-A'
+S'GTP-binding signaling proteins'
 p2259
-S''
-sS'YDR511W'
+sS'YER162C'
 p2260
-S''
-sS'YML011C'
+S'Nucleotide excision repair'
 p2261
-S''
-sS'YNL201C'
+sS'YOR020W-A'
 p2262
 S''
-sS'YDR398W'
+sS'YDR511W'
 p2263
-S'Ribosome biogenesis in eukaryotes'
+S''
+sS'YML011C'
 p2264
-sS'YCR028C-A'
+S''
+sS'YNL201C'
 p2265
 S''
-sS'YHR102W'
+sS'YDR398W'
 p2266
+S'Ribosome biogenesis in eukaryotes'
+p2267
+sS'YCR028C-A'
+p2268
+S''
+sS'YHR102W'
+p2269
 S''
 sS'YER112W'
-p2267
-S'Spliceosome'
-p2268
-sS'YMR250W'
-p2269
-S'Amino acid metabolism'
 p2270
-sS'YEL015W'
+S'Spliceosome'
 p2271
-S'RNA degradation'
+sS'YMR250W'
 p2272
-sS'YGR254W'
+S'Amino acid metabolism'
 p2273
-S'Glycolysis'
+sS'YEL015W'
 p2274
-sS'YLR018C'
+S'RNA degradation'
 p2275
+sS'YGR254W'
+p2276
+S'Glycolysis'
+p2277
+sS'YLR018C'
+p2278
 S''
 sS'YKR085C'
-p2276
-S''
-sS'YPR131C'
-p2277
-S'Other enzymes'
-p2278
-sS'YJL201W'
 p2279
 S''
-sS'YLR418C'
+sS'YPR131C'
 p2280
-S''
-sS'YLR063W'
+S'Other enzymes'
 p2281
-S''
-sS'YER059W'
+sS'YJL201W'
 p2282
 S''
-sS'YOR234C'
+sS'YLR418C'
 p2283
-S'Ribosome'
+S''
+sS'YLR063W'
 p2284
-sS'YGL111W'
+S''
+sS'YER059W'
 p2285
 S''
-sS'YKL087C'
+sS'YOR234C'
 p2286
-S'Cofactor biosynthesis'
+S'Ribosome'
 p2287
-sS'YBR289W'
+sS'YGL111W'
 p2288
-S'Chromosome-related'
+S''
+sS'YKL087C'
 p2289
-sS'YPL153C'
+S'Cofactor biosynthesis'
 p2290
-S'DNA repair and recombination proteins'
+sS'YBR289W'
 p2291
-sS'YKR093W'
+S'Chromosome-related'
 p2292
+sS'YPL153C'
+p2293
+S'DNA repair and recombination proteins'
+p2294
+sS'YKR093W'
+p2295
 S''
 sS'YDL167C'
-p2293
-S''
-sS'YOL066C'
-p2294
-S'Cofactor biosynthesis'
-p2295
-sS'YER082C'
 p2296
 S''
-sS'YKL212W'
+sS'YOL066C'
 p2297
+S'Cofactor biosynthesis'
+p2298
+sS'YER082C'
+p2299
+S''
+sS'YKL212W'
+p2300
 S''
 sS'YJL071W'
-p2298
-S'Amino acid metabolism'
-p2299
-sS'YGL167C'
-p2300
-S'Transport'
 p2301
-sS'YHR115C'
+S'Amino acid metabolism'
 p2302
-S''
-sS'YEL022W'
+sS'YGL167C'
 p2303
-S''
-sS'YPL188W'
+S'Transport'
 p2304
-S''
-sS'YPR188C'
+sS'YHR115C'
 p2305
 S''
-sS'YIL053W'
+sS'YEL022W'
 p2306
-S'Lipid and steroid metabolism'
-p2307
-sS'YDL074C'
-p2308
-S'Ubiquitin labeling'
-p2309
-sS'YNL073W'
-p2310
-S'tRNA loading'
-p2311
-sS'YOR374W'
-p2312
-S'Glycolysis'
-p2313
-sS'YJL190C'
-p2314
-S'Ribosome'
-p2315
-sS'YPL059W'
-p2316
-S'Chaperones and folding catalysts'
-p2317
-sS'YLR052W'
-p2318
-S'Chromosome-related'
-p2319
-sS'YGL107C'
-p2320
 S''
-sS'YOR212W'
+sS'YPL188W'
+p2307
+S''
+sS'YPR188C'
+p2308
+S''
+sS'YIL053W'
+p2309
+S'Lipid and steroid metabolism'
+p2310
+sS'YDL074C'
+p2311
+S'Ubiquitin labeling'
+p2312
+sS'YNL073W'
+p2313
+S'tRNA loading'
+p2314
+sS'YOR374W'
+p2315
+S'Glycolysis'
+p2316
+sS'YJL190C'
+p2317
+S'Ribosome'
+p2318
+sS'YPL059W'
+p2319
+S'Chaperones and folding catalysts'
+p2320
+sS'YLR052W'
 p2321
-S'MAPK signaling pathway'
+S'Chromosome-related'
 p2322
-sS'YDR032C'
+sS'YGL107C'
 p2323
 S''
-sS'YMR221C'
+sS'YOR212W'
 p2324
-S''
-sS'YNL106C'
+S'MAPK signaling pathway'
 p2325
-S'Phosphatidylinositol signaling system'
+sS'YDR032C'
 p2326
-sS'YGL198W'
+S''
+sS'YMR221C'
 p2327
 S''
-sS'YEL053C'
+sS'YNL106C'
 p2328
+S'Phosphatidylinositol signaling system'
+p2329
+sS'YGL198W'
+p2330
+S''
+sS'YEL053C'
+p2331
 S''
 sS'YMR280C'
-p2329
-S'Transcription factors'
-p2330
-sS'YDR236C'
-p2331
-S'Cofactor biosynthesis'
 p2332
-sS'YJL042W'
+S'Transcription factors'
 p2333
-S'Cytoskeleton proteins'
+sS'YDR236C'
 p2334
-sS'YDR372C'
+S'Cofactor biosynthesis'
 p2335
+sS'YJL042W'
+p2336
+S'Cytoskeleton proteins'
+p2337
+sS'YDR372C'
+p2338
 S''
 sS'YER057C'
-p2336
-S''
-sS'YNL301C'
-p2337
-S'Ribosome'
-p2338
-sS'YBR119W'
 p2339
 S''
-sS'YJL111W'
+sS'YNL301C'
 p2340
-S'Chaperones and folding catalysts'
+S'Ribosome'
 p2341
-sS'YIL066C'
+sS'YBR119W'
 p2342
-S'DNA repair and recombination proteins'
+S''
+sS'YJL111W'
 p2343
-sS'YMR211W'
+S'Chaperones and folding catalysts'
 p2344
+sS'YIL066C'
+p2345
+S'DNA repair and recombination proteins'
+p2346
+sS'YMR211W'
+p2347
 S''
 sS'YKR010C'
-p2345
+p2348
 S''
 sS'YDL043C'
-p2346
-S'Spliceosome'
-p2347
-sS'YNL192W'
-p2348
-S'Other central metabolism enzymes'
 p2349
-sS'YLL010C'
+S'Spliceosome'
 p2350
-S''
-sS'YMR058W'
+sS'YNL192W'
 p2351
-S'Other enzymes'
+S'Other central metabolism enzymes'
 p2352
-sS'YDR061W'
+sS'YLL010C'
 p2353
 S''
-sS'YOR290C'
+sS'YMR058W'
 p2354
-S'Chromosome-related'
+S'Other enzymes'
 p2355
-sS'YMR129W'
+sS'YDR061W'
 p2356
 S''
-sS'YML093W'
+sS'YOR290C'
 p2357
-S'Ribosome biogenesis in eukaryotes'
+S'Chromosome-related'
 p2358
-sS'YJR077C'
+sS'YMR129W'
 p2359
 S''
-sS'YHR197W'
+sS'YML093W'
 p2360
+S'Ribosome biogenesis in eukaryotes'
+p2361
+sS'YJR077C'
+p2362
+S''
+sS'YHR197W'
+p2363
 S''
 sS'YDL112W'
-p2361
-S''
-sS'YBR002C'
-p2362
-S'Cofactor biosynthesis'
-p2363
-sS'YDR391C'
 p2364
 S''
-sS'YPR004C'
+sS'YBR002C'
 p2365
+S'Cofactor biosynthesis'
+p2366
+sS'YDR391C'
+p2367
+S''
+sS'YPR004C'
+p2368
 S''
 sS'YGR261C'
-p2366
+p2369
 S''
 sS'YKL154W'
-p2367
-S'Protein export'
-p2368
-sS'YGR180C'
-p2369
-S'Purine metabolism'
 p2370
-sS'YDR158W'
+S'Protein export'
 p2371
-S'Amino acid metabolism'
+sS'YGR180C'
 p2372
-sS'YKL092C'
+S'Purine metabolism'
 p2373
-S''
-sS'YMR116C'
+sS'YDR158W'
 p2374
-S'Ribosome'
+S'Amino acid metabolism'
 p2375
-sS'YPL004C'
+sS'YKL092C'
 p2376
 S''
-sS'YHR065C'
+sS'YMR116C'
 p2377
-S'Other enzymes'
+S'Ribosome'
 p2378
-sS'YOR164C'
+sS'YPL004C'
 p2379
 S''
-sS'YPL082C'
+sS'YHR065C'
 p2380
+S'Other enzymes'
+p2381
+sS'YOR164C'
+p2382
+S''
+sS'YPL082C'
+p2383
 S''
 sS'YDR256C'
-p2381
-S'Other enzymes'
-p2382
-sS'YGL030W'
-p2383
-S'Ribosome'
 p2384
-sS'YGR283C'
+S'Other enzymes'
 p2385
-S''
-sS'YDL052C'
+sS'YGL030W'
 p2386
-S'Lipid and steroid metabolism'
+S'Ribosome'
 p2387
-sS'YER175C'
+sS'YGR283C'
 p2388
 S''
-sS'YJL178C'
+sS'YDL052C'
 p2389
+S'Lipid and steroid metabolism'
+p2390
+sS'YER175C'
+p2391
+S''
+sS'YJL178C'
+p2392
 S''
 sS'YMR174C'
-p2390
-S''
-sS'YJL033W'
-p2391
-S'Other enzymes'
-p2392
-sS'YLR429W'
 p2393
 S''
-sS'YMR308C'
+sS'YJL033W'
 p2394
+S'Other enzymes'
+p2395
+sS'YLR429W'
+p2396
+S''
+sS'YMR308C'
+p2397
 S''
 sS'YMR218C'
-p2395
+p2398
 S''
 sS'YDR050C'
-p2396
-S'Glycolysis'
-p2397
-sS'YGR061C'
-p2398
-S'Purine metabolism'
 p2399
-sS'YLL007C'
+S'Glycolysis'
 p2400
+sS'YGR061C'
+p2401
+S'Purine metabolism'
+p2402
+sS'YLL007C'
+p2403
 S''
 sS'YNL265C'
-p2401
+p2404
 S''
 sS'YCR032W'
-p2402
-S''
-sS'YNL312W'
-p2403
-S'DNA replication complex'
-p2404
-sS'YPL241C'
 p2405
 S''
-sS'YGL120C'
+sS'YNL312W'
 p2406
-S'Spliceosome'
+S'DNA replication complex'
 p2407
-sS'YGR271C-A'
+sS'YPL241C'
 p2408
 S''
-sS'YDR169C'
+sS'YGL120C'
 p2409
-S''
-sS'YMR183C'
+S'Spliceosome'
 p2410
-S'SNARE interactions in vesicular transport'
+sS'YGR271C-A'
 p2411
-sS'YMR090W'
+S''
+sS'YDR169C'
 p2412
 S''
-sS'YIR038C'
+sS'YMR183C'
 p2413
-S'Cofactor biosynthesis'
+S'SNARE interactions in vesicular transport'
 p2414
-sS'YHR099W'
+sS'YMR090W'
 p2415
-S'Chromosome-related'
+S''
+sS'YIR038C'
 p2416
-sS'YEL071W'
+S'Cofactor biosynthesis'
 p2417
+sS'YHR099W'
+p2418
+S'Chromosome-related'
+p2419
+sS'YEL071W'
+p2420
 S''
 sS'YMR272C'
-p2418
+p2421
 S''
 sS'YML062C'
-p2419
-S''
-sS'YPR108W'
-p2420
-S'Proteasome'
-p2421
-sS'YNL041C'
 p2422
 S''
-sS'YBR106W'
+sS'YPR108W'
 p2423
-S''
-sS'YBL093C'
+S'Proteasome'
 p2424
-S''
-sS'YKL054C'
+sS'YNL041C'
 p2425
 S''
-sS'YAL062W'
+sS'YBR106W'
 p2426
-S'Amino acid metabolism'
+S''
+sS'YBL093C'
 p2427
-sS'YLR390W-A'
+S''
+sS'YKL054C'
 p2428
-S'Cell wall'
+S''
+sS'YAL062W'
 p2429
-sS'YHR171W'
+S'Amino acid metabolism'
 p2430
-S'Ubiquitin labeling'
+sS'YLR390W-A'
 p2431
-sS'YGR162W'
+S'Cell wall'
 p2432
-S'RNA transport'
+sS'YHR171W'
 p2433
-sS'YMR298W'
+S'Ubiquitin labeling'
 p2434
-S''
-sS'YBR291C'
+sS'YGR162W'
 p2435
-S''
-sS'YDR258C'
+S'RNA transport'
 p2436
-S''
-sS'YDR520C'
+sS'YMR298W'
 p2437
 S''
-sS'YJL124C'
+sS'YBR291C'
 p2438
-S'RNA degradation'
+S''
+sS'YDR258C'
 p2439
-sS'YLR253W'
+S''
+sS'YDR520C'
 p2440
 S''
-sS'YKL023W'
+sS'YJL124C'
 p2441
-S''
-sS'YJR051W'
+S'RNA degradation'
 p2442
-S''
-sS'YKL094W'
+sS'YLR253W'
 p2443
 S''
-sS'YNL259C'
+sS'YKL023W'
 p2444
 S''
-sS'YDR261C'
+sS'YJR051W'
 p2445
-S'Carbohydrate metabolism'
+S''
+sS'YKL094W'
 p2446
-sS'YIL131C'
+S''
+sS'YNL259C'
 p2447
 S''
-sS'YKL143W'
+sS'YDR261C'
 p2448
+S'Carbohydrate metabolism'
+p2449
+sS'YIL131C'
+p2450
+S''
+sS'YKL143W'
+p2451
 S''
 sS'YBR146W'
-p2449
-S''
-sS'YPL031C'
-p2450
-S'Cell cycle'
-p2451
-sS'YAL044W-A'
 p2452
 S''
-sS'YKL012W'
+sS'YPL031C'
 p2453
-S'Spliceosome'
+S'Cell cycle'
 p2454
-sS'YER080W'
+sS'YAL044W-A'
 p2455
 S''
-sS'YJL164C'
+sS'YKL012W'
 p2456
-S'MAPK signaling pathway'
+S'Spliceosome'
 p2457
-sS'YNL125C'
+sS'YER080W'
 p2458
 S''
-sS'YJR019C'
+sS'YJL164C'
 p2459
-S'Lipid and steroid metabolism'
+S'MAPK signaling pathway'
 p2460
-sS'YLR191W'
+sS'YNL125C'
 p2461
-S'Peroxisome'
+S''
+sS'YJR019C'
 p2462
-sS'YDR321W'
-p2463
-S'Amino acid metabolism'
-p2464
-sS'YFR032C-A'
-p2465
-S'Ribosome'
-p2466
-sS'YNR001C'
-p2467
-S'TCA cycle and anaplerotic enzymes'
-p2468
-sS'YNL178W'
-p2469
-S'Ribosome'
-p2470
-sS'YDR147W'
-p2471
 S'Lipid and steroid metabolism'
+p2463
+sS'YLR191W'
+p2464
+S'Peroxisome'
+p2465
+sS'YDR321W'
+p2466
+S'Amino acid metabolism'
+p2467
+sS'YFR032C-A'
+p2468
+S'Ribosome'
+p2469
+sS'YNR001C'
+p2470
+S'TCA cycle and anaplerotic enzymes'
+p2471
+sS'YNL178W'
 p2472
-sS'YJL004C'
+S'Ribosome'
 p2473
+sS'YDR147W'
+p2474
+S'Lipid and steroid metabolism'
+p2475
+sS'YJL004C'
+p2476
 S''
 sS'YGR217W'
-p2474
+p2477
 S''
 sS'YGL243W'
-p2475
+p2478
 S''
 sS'YMR076C'
-p2476
-S'Chromosome-related'
-p2477
-sS'YJL006C'
-p2478
-S'Other enzymes'
 p2479
-sS'YDR356W'
+S'Chromosome-related'
 p2480
-S'Cytoskeleton proteins'
+sS'YJL006C'
 p2481
-sS'YDL083C'
+S'Other enzymes'
 p2482
-S'Ribosome'
+sS'YDR356W'
 p2483
-sS'YJR017C'
+S'Cytoskeleton proteins'
 p2484
-S'Chaperones and folding catalysts'
+sS'YDL083C'
 p2485
-sS'YPL180W'
+S'Ribosome'
 p2486
-S''
-sS'YKL113C'
+sS'YJR017C'
 p2487
-S'DNA replication complex'
+S'Chaperones and folding catalysts'
 p2488
-sS'YNL027W'
+sS'YPL180W'
 p2489
 S''
-sS'YPL022W'
+sS'YKL113C'
 p2490
-S'DNA replication control'
+S'DNA replication complex'
 p2491
-sS'YDR440W'
+sS'YNL027W'
 p2492
-S'Chromosome-related'
+S''
+sS'YPL022W'
 p2493
-sS'YJL060W'
+S'DNA replication control'
 p2494
-S'Amino acid metabolism'
+sS'YDR440W'
 p2495
-sS'YOR100C'
+S'Chromosome-related'
 p2496
+sS'YJL060W'
+p2497
+S'Amino acid metabolism'
+p2498
+sS'YOR100C'
+p2499
 S''
 sS'YDL205C'
-p2497
-S'Cofactor biosynthesis'
-p2498
-sS'YML080W'
-p2499
-S'Other enzymes'
 p2500
-sS'YNL116W'
+S'Cofactor biosynthesis'
 p2501
+sS'YML080W'
+p2502
+S'Other enzymes'
+p2503
+sS'YNL116W'
+p2504
 S''
 sS'YMR285C'
-p2502
+p2505
 S''
 sS'YLR291C'
-p2503
-S'Translation factors'
-p2504
-sS'YPR140W'
-p2505
-S'Lipid and steroid metabolism'
 p2506
-sS'YGR048W'
+S'Translation factors'
 p2507
-S'Protein processing in endoplasmic reticulum'
+sS'YPR140W'
 p2508
-sS'YIR001C'
+S'Lipid and steroid metabolism'
 p2509
-S'mRNA surveillance pathway'
+sS'YGR048W'
 p2510
-sS'YDL230W'
+S'Protein processing in endoplasmic reticulum'
 p2511
-S'Transport'
+sS'YIR001C'
 p2512
-sS'YML115C'
+S'mRNA surveillance pathway'
 p2513
-S'Glycan metabolism'
+sS'YDL230W'
 p2514
-sS'YJR113C'
+S'Transport'
 p2515
-S'Ribosome'
+sS'YML115C'
 p2516
-sS'YBR279W'
+S'Glycan metabolism'
 p2517
+sS'YJR113C'
+p2518
+S'Ribosome'
+p2519
+sS'YBR279W'
+p2520
 S''
 sS'YOR281C'
-p2518
+p2521
 S''
 sS'YGL181W'
-p2519
-S''
-sS'YOR340C'
-p2520
-S'Purine metabolism'
-p2521
-sS'YIL156W-B'
 p2522
 S''
-sS'YKL032C'
+sS'YOR340C'
 p2523
+S'Purine metabolism'
+p2524
+sS'YIL156W-B'
+p2525
+S''
+sS'YKL032C'
+p2526
 S''
 sS'YPL137C'
-p2524
-S''
-sS'YOL158C'
-p2525
-S'Transport'
-p2526
-sS'YGR097W'
 p2527
 S''
-sS'YOR122C'
+sS'YOL158C'
 p2528
-S'Regulation of actin cytoskeleton'
+S'Transport'
 p2529
-sS'YBR151W'
+sS'YGR097W'
 p2530
 S''
-sS'YCL025C'
+sS'YOR122C'
 p2531
-S''
-sS'YNR034W'
+S'Regulation of actin cytoskeleton'
 p2532
-S'Pentose phosphate metabolism'
+sS'YBR151W'
 p2533
-sS'YGL231C'
+S''
+sS'YCL025C'
 p2534
 S''
-sS'YGR157W'
+sS'YNR034W'
 p2535
-S'Lipid and steroid metabolism'
+S'Pentose phosphate metabolism'
 p2536
-sS'YBR286W'
+sS'YGL231C'
 p2537
-S'Peptidases'
-p2538
-sS'YJL165C'
-p2539
 S''
-sS'YDR190C'
+sS'YGR157W'
+p2538
+S'Lipid and steroid metabolism'
+p2539
+sS'YBR286W'
 p2540
-S'Chromosome-related'
+S'Peptidases'
 p2541
-sS'YAL031C'
+sS'YJL165C'
 p2542
 S''
-sS'YBL006C'
+sS'YDR190C'
 p2543
 S'Chromosome-related'
 p2544
-sS'YLR340W'
+sS'YAL031C'
 p2545
-S'Ribosome'
-p2546
-sS'YNL132W'
-p2547
-S'Ribosome biogenesis in eukaryotes'
-p2548
-sS'YMR070W'
-p2549
 S''
-sS'YBR264C'
+sS'YBL006C'
+p2546
+S'Chromosome-related'
+p2547
+sS'YLR340W'
+p2548
+S'Ribosome'
+p2549
+sS'YNL132W'
 p2550
-S'GTP-binding signaling proteins'
+S'Ribosome biogenesis in eukaryotes'
 p2551
-sS'YBR231C'
+sS'YMR070W'
 p2552
 S''
-sS'YBR246W'
+sS'YBR264C'
 p2553
+S'GTP-binding signaling proteins'
+p2554
+sS'YBR231C'
+p2555
+S''
+sS'YBR246W'
+p2556
 S''
 sS'YGR207C'
-p2554
+p2557
 S''
 sS'YLR275W'
-p2555
-S'Spliceosome'
-p2556
-sS'YMR230W'
-p2557
-S'Ribosome'
 p2558
-sS'YER095W'
+S'Spliceosome'
 p2559
-S'Ubiquitin labeling'
+sS'YMR230W'
 p2560
-sS'YHR076W'
+S'Ribosome'
 p2561
+sS'YER095W'
+p2562
+S'Ubiquitin labeling'
+p2563
+sS'YHR076W'
+p2564
 S''
 sS'YIL155C'
-p2562
-S'Lipid and steroid metabolism'
-p2563
-sS'YGR171C'
-p2564
-S'tRNA loading'
 p2565
-sS'YJL148W'
+S'Lipid and steroid metabolism'
 p2566
-S'RNA polymerase'
+sS'YGR171C'
 p2567
-sS'YAL048C'
+S'tRNA loading'
 p2568
-S''
-sS'YPL055C'
+sS'YJL148W'
 p2569
-S''
-sS'YAL013W'
+S'RNA polymerase'
 p2570
-S''
-sS'YDR098C'
+sS'YAL048C'
 p2571
 S''
-sS'YPL009C'
+sS'YPL055C'
 p2572
 S''
-sS'YIL148W'
+sS'YAL013W'
 p2573
-S'Ribosome'
+S''
+sS'YDR098C'
 p2574
-sS'YNR016C'
+S''
+sS'YPL009C'
 p2575
-S'Lipid and steroid metabolism'
+S''
+sS'YIL148W'
 p2576
-sS'YJR099W'
+S'Ribosome'
 p2577
-S'Ubiquitin labeling'
+sS'YNR016C'
 p2578
-sS'YLR259C'
+S'Lipid and steroid metabolism'
 p2579
-S'Chaperones and folding catalysts'
+sS'YJR099W'
 p2580
-sS'YNL052W'
+S'Ubiquitin labeling'
 p2581
-S'Oxidative phosphorylation'
+sS'YLR259C'
 p2582
-sS'YGL184C'
+S'Chaperones and folding catalysts'
 p2583
-S'Amino acid metabolism'
+sS'YNL052W'
 p2584
-sS'YKL005C'
+S'Oxidative phosphorylation'
 p2585
+sS'YGL184C'
+p2586
+S'Amino acid metabolism'
+p2587
+sS'YKL005C'
+p2588
 S''
 sS'YBR120C'
-p2586
+p2589
 S''
 sS'YLR085C'
-p2587
-S'Chromosome-related'
-p2588
-sS'YDR280W'
-p2589
-S'RNA degradation'
 p2590
-sS'YKL215C'
+S'Chromosome-related'
 p2591
-S'Amino acid metabolism'
+sS'YDR280W'
 p2592
-sS'YDR418W'
+S'RNA degradation'
 p2593
-S'Ribosome'
+sS'YKL215C'
 p2594
-sS'YPL217C'
+S'Amino acid metabolism'
 p2595
-S'Ribosome biogenesis in eukaryotes'
+sS'YDR418W'
 p2596
-sS'YHR114W'
+S'Ribosome'
 p2597
-S''
-sS'YHR138C'
+sS'YPL217C'
 p2598
-S''
-sS'YBL024W'
+S'Ribosome biogenesis in eukaryotes'
 p2599
-S''
-sS'YMR241W'
+sS'YHR114W'
 p2600
 S''
-sS'YPR189W'
+sS'YHR138C'
 p2601
-S'RNA degradation'
+S''
+sS'YBL024W'
 p2602
-sS'YGR028W'
+S''
+sS'YMR241W'
 p2603
 S''
-sS'YDL075W'
+sS'YPR189W'
 p2604
-S'Ribosome'
+S'RNA degradation'
 p2605
-sS'YDR127W'
+sS'YGR028W'
 p2606
-S'Amino acid metabolism'
+S''
+sS'YDL075W'
 p2607
-sS'YCL034W'
+S'Ribosome'
 p2608
+sS'YDR127W'
+p2609
+S'Amino acid metabolism'
+p2610
+sS'YCL034W'
+p2611
 S''
 sS'YDR118W'
-p2609
-S'Ubiquitin mediated proteolysis'
-p2610
-sS'YOL018C'
-p2611
-S'SNARE interactions in vesicular transport'
 p2612
-sS'YBR288C'
+S'Ubiquitin mediated proteolysis'
 p2613
+sS'YOL018C'
+p2614
+S'SNARE interactions in vesicular transport'
+p2615
+sS'YBR288C'
+p2616
 S''
 sS'YOR220W'
-p2614
+p2617
 S''
 sS'YJR067C'
-p2615
-S''
-sS'YOR259C'
-p2616
-S'Proteasome'
-p2617
-sS'YLL048C'
 p2618
 S''
-sS'YNL264C'
+sS'YOR259C'
 p2619
-S''
-sS'YGR117C'
+S'Proteasome'
 p2620
-S''
-sS'YER180C-A'
+sS'YLL048C'
 p2621
 S''
-sS'YGL174W'
+sS'YNL264C'
 p2622
 S''
-sS'YLL024C'
+sS'YGR117C'
 p2623
-S'Chaperones and folding catalysts'
+S''
+sS'YER180C-A'
 p2624
-sS'YHL007C'
+S''
+sS'YGL174W'
 p2625
-S'MAPK signaling pathway'
+S''
+sS'YLL024C'
 p2626
-sS'YGL106W'
+S'Chaperones and folding catalysts'
 p2627
-S''
-sS'YOL027C'
+sS'YHL007C'
 p2628
-S''
-sS'YOR211C'
+S'MAPK signaling pathway'
 p2629
-S''
-sS'YCR002C'
+sS'YGL106W'
 p2630
 S''
-sS'YDR033W'
+sS'YOL027C'
 p2631
 S''
-sS'YPL120W'
+sS'YOR211C'
 p2632
-S'Regulation of autophagy'
+S''
+sS'YCR002C'
 p2633
-sS'YIL075C'
+S''
+sS'YDR033W'
 p2634
-S'Proteasome'
+S''
+sS'YPL120W'
 p2635
-sS'YOL145C'
+S'Regulation of autophagy'
 p2636
+sS'YIL075C'
+p2637
+S'Proteasome'
+p2638
+sS'YOL145C'
+p2639
 S''
 sS'YOR022C'
-p2637
+p2640
 S''
 sS'Q0065'
-p2638
-S'Oxidative phosphorylation'
-p2639
-sS'YHR038W'
-p2640
-S'Translation factors'
 p2641
-sS'YJL099W'
+S'Oxidative phosphorylation'
 p2642
+sS'YHR038W'
+p2643
+S'Translation factors'
+p2644
+sS'YJL099W'
+p2645
 S''
 sS'YHR149C'
-p2643
-S''
-sS'YIL020C'
-p2644
-S'Amino acid metabolism'
-p2645
-sS'YOL098C'
 p2646
 S''
-sS'YDR365W-A'
+sS'YIL020C'
 p2647
+S'Amino acid metabolism'
+p2648
+sS'YOL098C'
+p2649
+S''
+sS'YDR365W-A'
+p2650
 S''
 sS'YBR208C'
-p2648
-S'Amino acid metabolism'
-p2649
-sS'YOR099W'
-p2650
-S'Glycan metabolism'
 p2651
-sS'YGL256W'
+S'Amino acid metabolism'
 p2652
-S'Glycolysis'
+sS'YOR099W'
 p2653
-sS'YHL025W'
+S'Glycan metabolism'
 p2654
-S'Chromosome-related'
+sS'YGL256W'
 p2655
-sS'YIL097W'
+S'Glycolysis'
 p2656
-S''
-sS'YFR010W'
+sS'YHL025W'
 p2657
-S'Ubiquitin labeling'
+S'Chromosome-related'
 p2658
-sS'YHL009C'
+sS'YIL097W'
 p2659
 S''
-sS'YMR311C'
+sS'YFR010W'
 p2660
-S''
-sS'YAL042W'
+S'Ubiquitin labeling'
 p2661
-S''
-sS'YDR251W'
+sS'YHL009C'
 p2662
 S''
-sS'YHR205W'
+sS'YMR311C'
 p2663
 S''
-sS'YKL052C'
+sS'YAL042W'
 p2664
-S'Cytoskeleton proteins'
+S''
+sS'YDR251W'
 p2665
-sS'YGR037C'
+S''
+sS'YHR205W'
 p2666
 S''
-sS'YLR304C'
+sS'YKL052C'
 p2667
-S'TCA cycle and anaplerotic enzymes'
+S'Cytoskeleton proteins'
 p2668
-sS'YBL039C'
+sS'YGR037C'
 p2669
-S'Pyrimidine metabolism'
-p2670
-sS'YER143W'
-p2671
 S''
-sS'YNL048W'
+sS'YLR304C'
+p2670
+S'TCA cycle and anaplerotic enzymes'
+p2671
+sS'YBL039C'
 p2672
-S'Glycan metabolism'
+S'Pyrimidine metabolism'
 p2673
-sS'YDL153C'
+sS'YER143W'
 p2674
 S''
-sS'YGL064C'
+sS'YOR362C'
 p2675
-S''
-sS'YGR284C'
+S'Proteasome'
 p2676
-S''
-sS'YDL053C'
+sS'YDL153C'
 p2677
 S''
-sS'YHR075C'
+sS'YGL064C'
 p2678
-S'Peptidases'
+S''
+sS'YGR284C'
 p2679
-sS'YMR240C'
+S''
+sS'YDL053C'
 p2680
-S'Spliceosome'
+S''
+sS'YHR075C'
 p2681
-sS'YAL038W'
+S'Peptidases'
 p2682
-S'Glycolysis'
+sS'YMR240C'
 p2683
-sS'YML074C'
+S'Spliceosome'
 p2684
-S'Other enzymes'
+sS'YAL038W'
 p2685
-sS'YKR062W'
+S'Glycolysis'
 p2686
-S'Basal transcription factors'
+sS'YML074C'
 p2687
-sS'YNL286W'
+S'Other enzymes'
 p2688
+sS'YKR062W'
+p2689
+S'Basal transcription factors'
+p2690
+sS'YNL286W'
+p2691
 S''
 sS'YPL150W'
-p2689
+p2692
 S''
 sS'YPR069C'
-p2690
-S'Amino acid metabolism'
-p2691
-sS'YLR200W'
-p2692
-S'Chaperones and folding catalysts'
 p2693
-sS'YMR215W'
+S'Amino acid metabolism'
 p2694
-S'Cell wall'
+sS'YLR200W'
 p2695
-sS'YDR051C'
+S'Chaperones and folding catalysts'
 p2696
+sS'YMR215W'
+p2697
+S'Cell wall'
+p2698
+sS'YDR051C'
+p2699
 S''
 sS'YGR062C'
-p2697
-S''
-sS'YDL108W'
-p2698
-S'Basal transcription factors'
-p2699
-sS'YER176W'
 p2700
 S''
-sS'YHL035C'
+sS'YDL108W'
 p2701
+S'Basal transcription factors'
+p2702
+sS'YER176W'
+p2703
+S''
+sS'YHL035C'
+p2704
 S''
 sS'YKR003W'
-p2702
-S''
-sS'YBR078W'
-p2703
-S'Cell wall'
-p2704
-sS'YMR097C'
 p2705
 S''
-sS'YBR030W'
+sS'YBR078W'
 p2706
-S''
-sS'YLR336C'
+S'Cell wall'
 p2707
-S''
-sS'YDL133W'
+sS'YMR097C'
 p2708
 S''
-sS'YPL240C'
+sS'YBR030W'
 p2709
-S'Chaperones and folding catalysts'
+S''
+sS'YLR336C'
 p2710
-sS'YDL022W'
+S''
+sS'YDL133W'
 p2711
-S'Lipid and steroid metabolism'
+S''
+sS'YPL240C'
 p2712
-sS'YPR021C'
+S'Chaperones and folding catalysts'
 p2713
+sS'YDL022W'
+p2714
+S'Lipid and steroid metabolism'
+p2715
+sS'YPR021C'
+p2716
 S''
 sS'YLR044C'
-p2714
-S'Glycolysis'
-p2715
-sS'YGR244C'
-p2716
-S'TCA cycle and anaplerotic enzymes'
 p2717
-sS'YIR033W'
+S'Glycolysis'
 p2718
+sS'YGR244C'
+p2719
+S'TCA cycle and anaplerotic enzymes'
+p2720
+sS'YIR033W'
+p2721
 S''
 sS'YDR496C'
-p2719
+p2722
 S''
 sS'YLR099C'
-p2720
-S''
-sS'YOR074C'
-p2721
-S'Other central metabolism enzymes'
-p2722
-sS'YOR298C-A'
 p2723
 S''
-sS'YML032C'
+sS'YOR074C'
 p2724
-S'Homologous recombination'
+S'Other central metabolism enzymes'
 p2725
-sS'YLR146C'
+sS'YOR298C-A'
 p2726
-S'Amino acid metabolism'
+S''
+sS'YML032C'
 p2727
-sS'YPR110C'
+S'Homologous recombination'
 p2728
-S'RNA polymerase'
+sS'YLR146C'
 p2729
-sS'YBR267W'
+S'Amino acid metabolism'
 p2730
+sS'YPR110C'
+p2731
+S'RNA polymerase'
+p2732
+sS'YBR267W'
+p2733
 S''
 sS'YDR429C'
-p2731
-S'Translation factors'
-p2732
-sS'YAL047C'
-p2733
-S'Cytoskeleton proteins'
 p2734
-sS'YDL035C'
+S'Translation factors'
 p2735
-S'G protein-coupled receptors'
+sS'YAL047C'
 p2736
-sS'YML010W'
+S'Cytoskeleton proteins'
 p2737
+sS'YDL035C'
+p2738
+S'G protein-coupled receptors'
+p2739
+sS'YML010W'
+p2740
 S''
 sS'YDL193W'
-p2738
+p2741
 S''
 sS'YER074W'
-p2739
-S'Ribosome'
-p2740
-sS'YER021W'
-p2741
-S'Proteasome'
 p2742
-sS'YMR208W'
+S'Ribosome'
 p2743
-S'Peroxisome'
+sS'YER021W'
 p2744
-sS'YER134C'
+S'Proteasome'
 p2745
+sS'YMR208W'
+p2746
+S'Peroxisome'
+p2747
+sS'YER134C'
+p2748
 S''
 sS'YEL052W'
-p2746
-S''
-sS'YNL088W'
-p2747
-S'DNA replication control'
-p2748
-sS'YER161C'
 p2749
 S''
-sS'YJL180C'
+sS'YNL088W'
 p2750
-S''
-sS'YHR103W'
+S'DNA replication control'
 p2751
-S''
-sS'YNL200C'
+sS'YER161C'
 p2752
 S''
-sS'YDR498C'
+sS'YJL180C'
 p2753
-S'SNARE interactions in vesicular transport'
-p2754
-sS'YOR257W'
-p2755
-S'Cytoskeleton proteins'
-p2756
-sS'YGR002C'
-p2757
-S'Chromosome-related'
-p2758
-sS'YIL039W'
-p2759
 S''
-sS'YGR075C'
+sS'YHR103W'
+p2754
+S''
+sS'YNL200C'
+p2755
+S''
+sS'YDR498C'
+p2756
+S'SNARE interactions in vesicular transport'
+p2757
+sS'YOR257W'
+p2758
+S'Cytoskeleton proteins'
+p2759
+sS'YGR002C'
 p2760
-S'Spliceosome'
+S'Chromosome-related'
 p2761
-sS'YBR058C-A'
+sS'YIL039W'
 p2762
 S''
-sS'YOL113W'
+sS'YGR075C'
 p2763
+S'Spliceosome'
+p2764
+sS'YBR058C-A'
+p2765
+S''
+sS'YOL113W'
+p2766
 S''
 sS'YDR111C'
-p2764
-S'Carbon fixation in photosynthetic organisms'
-p2765
-sS'YGR253C'
-p2766
-S'Proteasome'
 p2767
-sS'YDR510W'
+S'Carbon fixation in photosynthetic organisms'
 p2768
-S'RNA transport'
+sS'YGR253C'
 p2769
-sS'YKR082W'
+S'Proteasome'
 p2770
-S'RNA transport'
+sS'YDR510W'
 p2771
-sS'YLR228C'
+S'RNA transport'
 p2772
+sS'YKR082W'
+p2773
+S'RNA transport'
+p2774
+sS'YLR228C'
+p2775
 S''
 sS'YOL115W'
-p2773
-S'RNA degradation'
-p2774
-sS'YBR199W'
-p2775
-S'Glycan metabolism'
 p2776
-sS'YBR023C'
+S'RNA degradation'
 p2777
-S'Other central metabolism enzymes'
+sS'YBR199W'
 p2778
-sS'YPR045C'
+S'Glycan metabolism'
 p2779
+sS'YBR023C'
+p2780
+S'Other central metabolism enzymes'
+p2781
+sS'YPR045C'
+p2782
 S''
 sS'YLR419W'
-p2780
+p2783
 S''
 sS'YPR010C'
-p2781
-S'RNA polymerase'
-p2782
-sS'YPL231W'
-p2783
-S'Lipid and steroid metabolism'
 p2784
-sS'YLR148W'
+S'RNA polymerase'
 p2785
+sS'YPL231W'
+p2786
+S'Lipid and steroid metabolism'
+p2787
+sS'YLR148W'
+p2788
 S''
 sS'YDR164C'
-p2786
-S''
-sS'YDL082W'
-p2787
-S'Ribosome'
-p2788
-sS'YKL155C'
 p2789
 S''
-sS'YPL133C'
+sS'YDL082W'
 p2790
-S''
-sS'YJR069C'
+S'Ribosome'
 p2791
-S''
-sS'YCL055W'
+sS'YKL155C'
 p2792
 S''
-sS'YNR031C'
+sS'YPL133C'
 p2793
-S'MAPK signaling pathway'
-p2794
-sS'YKR055W'
-p2795
-S'GTP-binding signaling proteins'
-p2796
-sS'YFL042C'
-p2797
 S''
-sS'YPL081W'
+sS'YJR069C'
+p2794
+S''
+sS'YCL055W'
+p2795
+S''
+sS'YNR031C'
+p2796
+S'MAPK signaling pathway'
+p2797
+sS'YKR055W'
 p2798
-S'Ribosome'
+S'GTP-binding signaling proteins'
 p2799
-sS'YIR035C'
+sS'YFL042C'
 p2800
 S''
-sS'YDR148C'
+sS'YPL081W'
 p2801
-S'TCA cycle and anaplerotic enzymes'
+S'Ribosome'
 p2802
-sS'YJR034W'
+sS'YIR035C'
 p2803
 S''
-sS'YDL045W-A'
+sS'YDR148C'
 p2804
+S'TCA cycle and anaplerotic enzymes'
+p2805
+sS'YJR034W'
+p2806
+S''
+sS'YDL045W-A'
+p2807
 S''
 sS'YPL096W'
-p2805
-S'Protein processing in endoplasmic reticulum'
-p2806
-sS'YDL204W'
-p2807
-S'Protein processing in endoplasmic reticulum'
 p2808
-sS'YDR335W'
+S'Protein processing in endoplasmic reticulum'
 p2809
-S'RNA transport'
+sS'YDL204W'
 p2810
-sS'YPR141C'
+S'Protein processing in endoplasmic reticulum'
 p2811
-S'Cytoskeleton proteins'
+sS'YDR335W'
 p2812
-sS'YHR081W'
+S'RNA transport'
 p2813
-S'RNA degradation'
+sS'YPR141C'
 p2814
-sS'YKR031C'
+S'Cytoskeleton proteins'
 p2815
-S'Endocytosis'
+sS'YHR081W'
 p2816
-sS'YDR541C'
+S'RNA degradation'
 p2817
-S''
-sS'YGL189C'
+sS'YKR031C'
 p2818
-S'Ribosome'
+S'Endocytosis'
 p2819
-sS'YML081W'
+sS'YDR541C'
 p2820
 S''
-sS'YHR181W'
+sS'YGL189C'
 p2821
+S'Ribosome'
+p2822
+sS'YML081W'
+p2823
+S''
+sS'YHR181W'
+p2824
 S''
 sS'YDR342C'
-p2822
-S'Transport'
-p2823
-sS'YPL078C'
-p2824
-S'Oxidative phosphorylation'
 p2825
-sS'YDR211W'
+S'Transport'
 p2826
-S'Translation factors'
+sS'YPL078C'
 p2827
-sS'YCR095C'
+S'Oxidative phosphorylation'
 p2828
+sS'YDR211W'
+p2829
+S'Translation factors'
+p2830
+sS'YCR095C'
+p2831
 S''
 sS'YMR128W'
-p2829
+p2832
 S''
 sS'YLL011W'
-p2830
-S'Ribosome biogenesis'
-p2831
-sS'YCR077C'
-p2832
-S'RNA degradation'
 p2833
-sS'YML130C'
+S'Ribosome biogenesis'
 p2834
+sS'YCR077C'
+p2835
+S'RNA degradation'
+p2836
+sS'YML130C'
+p2837
 S''
 sS'YJL029C'
-p2835
+p2838
 S''
 sS'YER056C'
-p2836
-S''
-sS'YGL130W'
-p2837
-S'Other enzymes'
-p2838
-sS'YMR157C'
 p2839
 S''
-sS'YML063W'
+sS'YGL130W'
 p2840
-S'Ribosome'
+S'Other enzymes'
 p2841
-sS'YNL306W'
+sS'YMR157C'
 p2842
 S''
-sS'YML075C'
+sS'YML063W'
 p2843
-S'Cofactor biosynthesis'
+S'Ribosome'
 p2844
-sS'YNL191W'
+sS'YNL306W'
 p2845
 S''
-sS'YDR237W'
+sS'YML075C'
 p2846
-S''
-sS'YOR297C'
+S'Cofactor biosynthesis'
 p2847
-S''
-sS'YDR060W'
+sS'YNL191W'
 p2848
 S''
-sS'YBL072C'
+sS'YDR237W'
 p2849
-S'Ribosome'
+S''
+sS'YOR297C'
 p2850
-sS'YMR080C'
+S''
+sS'YDR060W'
 p2851
-S'RNA transport'
+S''
+sS'YBL072C'
 p2852
-sS'YGL187C'
+S'Ribosome'
 p2853
-S'Oxidative phosphorylation'
+sS'YMR080C'
 p2854
-sS'YBR001C'
+S'RNA transport'
 p2855
-S'Carbohydrate metabolism'
+sS'YGL187C'
 p2856
-sS'YNL246W'
+S'Oxidative phosphorylation'
 p2857
+sS'YBR001C'
+p2858
+S'Carbohydrate metabolism'
+p2859
+sS'YNL246W'
+p2860
 S''
 sS'YDR407C'
-p2858
-S''
-sS'YHR196W'
-p2859
-S'Ribosome biogenesis in eukaryotes'
-p2860
-sS'YPR067W'
 p2861
 S''
-sS'YML092C'
+sS'YHR196W'
 p2862
-S'Proteasome'
+S'Ribosome biogenesis in eukaryotes'
 p2863
-sS'YML025C'
+sS'YPR067W'
 p2864
 S''
-sS'YDL124W'
+sS'YML092C'
 p2865
-S''
-sS'YDR257C'
+S'Proteasome'
 p2866
-S''
-sS'YJR074W'
+sS'YML025C'
 p2867
 S''
-sS'YPR127W'
+sS'YDL124W'
 p2868
-S'Cofactor biosynthesis'
+S''
+sS'YDR257C'
 p2869
-sS'YGR266W'
+S''
+sS'YJR074W'
 p2870
 S''
-sS'YDL148C'
+sS'YPR127W'
 p2871
+S'Cofactor biosynthesis'
+p2872
+sS'YGR266W'
+p2873
+S''
+sS'YDL148C'
+p2874
 S''
 sS'YMR102C'
-p2872
+p2875
 S''
 sS'YAL012W'
-p2873
-S'Amino acid metabolism'
-p2874
-sS'YHR163W'
-p2875
-S'Pentose phosphate metabolism'
 p2876
-sS'YJR134C'
+S'Amino acid metabolism'
 p2877
+sS'YHR163W'
+p2878
+S'Pentose phosphate metabolism'
+p2879
+sS'YJR134C'
+p2880
 S''
 sS'YMR288W'
-p2878
-S'Spliceosome'
-p2879
-sS'YKL080W'
-p2880
-S'Phagosome'
 p2881
-sS'YBR167C'
+S'Spliceosome'
 p2882
-S'Ribosome biogenesis in eukaryotes'
+sS'YKL080W'
 p2883
-sS'YIL156W'
+S'Phagosome'
 p2884
-S'Ubiquitin labeling'
+sS'YBR167C'
 p2885
-sS'YDR384C'
+S'Ribosome biogenesis in eukaryotes'
 p2886
+sS'YIL156W'
+p2887
+S'Ubiquitin labeling'
+p2888
+sS'YDR384C'
+p2889
 S''
 sS'YPL196W'
-p2887
+p2890
 S''
 sS'YDR518W'
-p2888
-S'Chaperones and folding catalysts'
-p2889
-sS'YLR272C'
-p2890
-S'Chromosome-related'
 p2891
-sS'YHR100C'
+S'Chaperones and folding catalysts'
 p2892
-S''
-sS'YDL226C'
+sS'YLR272C'
 p2893
-S'Endocytosis'
+S'Chromosome-related'
 p2894
-sS'YNR017W'
+sS'YHR100C'
 p2895
 S''
-sS'YNL168C'
+sS'YDL226C'
 p2896
-S''
-sS'YGL092W'
+S'Endocytosis'
 p2897
-S''
-sS'YCL039W'
+sS'YNR017W'
 p2898
 S''
-sS'YHR077C'
+sS'YNL168C'
 p2899
-S'RNA transport'
+S''
+sS'YGL092W'
 p2900
-sS'YJL212C'
+S''
+sS'YCL039W'
 p2901
 S''
-sS'YGR136W'
+sS'YHR077C'
 p2902
+S'RNA transport'
+p2903
+sS'YJL212C'
+p2904
+S''
+sS'YGR136W'
+p2905
 S''
 sS'YML007W'
-p2903
-S'Transcription factors'
-p2904
-sS'YOR008C'
-p2905
-S'MAPK signaling pathway'
 p2906
-sS'YOR153W'
+S'Transcription factors'
 p2907
-S'Transport'
+sS'YOR008C'
 p2908
-sS'YDR041W'
+S'MAPK signaling pathway'
 p2909
+sS'YOR153W'
+p2910
+S'Transport'
+p2911
+sS'YDR041W'
+p2912
 S''
 sS'YGL201C'
-p2910
-S'DNA replication complex'
-p2911
-sS'YNL113W'
-p2912
-S'RNA polymerase'
 p2913
-sS'YDR099W'
+S'DNA replication complex'
 p2914
-S'Cell cycle'
+sS'YNL113W'
 p2915
-sS'YBR121C'
+S'RNA polymerase'
 p2916
-S'tRNA loading'
+sS'YDR099W'
 p2917
-sS'YLR229C'
+S'Cell cycle'
 p2918
-S'MAPK signaling pathway'
+sS'YBR121C'
 p2919
-sS'YNL079C'
+S'tRNA loading'
 p2920
+sS'YLR229C'
+p2921
+S'MAPK signaling pathway'
+p2922
+sS'YNL079C'
+p2923
 S''
 sS'YMR062C'
-p2921
-S'Amino acid metabolism'
-p2922
-sS'YMR015C'
-p2923
-S'Lipid and steroid metabolism'
 p2924
-sS'YKL020C'
+S'Amino acid metabolism'
 p2925
+sS'YMR015C'
+p2926
+S'Lipid and steroid metabolism'
+p2927
+sS'YKL020C'
+p2928
 S''
 sS'YAL007C'
-p2926
-S''
-sS'YHR170W'
-p2927
-S'RNA transport'
-p2928
-sS'YCL026C-B'
 p2929
 S''
-sS'YJL125C'
+sS'YHR170W'
 p2930
-S'Other enzymes'
+S'RNA transport'
 p2931
-sS'YLR312W-A'
+sS'YCL026C-B'
 p2932
 S''
-sS'YBL090W'
+sS'YJL125C'
 p2933
+S'Other enzymes'
+p2934
+sS'YLR312W-A'
+p2935
+S''
+sS'YBL090W'
+p2936
 S''
 sS'YKL068W'
-p2934
-S''
-sS'YDL166C'
-p2935
-S'Basal transcription factors'
-p2936
-sS'YKL142W'
 p2937
 S''
-sS'YPL049C'
+sS'YDL166C'
 p2938
-S'MAPK signaling pathway'
+S'Basal transcription factors'
 p2939
-sS'YNL064C'
+sS'YKL142W'
 p2940
-S'Chaperones and folding catalysts'
+S''
+sS'YPL049C'
 p2941
-sS'YOR110W'
+S'MAPK signaling pathway'
 p2942
+sS'YNL064C'
+p2943
+S'Chaperones and folding catalysts'
+p2944
+sS'YOR110W'
+p2945
 S''
 sS'YLR045C'
-p2943
-S'Cytoskeleton proteins'
-p2944
-sS'YER081W'
-p2945
-S'Amino acid metabolism'
 p2946
-sS'YIL136W'
+S'Cytoskeleton proteins'
 p2947
+sS'YER081W'
+p2948
+S'Amino acid metabolism'
+p2949
+sS'YIL136W'
+p2950
 S''
 sS'YPL178W'
-p2948
-S'Spliceosome'
-p2949
-sS'YHL010C'
-p2950
-S'Ubiquitin labeling'
 p2951
-sS'YGL057C'
+S'Spliceosome'
 p2952
+sS'YHL010C'
+p2953
+S'Ubiquitin labeling'
+p2954
+sS'YGL057C'
+p2955
 S''
 sS'YIR003W'
-p2953
-S''
-sS'YDR450W'
-p2954
-S'Ribosome'
-p2955
-sS'YNL008C'
 p2956
 S''
-sS'YOL111C'
+sS'YDR450W'
 p2957
-S''
-sS'YOR098C'
+S'Ribosome'
 p2958
-S''
-sS'YDL120W'
+sS'YNL008C'
 p2959
 S''
-sS'YGL227W'
+sS'YOL111C'
 p2960
 S''
-sS'YIL018W'
+sS'YOR098C'
 p2961
-S'Ribosome'
+S''
+sS'YDL120W'
 p2962
-sS'YIL074C'
+S''
+sS'YGL227W'
 p2963
-S'Amino acid metabolism'
+S''
+sS'YIL018W'
 p2964
-sS'YMR312W'
+S'Ribosome'
 p2965
-S'Chromosome-related'
+sS'YIL074C'
 p2966
-sS'YCL033C'
+S'Amino acid metabolism'
 p2967
-S''
-sS'YIL161W'
+sS'YMR312W'
 p2968
-S''
-sS'YOR307C'
+S'Chromosome-related'
 p2969
-S''
-sS'YOL144W'
+sS'YCL033C'
 p2970
 S''
-sS'YLR325C'
+sS'YIL161W'
 p2971
-S'Ribosome'
+S''
+sS'YOL144W'
 p2972
-sS'YHR039C'
+S''
+sS'YLR325C'
 p2973
+S'Ribosome'
+p2974
+sS'YHR039C'
+p2975
 S''
 sS'YBR274W'
-p2974
-S'DNA repair and recombination proteins'
-p2975
-sS'YER131W'
 p2976
-S'Ribosome'
+S'DNA repair and recombination proteins'
 p2977
-sS'YDL190C'
+sS'YER131W'
 p2978
-S'Protein processing in endoplasmic reticulum'
-p2979
-sS'YLR110C'
-p2980
-S'Cell wall'
-p2981
-sS'YCR042C'
-p2982
-S'Basal transcription factors'
-p2983
-sS'YDL188C'
-p2984
-S'mRNA surveillance pathway'
-p2985
-sS'YGR118W'
-p2986
 S'Ribosome'
+p2979
+sS'YDL190C'
+p2980
+S'Protein processing in endoplasmic reticulum'
+p2981
+sS'YLR110C'
+p2982
+S'Cell wall'
+p2983
+sS'YCR042C'
+p2984
+S'Basal transcription factors'
+p2985
+sS'YDL188C'
+p2986
+S'mRNA surveillance pathway'
 p2987
-sS'YCR035C'
+sS'YGR118W'
 p2988
-S'RNA degradation'
+S'Ribosome'
 p2989
-sS'YGL065C'
+sS'YCR035C'
 p2990
-S'Glycan metabolism'
+S'RNA degradation'
 p2991
-sS'YOR052C'
+sS'YGL065C'
 p2992
-S''
-sS'YLR243W'
+S'Glycan metabolism'
 p2993
-S''
-sS'YAL001C'
+sS'YOR052C'
 p2994
 S''
-sS'YHR066W'
+sS'YLR243W'
 p2995
 S''
-sS'YAL054C'
+sS'YAL001C'
 p2996
-S'Glycolysis'
+S''
+sS'YHR066W'
 p2997
-sS'YOL051W'
+S''
+sS'YAL054C'
 p2998
+S'Glycolysis'
+p2999
+sS'YOL051W'
+p3000
 S''
 sS'YMR135C'
-p2999
+p3001
 S''
 sS'YLR032W'
-p3000
-S'Other enzymes'
-p3001
-sS'YOR045W'
 p3002
-S''
-sS'YDR476C'
+S'Other enzymes'
 p3003
-S''
-sS'YDL046W'
+sS'YOR045W'
 p3004
 S''
-sS'YJR112W'
+sS'YDR476C'
 p3005
-S'Chromosome-related'
+S''
+sS'YDL046W'
 p3006
-sS'YBR252W'
+S''
+sS'YJR112W'
 p3007
-S'DNA repair and recombination proteins'
-p3008
-sS'YGR116W'
-p3009
 S'Chromosome-related'
+p3008
+sS'YBR252W'
+p3009
+S'DNA repair and recombination proteins'
 p3010
-sS'YIL110W'
+sS'YGR116W'
 p3011
+S'Chromosome-related'
+p3012
+sS'YIL110W'
+p3013
 S''
 sS'YJR083C'
-p3012
+p3014
 S''
 sS'YBR169C'
-p3013
-S'Chaperones and folding catalysts'
-p3014
-sS'YNL135C'
 p3015
 S'Chaperones and folding catalysts'
 p3016
-sS'YAL030W'
+sS'YNL135C'
 p3017
-S'SNARE interactions in vesicular transport'
+S'Chaperones and folding catalysts'
 p3018
-sS'YGL147C'
+sS'YAL030W'
 p3019
-S'Ribosome'
+S'SNARE interactions in vesicular transport'
 p3020
-sS'YBR263W'
+sS'YGL147C'
 p3021
-S'Other central metabolism enzymes'
+S'Ribosome'
 p3022
-sS'YOL086C'
+sS'YBR263W'
 p3023
-S'Glycolysis'
+S'Other central metabolism enzymes'
 p3024
-sS'YBL001C'
+sS'YOL086C'
 p3025
+S'Glycolysis'
+p3026
+sS'YBL001C'
+p3027
 S''
 sS'YNR035C'
-p3026
-S'Regulation of actin cytoskeleton'
-p3027
-sS'YDR019C'
 p3028
-S'Other central metabolism enzymes'
+S'Regulation of actin cytoskeleton'
 p3029
-sS'YBL051C'
+sS'YDR019C'
 p3030
+S'Other central metabolism enzymes'
+p3031
+sS'YBL051C'
+p3032
 S''
 sS'YGR150C'
-p3031
+p3033
 S''
 sS'YLR287C-A'
-p3032
-S'Ribosome'
-p3033
-sS'YEL055C'
 p3034
-S'DNA repair and recombination proteins'
+S'Ribosome'
 p3035
-sS'YGR058W'
+sS'YJL003W'
 p3036
 S''
-sS'YPR193C'
+sS'YEL055C'
 p3037
-S''
-sS'YDR381C-A'
+S'DNA repair and recombination proteins'
 p3038
-S''
-sS'YMR196W'
+sS'YGR058W'
 p3039
 S''
-sS'YBR053C'
+sS'YPR193C'
 p3040
 S''
-sS'YML013W'
+sS'YDR381C-A'
 p3041
-S'Protein processing in endoplasmic reticulum'
+S''
+sS'YMR196W'
 p3042
-sS'YNL207W'
+S''
+sS'YBR053C'
 p3043
-S'Ribosome biogenesis in eukaryotes'
+S''
+sS'YML013W'
 p3044
-sS'YDR428C'
-p3045
-S'TCA cycle and anaplerotic enzymes'
-p3046
-sS'YLR029C'
-p3047
-S'Ribosome'
-p3048
-sS'YBR082C'
-p3049
 S'Protein processing in endoplasmic reticulum'
+p3045
+sS'YNL207W'
+p3046
+S'Ribosome biogenesis in eukaryotes'
+p3047
+sS'YDR428C'
+p3048
+S'TCA cycle and anaplerotic enzymes'
+p3049
+sS'YLR029C'
 p3050
-sS'YOR210W'
+S'Ribosome'
 p3051
-S'RNA polymerase'
+sS'YBR082C'
 p3052
-sS'YBL034C'
+S'Protein processing in endoplasmic reticulum'
 p3053
-S'Cytoskeleton proteins'
+sS'YOR210W'
 p3054
-sS'YJR022W'
+S'RNA polymerase'
 p3055
-S'Spliceosome'
+sS'YBL034C'
 p3056
-sS'YOL008W'
+S'Cytoskeleton proteins'
 p3057
+sS'YJR022W'
+p3058
+S'Spliceosome'
+p3059
+sS'YOL008W'
+p3060
 S''
 sS'YER077C'
-p3058
-S''
-sS'YHR104W'
-p3059
-S'Carbohydrate metabolism'
-p3060
-sS'YBR089C-A'
 p3061
 S''
-sS'YCR054C'
+sS'YHR104W'
 p3062
+S'Carbohydrate metabolism'
+p3063
+sS'YBR089C-A'
+p3064
+S''
+sS'YCR054C'
+p3065
 S''
 sS'YDR045C'
-p3063
-S'RNA polymerase'
-p3064
-sS'YHR092C'
-p3065
-S'Transport'
 p3066
-sS'YPL232W'
+S'RNA polymerase'
 p3067
-S'SNARE interactions in vesicular transport'
+sS'YHR092C'
 p3068
-sS'YKR083C'
+S'Transport'
 p3069
-S'Cytoskeleton proteins'
+sS'YPL232W'
 p3070
-sS'YMR209C'
+S'SNARE interactions in vesicular transport'
 p3071
+sS'YKR083C'
+p3072
+S'Cytoskeleton proteins'
+p3073
+sS'YMR209C'
+p3074
 S''
 sS'YEL017W'
-p3072
+p3075
 S''
 sS'YGR252W'
-p3073
-S'Chromosome-related'
-p3074
-sS'YDL003W'
-p3075
-S'Chromosome-related'
 p3076
-sS'YER128W'
+S'Chromosome-related'
 p3077
+sS'YDL003W'
+p3078
+S'Chromosome-related'
+p3079
+sS'YER128W'
+p3080
 S''
 sS'YDL235C'
-p3078
-S'MAPK signaling pathway'
-p3079
-sS'YDL215C'
-p3080
-S'Amino acid metabolism'
 p3081
-sS'YJR029W'
+S'MAPK signaling pathway'
 p3082
+sS'YDL215C'
+p3083
+S'Amino acid metabolism'
+p3084
+sS'YJR029W'
+p3085
 S''
 sS'YDL078C'
-p3083
-S'TCA cycle and anaplerotic enzymes'
-p3084
-sS'YGR003W'
-p3085
-S'Ubiquitin mediated proteolysis'
 p3086
-sS'YDR517W'
+S'TCA cycle and anaplerotic enzymes'
 p3087
-S''
-sS'YGL043W'
+sS'YGR003W'
 p3088
-S''
-sS'YOR256C'
+S'Ubiquitin mediated proteolysis'
 p3089
-S''
-sS'YPR011C'
+sS'YDR517W'
 p3090
 S''
-sS'YLL061W'
+sS'YGL043W'
 p3091
 S''
-sS'YDR110W'
+sS'YOR256C'
 p3092
-S'Cell cycle'
+S''
+sS'YPR011C'
 p3093
-sS'YLR061W'
+S''
+sS'YLL061W'
 p3094
-S'Ribosome'
+S''
+sS'YDR110W'
 p3095
-sS'YAR010C'
+S'Cell cycle'
 p3096
+sS'YLR061W'
+p3097
+S'Ribosome'
+p3098
+sS'YAR010C'
+p3099
 S''
 sS'YKL214C'
-p3097
+p3100
 S''
 sS'YOL088C'
-p3098
+p3101
 S''
 sS'YOR361C'
-p3099
-S'Translation factors'
-p3100
-sS'YOR221C'
-p3101
-S'Lipid and steroid metabolism'
 p3102
-sS'YKR095W'
+S'Translation factors'
 p3103
-S'RNA transport'
+sS'YOR221C'
 p3104
-sS'YMR223W'
+S'Lipid and steroid metabolism'
 p3105
-S'Ubiquitin labeling'
+sS'YKR095W'
 p3106
-sS'YMR107W'
+S'RNA transport'
 p3107
+sS'YMR223W'
+p3108
+S'Ubiquitin labeling'
+p3109
+sS'YMR107W'
+p3110
 S''
 sS'YBR061C'
-p3108
-S'Ribosome biogenesis'
-p3109
-sS'YOL064C'
-p3110
-S'Amino acid metabolism'
 p3111
-sS'YBL023C'
+S'Ribosome biogenesis'
 p3112
-S'DNA replication complex'
+sS'YOL064C'
 p3113
-sS'YNR010W'
+S'Amino acid metabolism'
 p3114
-S''
-sS'YGL078C'
+sS'YBL023C'
 p3115
-S''
-sS'YBR261C'
+S'DNA replication complex'
 p3116
-S''
-sS'YDR435C'
+sS'YNR010W'
 p3117
 S''
-sS'YER151C'
+sS'YGL078C'
 p3118
-S'Ubiquitin labeling'
+S''
+sS'YBR261C'
 p3119
-sS'YIL098C'
+S''
+sS'YDR435C'
 p3120
 S''
-sS'YLR005W'
+sS'YER151C'
 p3121
-S'Basal transcription factors'
+S'Ubiquitin labeling'
 p3122
-sS'YLL027W'
+sS'YIL098C'
 p3123
 S''
-sS'YDL171C'
+sS'YLR005W'
 p3124
-S'Amino acid metabolism'
+S'Basal transcription factors'
 p3125
-sS'YOR253W'
+sS'YLL027W'
 p3126
 S''
-sS'YNL267W'
+sS'YDL171C'
 p3127
-S'Phosphatidylinositol signaling system'
+S'Amino acid metabolism'
 p3128
-sS'YCL001W'
+sS'YOR253W'
 p3129
 S''
-sS'YGR198W'
+sS'YNL267W'
 p3130
+S'Phosphatidylinositol signaling system'
+p3131
+sS'YCL001W'
+p3132
+S''
+sS'YGR198W'
+p3133
 S''
 sS'YKL189W'
-p3131
+p3134
 S''
 sS'YAR007C'
-p3132
-S'Transcription factors'
-p3133
-sS'YPL254W'
-p3134
-S'Chromosome-related'
 p3135
-sS'YGR010W'
+S'Transcription factors'
 p3136
-S'Cofactor biosynthesis'
+sS'YPL254W'
 p3137
-sS'YML064C'
+S'Chromosome-related'
 p3138
-S'Cell cycle'
+sS'YGR010W'
 p3139
-sS'YEL020C'
+S'Cofactor biosynthesis'
 p3140
-S'Peroxisome'
+sS'YML064C'
 p3141
-sS'YER055C'
+S'Cell cycle'
 p3142
-S'Amino acid metabolism'
+sS'YEL020C'
 p3143
-sS'YNL307C'
+S'Peroxisome'
 p3144
-S'Other enzymes'
+sS'YER055C'
 p3145
-sS'YCR016W'
-p3146
-S''
-sS'YLR438W'
-p3147
 S'Amino acid metabolism'
+p3146
+sS'YNL307C'
+p3147
+S'Other enzymes'
 p3148
-sS'YGL238W'
+sS'YCR016W'
 p3149
 S''
-sS'YIL030C'
+sS'YLR438W'
 p3150
-S'Protein processing in endoplasmic reticulum'
+S'Amino acid metabolism'
 p3151
-sS'YJL044C'
+sS'YGL238W'
 p3152
 S''
-sS'YCR094W'
+sS'YIL030C'
 p3153
-S''
-sS'YBR085W'
+S'Protein processing in endoplasmic reticulum'
 p3154
-S''
-sS'YGL186C'
+sS'YJL044C'
 p3155
 S''
-sS'YDR234W'
+sS'YCR094W'
 p3156
-S'Amino acid metabolism'
-p3157
-sS'YGR218W'
-p3158
-S'RNA transport'
-p3159
-sS'YEL060C'
-p3160
-S'Chaperones and folding catalysts'
-p3161
-sS'YKR049C'
-p3162
 S''
-sS'YML081C-A'
+sS'YBR085W'
+p3157
+S''
+sS'YGL186C'
+p3158
+S''
+sS'YDR234W'
+p3159
+S'Amino acid metabolism'
+p3160
+sS'YGR218W'
+p3161
+S'RNA transport'
+p3162
+sS'YEL060C'
 p3163
-S'Oxidative phosphorylation'
+S'Chaperones and folding catalysts'
 p3164
-sS'YPR179C'
+sS'YKR049C'
 p3165
 S''
-sS'YHR195W'
+sS'YML081C-A'
 p3166
-S''
-sS'YGR267C'
+S'Oxidative phosphorylation'
 p3167
-S'Cofactor biosynthesis'
+sS'YPR179C'
 p3168
-sS'YGL091C'
+S''
+sS'YHR195W'
 p3169
 S''
-sS'YDL125C'
+sS'YGR267C'
 p3170
+S'Cofactor biosynthesis'
+p3171
+sS'YGL091C'
+p3172
+S''
+sS'YDL125C'
+p3173
 S''
 sS'YPR006C'
-p3171
-S'TCA cycle and anaplerotic enzymes'
-p3172
-sS'YGL022W'
-p3173
-S'Protein processing in endoplasmic reticulum'
 p3174
-sS'YML079W'
+S'TCA cycle and anaplerotic enzymes'
 p3175
-S''
-sS'YJL153C'
+sS'YGL022W'
 p3176
-S'Carbohydrate metabolism'
+S'Protein processing in endoplasmic reticulum'
 p3177
-sS'YMR049C'
+sS'YML079W'
 p3178
 S''
-sS'YDR229W'
+sS'YJL153C'
 p3179
-S''
-sS'YJR075W'
+S'Carbohydrate metabolism'
 p3180
-S'Glycan metabolism'
+sS'YMR049C'
 p3181
-sS'YPR124W'
+S''
+sS'YDR229W'
 p3182
 S''
-sS'YLL029W'
+sS'YJR075W'
 p3183
-S'Peptidases'
+S'Glycan metabolism'
 p3184
-sS'YDL181W'
+sS'YPR124W'
 p3185
 S''
-sS'YGR285C'
+sS'YLL029W'
 p3186
-S'Chaperones and folding catalysts'
+S'Peptidases'
 p3187
-sS'YNL232W'
+sS'YDL181W'
 p3188
-S'RNA degradation'
+S''
+sS'YGR285C'
 p3189
-sS'YCR079W'
+S'Chaperones and folding catalysts'
 p3190
+sS'YNL232W'
+p3191
+S'RNA degradation'
+p3192
+sS'YCR079W'
+p3193
 S''
 sS'YGL254W'
-p3191
-S''
-sS'YER017C'
-p3192
-S'Chaperones and folding catalysts'
-p3193
-sS'YBR022W'
 p3194
 S''
-sS'YMR214W'
+sS'YER017C'
 p3195
-S'Protein processing in endoplasmic reticulum'
+S'Chaperones and folding catalysts'
 p3196
-sS'YCR030C'
+sS'YBR022W'
 p3197
 S''
-sS'YNR066C'
+sS'YMR214W'
 p3198
+S'Protein processing in endoplasmic reticulum'
+p3199
+sS'YCR030C'
+p3200
+S''
+sS'YNR066C'
+p3201
 S''
 sS'YER177W'
-p3199
-S'Cell cycle'
-p3200
-sS'YDR500C'
-p3201
-S'Ribosome'
 p3202
-sS'YER048C'
+S'Cell cycle'
 p3203
-S''
-sS'YPR020W'
+sS'YDR500C'
 p3204
-S'Oxidative phosphorylation'
+S'Ribosome'
 p3205
-sS'YML048W'
+sS'YER048C'
 p3206
 S''
-sS'YNL112W'
+sS'YPR020W'
 p3207
-S'Spliceosome'
+S'Oxidative phosphorylation'
 p3208
-sS'YLR027C'
+sS'YML048W'
 p3209
-S'Amino acid metabolism'
+S''
+sS'YNL112W'
 p3210
-sS'YBR031W'
+S'Spliceosome'
 p3211
-S'Ribosome'
+sS'YLR027C'
 p3212
-sS'YDL132W'
+S'Amino acid metabolism'
 p3213
-S'Protein processing in endoplasmic reticulum'
+sS'YBR031W'
 p3214
-sS'YBL064C'
+S'Ribosome'
 p3215
-S'Other enzymes'
+sS'YDL132W'
 p3216
-sS'YGR245C'
+S'Protein processing in endoplasmic reticulum'
 p3217
+sS'YBL064C'
+p3218
+S'Other enzymes'
+p3219
+sS'YGR245C'
+p3220
 S''
 sS'YNL009W'
-p3218
-S'TCA cycle and anaplerotic enzymes'
-p3219
-sS'YPL243W'
-p3220
-S'Protein export'
 p3221
-sS'YMR096W'
+S'TCA cycle and anaplerotic enzymes'
 p3222
-S'Cofactor biosynthesis'
+sS'YPL243W'
 p3223
-sS'YDL025C'
+S'Protein export'
 p3224
+sS'YMR096W'
+p3225
+S'Cofactor biosynthesis'
+p3226
+sS'YDL025C'
+p3227
 S''
 sS'YGR229C'
-p3225
+p3228
 S''
 sS'YLR167W'
-p3226
-S'Ribosome'
-p3227
-sS'YLR293C'
-p3228
-S'RNA transport'
 p3229
-sS'YDL147W'
+S'Ribosome'
 p3230
-S'Proteasome'
+sS'YLR293C'
 p3231
-sS'YFL029C'
+S'RNA transport'
 p3232
-S'Cell cycle'
+sS'YDL147W'
 p3233
-sS'YJL171C'
+S'Proteasome'
 p3234
-S''
-sS'YBL091C'
+sS'YFL029C'
 p3235
-S'Peptidases'
+S'Cell cycle'
 p3236
-sS'YOR262W'
+sS'YJL171C'
 p3237
 S''
-sS'YMR014W'
+sS'YBL091C'
 p3238
+S'Peptidases'
+p3239
+sS'YOR262W'
+p3240
+S''
+sS'YMR014W'
+p3241
 S''
 sS'YDR453C'
-p3239
-S'Other enzymes'
-p3240
-sS'YPL048W'
-p3241
-S'Translation factors'
 p3242
-sS'YPR133C'
+S'Other enzymes'
 p3243
+sS'YPL048W'
+p3244
+S'Translation factors'
+p3245
+sS'YPR133C'
+p3246
 S''
 sS'YIL137C'
-p3244
-S''
-sS'YKL069W'
-p3245
-S'Amino acid metabolism'
-p3246
-sS'YNL123W'
 p3247
 S''
-sS'YEL018W'
+sS'YKL069W'
 p3248
-S'Chromosome-related'
+S'Amino acid metabolism'
 p3249
-sS'YPL037C'
+sS'YNL123W'
 p3250
-S'Translation factors'
+S''
+sS'YEL018W'
 p3251
-sS'YKL145W'
-p3252
-S'Proteasome'
-p3253
-sS'YEL056W'
-p3254
 S'Chromosome-related'
+p3252
+sS'YPL037C'
+p3253
+S'Translation factors'
+p3254
+sS'YKL145W'
 p3255
-sS'YLR373C'
+S'Proteasome'
 p3256
-S''
-sS'YOR111W'
+sS'YEL056W'
 p3257
-S''
-sS'YFL016C'
+S'Chromosome-related'
 p3258
-S''
-sS'YDR322C-A'
+sS'YLR373C'
 p3259
 S''
-sS'YJL162C'
+sS'YOR111W'
 p3260
 S''
-sS'YKL198C'
+sS'YFL016C'
 p3261
 S''
-sS'YLR260W'
+sS'YDR322C-A'
 p3262
-S'VEGF signaling pathway'
-p3263
-sS'YPL117C'
-p3264
-S'Cofactor biosynthesis'
-p3265
-sS'YKL152C'
-p3266
-S'Glycolysis'
-p3267
-sS'YKR001C'
-p3268
 S''
-sS'YGR227W'
+sS'YJL162C'
+p3263
+S''
+sS'YKL198C'
+p3264
+S''
+sS'YLR260W'
+p3265
+S'VEGF signaling pathway'
+p3266
+sS'YPL117C'
+p3267
+S'Cofactor biosynthesis'
+p3268
+sS'YKL152C'
 p3269
-S'Glycan metabolism'
+S'Glycolysis'
 p3270
-sS'YJL100W'
+sS'YKR001C'
 p3271
 S''
-sS'YPL221W'
+sS'YGR227W'
 p3272
+S'Glycan metabolism'
+p3273
+sS'YJL100W'
+p3274
+S''
+sS'YPL221W'
+p3275
 S''
 sS'YBL082C'
-p3273
-S'Glycan metabolism'
-p3274
-sS'YDL081C'
-p3275
-S'Ribosome'
 p3276
-sS'YIR034C'
+S'Glycan metabolism'
 p3277
-S'Amino acid metabolism'
+sS'YDL081C'
 p3278
-sS'YDR165W'
+S'Ribosome'
 p3279
+sS'YIR034C'
+p3280
+S'Amino acid metabolism'
+p3281
+sS'YDR165W'
+p3282
 S''
 sS'YGL013C'
-p3280
+p3283
 S''
 sS'YFL018C'
-p3281
-S'Glycolysis'
-p3282
-sS'YJR068W'
-p3283
-S'DNA replication complex'
 p3284
-sS'YJL139C'
+S'Glycolysis'
 p3285
-S'Glycan metabolism'
+sS'YJR068W'
 p3286
-sS'YDL178W'
+S'DNA replication complex'
 p3287
-S''
-sS'YDR212W'
+sS'YJL139C'
 p3288
-S'Chaperones and folding catalysts'
+S'Glycan metabolism'
 p3289
-sS'YLR170C'
+sS'YDL178W'
 p3290
 S''
-sS'YML086C'
+sS'YDR212W'
 p3291
-S'Other enzymes'
+S'Chaperones and folding catalysts'
 p3292
-sS'YPL097W'
+sS'YLR170C'
 p3293
-S'tRNA loading'
+S''
+sS'YML086C'
 p3294
-sS'YDL207W'
+S'Other enzymes'
 p3295
+sS'YPL097W'
+p3296
+S'tRNA loading'
+p3297
+sS'YDL207W'
+p3298
 S''
 sS'YPL079W'
-p3296
-S'Ribosome'
-p3297
-sS'YPL015C'
-p3298
-S'Cofactor biosynthesis'
 p3299
-sS'YGL213C'
+S'Ribosome'
 p3300
-S'RNA degradation'
+sS'YPL015C'
 p3301
-sS'YDR231C'
+S'Cofactor biosynthesis'
 p3302
-S''
-sS'YMR038C'
+sS'YGL213C'
 p3303
-S'Other enzymes'
+S'RNA degradation'
 p3304
-sS'YJL066C'
+sS'YDR231C'
 p3305
 S''
-sS'YHR182W'
+sS'YMR038C'
 p3306
-S''
-sS'YDL107W'
+S'Other enzymes'
 p3307
-S''
-sS'YNR029C'
+sS'YJL066C'
 p3308
 S''
-sS'YGR091W'
+sS'YHR182W'
 p3309
-S'Spliceosome'
+S''
+sS'YDL107W'
 p3310
-sS'YHR001W'
+S''
+sS'YNR029C'
 p3311
 S''
-sS'YDR477W'
+sS'YGR091W'
 p3312
-S'Meiosis'
+S'Spliceosome'
 p3313
-sS'YOR042W'
+sS'YHR001W'
 p3314
 S''
-sS'YMR088C'
+sS'YDR477W'
 p3315
-S''
-sS'YJR148W'
+S'Meiosis'
 p3316
-S'Amino acid metabolism'
+sS'YOR042W'
 p3317
-sS'YBR253W'
+S''
+sS'YMR088C'
 p3318
 S''
-sS'YIL042C'
+sS'YJR148W'
 p3319
+S'Amino acid metabolism'
+p3320
+sS'YBR253W'
+p3321
+S''
+sS'YIL042C'
+p3322
 S''
 sS'YKL217W'
-p3320
-S'Transport'
-p3321
-sS'YIL035C'
-p3322
-S'Ribosome biogenesis in eukaryotes'
 p3323
-sS'YIL111W'
+S'Transport'
 p3324
-S'Oxidative phosphorylation'
+sS'YIL035C'
 p3325
-sS'YBR153W'
+S'Ribosome biogenesis in eukaryotes'
 p3326
-S'Cofactor biosynthesis'
+sS'YIL111W'
 p3327
-sS'YLL062C'
+S'Oxidative phosphorylation'
 p3328
-S''
-sS'YML121W'
+sS'YBR153W'
 p3329
-S''
-sS'YOL087C'
+S'Cofactor biosynthesis'
 p3330
-S''
-sS'YNL134C'
+sS'YLL062C'
 p3331
 S''
-sS'YPL215W'
+sS'YML121W'
 p3332
 S''
-sS'YHR154W'
+sS'YOL087C'
 p3333
 S''
-sS'YPL135W'
+sS'YNL134C'
 p3334
 S''
-sS'YGR014W'
+sS'YPL215W'
 p3335
 S''
-sS'YHL014C'
+sS'YHR154W'
 p3336
 S''
-sS'YBR262C'
+sS'YPL135W'
 p3337
 S''
-sS'YMR304W'
+sS'YGR014W'
 p3338
-S'Ubiquitin labeling'
+S''
+sS'YHL014C'
 p3339
-sS'YKL010C'
+S''
+sS'YBR262C'
 p3340
-S'Ubiquitin mediated proteolysis'
+S''
+sS'YMR304W'
 p3341
-sS'YPL255W'
+S'Ubiquitin labeling'
 p3342
-S'Cytoskeleton proteins'
+sS'YKL010C'
 p3343
-sS'YMR289W'
+S'Ubiquitin mediated proteolysis'
 p3344
+sS'YPL255W'
+p3345
+S'Cytoskeleton proteins'
+p3346
+sS'YMR289W'
+p3347
 S''
 sS'YPL199C'
-p3345
+p3348
 S''
 sS'YFL036W'
-p3346
-S'Other enzymes'
-p3347
-sS'YGR177C'
-p3348
-S'Other enzymes'
 p3349
-sS'YDL209C'
+S'Other enzymes'
 p3350
+sS'YGR177C'
+p3351
+S'Other enzymes'
+p3352
+sS'YDL209C'
+p3353
 S''
 sS'YKL045W'
-p3351
-S'DNA replication complex'
-p3352
-sS'YMR239C'
-p3353
-S'Ribosome biogenesis'
 p3354
-sS'YML103C'
+S'DNA replication complex'
 p3355
-S'RNA transport'
+sS'YMR239C'
 p3356
-sS'YMR243C'
+S'Ribosome biogenesis'
 p3357
+sS'YML103C'
+p3358
+S'RNA transport'
+p3359
+sS'YMR243C'
+p3360
 S''
 sS'YGR205W'
-p3358
-S'Amino acid metabolism'
-p3359
-sS'YIL051C'
-p3360
-S'Amino acid metabolism'
 p3361
-sS'YPL057C'
+S'Amino acid metabolism'
 p3362
+sS'YIL051C'
+p3363
+S'Amino acid metabolism'
+p3364
+sS'YPL057C'
+p3365
 S''
 sS'YNL074C'
-p3363
+p3366
 S''
 sS'YDR365C'
-p3364
+p3367
 S''
 sS'YPL151C'
-p3365
-S'Spliceosome'
-p3366
-sS'YKL007W'
-p3367
-S'Cytoskeleton proteins'
 p3368
-sS'YNL169C'
+S'Spliceosome'
 p3369
-S'Lipid and steroid metabolism'
+sS'YKL007W'
 p3370
-sS'YLR440C'
+S'Cytoskeleton proteins'
 p3371
-S''
-sS'YGL206C'
+sS'YNL169C'
 p3372
-S'Endocytosis'
+S'Lipid and steroid metabolism'
 p3373
-sS'YDL225W'
+sS'YLR440C'
 p3374
 S''
-sS'YHR070W'
+sS'YGL206C'
 p3375
-S''
-sS'YDR460W'
+S'Endocytosis'
 p3376
-S'Basal transcription factors'
+sS'YDL225W'
 p3377
-sS'YOL025W'
+S''
+sS'YHR070W'
 p3378
 S''
-sS'YLR364W'
+sS'YDR460W'
 p3379
+S'Basal transcription factors'
+p3380
+sS'YOL025W'
+p3381
+S''
+sS'YLR364W'
+p3382
 S''
 sS'YKL085W'
-p3380
-S'TCA cycle and anaplerotic enzymes'
-p3381
-sS'YNR043W'
-p3382
-S'Cofactor biosynthesis'
 p3383
-sS'YOR360C'
+S'TCA cycle and anaplerotic enzymes'
 p3384
-S'Purine metabolism'
+sS'YNR043W'
 p3385
-sS'YOR335C'
+S'Cofactor biosynthesis'
 p3386
-S'tRNA loading'
+sS'YOR360C'
 p3387
-sS'YOL089C'
+S'Purine metabolism'
 p3388
-S''
-sS'YMR099C'
+sS'YOR335C'
 p3389
-S'Glycolysis'
+S'tRNA loading'
 p3390
-sS'YLR193C'
+sS'YOL089C'
 p3391
 S''
-sS'YIL064W'
+sS'YMR099C'
 p3392
+S'Glycolysis'
+p3393
+sS'YLR193C'
+p3394
+S''
+sS'YIL064W'
+p3395
 S''
 sS'YOL065C'
-p3393
-S'Phosphatidylinositol signaling system'
-p3394
-sS'YDR097C'
-p3395
-S'Mismatch repair'
 p3396
-sS'YBL022C'
+S'Phosphatidylinositol signaling system'
 p3397
-S'Peptidases'
+sS'YDR097C'
 p3398
-sS'YGL164C'
+S'Mismatch repair'
 p3399
-S''
-sS'YER156C'
+sS'YBL022C'
 p3400
-S''
-sS'YNL298W'
+S'Peptidases'
 p3401
-S''
-sS'YGR013W'
+sS'YGL164C'
 p3402
 S''
-sS'YHR057C'
+sS'YER156C'
 p3403
-S'Other enzymes'
+S''
+sS'YNL298W'
 p3404
-sS'YOR095C'
+S''
+sS'YGR013W'
 p3405
-S'Pentose phosphate metabolism'
+S''
+sS'YHR057C'
 p3406
-sS'YEL038W'
+S'Other enzymes'
 p3407
-S'Amino acid metabolism'
+sS'YOR095C'
 p3408
-sS'YDR392W'
+S'Pentose phosphate metabolism'
 p3409
-S'Chromosome-related'
+sS'YEL038W'
 p3410
-sS'YOR227W'
+S'Amino acid metabolism'
 p3411
-S''
-sS'YLL026W'
+sS'YDR392W'
 p3412
-S''
-sS'YDR286C'
+S'Chromosome-related'
 p3413
-S''
-sS'YGL108C'
+sS'YOR227W'
 p3414
 S''
-sS'YLR051C'
+sS'YLL026W'
 p3415
 S''
-sS'YDR388W'
+sS'YDR286C'
 p3416
 S''
-sS'YLR368W'
+sS'YGL108C'
 p3417
 S''
-sS'YMR028W'
+sS'YLR051C'
 p3418
 S''
-sS'YPL208W'
+sS'YDR388W'
 p3419
 S''
-sS'YOL147C'
+sS'YLR368W'
 p3420
 S''
-sS'YNL280C'
+sS'YMR028W'
 p3421
-S'Lipid and steroid metabolism'
+S''
+sS'YPL208W'
 p3422
-sS'YJR047C'
+S''
+sS'YOL147C'
 p3423
-S'Translation factors'
+S''
+sS'YNL280C'
 p3424
-sS'YGL083W'
+S'Lipid and steroid metabolism'
 p3425
-S''
-sS'YGL220W'
+sS'YJR047C'
 p3426
-S''
-sS'YPR089W'
+S'Translation factors'
 p3427
-S''
-sS'YBR233W'
+sS'YGL083W'
 p3428
 S''
-sS'YPL122C'
+sS'YGL220W'
 p3429
-S'Basal transcription factors'
+S''
+sS'YPR089W'
 p3430
-sS'YGR082W'
+S''
+sS'YBR233W'
 p3431
 S''
-sS'YDL115C'
+sS'YPL122C'
 p3432
-S''
-sS'YDL086W'
+S'Basal transcription factors'
 p3433
-S'Other enzymes'
+sS'YGR082W'
 p3434
-sS'YHR012W'
+S''
+sS'YDL115C'
 p3435
 S''
-sS'YIL022W'
+sS'YDL086W'
 p3436
-S''
-sS'YLR406C'
+S'Other enzymes'
 p3437
-S'Ribosome'
+sS'YHR012W'
 p3438
-sS'YNL248C'
+S''
+sS'YIL022W'
 p3439
-S'RNA polymerase'
+S''
+sS'YNL248C'
 p3440
-sS'YHR202W'
+S'RNA polymerase'
 p3441
+sS'YHR202W'
+p3442
 S''
 sS'YDL140C'
-p3442
-S'RNA polymerase'
 p3443
-sS'YGR206W'
+S'RNA polymerase'
 p3444
-S'Endocytosis'
+sS'YGR206W'
 p3445
-sS'YGR119C'
+S'Endocytosis'
 p3446
+sS'YGR119C'
+p3447
 S''
 sS'YOL127W'
-p3447
-S'Ribosome'
 p3448
-sS'YLR454W'
+S'Ribosome'
 p3449
-S''
-sS'YNL224C'
+sS'YLR454W'
 p3450
 S''
-sS'YGR120C'
+sS'YNL224C'
 p3451
 S''
-sS'YDR539W'
+sS'YGR120C'
 p3452
 S''
-sS'YBR025C'
+sS'YDR539W'
 p3453
 S''
-sS'YML001W'
+sS'YBR025C'
 p3454
-S'GTP-binding signaling proteins'
+S''
+sS'YML001W'
 p3455
-sS'YOR187W'
+S'GTP-binding signaling proteins'
 p3456
-S'Translation factors'
+sS'YOR187W'
 p3457
-sS'YER016W'
+S'Translation factors'
 p3458
-S'Cytoskeleton proteins'
+sS'YER016W'
 p3459
-sS'YJR100C'
+S'Cytoskeleton proteins'
 p3460
+sS'YJR100C'
+p3461
 S''
 sS'YGR286C'
-p3461
-S'Cofactor biosynthesis'
 p3462
-sS'YDL101C'
+S'Cofactor biosynthesis'
 p3463
-S'DNA repair and recombination proteins'
+sS'YDL101C'
 p3464
-sS'YCR037C'
+S'DNA repair and recombination proteins'
 p3465
+sS'YCR037C'
+p3466
 S''
 sS'YIR031C'
-p3466
-S'Glycolysis'
 p3467
-sS'YMR217W'
+S'Glycolysis'
 p3468
-S'Peptidases'
+sS'YMR217W'
 p3469
-sS'YOR239W'
+S'Peptidases'
 p3470
-S''
-sS'YNL320W'
+sS'YOR239W'
 p3471
 S''
-sS'YCR086W'
+sS'YNL320W'
 p3472
 S''
-sS'YDR494W'
+sS'YCR086W'
 p3473
 S''
-sS'YLR026C'
+sS'YDR494W'
 p3474
-S'SNARE interactions in vesicular transport'
+S''
+sS'YLR026C'
 p3475
-sS'YLR139C'
+S'SNARE interactions in vesicular transport'
 p3476
+sS'YLR139C'
+p3477
 S''
 sS'YDL131W'
-p3477
-S'Pyruvate metabolism'
 p3478
-sS'YIL160C'
+S'Pyruvate metabolism'
 p3479
-S'Lipid and steroid metabolism'
+sS'YIL160C'
 p3480
-sS'YMR277W'
+S'Lipid and steroid metabolism'
 p3481
-S'Other enzymes'
+sS'YMR277W'
 p3482
-sS'Q0045'
+S'Other enzymes'
 p3483
-S'Oxidative phosphorylation'
+sS'Q0045'
 p3484
-sS'YMR095C'
+S'Oxidative phosphorylation'
 p3485
-S'Cofactor biosynthesis'
+sS'YMR095C'
 p3486
-sS'YML049C'
+S'Cofactor biosynthesis'
 p3487
-S'Spliceosome'
+sS'YML049C'
 p3488
-sS'YLR064W'
+S'Spliceosome'
 p3489
-S''
-sS'YER138C'
+sS'YLR064W'
 p3490
 S''
-sS'YLL004W'
+sS'YER138C'
 p3491
-S'DNA replication control'
+S''
+sS'YLL004W'
 p3492
-sS'YER049W'
+S'DNA replication control'
 p3493
+sS'YER049W'
+p3494
 S''
 sS'YGL125W'
-p3494
-S'Other central metabolism enzymes'
 p3495
-sS'YMR255W'
+S'Other central metabolism enzymes'
 p3496
-S''
-sS'YGL068W'
+sS'YMR255W'
 p3497
 S''
-sS'YLR028C'
+sS'YGL068W'
 p3498
-S'Other central metabolism enzymes'
+S''
+sS'YLR028C'
 p3499
-sS'YER136W'
+S'Other central metabolism enzymes'
 p3500
+sS'YER136W'
+p3501
 S''
 sS'YER056C-A'
-p3501
-S'Ribosome'
 p3502
-sS'YDR028C'
+S'Ribosome'
 p3503
+sS'YDR028C'
+p3504
 S''
 sS'YOR217W'
-p3504
-S'DNA replication complex'
 p3505
-sS'YBL035C'
-p3506
 S'DNA replication complex'
+p3506
+sS'YBL035C'
 p3507
-sS'YPL010W'
+S'DNA replication complex'
 p3508
+sS'YPL010W'
+p3509
 S''
 sS'YCR057C'
-p3509
-S'Ribosome biogenesis in eukaryotes'
 p3510
-sS'YNL206C'
+S'Ribosome biogenesis in eukaryotes'
 p3511
+sS'YNL206C'
+p3512
 S''
 sS'YMR197C'
-p3512
-S'SNARE interactions in vesicular transport'
 p3513
-sS'YAR071W'
+S'SNARE interactions in vesicular transport'
 p3514
-S'Cofactor biosynthesis'
+sS'YAR071W'
 p3515
-sS'YLR060W'
+S'Cofactor biosynthesis'
 p3516
-S'tRNA loading'
+sS'YLR060W'
 p3517
-sS'YDR516C'
+S'tRNA loading'
 p3518
+sS'YDR516C'
+p3519
 S''
 sS'YPL233W'
-p3519
-S'Chromosome-related'
 p3520
-sS'YIL063C'
+S'Chromosome-related'
 p3521
-S''
-sS'YGL059W'
+sS'YOR063W'
 p3522
+S'Ribosome'
+p3523
+sS'YGL059W'
+p3524
 S''
 sS'YGR251W'
-p3523
+p3525
 S''
 sS'YPR047W'
-p3524
-S'tRNA loading'
-p3525
-sS'YKL219W'
 p3526
+S'tRNA loading'
+p3527
+sS'YKL219W'
+p3528
 S''
 sS'YML091C'
-p3527
-S'RNA transport'
-p3528
-sS'YCL004W'
 p3529
-S'Lipid and steroid metabolism'
+S'RNA transport'
 p3530
-sS'YBR049C'
+sS'YCL004W'
 p3531
-S'Transcription factors'
+S'Lipid and steroid metabolism'
 p3532
-sS'YDR044W'
+sS'YBR049C'
 p3533
-S'Cofactor biosynthesis'
+S'Transcription factors'
 p3534
-sS'YOR193W'
+sS'YDR044W'
 p3535
+S'Cofactor biosynthesis'
+p3536
+sS'YOR193W'
+p3537
 S''
 sS'YKR080W'
-p3536
-S'Other central metabolism enzymes'
-p3537
-sS'YDL079C'
 p3538
-S'Other enzymes'
+S'Other central metabolism enzymes'
 p3539
-sS'YKL078W'
+sS'YDL079C'
 p3540
+S'Other enzymes'
+p3541
+sS'YKL078W'
+p3542
 S''
 sS'YDL002C'
-p3541
-S'Chromosome-related'
-p3542
-sS'YDL110C'
 p3543
+S'Chromosome-related'
+p3544
+sS'YDL110C'
+p3545
 S''
 sS'YNL180C'
-p3544
-S'GTP-binding signaling proteins'
-p3545
-sS'YOR037W'
 p3546
+S'GTP-binding signaling proteins'
+p3547
+sS'YOR037W'
+p3548
 S''
 sS'YIR037W'
-p3547
-S'Cofactor biosynthesis'
-p3548
-sS'YDR071C'
 p3549
 S'Cofactor biosynthesis'
 p3550
-sS'YDL098C'
+sS'YDR071C'
 p3551
-S'Spliceosome'
+S'Cofactor biosynthesis'
 p3552
-sS'YGL012W'
+sS'YDL098C'
 p3553
-S'Lipid and steroid metabolism'
-p3554
-sS'YGR129W'
-p3555
 S'Spliceosome'
+p3554
+sS'YGL012W'
+p3555
+S'Lipid and steroid metabolism'
 p3556
-sS'YJL101C'
+sS'YGR129W'
 p3557
-S'Amino acid metabolism'
+S'Spliceosome'
 p3558
-sS'YKL160W'
+sS'YJL101C'
 p3559
-S''
-sS'YBL069W'
+S'Amino acid metabolism'
 p3560
-S''
-sS'YNL040W'
+sS'YKL160W'
 p3561
 S''
-sS'YDR353W'
+sS'YBL069W'
 p3562
-S'Pyrimidine metabolism'
+S''
+sS'YNL040W'
 p3563
-sS'YMR139W'
+S''
+sS'YDR353W'
 p3564
-S'Meiosis'
+S'Pyrimidine metabolism'
 p3565
-sS'YJL001W'
+sS'YMR139W'
 p3566
-S'Proteasome'
+S'Meiosis'
 p3567
-sS'YDL080C'
+sS'YJL001W'
 p3568
-S'Glycolysis'
+S'Proteasome'
 p3569
-sS'YJL049W'
+sS'YDL080C'
 p3570
-S'Endocytosis'
+S'Glycolysis'
 p3571
-sS'YHR183W'
+sS'YJL049W'
 p3572
-S'Pentose phosphate metabolism'
+S'Endocytosis'
 p3573
-sS'YDL085C-A'
+sS'YHR183W'
 p3574
+S'Pentose phosphate metabolism'
+p3575
+sS'YDL085C-A'
+p3576
 S''
 sS'YJL138C'
-p3575
-S'RNA transport'
-p3576
-sS'YOR129C'
 p3577
-S''
-sS'YPR143W'
+S'RNA transport'
 p3578
-S''
-sS'YGL010W'
+sS'YOR129C'
 p3579
 S''
-sS'YOL080C'
+sS'YPR143W'
 p3580
 S''
-sS'YHR060W'
+sS'YGL010W'
 p3581
 S''
-sS'YBR010W'
+sS'YOL080C'
 p3582
-S'Chromosome-related'
+S''
+sS'YHR060W'
 p3583
-sS'YER094C'
+S''
+sS'YBR010W'
 p3584
-S'Proteasome'
+S'Chromosome-related'
 p3585
-sS'YHR083W'
+sS'YER094C'
 p3586
+S'Proteasome'
+p3587
+sS'YHR083W'
+p3588
 S''
 sS'YGR208W'
-p3587
-S'Amino acid metabolism'
-p3588
-sS'YKL119C'
 p3589
+S'Amino acid metabolism'
+p3590
+sS'YKL119C'
+p3591
 S''
 sS'YPL016W'
-p3590
-S'Chromosome-related'
-p3591
-sS'YGR214W'
 p3592
-S'Ribosome'
+S'Chromosome-related'
 p3593
-sS'YBL058W'
+sS'YGR214W'
 p3594
-S'Protein processing in endoplasmic reticulum'
+S'Ribosome'
 p3595
-sS'YER101C'
+sS'YBL058W'
 p3596
+S'Protein processing in endoplasmic reticulum'
+p3597
+sS'YER101C'
+p3598
 S''
 sS'YKR079C'
-p3597
-S'RNA transport'
-p3598
-sS'YDR171W'
 p3599
-S'Chaperones and folding catalysts'
+S'RNA transport'
 p3600
-sS'YLR086W'
+sS'YDR171W'
 p3601
-S'Chromosome-related'
+S'Chaperones and folding catalysts'
 p3602
-sS'YLR439W'
+sS'YLR086W'
 p3603
-S''
-sS'YCR020C'
+S'Chromosome-related'
 p3604
-S''
-sS'YML030W'
+sS'YLR439W'
 p3605
 S''
-sS'YCL051W'
+sS'YCR020C'
 p3606
 S''
-sS'YOR127W'
+sS'YML030W'
 p3607
 S''
-sS'YER001W'
+sS'YCL051W'
 p3608
-S'Glycan metabolism'
+S''
+sS'YOR127W'
 p3609
-sS'YLL013C'
+S''
+sS'YER001W'
 p3610
+S'Glycan metabolism'
+p3611
+sS'YLL013C'
+p3612
 S''
 sS'YOR319W'
-p3611
-S'Spliceosome'
-p3612
-sS'YPR125W'
 p3613
-S''
-sS'YGL023C'
+S'Spliceosome'
 p3614
-S''
-sS'YHR049W'
+sS'YPR125W'
 p3615
 S''
-sS'YBR007C'
+sS'YGL023C'
 p3616
 S''
-sS'YMR115W'
+sS'YHR049W'
 p3617
 S''
-sS'YDL126C'
+sS'YBR007C'
 p3618
-S'Protein processing in endoplasmic reticulum'
+S''
+sS'YMR115W'
 p3619
-sS'YDR228C'
+S''
+sS'YDL126C'
 p3620
-S'mRNA surveillance pathway'
+S'Protein processing in endoplasmic reticulum'
 p3621
-sS'YOL052C'
+sS'YDR228C'
 p3622
-S'Amino acid metabolism'
+S'mRNA surveillance pathway'
 p3623
-sS'YMR260C'
+sS'YOL052C'
 p3624
-S'Translation factors'
+S'Amino acid metabolism'
 p3625
-sS'YGR264C'
+sS'YMR260C'
 p3626
-S'tRNA loading'
+S'Translation factors'
 p3627
-sS'YML078W'
+sS'YGR264C'
 p3628
-S'Other enzymes'
+S'tRNA loading'
 p3629
-sS'YOR158W'
+sS'YML078W'
 p3630
+S'Other enzymes'
+p3631
+sS'YOR158W'
+p3632
 S''
 sS'YGR140W'
-p3631
-S'Chromosome-related'
-p3632
-sS'YDL208W'
 p3633
-S'Ribosome biogenesis in eukaryotes'
+S'Chromosome-related'
 p3634
-sS'YPL074W'
+sS'YDL208W'
 p3635
+S'Ribosome biogenesis in eukaryotes'
+p3636
+sS'YPL074W'
+p3637
 S''
 sS'YJR025C'
-p3636
-S'Amino acid metabolism'
-p3637
-sS'YDR475C'
 p3638
+S'Amino acid metabolism'
+p3639
+sS'YDR475C'
+p3640
 S''
 sS'YBR145W'
-p3639
-S'Glycolysis'
-p3640
-sS'YDR339C'
 p3641
-S'Ribosome biogenesis in eukaryotes'
+S'Glycolysis'
 p3642
-sS'YNL310C'
+sS'YDR339C'
 p3643
+S'Ribosome biogenesis in eukaryotes'
+p3644
+sS'YNL310C'
+p3645
 S''
 sS'YFL037W'
-p3644
-S'Cytoskeleton proteins'
-p3645
-sS'YJR132W'
 p3646
+S'Cytoskeleton proteins'
+p3647
+sS'YJR132W'
+p3648
 S''
 sS'YOR075W'
-p3647
-S'SNARE interactions in vesicular transport'
-p3648
-sS'YPL169C'
 p3649
-S'RNA transport'
+S'SNARE interactions in vesicular transport'
 p3650
-sS'YPL116W'
+sS'YPL169C'
 p3651
-S'Chromosome-related'
+S'RNA transport'
 p3652
-sS'YGR174C'
+sS'YPL116W'
 p3653
+S'Chromosome-related'
+p3654
+sS'YGR174C'
+p3655
 S''
 sS'YDL224C'
-p3654
+p3656
 S''
 sS'YLR181C'
-p3655
-S'Endocytosis'
-p3656
-sS'YLR225C'
 p3657
-S''
-sS'YGL207W'
+S'Endocytosis'
 p3658
-S''
-sS'YNL111C'
+sS'YLR225C'
 p3659
 S''
-sS'YCL067C'
+sS'YGL207W'
 p3660
-S'Transcription factors'
+S''
+sS'YNL111C'
 p3661
-sS'YPL058C'
+S''
+sS'YCL067C'
 p3662
-S''
-sS'YLR326W'
+S'Transcription factors'
 p3663
-S''
-sS'YGR134W'
+sS'YPL058C'
 p3664
 S''
-sS'YLR270W'
+sS'YLR326W'
 p3665
-S'RNA degradation'
+S''
+sS'YGR134W'
 p3666
-sS'YKL184W'
+S''
+sS'YLR270W'
 p3667
-S'Amino acid metabolism'
+S'RNA degradation'
 p3668
-sS'YML067C'
+sS'YKL184W'
 p3669
-S''
-sS'YLR309C'
+S'Amino acid metabolism'
 p3670
-S''
-sS'YHR156C'
+sS'YML067C'
 p3671
 S''
-sS'YPR086W'
+sS'YLR309C'
 p3672
-S'Basal transcription factors'
+S''
+sS'YHR156C'
 p3673
-sS'YJR125C'
+S''
+sS'YPR086W'
 p3674
+S'Basal transcription factors'
+p3675
+sS'YJR125C'
+p3676
 S''
 sS'YIL021W'
-p3675
-S'RNA polymerase'
-p3676
-sS'YMR060C'
 p3677
+S'RNA polymerase'
+p3678
+sS'YMR060C'
+p3679
 S''
 sS'YJL012C'
-p3678
+p3680
 S''
 sS'YMR170C'
-p3679
-S'Glycolysis'
-p3680
-sS'YDR270W'
 p3681
-S'Other enzymes'
+S'Glycolysis'
 p3682
 sS'YLR149C'
 p3683
@@ -8966,1997 +8964,1999 @@ p3845
 sS'YDR027C'
 p3846
 S''
-sS'YHR068W'
+sS'YIL063C'
 p3847
-S'Other enzymes'
-p3848
-sS'YER071C'
-p3849
 S''
-sS'YNL272C'
+sS'YHR068W'
+p3848
+S'Other enzymes'
+p3849
+sS'YER071C'
 p3850
 S''
-sS'YBR048W'
+sS'YNL272C'
 p3851
-S'Ribosome'
-p3852
-sS'YKL218C'
-p3853
 S''
-sS'YKR081C'
+sS'YBR048W'
+p3852
+S'Ribosome'
+p3853
+sS'YKL218C'
 p3854
 S''
-sS'YEL011W'
+sS'YKR081C'
 p3855
-S'Carbohydrate metabolism'
-p3856
-sS'YGR001C'
-p3857
 S''
-sS'YDL001W'
+sS'YEL011W'
+p3856
+S'Carbohydrate metabolism'
+p3857
+sS'YGR001C'
 p3858
 S''
-sS'YBL107C'
+sS'YDL001W'
 p3859
 S''
-sS'YNL003C'
+sS'YBL107C'
 p3860
 S''
-sS'YJL183W'
+sS'YNL003C'
 p3861
-S'Glycan metabolism'
+S''
+sS'YJL183W'
 p3862
-sS'YPL218W'
+S'Glycan metabolism'
 p3863
-S'Protein processing in endoplasmic reticulum'
+sS'YPL218W'
 p3864
-sS'YGR250C'
+S'Protein processing in endoplasmic reticulum'
 p3865
+sS'YGR250C'
+p3866
 S''
 sS'YDR047W'
-p3866
-S'Cofactor biosynthesis'
 p3867
-sS'YOR254C'
+S'Cofactor biosynthesis'
 p3868
-S'Chaperones and folding catalysts'
+sS'YOR254C'
 p3869
-sS'YOR201C'
+S'Chaperones and folding catalysts'
 p3870
-S'Amino acid metabolism'
+sS'YOR201C'
 p3871
-sS'YOR276W'
+S'Amino acid metabolism'
 p3872
-S'Translation factors'
+sS'YOR276W'
 p3873
-sS'YMR309C'
-p3874
 S'Translation factors'
+p3874
+sS'YMR309C'
 p3875
-sS'YOR089C'
+S'Translation factors'
 p3876
-S'GTP-binding signaling proteins'
+sS'YOR089C'
 p3877
-sS'YMR023C'
+S'GTP-binding signaling proteins'
 p3878
-S''
-sS'YIL065C'
+sS'YMR023C'
 p3879
 S''
-sS'YOL031C'
+sS'YIL065C'
 p3880
-S'Protein processing in endoplasmic reticulum'
+S''
+sS'YOL031C'
 p3881
-sS'YBR071W'
+S'Protein processing in endoplasmic reticulum'
 p3882
+sS'YBR071W'
+p3883
 S''
 sS'YLR186W'
-p3883
-S'Ribosome biogenesis in eukaryotes'
 p3884
-sS'YNL258C'
+S'Ribosome biogenesis in eukaryotes'
 p3885
+sS'YNL258C'
+p3886
 S''
 sS'YOR336W'
-p3886
-S'Protein processing in endoplasmic reticulum'
 p3887
-sS'YJR094W-A'
+S'Protein processing in endoplasmic reticulum'
 p3888
-S'Ribosome'
+sS'YJR094W-A'
 p3889
-sS'YKL216W'
+S'Ribosome'
 p3890
-S'Pyrimidine metabolism'
+sS'YKL216W'
 p3891
-sS'YML021C'
+S'Pyrimidine metabolism'
 p3892
-S'Base excision repair'
+sS'YML021C'
 p3893
-sS'YGR012W'
+S'Base excision repair'
 p3894
-S'Amino acid metabolism'
+sS'YGR012W'
 p3895
-sS'YHL004W'
+S'Amino acid metabolism'
 p3896
-S'Ribosome'
+sS'YHL004W'
 p3897
-sS'YLL045C'
-p3898
 S'Ribosome'
+p3898
+sS'YLL045C'
 p3899
-sS'YOR209C'
+S'Ribosome'
 p3900
-S'Cofactor biosynthesis'
+sS'YOR209C'
 p3901
-sS'YJL205C'
+S'Cofactor biosynthesis'
 p3902
+sS'YJL205C'
+p3903
 S''
 sS'YNL098C'
-p3903
-S'GTP-binding signaling proteins'
 p3904
-sS'YKR097W'
-p3905
-S'Glycolysis'
-p3906
-sS'YOR094W'
-p3907
 S'GTP-binding signaling proteins'
+p3905
+sS'YOR307C'
+p3906
+S''
+sS'YKR097W'
+p3907
+S'Glycolysis'
 p3908
-sS'YER157W'
+sS'YOR094W'
 p3909
-S''
-sS'YOR370C'
+S'GTP-binding signaling proteins'
 p3910
-S''
-sS'YHR116W'
+sS'YER157W'
 p3911
 S''
-sS'YCR090C'
+sS'YOR370C'
 p3912
 S''
-sS'YEL037C'
+sS'YCR090C'
 p3913
-S'Protein processing in endoplasmic reticulum'
+S''
+sS'YEL037C'
 p3914
-sS'YHR094C'
+S'Protein processing in endoplasmic reticulum'
 p3915
-S'Transport'
+sS'YHR094C'
 p3916
-sS'YHR062C'
+S'Transport'
 p3917
-S'RNA transport'
+sS'YHR062C'
 p3918
-sS'YBR141C'
+S'RNA transport'
 p3919
+sS'YBR141C'
+p3920
 S''
 sS'YMR054W'
-p3920
-S'Oxidative phosphorylation'
 p3921
-sS'YMR322C'
+S'Oxidative phosphorylation'
 p3922
-S''
-sS'YBL059W'
+sS'YMR322C'
 p3923
 S''
-sS'YDL027C'
+sS'YBL059W'
 p3924
 S''
-sS'YER053C'
+sS'YDL027C'
 p3925
 S''
-sS'YPL051W'
+sS'YER053C'
 p3926
-S'GTP-binding signaling proteins'
+S''
+sS'YPL051W'
 p3927
-sS'YDL217C'
+S'GTP-binding signaling proteins'
 p3928
+sS'YDL217C'
+p3929
 S''
 sS'YCL050C'
-p3929
-S'Amino acid metabolism'
 p3930
-sS'YGR047C'
+S'Amino acid metabolism'
 p3931
-S''
-sS'YDR049W'
+sS'YGR047C'
 p3932
 S''
-sS'YKR014C'
+sS'YDR049W'
 p3933
-S'GTP-binding signaling proteins'
+S''
+sS'YKR014C'
 p3934
-sS'YKR078W'
+S'GTP-binding signaling proteins'
 p3935
+sS'YKR078W'
+p3936
 S''
 sS'YPR079W'
-p3936
-S'Glycan binding proteins'
 p3937
-sS'YAL060W'
+S'Glycan binding proteins'
 p3938
-S'Butanoate metabolism'
+sS'YAL060W'
 p3939
-sS'YJL026W'
+S'Butanoate metabolism'
 p3940
-S'Purine metabolism'
+sS'YJL026W'
 p3941
-sS'YLR412W'
+S'Purine metabolism'
 p3942
-S''
-sS'YER002W'
+sS'YLR412W'
 p3943
 S''
-sS'YDR170C'
+sS'YER002W'
 p3944
 S''
-sS'Q0140'
+sS'YDR170C'
 p3945
 S''
-sS'YBL075C'
+sS'Q0140'
 p3946
-S'Chaperones and folding catalysts'
-p3947
-sS'YDR272W'
-p3948
-S'Glycolysis'
-p3949
-sS'YPR008W'
-p3950
 S''
-sS'YGL020C'
+sS'YBL075C'
+p3947
+S'Chaperones and folding catalysts'
+p3948
+sS'YDR272W'
+p3949
+S'Glycolysis'
+p3950
+sS'YPR008W'
 p3951
 S''
-sS'YOR160W'
+sS'YGL020C'
 p3952
 S''
-sS'YMR083W'
+sS'YOR160W'
 p3953
-S'Glycolysis'
-p3954
-sS'YOR294W'
-p3955
 S''
-sS'YEL062W'
+sS'YMR083W'
+p3954
+S'Glycolysis'
+p3955
+sS'YOR294W'
 p3956
 S''
-sS'YMR261C'
+sS'YEL062W'
 p3957
-S'Carbohydrate metabolism'
+S''
+sS'YMR261C'
 p3958
-sS'YMR112C'
+S'Carbohydrate metabolism'
 p3959
+sS'YMR112C'
+p3960
 S''
 sS'YJL039C'
-p3960
-S'RNA transport'
 p3961
-sS'YBR006W'
+S'RNA transport'
 p3962
-S'Other central metabolism enzymes'
+sS'YBR006W'
 p3963
-sS'YLR038C'
+S'Other central metabolism enzymes'
 p3964
-S'Oxidative phosphorylation'
+sS'YLR038C'
 p3965
-sS'YOR038C'
+S'Oxidative phosphorylation'
 p3966
+sS'YOR038C'
+p3967
 S''
 sS'YNL096C'
-p3967
-S'Ribosome'
 p3968
-sS'YLR187W'
+S'Ribosome'
 p3969
-S'RNA degradation'
+sS'YLR187W'
 p3970
-sS'YNL212W'
+S'RNA degradation'
 p3971
+sS'YNL212W'
+p3972
 S''
 sS'YCR036W'
-p3972
-S'Pentose phosphate metabolism'
 p3973
-sS'YDR038C'
+S'Pentose phosphate metabolism'
 p3974
+sS'YDR038C'
+p3975
 S''
 sS'YER015W'
-p3975
-S'Other enzymes'
 p3976
-sS'YMR216C'
-p3977
 S'Other enzymes'
+p3977
+sS'YMR216C'
 p3978
-sS'YIL144W'
+S'Other enzymes'
 p3979
-S'Cytoskeleton proteins'
+sS'YIL144W'
 p3980
-sS'YML006C'
+S'Cytoskeleton proteins'
 p3981
+sS'YML006C'
+p3982
 S''
 sS'YCL061C'
-p3982
-S'Chromosome-related'
 p3983
-sS'YDR439W'
+S'Chromosome-related'
 p3984
-S'Meiosis'
+sS'YDR439W'
 p3985
-sS'YBR024W'
+S'Meiosis'
 p3986
+sS'YBR024W'
+p3987
 S''
 sS'YDR502C'
-p3987
-S'Amino acid metabolism'
 p3988
-sS'YHR167W'
+S'Amino acid metabolism'
 p3989
+sS'YHR167W'
+p3990
 S''
 sS'YLR401C'
-p3990
-S'Other enzymes'
 p3991
-sS'YER171W'
-p3992
-S'Basal transcription factors'
-p3993
-sS'YDL047W'
-p3994
 S'Other enzymes'
+p3992
+sS'YER171W'
+p3993
+S'Basal transcription factors'
+p3994
+sS'YDL047W'
 p3995
-sS'YDR101C'
+S'Other enzymes'
 p3996
+sS'YDR101C'
+p3997
 S''
 sS'YHR079C'
-p3997
-S'Protein processing in endoplasmic reticulum'
 p3998
-sS'YML046W'
+S'Protein processing in endoplasmic reticulum'
 p3999
-S''
-sS'YGL124C'
+sS'YML046W'
 p4000
 S''
-sS'YDR107C'
+sS'YGL124C'
 p4001
 S''
-sS'YDL130W'
+sS'YDR107C'
 p4002
-S'Ribosome'
-p4003
-sS'YMR276W'
-p4004
-S'Protein processing in endoplasmic reticulum'
-p4005
-sS'YEL002C'
-p4006
-S'Protein processing in endoplasmic reticulum'
-p4007
-sS'YLR025W'
-p4008
-S'Endocytosis'
-p4009
-sS'YER139C'
-p4010
 S''
-sS'YPL245W'
+sS'YDL130W'
+p4003
+S'Ribosome'
+p4004
+sS'YMR276W'
+p4005
+S'Protein processing in endoplasmic reticulum'
+p4006
+sS'YEL002C'
+p4007
+S'Protein processing in endoplasmic reticulum'
+p4008
+sS'YLR025W'
+p4009
+S'Endocytosis'
+p4010
+sS'YER139C'
 p4011
 S''
-sS'YGL200C'
+sS'YPL245W'
 p4012
 S''
-sS'YDR341C'
+sS'YGL200C'
 p4013
-S'tRNA loading'
-p4014
-sS'YKL027W'
-p4015
 S''
-sS'YJL173C'
+sS'YDR341C'
+p4014
+S'tRNA loading'
+p4015
+sS'YKL027W'
 p4016
 S''
-sS'YHR199C'
+sS'YJL173C'
 p4017
 S''
-sS'YDR152W'
+sS'YLR240W'
 p4018
+S'Phosphatidylinositol signaling system'
+p4019
+sS'YHR199C'
+p4020
+S''
+sS'YDR152W'
+p4021
 S''
 sS'YMR061W'
-p4019
-S'mRNA surveillance pathway'
-p4020
-sS'YJL128C'
-p4021
-S'MAPK signaling pathway'
 p4022
-sS'YJR002W'
+S'mRNA surveillance pathway'
 p4023
-S'Ribosome biogenesis in eukaryotes'
+sS'YJL128C'
 p4024
-sS'YDL145C'
+S'MAPK signaling pathway'
 p4025
-S''
-sS'YER019C-A'
+sS'YJR002W'
 p4026
-S'Protein export'
+S'Ribosome biogenesis in eukaryotes'
 p4027
-sS'YGR260W'
+sS'YDL145C'
 p4028
 S''
-sS'YKL127W'
+sS'YER019C-A'
 p4029
-S'Glycolysis'
+S'Protein export'
 p4030
-sS'YNL061W'
+sS'YGR260W'
 p4031
 S''
-sS'YKR021W'
+sS'YKL127W'
 p4032
+S'Glycolysis'
+p4033
+sS'YNL061W'
+p4034
+S''
+sS'YKR021W'
+p4035
 S''
 sS'YHR209W'
-p4033
+p4036
 S''
 sS'YFL014W'
-p4034
-S'Chaperones and folding catalysts'
-p4035
-sS'YDR457W'
-p4036
-S'Ubiquitin mediated proteolysis'
 p4037
-sS'YLR386W'
-p4038
-S''
-sS'YJL073W'
-p4039
 S'Chaperones and folding catalysts'
+p4038
+sS'YDR457W'
+p4039
+S'Ubiquitin mediated proteolysis'
 p4040
-sS'YLR371W'
+sS'YLR386W'
 p4041
 S''
-sS'YKL067W'
+sS'YJL073W'
 p4042
-S'Purine metabolism'
+S'Chaperones and folding catalysts'
 p4043
-sS'YMR005W'
+sS'YLR371W'
 p4044
 S''
-sS'YLR262C'
+sS'YKL067W'
 p4045
-S'GTP-binding signaling proteins'
+S'Purine metabolism'
 p4046
-sS'YNL121C'
+sS'YMR005W'
 p4047
 S''
-sS'YDR087C'
+sS'YLR262C'
 p4048
+S'GTP-binding signaling proteins'
+p4049
+sS'YNL121C'
+p4050
+S''
+sS'YDR087C'
+p4051
 S''
 sS'YMR294W'
-p4049
-S'Cytoskeleton proteins'
-p4050
-sS'YPR135W'
-p4051
-S'Chromosome-related'
 p4052
-sS'YBR081C'
+S'Cytoskeleton proteins'
 p4053
-S'Chromosome-related'
+sS'YPR135W'
 p4054
-sS'YPL138C'
+S'Chromosome-related'
 p4055
-S''
-sS'YJL166W'
+sS'YBR081C'
 p4056
-S'Oxidative phosphorylation'
+S'Chromosome-related'
 p4057
-sS'YNL044W'
+sS'YPL138C'
 p4058
 S''
-sS'YER044C'
+sS'YJL166W'
 p4059
-S''
-sS'YMR072W'
+S'Oxidative phosphorylation'
 p4060
-S''
-sS'YLR248W'
+sS'YNL044W'
 p4061
 S''
-sS'YOR283W'
+sS'YER044C'
 p4062
-S'Glycolysis'
+S''
+sS'YMR072W'
 p4063
-sS'YJL102W'
+S''
+sS'YLR248W'
 p4064
-S'Translation factors'
+S''
+sS'YOR283W'
 p4065
-sS'YKL105C'
+S'Glycolysis'
 p4066
-S''
-sS'YKL075C'
+sS'YJL102W'
 p4067
-S''
-sS'YNL181W'
+S'Translation factors'
 p4068
-S''
-sS'YDL087C'
+sS'YKL105C'
 p4069
 S''
-sS'YKR056W'
+sS'YKL075C'
 p4070
 S''
-sS'YGL011C'
+sS'YNL181W'
 p4071
-S'Proteasome'
+S''
+sS'YDL087C'
 p4072
-sS'YHL023C'
+S''
+sS'YKR056W'
 p4073
 S''
-sS'YIR036C'
+sS'YGL011C'
 p4074
-S'Other enzymes'
+S'Proteasome'
 p4075
-sS'YKL129C'
+sS'YHL023C'
 p4076
 S''
-sS'YDR163W'
+sS'YIR036C'
 p4077
-S'Spliceosome'
+S'Other enzymes'
 p4078
-sS'YMR123W'
+sS'YKL129C'
 p4079
 S''
-sS'YDR238C'
+sS'YDR163W'
 p4080
-S''
-sS'YOR173W'
+S'Spliceosome'
 p4081
-S''
-sS'YNL323W'
+sS'YMR123W'
 p4082
 S''
-sS'YFR024C-A'
+sS'YDR238C'
 p4083
 S''
-sS'YLR220W'
+sS'YOR173W'
 p4084
 S''
-sS'YDR243C'
+sS'YNL323W'
 p4085
-S'Spliceosome'
+S''
+sS'YFR024C-A'
 p4086
-sS'YLR172C'
+S''
+sS'YLR220W'
 p4087
-S'Other enzymes'
+S''
+sS'YDR243C'
 p4088
-sS'YGR209C'
+S'Spliceosome'
 p4089
-S'Chaperones and folding catalysts'
+sS'YLR172C'
 p4090
-sS'YPR168W'
+S'Other enzymes'
 p4091
+sS'YGR209C'
+p4092
+S'Chaperones and folding catalysts'
+p4093
+sS'YPR168W'
+p4094
 S''
 sS'YJL048C'
-p4092
-S''
-sS'YPR113W'
-p4093
-S'Phosphatidylinositol signaling system'
-p4094
-sS'YNL050C'
 p4095
 S''
-sS'YKR036C'
+sS'YPR113W'
 p4096
+S'Phosphatidylinositol signaling system'
+p4097
+sS'YNL050C'
+p4098
+S''
+sS'YKR036C'
+p4099
 S''
 sS'YPL113C'
-p4097
+p4100
 S''
 sS'YBR251W'
-p4098
-S'Ribosome'
-p4099
-sS'YIR008C'
-p4100
-S'DNA replication complex'
 p4101
-sS'YLR377C'
+S'Ribosome'
 p4102
-S'Glycolysis'
+sS'YIR008C'
 p4103
-sS'YGR093W'
+S'DNA replication complex'
 p4104
+sS'YLR377C'
+p4105
+S'Glycolysis'
+p4106
+sS'YGR093W'
+p4107
 S''
 sS'YIL040W'
-p4105
+p4108
 S''
 sS'YKL186C'
-p4106
-S'Ribosome biogenesis in eukaryotes'
-p4107
-sS'YGR135W'
-p4108
-S'Proteasome'
 p4109
-sS'YDL234C'
+S'Ribosome biogenesis in eukaryotes'
 p4110
-S''
-sS'YHR003C'
+sS'YGR135W'
 p4111
-S''
-sS'YDR524C'
+S'Proteasome'
 p4112
-S''
-sS'YAL019W'
+sS'YDL234C'
 p4113
 S''
-sS'YNR003C'
+sS'YHR003C'
 p4114
-S'RNA polymerase'
+S''
+sS'YDR524C'
 p4115
-sS'YPL140C'
+S''
+sS'YAL019W'
 p4116
-S'MAPK signaling pathway'
+S''
+sS'YNR003C'
 p4117
-sS'YLR449W'
+S'RNA polymerase'
 p4118
-S'Other enzymes'
+sS'YPL140C'
 p4119
-sS'YNL156C'
+S'MAPK signaling pathway'
 p4120
+sS'YLR449W'
+p4121
+S'Other enzymes'
+p4122
+sS'YNL156C'
+p4123
 S''
 sS'YDR293C'
-p4121
+p4124
 S''
 sS'YBR155W'
-p4122
-S''
-sS'YBL002W'
-p4123
-S'Chromosome-related'
-p4124
-sS'YNR038W'
 p4125
 S''
-sS'YIR024C'
+sS'YBL002W'
 p4126
-S''
-sS'YGL140C'
+S'Chromosome-related'
 p4127
-S''
-sS'YCL029C'
+sS'YNR038W'
 p4128
 S''
-sS'YGR169C-A'
+sS'YIR024C'
 p4129
 S''
-sS'YML123C'
+sS'YGL140C'
 p4130
-S'Transport'
+S''
+sS'YCL029C'
 p4131
-sS'YKL194C'
+S''
+sS'YGR169C-A'
 p4132
-S'tRNA loading'
+S''
+sS'YML123C'
 p4133
-sS'YOR275C'
+S'Transport'
 p4134
-S'Endocytosis'
+sS'YKL194C'
 p4135
-sS'YAL017W'
+S'tRNA loading'
 p4136
+sS'YOR275C'
+p4137
+S'Endocytosis'
+p4138
+sS'YAL017W'
+p4139
 S''
 sS'YJR024C'
-p4137
-S'Amino acid metabolism'
-p4138
-sS'YFL038C'
-p4139
-S'GTP-binding signaling proteins'
 p4140
-sS'YBR242W'
+S'Amino acid metabolism'
 p4141
+sS'YFL038C'
+p4142
+S'GTP-binding signaling proteins'
+p4143
+sS'YBR242W'
+p4144
 S''
 sS'YIL056W'
-p4142
-S''
-sS'YBR142W'
-p4143
-S'Other enzymes'
-p4144
-sS'YNL077W'
 p4145
 S''
-sS'YHR166C'
+sS'YBR142W'
 p4146
-S'Ubiquitin mediated proteolysis'
+S'Other enzymes'
 p4147
-sS'YGR175C'
+sS'YNL077W'
 p4148
-S'Lipid and steroid metabolism'
+S''
+sS'YHR166C'
 p4149
-sS'YJR131W'
+S'Ubiquitin mediated proteolysis'
 p4150
-S'Carbohydrate metabolism'
+sS'YGR175C'
 p4151
-sS'YIR017C'
+S'Lipid and steroid metabolism'
 p4152
-S''
-sS'YKL047W'
+sS'YJR131W'
 p4153
-S''
-sS'YIL128W'
+S'Carbohydrate metabolism'
 p4154
-S''
-sS'YNL127W'
+sS'YIR017C'
 p4155
 S''
-sS'YBR108W'
+sS'YKL047W'
 p4156
 S''
-sS'YDR089W'
+sS'YIL128W'
 p4157
 S''
-sS'YNR012W'
+sS'YNL127W'
 p4158
-S'Pyrimidine metabolism'
+S''
+sS'YBR108W'
 p4159
-sS'YGL097W'
+S''
+sS'YDR089W'
 p4160
 S''
-sS'YBR028C'
+sS'YNR012W'
 p4161
-S''
-sS'YHR073W'
+S'Pyrimidine metabolism'
 p4162
-S''
-sS'YER113C'
+sS'YGL097W'
 p4163
 S''
-sS'YNL110C'
+sS'YBR028C'
 p4164
 S''
-sS'YNL076W'
+sS'YHR073W'
 p4165
 S''
-sS'YDR367W'
+sS'YER113C'
 p4166
 S''
-sS'YHR072W'
+sS'YNL110C'
 p4167
-S'Lipid and steroid metabolism'
-p4168
-sS'YKL001C'
-p4169
-S'Purine metabolism'
-p4170
-sS'YDR012W'
-p4171
-S'Ribosome'
-p4172
-sS'YHR045W'
-p4173
 S''
-sS'YHR021C'
+sS'YNL076W'
+p4168
+S''
+sS'YDR367W'
+p4169
+S''
+sS'YHR072W'
+p4170
+S'Lipid and steroid metabolism'
+p4171
+sS'YKL001C'
+p4172
+S'Purine metabolism'
+p4173
+sS'YDR012W'
 p4174
 S'Ribosome'
 p4175
-sS'YGL253W'
+sS'YHR045W'
 p4176
-S'Glycolysis'
+S''
+sS'YHR021C'
 p4177
-sS'YPR178W'
+S'Ribosome'
 p4178
-S'Spliceosome'
+sS'YGL253W'
 p4179
-sS'YHL032C'
+S'Glycolysis'
 p4180
-S'Lipid and steroid metabolism'
+sS'YPR178W'
 p4181
-sS'YAR002C-A'
+S'Spliceosome'
 p4182
-S''
-sS'YIL088C'
+sS'YHL032C'
 p4183
-S''
-sS'YOR271C'
+S'Lipid and steroid metabolism'
 p4184
-S''
-sS'YOR057W'
+sS'YAR002C-A'
 p4185
 S''
-sS'YOL030W'
+sS'YIL088C'
 p4186
-S'Cell wall'
+S''
+sS'YOR271C'
 p4187
-sS'YBL025W'
+S''
+sS'YOR057W'
 p4188
 S''
-sS'YOR097C'
+sS'YOL030W'
 p4189
-S''
-sS'YHR216W'
+S'Cell wall'
 p4190
-S'Purine metabolism'
+sS'YBL025W'
 p4191
-sS'YMR074C'
+S''
+sS'YOR097C'
 p4192
 S''
-sS'YGR024C'
+sS'YHR216W'
 p4193
-S'Other enzymes'
+S'Purine metabolism'
 p4194
-sS'YOL023W'
+sS'YMR074C'
 p4195
-S'Translation factors'
+S''
+sS'YGR024C'
 p4196
-sS'YBL020W'
+S'Other enzymes'
 p4197
-S'Glycan metabolism'
+sS'YOL023W'
 p4198
-sS'YGR203W'
+S'Translation factors'
 p4199
+sS'YBL020W'
+p4200
+S'Glycan metabolism'
+p4201
+sS'YGR203W'
+p4202
 S''
 sS'YHL003C'
-p4200
-S'Lipid and steroid metabolism'
-p4201
-sS'YER154W'
-p4202
-S'Protein export'
 p4203
-sS'YDR422C'
+S'Lipid and steroid metabolism'
 p4204
-S''
-sS'YEL036C'
+sS'YER154W'
 p4205
-S'Glycan metabolism'
+S'Protein export'
 p4206
-sS'YBR260C'
+sS'YDR422C'
 p4207
 S''
-sS'YHR010W'
+sS'YEL036C'
 p4208
-S'Ribosome'
+S'Glycan metabolism'
 p4209
-sS'YDR400W'
+sS'YBR260C'
 p4210
-S'Pyrimidine metabolism'
-p4211
-sS'YJR104C'
-p4212
-S'Other enzymes'
-p4213
-sS'YNL231C'
-p4214
 S''
-sS'YPL124W'
+sS'YHR010W'
+p4211
+S'Ribosome'
+p4212
+sS'YDR400W'
+p4213
+S'Pyrimidine metabolism'
+p4214
+sS'YJR104C'
 p4215
-S'Cytoskeleton proteins'
+S'Other enzymes'
 p4216
-sS'YHL021C'
+sS'YNL231C'
 p4217
 S''
-sS'YLR056W'
+sS'YPL124W'
 p4218
-S'Lipid and steroid metabolism'
+S'Cytoskeleton proteins'
 p4219
-sS'YAL035W'
+sS'YHL021C'
 p4220
-S'Translation factors'
+S''
+sS'YLR056W'
 p4221
-sS'YOL041C'
+S'Lipid and steroid metabolism'
 p4222
-S''
-sS'YKL176C'
+sS'YAL035W'
 p4223
-S''
-sS'YFR038W'
+S'Translation factors'
 p4224
-S''
-sS'YBR235W'
+sS'YOL041C'
 p4225
 S''
-sS'YDR001C'
+sS'YKL176C'
 p4226
-S'Carbohydrate metabolism'
+S''
+sS'YFR038W'
 p4227
-sS'YIL162W'
+S''
+sS'YBR235W'
 p4228
-S'Carbohydrate metabolism'
+S''
+sS'YDR001C'
 p4229
-sS'YOL141W'
+S'Carbohydrate metabolism'
 p4230
+sS'YIL162W'
+p4231
+S'Carbohydrate metabolism'
+p4232
+sS'YOL141W'
+p4233
 S''
 sS'YGR080W'
-p4231
+p4234
 S''
 sS'YOL109W'
-p4232
-S''
-sS'YBL011W'
-p4233
-S'Lipid and steroid metabolism'
-p4234
-sS'YBR195C'
 p4235
 S''
-sS'YDR183W'
+sS'YBL011W'
 p4236
-S''
-sS'YGL222C'
+S'Lipid and steroid metabolism'
 p4237
-S''
-sS'YDR138W'
+sS'YBR195C'
 p4238
 S''
-sS'YGR122W'
+sS'YDR183W'
 p4239
 S''
-sS'YOR317W'
+sS'YGL222C'
 p4240
-S'Other enzymes'
+S''
+sS'YDR138W'
 p4241
-sS'YBR255C-A'
+S''
+sS'YGR122W'
 p4242
 S''
-sS'YGR033C'
+sS'YOR317W'
 p4243
-S''
-sS'YJR144W'
+S'Other enzymes'
 p4244
-S''
-sS'YMR315W'
+sS'YBR255C-A'
 p4245
 S''
-sS'YLR328W'
+sS'YGR033C'
 p4246
-S'Cofactor biosynthesis'
+S''
+sS'YJR144W'
 p4247
-sS'YGL153W'
+S''
+sS'YMR315W'
 p4248
-S'Peroxisome'
+S''
+sS'YLR328W'
 p4249
-sS'YDL180W'
+S'Cofactor biosynthesis'
 p4250
-S''
-sS'YLR039C'
+sS'YGL153W'
 p4251
-S''
-sS'YNL097C'
+S'Peroxisome'
 p4252
-S''
-sS'YOR305W'
+sS'YDL180W'
 p4253
 S''
-sS'YER063W'
+sS'YLR039C'
 p4254
 S''
-sS'YDR481C'
+sS'YNL097C'
 p4255
-S'Two-component system'
+S''
+sS'YOR305W'
 p4256
-sS'YER014W'
+S''
+sS'YER063W'
 p4257
-S'Cofactor biosynthesis'
+S''
+sS'YDR481C'
 p4258
-sS'YPL115C'
+S'Two-component system'
 p4259
+sS'YER014W'
+p4260
+S'Cofactor biosynthesis'
+p4261
+sS'YPL115C'
+p4262
 S''
 sS'YPR041W'
-p4260
-S'Translation factors'
-p4261
-sS'YER172C'
-p4262
-S'Spliceosome'
 p4263
-sS'YCR019W'
+S'Translation factors'
 p4264
+sS'YER172C'
+p4265
+S'Spliceosome'
+p4266
+sS'YCR019W'
+p4267
 S''
 sS'YJR032W'
-p4265
-S'Other enzymes'
-p4266
-sS'YPL249C-A'
-p4267
-S'Ribosome'
 p4268
-sS'YJL084C'
+S'Other enzymes'
 p4269
+sS'YPL249C-A'
+p4270
+S'Ribosome'
+p4271
+sS'YJL084C'
+p4272
 S''
 sS'YOR185C'
-p4270
-S'RNA transport'
-p4271
-sS'YOR244W'
-p4272
-S'Chromosome-related'
 p4273
-sS'YEL003W'
+S'RNA transport'
 p4274
-S'Chaperones and folding catalysts'
+sS'YOR244W'
 p4275
-sS'YOR004W'
+S'Chromosome-related'
 p4276
+sS'YEL003W'
+p4277
+S'Chaperones and folding catalysts'
+p4278
+sS'YOR004W'
+p4279
 S''
 sS'YGL037C'
-p4277
-S'Cofactor biosynthesis'
-p4278
-sS'YBR058C'
-p4279
-S'Ubiquitin labeling'
 p4280
-sS'YLR048W'
+S'Cofactor biosynthesis'
 p4281
-S'Ribosome'
+sS'YBR058C'
 p4282
-sS'YLR071C'
+S'Ubiquitin labeling'
 p4283
+sS'YLR048W'
+p4284
+S'Ribosome'
+p4285
+sS'YLR071C'
+p4286
 S''
 sS'YGR240C'
-p4284
-S'Glycolysis'
-p4285
-sS'YEL058W'
-p4286
-S'Other central metabolism enzymes'
 p4287
-sS'YMR259C'
+S'Glycolysis'
 p4288
+sS'YEL058W'
+p4289
+S'Other central metabolism enzymes'
+p4290
+sS'YMR259C'
+p4291
 S''
 sS'YJR001W'
-p4289
+p4292
 S''
 sS'YFL034C-A'
-p4290
-S'Ribosome'
-p4291
-sS'YDR434W'
-p4292
-S'Glycan metabolism'
 p4293
-sS'YOR145C'
+S'Ribosome'
 p4294
-S'Ribosome biogenesis'
+sS'YDR434W'
 p4295
-sS'YFL034C-B'
+S'Glycan metabolism'
 p4296
+sS'YOR145C'
+p4297
+S'Ribosome biogenesis'
+p4298
+sS'YFL034C-B'
+p4299
 S''
 sS'YPR052C'
-p4297
+p4300
 S''
 sS'YMR121C'
-p4298
-S'Ribosome'
-p4299
-sS'YPR025C'
-p4300
-S'Basal transcription factors'
 p4301
-sS'YCL019W'
+S'Ribosome'
 p4302
+sS'YPR025C'
+p4303
+S'Basal transcription factors'
+p4304
+sS'YCL019W'
+p4305
 S''
 sS'YBR087W'
-p4303
-S'DNA replication complex'
-p4304
-sS'YLR006C'
-p4305
-S'MAPK signaling pathway'
 p4306
-sS'YJL174W'
+S'DNA replication complex'
 p4307
-S'Cell wall'
+sS'YLR006C'
 p4308
-sS'YDR330W'
+S'MAPK signaling pathway'
 p4309
-S''
-sS'YER149C'
+sS'YJL174W'
 p4310
-S''
-sS'YMR056C'
+S'Cell wall'
 p4311
-S''
-sS'YER114C'
+sS'YDR330W'
 p4312
 S''
-sS'YOR375C'
+sS'YER149C'
 p4313
-S'Amino acid metabolism'
+S''
+sS'YMR056C'
 p4314
-sS'YDR057W'
+S''
+sS'YER114C'
 p4315
-S'Protein processing in endoplasmic reticulum'
+S''
+sS'YOR375C'
 p4316
-sS'YPR190C'
+S'Amino acid metabolism'
 p4317
-S'RNA polymerase'
+sS'YDR057W'
 p4318
-sS'YOR215C'
+S'Protein processing in endoplasmic reticulum'
 p4319
-S''
-sS'YHR107C'
+sS'YPR190C'
 p4320
-S''
-sS'YAR002W'
+S'RNA polymerase'
 p4321
-S''
-sS'YHR127W'
+sS'YOR215C'
 p4322
 S''
-sS'YGR142W'
+sS'YHR107C'
 p4323
 S''
-sS'YMR237W'
+sS'YAR002W'
 p4324
 S''
-sS'YOL095C'
+sS'YHR127W'
 p4325
 S''
-sS'YDL064W'
+sS'YGR142W'
 p4326
-S'RNA transport'
-p4327
-sS'YDL031W'
-p4328
-S'Other enzymes'
-p4329
-sS'YMR194C-B'
-p4330
 S''
-sS'YLR066W'
+sS'YMR237W'
+p4327
+S''
+sS'YOL095C'
+p4328
+S''
+sS'YDL064W'
+p4329
+S'RNA transport'
+p4330
+sS'YDL031W'
 p4331
-S'Protein export'
+S'Other enzymes'
 p4332
-sS'YDR514C'
+sS'YMR194C-B'
 p4333
 S''
-sS'YEL029C'
+sS'YLR066W'
 p4334
-S'Cofactor biosynthesis'
+S'Protein export'
 p4335
-sS'YMR228W'
+sS'YDR514C'
 p4336
 S''
-sS'YMR125W'
+sS'YEL029C'
 p4337
-S'Spliceosome'
+S'Cofactor biosynthesis'
 p4338
-sS'YGL245W'
+sS'YMR228W'
 p4339
-S'tRNA loading'
-p4340
-sS'YNL273W'
-p4341
-S'Chromosome-related'
-p4342
-sS'YCR051W'
-p4343
 S''
-sS'YER070W'
+sS'YMR125W'
+p4340
+S'Spliceosome'
+p4341
+sS'YGL245W'
+p4342
+S'tRNA loading'
+p4343
+sS'YNL273W'
 p4344
-S'Purine metabolism'
+S'Chromosome-related'
 p4345
-sS'YPL219W'
+sS'YCR051W'
 p4346
 S''
-sS'YPL262W'
+sS'YER070W'
 p4347
-S'TCA cycle and anaplerotic enzymes'
+S'Purine metabolism'
 p4348
-sS'YGR006W'
+sS'YPL219W'
 p4349
-S'Spliceosome'
+S''
+sS'YPL262W'
 p4350
-sS'YMR002W'
+S'TCA cycle and anaplerotic enzymes'
 p4351
+sS'YGR006W'
+p4352
+S'Spliceosome'
+p4353
+sS'YMR002W'
+p4354
 S''
 sS'YDL119C'
-p4352
+p4355
 S''
 sS'YGL129C'
-p4353
-S''
-sS'YPL020C'
-p4354
-S'Ubiquitin labeling'
-p4355
-sS'YMR073C'
 p4356
 S''
-sS'YKL151C'
+sS'YPL020C'
 p4357
-S''
-sS'YLR289W'
+S'Ubiquitin labeling'
 p4358
-S''
-sS'YGR222W'
+sS'YMR073C'
 p4359
 S''
-sS'YKL104C'
+sS'YKL151C'
 p4360
-S'Peptidases'
+S''
+sS'YLR289W'
 p4361
-sS'YCL040W'
+S''
+sS'YGR222W'
 p4362
-S'Glycolysis'
+S''
+sS'YKL104C'
 p4363
-sS'YOR163W'
+S'Peptidases'
 p4364
-S'Other enzymes'
+sS'YCL040W'
 p4365
-sS'YLR422W'
+S'Glycolysis'
 p4366
+sS'YOR163W'
+p4367
+S'Other enzymes'
+p4368
+sS'YLR422W'
+p4369
 S''
 sS'YPR115W'
-p4367
-S''
-sS'YLR093C'
-p4368
-S'SNAREs'
-p4369
-sS'YMR044W'
 p4370
 S''
-sS'YKL128C'
+sS'YLR093C'
 p4371
-S''
-sS'YLR361C-A'
+S'SNAREs'
 p4372
-S''
-sS'YJR065C'
+sS'YMR044W'
 p4373
 S''
-sS'YNL308C'
+sS'YKL128C'
 p4374
 S''
-sS'YGL180W'
+sS'YLR361C-A'
 p4375
-S'mTOR signaling pathway'
+S''
+sS'YJR065C'
 p4376
-sS'YPR074C'
+S''
+sS'YNL308C'
 p4377
-S'Pentose phosphate metabolism'
+S''
+sS'YGL180W'
 p4378
-sS'YDR239C'
+S'mTOR signaling pathway'
 p4379
+sS'YPR074C'
+p4380
+S'Pentose phosphate metabolism'
+p4381
+sS'YDR239C'
+p4382
 S''
 sS'YJR049C'
-p4380
+p4383
 S''
 sS'YPR112C'
-p4381
+p4384
 S''
 sS'YML085C'
-p4382
-S'Cytoskeleton proteins'
-p4383
-sS'YML069W'
-p4384
-S'Transcription factors'
 p4385
-sS'YPR169W'
+S'Cytoskeleton proteins'
 p4386
+sS'YML069W'
+p4387
+S'Transcription factors'
+p4388
+sS'YPR169W'
+p4389
 S''
 sS'YLR175W'
-p4387
-S'Ribosome biogenesis in eukaryotes'
-p4388
-sS'YGR279C'
-p4389
-S'Cell wall'
 p4390
-sS'YDR064W'
+S'Ribosome biogenesis in eukaryotes'
 p4391
-S'Ribosome'
+sS'YGR279C'
 p4392
-sS'YMR275C'
+S'Cell wall'
 p4393
-S''
-sS'YBL056W'
+sS'YDR064W'
 p4394
-S'Other enzymes'
+S'Ribosome'
 p4395
-sS'YLR324W'
+sS'YMR275C'
 p4396
 S''
-sS'YER052C'
+sS'YBL056W'
 p4397
-S'Amino acid metabolism'
+S'Other enzymes'
 p4398
-sS'YLL015W'
+sS'YLR324W'
 p4399
 S''
-sS'YMR202W'
+sS'YER052C'
 p4400
-S'Lipid and steroid metabolism'
+S'Amino acid metabolism'
 p4401
-sS'YPL061W'
+sS'YLL015W'
 p4402
-S'Glycolysis'
-p4403
-sS'YER003C'
-p4404
-S'Carbohydrate metabolism'
-p4405
-sS'YER103W'
-p4406
-S'Chaperones and folding catalysts'
-p4407
-sS'YKR077W'
-p4408
 S''
-sS'YDR173C'
-p4409
+sS'YMR202W'
+p4403
+S'Lipid and steroid metabolism'
+p4404
+sS'YPL061W'
+p4405
+S'Glycolysis'
+p4406
+sS'YER003C'
+p4407
 S'Carbohydrate metabolism'
+p4408
+sS'YER103W'
+p4409
+S'Chaperones and folding catalysts'
 p4410
-sS'YOR353C'
+sS'YKR077W'
 p4411
 S''
-sS'YCL057W'
+sS'YDR173C'
 p4412
-S'Peptidases'
+S'Carbohydrate metabolism'
 p4413
-sS'YLR413W'
+sS'YOR353C'
 p4414
 S''
-sS'YBR072W'
+sS'YCL057W'
 p4415
-S'Chaperones and folding catalysts'
+S'Peptidases'
 p4416
-sS'YBR029C'
+sS'YLR413W'
 p4417
-S'Lipid and steroid metabolism'
+S''
+sS'YBR072W'
 p4418
-sS'YMR262W'
+S'Chaperones and folding catalysts'
 p4419
-S''
-sS'YPR063C'
+sS'YBR029C'
 p4420
-S''
-sS'YGR231C'
+S'Lipid and steroid metabolism'
 p4421
-S''
-sS'YGR127W'
+sS'YMR262W'
 p4422
 S''
-sS'YBL076C'
+sS'YPR063C'
 p4423
-S'tRNA loading'
-p4424
-sS'YMR113W'
-p4425
-S'Cofactor biosynthesis'
-p4426
-sS'YFR006W'
-p4427
 S''
-sS'YMR297W'
+sS'YGR231C'
+p4424
+S''
+sS'YGR127W'
+p4425
+S''
+sS'YBL076C'
+p4426
+S'tRNA loading'
+p4427
+sS'YMR113W'
 p4428
-S'Chaperones and folding catalysts'
+S'Cofactor biosynthesis'
 p4429
-sS'YKR068C'
+sS'YFR006W'
 p4430
 S''
-sS'YGL067W'
+sS'YMR297W'
 p4431
-S''
-sS'YLR387C'
+S'Chaperones and folding catalysts'
 p4432
-S''
-sS'YPR032W'
+sS'YKR068C'
 p4433
 S''
-sS'YDL173W'
+sS'YGL067W'
 p4434
 S''
-sS'YBR143C'
+sS'YLR387C'
 p4435
-S'Translation factors'
+S''
+sS'YPR032W'
 p4436
-sS'YCR092C'
+S''
+sS'YDL173W'
 p4437
-S'Mismatch repair'
+S''
+sS'YBR143C'
 p4438
-sS'YDR086C'
+S'Translation factors'
 p4439
-S'Protein export'
+sS'YCR092C'
 p4440
-sS'YHR072W-A'
+S'Mismatch repair'
 p4441
-S'Ribosome biogenesis in eukaryotes'
+sS'YDR086C'
 p4442
-sS'YJR130C'
+S'Protein export'
 p4443
-S'Amino acid metabolism'
+sS'YHR072W-A'
 p4444
-sS'YJL062W-A'
+S'Ribosome biogenesis in eukaryotes'
 p4445
+sS'YJR130C'
+p4446
+S'Amino acid metabolism'
+p4447
+sS'YJL062W-A'
+p4448
 S''
 sS'YPL072W'
-p4446
-S'Ubiquitin labeling'
-p4447
-sS'YAL016W'
-p4448
-S'mRNA surveillance pathway'
 p4449
-sS'YFL039C'
+S'Ubiquitin labeling'
 p4450
-S'Cytoskeleton proteins'
+sS'YAL016W'
 p4451
-sS'YIL172C'
+S'mRNA surveillance pathway'
 p4452
+sS'YFL039C'
+p4453
+S'Cytoskeleton proteins'
+p4454
+sS'YIL172C'
+p4455
 S''
 sS'YJL134W'
-p4453
-S'Lipid and steroid metabolism'
-p4454
-sS'YJR006W'
-p4455
-S'DNA replication complex'
 p4456
-sS'YJL161W'
+S'Lipid and steroid metabolism'
 p4457
+sS'YJR006W'
+p4458
+S'DNA replication complex'
+p4459
+sS'YJL161W'
+p4460
 S''
 sS'YDR207C'
-p4458
-S'Transcription factors'
-p4459
-sS'YDR449C'
-p4460
-S'Ribosome biogenesis in eukaryotes'
 p4461
-sS'YJL019W'
+S'Transcription factors'
 p4462
+sS'YDR449C'
+p4463
+S'Ribosome biogenesis in eukaryotes'
+p4464
+sS'YJL019W'
+p4465
 S''
 sS'YNR039C'
-p4463
+p4466
 S''
 sS'YNL117W'
-p4464
-S'Glycolysis'
-p4465
-sS'YPL152W'
-p4466
-S'Other enzymes'
 p4467
-sS'YIL052C'
+S'Glycolysis'
 p4468
-S'Ribosome'
+sS'YPL152W'
 p4469
-sS'YGL205W'
-p4470
-S'Peroxisome'
-p4471
-sS'YGL123W'
-p4472
-S'Ribosome'
-p4473
-sS'YPL064C'
-p4474
 S'Other enzymes'
+p4470
+sS'YIL052C'
+p4471
+S'Ribosome'
+p4472
+sS'YGL205W'
+p4473
+S'Peroxisome'
+p4474
+sS'YGL123W'
 p4475
-sS'YBR175W'
+S'Ribosome'
 p4476
+sS'YPL064C'
+p4477
+S'Other enzymes'
+p4478
+sS'YBR175W'
+p4479
 S''
 sS'YNR013C'
-p4477
-S''
-sS'YBR109C'
-p4478
-S'Calcium signaling pathway'
-p4479
-sS'YBR172C'
 p4480
 S''
-sS'YDR346C'
+sS'YBR109C'
 p4481
-S''
-sS'YJL172W'
+S'Calcium signaling pathway'
 p4482
-S'Peptidases'
+sS'YBR172C'
 p4483
-sS'YJL010C'
+S''
+sS'YDR346C'
 p4484
 S''
-sS'YBL078C'
+sS'YJL172W'
 p4485
-S'Ubiquitin labeling'
-p4486
-sS'YDL104C'
-p4487
 S'Peptidases'
-p4488
-sS'YNL222W'
-p4489
-S'mRNA surveillance pathway'
-p4490
-sS'YGR095C'
-p4491
-S'RNA degradation'
-p4492
-sS'YFR039C'
-p4493
+p4486
+sS'YJL010C'
+p4487
 S''
-sS'YKR042W'
+sS'YBL078C'
+p4488
+S'Ubiquitin labeling'
+p4489
+sS'YDL104C'
+p4490
+S'Peptidases'
+p4491
+sS'YNL222W'
+p4492
+S'mRNA surveillance pathway'
+p4493
+sS'YGR095C'
 p4494
-S'Cell wall'
+S'RNA degradation'
 p4495
-sS'YNL051W'
+sS'YFR039C'
 p4496
 S''
-sS'YOL077W-A'
+sS'YKR042W'
 p4497
-S'Oxidative phosphorylation'
+S'Cell wall'
 p4498
-sS'YPL029W'
+sS'YNL051W'
 p4499
 S''
-sS'YBR236C'
+sS'YOL077W-A'
 p4500
-S'mRNA surveillance pathway'
-p4501
-sS'Q0250'
-p4502
 S'Oxidative phosphorylation'
+p4501
+sS'YPL029W'
+p4502
+S''
+sS'YBR236C'
 p4503
-sS'YDL142C'
+S'mRNA surveillance pathway'
 p4504
-S'Lipid and steroid metabolism'
+sS'Q0250'
 p4505
-sS'YDL091C'
+S'Oxidative phosphorylation'
 p4506
+sS'YDL142C'
+p4507
+S'Lipid and steroid metabolism'
+p4508
+sS'YDL091C'
+p4509
 S''
 sS'YHR198C'
-p4507
-S''
-sS'YKL024C'
-p4508
-S'Pyrimidine metabolism'
-p4509
-sS'YGL196W'
 p4510
 S''
-sS'YKL126W'
+sS'YKL024C'
 p4511
-S'Other enzymes'
+S'Pyrimidine metabolism'
 p4512
-sS'YLR209C'
+sS'YGL196W'
 p4513
-S'Purine metabolism'
+S''
+sS'YKL126W'
 p4514
-sS'YIL070C'
+S'Other enzymes'
 p4515
-S''
-sS'YDR264C'
+sS'YLR209C'
 p4516
-S''
-sS'YKL039W'
+S'Purine metabolism'
 p4517
-S''
-sS'YKL064W'
+sS'YIL070C'
 p4518
 S''
-sS'YNL035C'
+sS'YDR264C'
 p4519
 S''
-sS'YLR287C'
+sS'YKL039W'
 p4520
 S''
-sS'YLR212C'
+sS'YKL064W'
 p4521
-S'Cytoskeleton proteins'
+S''
+sS'YNL035C'
 p4522
-sS'YJL074C'
+S''
+sS'YLR287C'
 p4523
-S'Chromosome-related'
+S''
+sS'YLR212C'
 p4524
-sS'YLR370C'
+S'Cytoskeleton proteins'
 p4525
-S'Regulation of actin cytoskeleton'
+sS'YJL074C'
 p4526
-sS'YNL177C'
+S'Chromosome-related'
 p4527
+sS'YLR370C'
+p4528
+S'Regulation of actin cytoskeleton'
+p4529
+sS'YNL177C'
+p4530
 S''
 sS'YDR454C'
-p4528
-S'Purine metabolism'
-p4529
-sS'YIL009W'
-p4530
-S'Other enzymes'
 p4531
-sS'YLR250W'
+S'Purine metabolism'
 p4532
+sS'YIL009W'
+p4533
+S'Other enzymes'
+p4534
+sS'YLR250W'
+p4535
 S''
 sS'YKL122C'
-p4533
+p4536
 S''
 sS'YHR011W'
-p4534
-S'tRNA loading'
-p4535
-sS'YAL043C'
-p4536
-S'mRNA surveillance pathway'
 p4537
-sS'YOL093W'
+S'tRNA loading'
 p4538
+sS'YAL043C'
+p4539
+S'mRNA surveillance pathway'
+p4540
+sS'YOL093W'
+p4541
 S''
 sS'YOL042W'
-p4539
-S''
-sS'YDR054C'
-p4540
-S'Ubiquitin mediated proteolysis'
-p4541
-sS'YHR146W'
 p4542
 S''
-sS'YPL125W'
+sS'YDR054C'
 p4543
-S''
-sS'YBR189W'
+S'Ubiquitin mediated proteolysis'
 p4544
-S'Ribosome'
+sS'YHR146W'
 p4545
-sS'YCL037C'
+S''
+sS'YPL125W'
 p4546
 S''
-sS'YHL020C'
+sS'YBR189W'
 p4547
-S'Transcription factors'
+S'Ribosome'
 p4548
-sS'YJR105W'
+sS'YCL037C'
 p4549
-S'Purine metabolism'
+S''
+sS'YHL020C'
 p4550
-sS'YDR289C'
+S'Transcription factors'
 p4551
+sS'YJR105W'
+p4552
+S'Purine metabolism'
+p4553
+sS'YDR289C'
+p4554
 S''
 sS'YOR054C'
-p4552
-S''
-sS'YLR305C'
-p4553
-S'Phosphatidylinositol signaling system'
-p4554
-sS'YOR354C'
 p4555
 S''
-sS'YOL140W'
+sS'YLR305C'
 p4556
-S'Amino acid metabolism'
+S'Phosphatidylinositol signaling system'
 p4557
-sS'YGL223C'
+sS'YOR354C'
 p4558
 S''
-sS'YBR193C'
+sS'YOL140W'
 p4559
-S''
-sS'YBL016W'
+S'Amino acid metabolism'
 p4560
-S'MAPK signaling pathway'
+sS'YGL223C'
 p4561
-sS'YML131W'
+S''
+sS'YBR193C'
 p4562
 S''
-sS'YGL150C'
+sS'YBL016W'
 p4563
-S'Chromosome-related'
+S'MAPK signaling pathway'
 p4564
-sS'YNL292W'
+sS'YML131W'
 p4565
-S'Other enzymes'
+S''
+sS'YGL150C'
 p4566
-sS'YCL057C-A'
+S'Chromosome-related'
 p4567
+sS'YNL292W'
+p4568
+S'Other enzymes'
+p4569
+sS'YCL057C-A'
+p4570
 S''
 sS'YNR024W'
-p4568
-S'RNA degradation'
-p4569
-sS'YJL092W'
-p4570
-S'Nucleotide excision repair'
 p4571
-sS'YIL038C'
-p4572
 S'RNA degradation'
+p4572
+sS'YJL092W'
 p4573
-sS'YGL076C'
+S'Nucleotide excision repair'
 p4574
-S'Ribosome'
+sS'YIL038C'
 p4575
-sS'YPL043W'
+S'RNA degradation'
 p4576
-S'Ribosome biogenesis in eukaryotes'
+sS'YGL076C'
 p4577
-sS'YIL138C'
+S'Ribosome'
 p4578
+sS'YPL043W'
+p4579
+S'Ribosome biogenesis in eukaryotes'
+p4580
+sS'YIL138C'
+p4581
 S''
 sS'YDR109C'
-p4579
+p4582
 S''
 sS'YIL143C'
-p4580
-S'Basal transcription factors'
-p4581
-sS'YGR092W'
-p4582
-S'Cell cycle'
 p4583
-sS'YBR256C'
+S'Basal transcription factors'
 p4584
-S'Cofactor biosynthesis'
+sS'YGR092W'
 p4585
-sS'YKL002W'
+S'Cell cycle'
 p4586
-S'Endocytosis'
+sS'YBR256C'
 p4587
-sS'YOR036W'
+S'Cofactor biosynthesis'
 p4588
-S'SNARE interactions in vesicular transport'
+sS'YKL002W'
 p4589
-sS'YJL207C'
+S'Endocytosis'
 p4590
+sS'YOR036W'
+p4591
+S'SNARE interactions in vesicular transport'
+p4592
+sS'YJL207C'
+p4593
 S''
 sS'YJR090C'
-p4591
-S'Ubiquitin mediated proteolysis'
-p4592
-sS'YOR014W'
-p4593
-S'mRNA surveillance pathway'
 p4594
-sS'YIR009W'
+S'Ubiquitin mediated proteolysis'
 p4595
-S''
-sS'YOR362C'
+sS'YOR014W'
 p4596
-S'Proteasome'
+S'mRNA surveillance pathway'
 p4597
-sS'YAL041W'
+sS'YIR009W'
 p4598
-S'MAPK signaling pathway'
+S''
+sS'YLR390W'
 p4599
-sS'YLR345W'
+S''
+sS'YAL041W'
 p4600
-S'Carbohydrate metabolism'
+S'MAPK signaling pathway'
 p4601
-sS'YKL073W'
+sS'YLR345W'
 p4602
-S'Chaperones and folding catalysts'
+S'Carbohydrate metabolism'
 p4603
-sS'YLR448W'
+sS'YKL073W'
 p4604
-S'Ribosome'
+S'Chaperones and folding catalysts'
 p4605
-sS'YGR103W'
+sS'YLR448W'
 p4606
+S'Ribosome'
+p4607
+sS'YGR103W'
+p4608
 S''
 sS'YPL141C'
-p4607
+p4609
 S''
 sS'YJL081C'
-p4608
-S'Chromosome-related'
-p4609
-sS'YIL041W'
 p4610
-S''
-sS'YGR178C'
+S'Chromosome-related'
 p4611
-S''
-sS'YGR057C'
+sS'YIL041W'
 p4612
 S''
-sS'YNL155W'
+sS'YGR178C'
 p4613
 S''
-sS'YNL100W'
+sS'YGR057C'
 p4614
 S''
-sS'YLR078C'
+sS'YNL155W'
 p4615
-S'SNARE interactions in vesicular transport'
+S''
+sS'YNL100W'
 p4616
-sS'YBR154C'
+S''
+sS'YLR078C'
 p4617
-S'RNA polymerase'
+S'SNARE interactions in vesicular transport'
 p4618
-sS'YNL139C'
+sS'YBR154C'
 p4619
-S'Spliceosome'
+S'RNA polymerase'
 p4620
-sS'YNL245C'
+sS'YNL139C'
 p4621
+S'Spliceosome'
+p4622
+sS'YNL245C'
+p4623
 S''
 sS'YGL143C'
-p4622
-S'Translation factors'
-p4623
-sS'YLR001C'
 p4624
+S'Translation factors'
+p4625
+sS'YLR001C'
+p4626
 S''
 sS'YLR126C'
-p4625
+p4627
 S''
 sS'YMR318C'
-p4626
-S'Glycolysis'
-p4627
-sS'YCL018W'
 p4628
-S'Amino acid metabolism'
+S'Glycolysis'
 p4629
-sS'YGR181W'
+sS'YCL018W'
 p4630
-S''
-sS'YKR074W'
+S'Amino acid metabolism'
 p4631
-S''
-sS'YHR108W'
+sS'YGR181W'
 p4632
 S''
-sS'YDL067C'
+sS'YKR074W'
 p4633
-S'Oxidative phosphorylation'
+S''
+sS'YHR108W'
 p4634
-sS'YOL020W'
+S''
+sS'YDL067C'
 p4635
-S''
-sS'YBR086C'
+S'Oxidative phosphorylation'
 p4636
-S''
-sS'YDR135C'
+sS'YOL020W'
 p4637
 S''
-sS'YBL030C'
+sS'YBR086C'
 p4638
 S''
-sS'YMR256C'
+sS'YDR135C'
 p4639
-S'Oxidative phosphorylation'
+S''
+sS'YBL030C'
 p4640
-sS'YMR236W'
+S''
+sS'YMR256C'
 p4641
-S'Basal transcription factors'
+S'Oxidative phosphorylation'
 p4642
-sS'YER148W'
+sS'YMR236W'
 p4643
 S'Basal transcription factors'
 p4644
-sS'YGL242C'
+sS'YER148W'
 p4645
+S'Basal transcription factors'
+p4646
+sS'YGL242C'
+p4647
 S''
 sS'YHL015W'
-p4646
-S'Ribosome'
-p4647
-sS'YEL048C'
 p4648
+S'Ribosome'
+p4649
+sS'YEL048C'
+p4650
 S''
 sS'YOR303W'
-p4649
-S'Pyrimidine metabolism'
-p4650
-sS'YIL087C'
 p4651
-S''
-sS'YOR252W'
+S'Pyrimidine metabolism'
 p4652
-S''
-sS'YDR472W'
+sS'YIL087C'
 p4653
 S''
-sS'YBR194W'
+sS'YOR252W'
 p4654
 S''
-sS'YMR192W'
+sS'YDR472W'
 p4655
 S''
-sS'YGR078C'
+sS'YBR194W'
 p4656
 S''
-sS'YOR104W'
+sS'YMR192W'
 p4657
 S''
-sS'YER073W'
+sS'YGR078C'
 p4658
-S'Glycolysis'
+S''
+sS'YOR104W'
 p4659
-sS'YMR229C'
+S''
+sS'YER073W'
 p4660
+S'Glycolysis'
+p4661
+sS'YMR229C'
+p4662
 S''
 sS'YLR065C'
-p4661
+p4663
 S''
 sS'YBR046C'
-p4662
-S'Other enzymes'
-p4663
-sS'YOR056C'
 p4664
-S'Ribosome biogenesis in eukaryotes'
+S'Other enzymes'
 p4665
-sS'YDR013W'
+sS'YOR056C'
 p4666
-S'DNA replication control'
+S'Ribosome biogenesis in eukaryotes'
 p4667
-sS'YGL028C'
+sS'YDR013W'
 p4668
-S'Cell wall'
+S'DNA replication control'
 p4669
-sS'YHL033C'
+sS'YGL028C'
 p4670
-S'Ribosome'
+S'Cell wall'
 p4671
-sS'YOR270C'
+sS'YHL033C'
 p4672
-S'Oxidative phosphorylation'
+S'Ribosome'
 p4673
-sS'YHR020W'
+sS'YOR270C'
 p4674
-S'tRNA loading'
+S'Oxidative phosphorylation'
 p4675
-sS'YOL068C'
+sS'YHR020W'
 p4676
-S'Cofactor biosynthesis'
+S'tRNA loading'
 p4677
-sS'YLL006W'
+sS'YOL068C'
 p4678
+S'Cofactor biosynthesis'
+p4679
+sS'YLL006W'
+p4680
 S''
 sS'YGL252C'
-p4679
-S'Chromosome-related'
-p4680
-sS'YOL033W'
 p4681
-S'tRNA loading'
+S'Chromosome-related'
 p4682
-sS'YBR238C'
+sS'YOL033W'
 p4683
+S'tRNA loading'
+p4684
+sS'YBR238C'
+p4685
 S''
 sS'YGL161C'
-p4684
+p4686
 S''
 sS'YPR051W'
-p4685
-S'Other enzymes'
-p4686
-sS'YER155C'
 p4687
-S''
-sS'YBR037C'
+S'Other enzymes'
 p4688
-S''
-sS'YGR049W'
+sS'YER155C'
 p4689
 S''
-sS'YHL002W'
+sS'YBR037C'
 p4690
-S'Jak-STAT signaling pathway'
+S''
+sS'YGR049W'
 p4691
-sS'YNL263C'
+S''
+sS'YHL002W'
 p4692
+S'Jak-STAT signaling pathway'
+p4693
+sS'YNL263C'
+p4694
 S''
 sS'YKR099W'
-p4693
-S'Transcription factors'
-p4694
-sS'YOR096W'
 p4695
-S'Ribosome'
+S'Transcription factors'
 p4696
-sS'YDR538W'
+sS'YOR096W'
 p4697
-S'Biosynthesis of other secondary metabolites'
+S'Ribosome'
 p4698
 sS'YPL001W'
 p4699
@@ -11051,306 +11051,304 @@ p4736
 sS'YMR263W'
 p4737
 S''
-sS'YKL185W'
+sS'YDR270W'
 p4738
-S''
-sS'YKR069W'
+S'Other enzymes'
 p4739
-S'Cofactor biosynthesis'
+sS'YKR069W'
 p4740
-sS'YBR008C'
+S'Cofactor biosynthesis'
 p4741
-S'Transport'
+sS'YBR008C'
 p4742
-sS'YDR172W'
+S'Transport'
 p4743
-S'Translation factors'
+sS'YDR172W'
 p4744
-sS'YDL121C'
+S'Translation factors'
 p4745
+sS'YDL121C'
+p4746
 S''
 sS'YPR033C'
-p4746
-S'tRNA loading'
 p4747
-sS'YGL135W'
+S'tRNA loading'
 p4748
-S'Ribosome'
+sS'YGL135W'
 p4749
-sS'YLR129W'
+S'Ribosome'
 p4750
-S'Ribosome biogenesis in eukaryotes'
+sS'YLR129W'
 p4751
-sS'YPR062W'
+S'Ribosome biogenesis in eukaryotes'
 p4752
-S'Pyrimidine metabolism'
+sS'YPR062W'
 p4753
-sS'YBL041W'
+S'Pyrimidine metabolism'
 p4754
-S'Proteasome'
+sS'YBL041W'
 p4755
-sS'YDL058W'
+S'Proteasome'
 p4756
+sS'YDL058W'
+p4757
 S''
 sS'YPR065W'
-p4757
-S'Transcription factors'
 p4758
-sS'YLR150W'
+S'Transcription factors'
 p4759
+sS'YLR150W'
+p4760
 S''
 sS'YBR026C'
-p4760
-S'Lipid and steroid metabolism'
 p4761
-sS'YBL059C-A'
+S'Lipid and steroid metabolism'
 p4762
-S''
-sS'YNL214W'
+sS'YBL059C-A'
 p4763
 S''
-sS'YOR184W'
+sS'YNL214W'
 p4764
-S'Amino acid metabolism'
+S''
+sS'YOR184W'
 p4765
-sS'YBR091C'
+S'Amino acid metabolism'
 p4766
+sS'YBR091C'
+p4767
 S''
 sS'YPR180W'
-p4767
-S'Ubiquitin mediated proteolysis'
 p4768
-sS'YEL013W'
+S'Ubiquitin mediated proteolysis'
 p4769
-S'Regulation of autophagy'
+sS'YEL013W'
 p4770
-sS'YDL007W'
+S'Regulation of autophagy'
 p4771
-S'Proteasome'
+sS'YDL007W'
 p4772
-sS'YGL056C'
+S'Proteasome'
 p4773
+sS'YGL056C'
+p4774
 S''
 sS'YDR385W'
-p4774
-S'Translation factors'
 p4775
-sS'YDR480W'
+S'Translation factors'
 p4776
-S'MAPK signaling pathway'
+sS'YDR480W'
 p4777
-sS'YML004C'
+S'MAPK signaling pathway'
 p4778
-S'Glycolysis'
+sS'YML004C'
 p4779
-sS'YCR043C'
+S'Glycolysis'
 p4780
+sS'YCR043C'
+p4781
 S''
 sS'YPL227C'
-p4781
-S'Glycan metabolism'
 p4782
-sS'YDL010W'
+S'Glycan metabolism'
 p4783
+sS'YDL010W'
+p4784
 S''
 sS'YLL009C'
-p4784
-S'Oxidative phosphorylation'
 p4785
-sS'YBR059C'
+S'Oxidative phosphorylation'
 p4786
+sS'YBR059C'
+p4787
 S''
 sS'YML019W'
-p4787
-S'Protein processing in endoplasmic reticulum'
 p4788
-sS'YPR024W'
+S'Protein processing in endoplasmic reticulum'
 p4789
-S'Peptidases'
+sS'YPR024W'
 p4790
-sS'YDR493W'
+S'Peptidases'
 p4791
+sS'YDR493W'
+p4792
 S''
 sS'YDL045C'
-p4792
-S'Cofactor biosynthesis'
 p4793
-sS'YLR163C'
+S'Cofactor biosynthesis'
 p4794
-S'Peptidases'
+sS'YLR163C'
 p4795
-sS'YGL036W'
+S'Peptidases'
 p4796
-S''
-sS'YPL247C'
+sS'YGL036W'
 p4797
 S''
-sS'YMR258C'
+sS'YPL247C'
 p4798
 S''
-sS'YDR328C'
+sS'YMR258C'
 p4799
-S'Protein processing in endoplasmic reticulum'
-p4800
-sS'YDL198C'
-p4801
 S''
-sS'YLR072W'
+sS'YDR328C'
+p4800
+S'Protein processing in endoplasmic reticulum'
+p4801
+sS'YDL198C'
 p4802
 S''
-sS'YKL167C'
+sS'YLR072W'
 p4803
 S''
-sS'YIR023W'
+sS'YKL167C'
 p4804
 S''
-sS'YDL092W'
+sS'YIR023W'
 p4805
-S'Protein export'
-p4806
-sS'YKR043C'
-p4807
-S'Glycolysis'
-p4808
-sS'YLR166C'
-p4809
 S''
-sS'YMR067C'
+sS'YDL092W'
+p4806
+S'Protein export'
+p4807
+sS'YKR043C'
+p4808
+S'Glycolysis'
+p4809
+sS'YLR166C'
 p4810
 S''
-sS'YJL011C'
+sS'YMR067C'
 p4811
 S''
-sS'YDL143W'
+sS'YJL011C'
 p4812
-S'Chaperones and folding catalysts'
+S''
+sS'YDL143W'
 p4813
-sS'YKL138C'
+S'Chaperones and folding catalysts'
 p4814
+sS'YKL138C'
+p4815
 S''
 sS'YBL079W'
-p4815
-S'RNA transport'
 p4816
-sS'YPL093W'
+S'RNA transport'
 p4817
-S'Ribosome biogenesis in eukaryotes'
+sS'YPL093W'
 p4818
-sS'YPL028W'
+S'Ribosome biogenesis in eukaryotes'
 p4819
-S'Lipid and steroid metabolism'
+sS'YPL028W'
 p4820
-sS'YFL001W'
+S'Lipid and steroid metabolism'
 p4821
-S'Other enzymes'
+sS'YFL001W'
 p4822
-sS'YDR150W'
+S'Other enzymes'
 p4823
-S''
-sS'YIL135C'
+sS'YDR150W'
 p4824
 S''
-sS'YBR157C'
+sS'YIL135C'
 p4825
 S''
-sS'YGL212W'
+sS'YBR157C'
 p4826
-S'SNARE interactions in vesicular transport'
-p4827
-sS'YPR137W'
-p4828
 S''
-sS'YMR027W'
+sS'YGL212W'
+p4827
+S'SNARE interactions in vesicular transport'
+p4828
+sS'YPR137W'
 p4829
 S''
-sS'YPL173W'
+sS'YMR027W'
 p4830
 S''
-sS'YDL130W-A'
+sS'YPL173W'
 p4831
 S''
-sS'YKL170W'
+sS'YDL130W-A'
 p4832
 S''
-sS'YKR023W'
+sS'YKL170W'
 p4833
 S''
-sS'YNL036W'
+sS'YKR023W'
 p4834
 S''
-sS'YOR115C'
+sS'YNL036W'
 p4835
 S''
-sS'YKL038W'
+sS'YOR115C'
 p4836
 S''
-sS'YIL129C'
+sS'YKL038W'
 p4837
 S''
-sS'YMR296C'
+sS'YIL129C'
 p4838
-S'Lipid and steroid metabolism'
-p4839
-sS'YLR286C'
-p4840
-S'Cell wall'
-p4841
-sS'YNL016W'
-p4842
 S''
-sS'YJL208C'
+sS'YMR296C'
+p4839
+S'Lipid and steroid metabolism'
+p4840
+sS'YLR286C'
+p4841
+S'Cell wall'
+p4842
+sS'YNL016W'
 p4843
 S''
-sS'YLR384C'
+sS'YJL208C'
 p4844
-S'Chromosome-related'
+S''
+sS'YLR384C'
 p4845
-sS'YDR307W'
+S'Chromosome-related'
 p4846
-S'Glycan metabolism'
+sS'YDR307W'
 p4847
-sS'YOR162C'
+S'Glycan metabolism'
 p4848
+sS'YOR162C'
+p4849
 S''
 sS'YLR421C'
-p4849
-S'Proteasome'
 p4850
-sS'YMR145C'
+S'Proteasome'
 p4851
-S'Oxidative phosphorylation'
+sS'YMR145C'
 p4852
-sS'YDR161W'
+S'Oxidative phosphorylation'
 p4853
-S''
-sS'YMR110C'
+sS'YDR161W'
 p4854
 S''
-sS'YDL212W'
+sS'YMR110C'
 p4855
 S''
-sS'YJR064W'
+sS'YDL212W'
 p4856
-S'Chaperones and folding catalysts'
+S''
+sS'YJR064W'
 p4857
-sS'YNL183C'
+S'Chaperones and folding catalysts'
 p4858
-S'Other enzymes'
+sS'YNL183C'
 p4859
-sS'YOR285W'
+S'Other enzymes'
 p4860
+sS'YOR285W'
+p4861
 S''
 sS'YJL002C'
-p4861
-S'Protein processing in endoplasmic reticulum'
 p4862
-sS'YML022W'
+S'Protein processing in endoplasmic reticulum'
 p4863
-S'Purine metabolism'
+sS'YML022W'
 p4864
-sS'YLR390W'
+S'Purine metabolism'
 p4865
-S''
 sS'YMR029C'
 p4866
 S''
@@ -11478,1697 +11476,1699 @@ sS'YKL192C'
 p4919
 S'Oxidative phosphorylation'
 p4920
-sS'YGL082W'
+sS'YKL185W'
 p4921
 S''
-sS'YDR310C'
+sS'YGL082W'
 p4922
-S'Transcription factors'
-p4923
-sS'YPL146C'
-p4924
 S''
-sS'YHL048W'
+sS'YDR310C'
+p4923
+S'Transcription factors'
+p4924
+sS'YPL146C'
 p4925
 S''
-sS'YPL139C'
+sS'YHL048W'
 p4926
 S''
-sS'YNL138W'
+sS'YPL139C'
 p4927
 S''
-sS'YNL154C'
+sS'YNL138W'
 p4928
-S'Endocytosis'
-p4929
-sS'YPR098C'
-p4930
 S''
-sS'YHR161C'
+sS'YNL154C'
+p4929
+S'Endocytosis'
+p4930
+sS'YPR098C'
 p4931
 S''
-sS'YNL001W'
+sS'YHR161C'
 p4932
-S'mRNA surveillance pathway'
-p4933
-sS'YDL236W'
-p4934
-S'Other enzymes'
-p4935
-sS'YJL080C'
-p4936
 S''
-sS'YCR067C'
+sS'YNL001W'
+p4933
+S'mRNA surveillance pathway'
+p4934
+sS'YDL236W'
+p4935
+S'Other enzymes'
+p4936
+sS'YJL080C'
 p4937
 S''
-sS'YGL142C'
+sS'YCR067C'
 p4938
-S'Glycan metabolism'
+S''
+sS'YGL142C'
 p4939
-sS'YFR009W'
+S'Glycan metabolism'
 p4940
+sS'YFR009W'
+p4941
 S''
 sS'YGR179C'
-p4941
-S'Chromosome-related'
 p4942
-sS'YJR086W'
+S'Chromosome-related'
 p4943
-S'MAPK signaling pathway'
+sS'YJR086W'
 p4944
-sS'YDR081C'
+S'MAPK signaling pathway'
 p4945
-S''
-sS'YJL137C'
+sS'YDR081C'
 p4946
 S''
-sS'YDR383C'
+sS'YJL137C'
 p4947
 S''
-sS'YKL065C'
+sS'YDR383C'
 p4948
 S''
-sS'YIL173W'
+sS'YKL065C'
 p4949
 S''
-sS'YBR139W'
+sS'YIL173W'
 p4950
 S''
-sS'YBR115C'
+sS'YBR139W'
 p4951
-S'Amino acid metabolism'
+S''
+sS'YBR115C'
 p4952
-sS'YBR140C'
+S'Amino acid metabolism'
 p4953
+sS'YBR140C'
+p4954
 S''
 sS'YDR448W'
-p4954
-S'Chromosome-related'
 p4955
-sS'YJR111C'
+S'Chromosome-related'
 p4956
-S''
-sS'YHR085W'
+sS'YJR111C'
 p4957
 S''
-sS'YHR188C'
+sS'YHR085W'
 p4958
-S'Glycan metabolism'
-p4959
-sS'YBR052C'
-p4960
 S''
-sS'YFL023W'
+sS'YHR188C'
+p4959
+S'Glycan metabolism'
+p4960
+sS'YBR052C'
 p4961
 S''
-sS'YER087C-B'
+sS'YFL023W'
 p4962
-S'Protein export'
+S''
+sS'YER087C-B'
 p4963
-sS'YKL081W'
+S'Protein export'
 p4964
-S'Translation factors'
+sS'YKL081W'
 p4965
-sS'YDR361C'
+S'Translation factors'
 p4966
+sS'YDR361C'
+p4967
 S''
 sS'YBR171W'
-p4967
-S'Secretion system'
 p4968
-sS'YKL196C'
+S'Secretion system'
 p4969
-S'SNARE interactions in vesicular transport'
+sS'YKL196C'
 p4970
-sS'YMR162C'
+S'SNARE interactions in vesicular transport'
 p4971
-S'Other enzymes'
+sS'YMR162C'
 p4972
-sS'YJL157C'
+S'Other enzymes'
 p4973
-S'MAPK signaling pathway'
+sS'YJL157C'
 p4974
-sS'YLR226W'
+S'MAPK signaling pathway'
 p4975
+sS'YLR226W'
+p4976
 S''
 sS'YKL181W'
-p4976
-S'Pentose phosphate metabolism'
 p4977
-sS'YDL229W'
+S'Pentose phosphate metabolism'
 p4978
-S'Chaperones and folding catalysts'
+sS'YDL229W'
 p4979
-sS'YOL032W'
+S'Chaperones and folding catalysts'
 p4980
+sS'YOL032W'
+p4981
 S''
 sS'YHR027C'
-p4981
-S'Proteasome'
 p4982
-sS'YIL157C'
+S'Proteasome'
 p4983
-S''
-sS'YGL255W'
+sS'YIL157C'
 p4984
 S''
-sS'YFR007W'
+sS'YGL255W'
 p4985
 S''
-sS'YBR083W'
+sS'YFR007W'
 p4986
-S'Transcription factors'
+S''
+sS'YBR083W'
 p4987
-sS'YKR090W'
+S'Transcription factors'
 p4988
+sS'YKR090W'
+p4989
 S''
 sS'YLR333C'
-p4989
-S'Ribosome'
 p4990
-sS'YHL030W'
+S'Ribosome'
 p4991
+sS'YHL030W'
+p4992
 S''
 sS'YAR018C'
-p4992
-S'Other enzymes'
 p4993
-sS'YBR200W'
+S'Other enzymes'
 p4994
-S'MAPK signaling pathway'
+sS'YBR200W'
 p4995
-sS'YNL262W'
+S'MAPK signaling pathway'
 p4996
-S'DNA replication complex'
+sS'YNL262W'
 p4997
-sS'YAR028W'
+S'DNA replication complex'
 p4998
+sS'YAR028W'
+p4999
 S''
 sS'YDR079C-A'
-p4999
-S'Basal transcription factors'
 p5000
-sS'YPL204W'
+S'Basal transcription factors'
 p5001
-S'Endocytosis'
+sS'YPL204W'
 p5002
-sS'YOL069W'
+S'Endocytosis'
 p5003
-S'Cytoskeleton proteins'
+sS'YOL069W'
 p5004
-sS'YNL075W'
+S'Cytoskeleton proteins'
 p5005
-S'Ribosome biogenesis in eukaryotes'
+sS'YNL075W'
 p5006
-sS'YDR412W'
+S'Ribosome biogenesis in eukaryotes'
 p5007
-S''
-sS'YDR129C'
+sS'YDR412W'
 p5008
 S''
-sS'YIL068C'
+sS'YDR129C'
 p5009
 S''
-sS'YBR302C'
+sS'YIL068C'
 p5010
 S''
-sS'YOR091W'
+sS'YBR302C'
 p5011
 S''
-sS'YGR026W'
+sS'YOR091W'
 p5012
 S''
-sS'YKL098W'
+sS'YGR026W'
 p5013
 S''
-sS'YML125C'
+sS'YKL098W'
 p5014
 S''
-sS'YER092W'
+sS'YML125C'
 p5015
-S'Chromosome-related'
-p5016
-sS'YDR288W'
-p5017
 S''
-sS'YGL208W'
+sS'YER092W'
+p5016
+S'Chromosome-related'
+p5017
+sS'YDR288W'
 p5018
 S''
-sS'YNL284C'
+sS'YGL208W'
 p5019
 S''
-sS'YFR041C'
+sS'YNL284C'
 p5020
 S''
-sS'YIL050W'
+sS'YFR041C'
 p5021
 S''
-sS'YGR086C'
+sS'YIL050W'
 p5022
 S''
-sS'YBR133C'
+sS'YGR086C'
 p5023
-S'RNA transport'
-p5024
-sS'YPL106C'
-p5025
-S'Chaperones and folding catalysts'
-p5026
-sS'YOL143C'
-p5027
-S'Cofactor biosynthesis'
-p5028
-sS'YAL034W-A'
-p5029
-S'Chromosome-related'
-p5030
-sS'YGR195W'
-p5031
-S'RNA degradation'
-p5032
-sS'YIL026C'
-p5033
-S'Chromosome-related'
-p5034
-sS'YGL151W'
-p5035
 S''
-sS'YBR197C'
+sS'YBR133C'
+p5024
+S'RNA transport'
+p5025
+sS'YPL106C'
+p5026
+S'Chaperones and folding catalysts'
+p5027
+sS'YOL143C'
+p5028
+S'Cofactor biosynthesis'
+p5029
+sS'YAL034W-A'
+p5030
+S'Chromosome-related'
+p5031
+sS'YGR195W'
+p5032
+S'RNA degradation'
+p5033
+sS'YIL026C'
+p5034
+S'Chromosome-related'
+p5035
+sS'YGL151W'
 p5036
 S''
-sS'YHR147C'
+sS'YBR197C'
 p5037
 S''
-sS'YJR091C'
+sS'YHR147C'
 p5038
 S''
-sS'YGR031W'
+sS'YJR091C'
 p5039
 S''
-sS'YJL204C'
+sS'YGR031W'
 p5040
 S''
-sS'YGR124W'
+sS'YJL204C'
 p5041
-S'Peptidases'
+S''
+sS'YGR124W'
 p5042
-sS'YPL126W'
+S'Peptidases'
 p5043
-S'Ribosome biogenesis in eukaryotes'
+sS'YPL126W'
 p5044
-sS'YBL017C'
+S'Ribosome biogenesis in eukaryotes'
 p5045
+sS'YBL017C'
+p5046
 S''
 sS'YNL244C'
-p5046
-S'Translation factors'
 p5047
-sS'YNR027W'
+S'Translation factors'
 p5048
-S'Cofactor biosynthesis'
+sS'YNR027W'
 p5049
-sS'YMR117C'
+S'Cofactor biosynthesis'
 p5050
-S'Cytoskeleton proteins'
+sS'YMR117C'
 p5051
-sS'YAL024C'
+S'Cytoskeleton proteins'
 p5052
-S'Cell cycle'
+sS'YAL024C'
 p5053
-sS'YOR348C'
+S'Cell cycle'
 p5054
-S''
-sS'YJR142W'
+sS'YOR348C'
 p5055
 S''
-sS'YJL197W'
+sS'YJR142W'
 p5056
-S'Ubiquitin labeling'
+S''
+sS'YJL197W'
 p5057
-sS'YMR213W'
+S'Ubiquitin labeling'
 p5058
-S'Spliceosome'
+sS'YMR213W'
 p5059
-sS'YBR233W-A'
+S'Spliceosome'
 p5060
-S'Chromosome-related'
+sS'YBR233W-A'
 p5061
-sS'YOR251C'
+S'Chromosome-related'
 p5062
-S'Sulfur relay system'
+sS'YOR251C'
 p5063
-sS'YPR181C'
+S'Sulfur relay system'
 p5064
-S'Protein processing in endoplasmic reticulum'
+sS'YPR181C'
 p5065
-sS'YBR092C'
+S'Protein processing in endoplasmic reticulum'
 p5066
-S'Cofactor biosynthesis'
+sS'YBR092C'
 p5067
-sS'YMR173W'
+S'Cofactor biosynthesis'
 p5068
+sS'YMR173W'
+p5069
 S''
 sS'YNL215W'
-p5069
-S'Chromosome-related'
 p5070
-sS'YDR529C'
-p5071
-S'Oxidative phosphorylation'
-p5072
-sS'YGR044C'
-p5073
-S'Transcription factors'
-p5074
-sS'YDL059C'
-p5075
-S'Homologous recombination'
-p5076
-sS'YOR204W'
-p5077
 S'Chromosome-related'
+p5071
+sS'YDR529C'
+p5072
+S'Oxidative phosphorylation'
+p5073
+sS'YGR044C'
+p5074
+S'Transcription factors'
+p5075
+sS'YDL059C'
+p5076
+S'Homologous recombination'
+p5077
+sS'YOR204W'
 p5078
-sS'YEL012W'
+S'Chromosome-related'
 p5079
-S'Ubiquitin mediated proteolysis'
+sS'YEL012W'
 p5080
-sS'YDL006W'
+S'Ubiquitin mediated proteolysis'
 p5081
-S'Other enzymes'
+sS'YDL006W'
 p5082
-sS'YER123W'
-p5083
 S'Other enzymes'
+p5083
+sS'YER123W'
 p5084
-sS'YDR153C'
+S'Other enzymes'
 p5085
+sS'YDR153C'
+p5086
 S''
 sS'YDR382W'
-p5086
-S'Ribosome'
 p5087
-sS'YDR483W'
+S'Ribosome'
 p5088
-S'Glycan metabolism'
+sS'YDR483W'
 p5089
-sS'YLL008W'
+S'Glycan metabolism'
 p5090
-S'Ribosome biogenesis'
+sS'YLL008W'
 p5091
-sS'YDR505C'
+S'Ribosome biogenesis'
 p5092
-S''
-sS'YKL206C'
+sS'YDR505C'
 p5093
 S''
-sS'YHR132W-A'
+sS'YKL206C'
 p5094
 S''
-sS'YLR022C'
+sS'YHR132W-A'
 p5095
-S'Ribosome biogenesis in eukaryotes'
-p5096
-sS'YGR068C'
-p5097
 S''
-sS'YOR390W'
+sS'YLR022C'
+p5096
+S'Ribosome biogenesis in eukaryotes'
+p5097
+sS'YGR068C'
 p5098
 S''
-sS'YPL246C'
+sS'YOR390W'
 p5099
 S''
-sS'YOR246C'
+sS'YPL246C'
 p5100
 S''
-sS'YPL226W'
+sS'YOR246C'
 p5101
-S'Translation factors'
-p5102
-sS'YDR397C'
-p5103
 S''
-sS'YLR375W'
+sS'YPL226W'
+p5102
+S'Translation factors'
+p5103
+sS'YDR397C'
 p5104
 S''
-sS'YGL039W'
+sS'YLR375W'
 p5105
 S''
-sS'YER183C'
+sS'YGL039W'
 p5106
-S'Other central metabolism enzymes'
-p5107
-sS'YML018C'
-p5108
 S''
-sS'YDL044C'
+sS'YER183C'
+p5107
+S'Other central metabolism enzymes'
+p5108
+sS'YML018C'
 p5109
 S''
-sS'YOL021C'
+sS'YDL044C'
 p5110
-S'RNA degradation'
+S''
+sS'YOL021C'
 p5111
-sS'YHR030C'
+S'RNA degradation'
 p5112
-S'MAPK signaling pathway'
+sS'YHR030C'
 p5113
-sS'YMR319C'
+S'MAPK signaling pathway'
 p5114
+sS'YMR319C'
+p5115
 S''
 sS'YMR235C'
-p5115
-S'RNA transport'
 p5116
-sS'YKL018W'
+S'RNA transport'
 p5117
-S'mRNA surveillance pathway'
+sS'YKL018W'
 p5118
-sS'YEL034W'
+S'mRNA surveillance pathway'
 p5119
-S'Translation factors'
+sS'YEL034W'
 p5120
-sS'YHL001W'
+S'Translation factors'
 p5121
-S'Ribosome'
+sS'YHL001W'
 p5122
-sS'YNR050C'
+S'Ribosome'
 p5123
-S'Amino acid metabolism'
+sS'YNR050C'
 p5124
-sS'YOR373W'
+S'Amino acid metabolism'
 p5125
-S'Cytoskeleton proteins'
+sS'YOR373W'
 p5126
-sS'YHR091C'
+S'Cytoskeleton proteins'
 p5127
-S'tRNA loading'
+sS'YHR091C'
 p5128
-sS'YKR100C'
+S'tRNA loading'
 p5129
+sS'YKR100C'
+p5130
 S''
 sS'YCL017C'
-p5130
-S'Sulfur relay system'
 p5131
-sS'YPL228W'
+S'Sulfur relay system'
 p5132
-S'Other enzymes'
+sS'YPL228W'
 p5133
-sS'YOR260W'
+S'Other enzymes'
 p5134
-S'Translation factors'
+sS'YOR260W'
 p5135
-sS'YPL260W'
+S'Translation factors'
 p5136
+sS'YPL260W'
+p5137
 S''
 sS'YML110C'
-p5137
-S'Cofactor biosynthesis'
 p5138
-sS'YOL010W'
+S'Cofactor biosynthesis'
 p5139
-S'Ribosome biogenesis in eukaryotes'
+sS'YOL010W'
 p5140
-sS'YNL271C'
+S'Ribosome biogenesis in eukaryotes'
 p5141
-S'MAPK signaling pathway'
+sS'YNL271C'
 p5142
-sS'YER058W'
+S'MAPK signaling pathway'
 p5143
+sS'YER058W'
+p5144
 S''
 sS'YGL048C'
-p5144
-S'Proteasome'
 p5145
-sS'YMR193W'
+S'Proteasome'
 p5146
+sS'YMR193W'
+p5147
 S''
 sS'YCR053W'
-p5147
-S'Amino acid metabolism'
 p5148
-sS'YER072W'
+S'Amino acid metabolism'
 p5149
+sS'YER072W'
+p5150
 S''
 sS'YKL106W'
-p5150
-S'Amino acid metabolism'
 p5151
-sS'YGL019W'
+S'Amino acid metabolism'
 p5152
-S'Ribosome biogenesis in eukaryotes'
+sS'YGL019W'
 p5153
-sS'YNL330C'
+S'Ribosome biogenesis in eukaryotes'
 p5154
-S'Chromosome-related'
+sS'YNL330C'
 p5155
-sS'YGR201C'
+S'Chromosome-related'
 p5156
-S''
-sS'YER047C'
+sS'YGR201C'
 p5157
 S''
-sS'YOR138C'
+sS'YER047C'
 p5158
 S''
-sS'YPR029C'
+sS'YOR138C'
 p5159
 S''
-sS'YMR144W'
+sS'YPR029C'
 p5160
 S''
-sS'YHR036W'
+sS'YMR144W'
 p5161
 S''
-sS'YCR066W'
+sS'YHR036W'
 p5162
-S'Ubiquitin labeling'
+S''
+sS'YCR066W'
 p5163
-sS'YML098W'
+S'Ubiquitin labeling'
 p5164
-S'Basal transcription factors'
+sS'YML098W'
 p5165
-sS'YJL034W'
+S'Basal transcription factors'
 p5166
-S'Chaperones and folding catalysts'
+sS'YJL034W'
 p5167
-sS'YLR420W'
+S'Chaperones and folding catalysts'
 p5168
-S'Pyrimidine metabolism'
+sS'YLR420W'
 p5169
-sS'YCR088W'
+S'Pyrimidine metabolism'
 p5170
+sS'YCR088W'
+p5171
 S''
 sS'YDR208W'
-p5171
-S'Phosphatidylinositol signaling system'
 p5172
-sS'YHR087W'
+S'Phosphatidylinositol signaling system'
 p5173
-S''
-sS'YFL048C'
+sS'YHR087W'
 p5174
 S''
-sS'YLR117C'
+sS'YFL048C'
 p5175
-S'Spliceosome'
-p5176
-sS'YGR220C'
-p5177
 S''
-sS'YBR014C'
+sS'YLR117C'
+p5176
+S'Spliceosome'
+p5177
+sS'YGR220C'
 p5178
 S''
-sS'YML052W'
+sS'YBR014C'
 p5179
 S''
-sS'YPL012W'
+sS'YML052W'
 p5180
 S''
-sS'YLR299W'
+sS'YPL012W'
 p5181
-S'Peptidases'
-p5182
-sS'YOR176W'
-p5183
-S'Cofactor biosynthesis'
-p5184
-sS'YHR187W'
-p5185
-S'Chromosome-related'
-p5186
-sS'YOR109W'
-p5187
-S'Phosphatidylinositol signaling system'
-p5188
-sS'YGR275W'
-p5189
 S''
-sS'YMR071C'
+sS'YLR299W'
+p5182
+S'Peptidases'
+p5183
+sS'YOR176W'
+p5184
+S'Cofactor biosynthesis'
+p5185
+sS'YHR187W'
+p5186
+S'Chromosome-related'
+p5187
+sS'YOR109W'
+p5188
+S'Phosphatidylinositol signaling system'
+p5189
+sS'YGR275W'
 p5190
 S''
-sS'YOR286W'
+sS'YMR071C'
 p5191
 S''
-sS'YGR021W'
+sS'YOR286W'
 p5192
 S''
-sS'YDL084W'
+sS'YGR021W'
 p5193
-S'Spliceosome'
-p5194
-sS'YGL016W'
-p5195
 S''
-sS'YOL103W-B'
+sS'YDL084W'
+p5194
+S'Spliceosome'
+p5195
+sS'YGL016W'
 p5196
 S''
-sS'YCR073W-A'
+sS'YOL103W-B'
 p5197
-S'Pentose phosphate metabolism'
+S''
+sS'YCR073W-A'
 p5198
-sS'YMR120C'
+S'Pentose phosphate metabolism'
 p5199
-S'Other central metabolism enzymes'
+sS'YMR120C'
 p5200
-sS'YKL114C'
+S'Other central metabolism enzymes'
 p5201
-S'Base excision repair'
+sS'YKL114C'
 p5202
-sS'YBL046W'
+S'Base excision repair'
 p5203
+sS'YBL046W'
+p5204
 S''
 sS'YOR143C'
-p5204
-S'Cofactor biosynthesis'
 p5205
-sS'YDR119W'
+S'Cofactor biosynthesis'
 p5206
-S''
-sS'YDR490C'
+sS'YDR119W'
 p5207
 S''
-sS'YER005W'
+sS'YDR490C'
 p5208
-S'Cellular antigens'
-p5209
-sS'YER105C'
-p5210
 S''
-sS'YGL160W'
+sS'YER005W'
+p5209
+S'Cellular antigens'
+p5210
+sS'YER105C'
 p5211
 S''
-sS'YBL054W'
+sS'YGL160W'
 p5212
 S''
-sS'YCR024C'
+sS'YBL054W'
 p5213
-S'tRNA loading'
-p5214
-sS'YML045W'
-p5215
 S''
-sS'YBL104C'
+sS'YCR024C'
+p5214
+S'tRNA loading'
+p5215
+sS'YML045W'
 p5216
 S''
-sS'YKL165C'
+sS'YBL104C'
 p5217
-S'Glycan metabolism'
+S''
+sS'YKL165C'
 p5218
-sS'YCR071C'
+S'Glycan metabolism'
 p5219
+sS'YCR071C'
+p5220
 S''
 sS'YLR009W'
-p5220
-S'Ribosome'
 p5221
-sS'YPR144C'
+S'Ribosome'
 p5222
-S''
-sS'YLR119W'
+sS'YPR144C'
 p5223
 S''
-sS'YDR175C'
+sS'YLR119W'
 p5224
 S''
-sS'YLR082C'
+sS'YDR175C'
 p5225
 S''
-sS'YPR034W'
+sS'YLR082C'
 p5226
-S'Chromosome-related'
+S''
+sS'YPR034W'
 p5227
-sS'YOR189W'
-p5228
 S'Chromosome-related'
+p5228
+sS'YOR189W'
 p5229
-sS'YOR154W'
+S'Chromosome-related'
 p5230
+sS'YOR154W'
+p5231
 S''
 sS'YDL122W'
-p5231
-S'Ubiquitin labeling'
 p5232
-sS'YMR264W'
+S'Ubiquitin labeling'
 p5233
-S'Protein processing in endoplasmic reticulum'
+sS'YMR264W'
 p5234
-sS'YPR018W'
+S'Protein processing in endoplasmic reticulum'
 p5235
-S''
-sS'YGL139W'
+sS'YPR018W'
 p5236
 S''
-sS'YLL038C'
+sS'YGL139W'
 p5237
 S''
-sS'YOR280C'
+sS'YLL038C'
 p5238
 S''
-sS'YMR086W'
+sS'YOR280C'
 p5239
 S''
-sS'YGR007W'
+sS'YMR086W'
 p5240
-S'Lipid and steroid metabolism'
-p5241
-sS'YNL315C'
-p5242
 S''
-sS'YPR174C'
+sS'YGR007W'
+p5241
+S'Lipid and steroid metabolism'
+p5242
+sS'YNL315C'
 p5243
 S''
-sS'YJR045C'
+sS'YPR174C'
 p5244
-S'Chaperones and folding catalysts'
+S''
+sS'YJR045C'
 p5245
-sS'YLR385C'
+S'Chaperones and folding catalysts'
 p5246
-S'Chromosome-related'
+sS'YLR385C'
 p5247
-sS'YOL124C'
+S'Chromosome-related'
 p5248
+sS'YOL124C'
+p5249
 S''
 sS'YIL125W'
-p5249
-S'TCA cycle and anaplerotic enzymes'
 p5250
-sS'YMR295C'
+S'TCA cycle and anaplerotic enzymes'
 p5251
+sS'YMR295C'
+p5252
 S''
 sS'YMR008C'
-p5252
-S'Lipid and steroid metabolism'
 p5253
-sS'YJL136C'
+S'Lipid and steroid metabolism'
 p5254
-S'Ribosome'
+sS'YJL136C'
 p5255
-sS'YKL148C'
+S'Ribosome'
 p5256
-S'TCA cycle and anaplerotic enzymes'
+sS'YKL148C'
 p5257
-sS'YJL117W'
+S'TCA cycle and anaplerotic enzymes'
 p5258
+sS'YJL117W'
+p5259
 S''
 sS'YJL076W'
-p5259
-S'Cell cycle'
 p5260
-sS'YKL062W'
+S'Cell cycle'
 p5261
-S'Transcription factors'
+sS'YKL062W'
 p5262
-sS'YLR238W'
+S'Transcription factors'
 p5263
-S''
-sS'YDR080W'
+sS'YLR238W'
 p5264
 S''
-sS'YJR010W'
+sS'YDR080W'
 p5265
-S'Purine metabolism'
-p5266
-sS'YPL176C'
-p5267
 S''
-sS'YHR024C'
+sS'YJR010W'
+p5266
+S'Purine metabolism'
+p5267
+sS'YPL176C'
 p5268
-S'Peptidases'
-p5269
+S''
 sS'YHR165C'
-p5270
+p5269
 S'Spliceosome'
-p5271
+p5270
 sS'YJR015W'
-p5272
+p5271
 S''
 sS'YKL028W'
-p5273
+p5272
 S'Basal transcription factors'
-p5274
+p5273
 sS'YIL126W'
-p5275
+p5274
 S'Chromosome-related'
-p5276
+p5275
 sS'YLR221C'
-p5277
+p5276
 S''
 sS'YDR093W'
-p5278
+p5277
 S'Other enzymes'
-p5279
+p5278
 sS'YMR282C'
-p5280
+p5279
 S''
 sS'YIL109C'
-p5281
+p5280
 S'Protein processing in endoplasmic reticulum'
-p5282
+p5281
 sS'YGR210C'
-p5283
+p5282
 S''
 sS'YPL070W'
-p5284
+p5283
 S''
 sS'YLR361C'
-p5285
+p5284
 S''
 sS'YOR085W'
-p5286
+p5285
 S'Protein processing in endoplasmic reticulum'
-p5287
+p5286
 sS'YFL022C'
-p5288
+p5287
 S'tRNA loading'
-p5289
+p5288
 sS'YJL156C'
-p5290
+p5289
 S''
 sS'YNL253W'
-p5291
+p5290
 S'Spliceosome'
-p5292
+p5291
 sS'YKL082C'
-p5293
+p5292
 S''
 sS'YNL071W'
-p5294
+p5293
 S'Glycolysis'
-p5295
+p5294
 sS'YDR222W'
-p5296
+p5295
 S''
 sS'YKL166C'
-p5297
+p5296
 S'MAPK signaling pathway'
-p5298
+p5297
 sS'YJR007W'
-p5299
+p5298
 S'Translation factors'
-p5300
+p5299
 sS'YGR211W'
-p5301
+p5300
 S''
 sS'YKL139W'
-p5302
+p5301
 S'Other enzymes'
-p5303
+p5302
 sS'YDL093W'
-p5304
+p5303
 S'Glycan metabolism'
-p5305
+p5304
 sS'YJL069C'
-p5306
+p5305
 S'Ribosome biogenesis in eukaryotes'
-p5307
+p5306
 sS'YLR168C'
-p5308
+p5307
 S''
 sS'YFL027C'
-p5309
+p5308
 S''
 sS'YHR047C'
-p5310
+p5309
 S''
 sS'YIR002C'
-p5311
+p5310
 S'DNA repair and recombination proteins'
-p5312
+p5311
 sS'YGL001C'
-p5313
+p5312
 S'Lipid and steroid metabolism'
-p5314
+p5313
 sS'YMR291W'
-p5315
+p5314
 S''
 sS'YER087W'
-p5316
+p5315
 S'tRNA loading'
-p5317
+p5316
 sS'YMR024W'
-p5318
+p5317
 S''
 sS'YPR156C'
-p5319
+p5318
 S''
 sS'YDR359C'
-p5320
+p5319
 S'Chromosome-related'
-p5321
+p5320
 sS'YKL124W'
-p5322
+p5321
 S''
 sS'YDR304C'
-p5323
+p5322
 S'Chaperones and folding catalysts'
-p5324
+p5323
 sS'YNL026W'
-p5325
+p5324
 S''
 sS'YDL219W'
-p5326
+p5325
 S''
 sS'YOR136W'
-p5327
+p5326
 S'TCA cycle and anaplerotic enzymes'
-p5328
+p5327
 sS'YDR266C'
-p5329
+p5328
 S''
 sS'YDR206W'
-p5330
+p5329
 S'DNA replication control'
-p5331
+p5330
 sS'YOR116C'
-p5332
+p5331
 S'RNA polymerase'
-p5333
+p5332
 sS'YKR024C'
-p5334
+p5333
 S''
 sS'YNL037C'
-p5335
+p5334
 S'TCA cycle and anaplerotic enzymes'
-p5336
+p5335
 sS'YFL013C'
-p5337
+p5336
 S'Chromosome-related'
-p5338
+p5337
 sS'YPL063W'
-p5339
+p5338
 S''
 sS'YKL140W'
-p5340
+p5339
 S'Biosynthesis of other secondary metabolites'
-p5341
+p5340
 sS'YFR040W'
-p5342
+p5341
 S''
 sS'YML124C'
-p5343
+p5342
 S'Cytoskeleton proteins'
-p5344
+p5343
 sS'YIL107C'
-p5345
+p5344
 S'Carbohydrate metabolism'
-p5346
+p5345
 sS'YOL142W'
-p5347
+p5346
 S'RNA degradation'
-p5348
+p5347
 sS'YDR287W'
-p5349
+p5348
 S'Phosphatidylinositol signaling system'
-p5350
+p5349
 sS'YDR405W'
-p5351
+p5350
 S''
 sS'YLR303W'
-p5352
+p5351
 S'Amino acid metabolism'
-p5353
+p5352
 sS'YGR055W'
-p5354
+p5353
 S''
 sS'YGL041W-A'
-p5355
+p5354
 S''
 sS'YCL031C'
-p5356
+p5355
 S'Ribosome biogenesis in eukaryotes'
-p5357
+p5356
 sS'YIL027C'
-p5358
+p5357
 S''
 sS'YPL127C'
-p5359
+p5358
 S'Chromosome-related'
-p5360
+p5359
 sS'YGL156W'
-p5361
+p5360
 S'Glycan metabolism'
-p5362
+p5361
 sS'YGR152C'
-p5363
+p5362
 S'GTP-binding signaling proteins'
-p5364
+p5363
 sS'YOR061W'
-p5365
+p5364
 S'Ribosome biogenesis in eukaryotes'
-p5366
+p5365
 sS'YNR026C'
-p5367
+p5366
 S''
 sS'YLR190W'
-p5368
+p5367
 S''
 sS'YGR147C'
-p5369
+p5368
 S'Other enzymes'
-p5370
+p5369
 sS'YDR002W'
-p5371
+p5370
 S''
 sS'YOR311C'
-p5372
+p5371
 S''
 sS'YMR039C'
-p5373
+p5372
 S''
 sS'YAL025C'
-p5374
+p5373
 S''
 sS'YDR046C'
-p5375
+p5374
 S''
 sS'YDR305C'
-p5376
+p5375
 S'Purine metabolism'
-p5377
+p5376
 sS'YGL094C'
-p5378
+p5377
 S'RNA degradation'
-p5379
+p5378
 sS'YNL039W'
-p5380
+p5379
 S''
 sS'YBR170C'
-p5381
+p5380
 S'Protein processing in endoplasmic reticulum'
-p5382
+p5381
 sS'YGR030C'
-p5383
+p5382
 S'Ribosome biogenesis in eukaryotes'
-p5384
+p5383
 sS'YOR084W'
-p5385
+p5384
 S''
 sS'YGR130C'
-p5386
+p5385
 S''
 sS'YKL051W'
-p5387
+p5386
 S''
 sS'YDR458C'
-p5388
+p5387
 S''
 sS'YJR118C'
-p5389
+p5388
 S''
 sS'YOR016C'
-p5390
+p5389
 S''
 sS'YJR121W'
-p5391
+p5390
 S'Oxidative phosphorylation'
-p5392
+p5391
 sS'YGR165W'
-p5393
+p5392
 S''
 sS'YCL010C'
-p5394
+p5393
 S'Chromosome-related'
-p5395
+p5394
 sS'YGR128C'
-p5396
+p5395
 S'Ribosome biogenesis in eukaryotes'
-p5397
+p5396
 sS'YER166W'
-p5398
+p5397
 S'Other enzymes'
-p5399
+p5398
 sS'YDR313C'
-p5400
+p5399
 S''
 sS'YIL047C'
-p5401
+p5400
 S''
 sS'YLR245C'
-p5402
+p5401
 S'Pyrimidine metabolism'
-p5403
+p5402
 sS'YKL193C'
-p5404
+p5403
 S''
 sS'YNL153C'
-p5405
+p5404
 S'Chaperones and folding catalysts'
-p5406
+p5405
 sS'YPR139C'
-p5407
+p5406
 S''
 sS'YBR214W'
-p5408
+p5407
 S''
 sS'YLR310C'
-p5409
+p5408
 S''
 sS'YDL237W'
-p5410
+p5409
 S''
 sS'YJL141C'
-p5411
+p5410
 S'Other enzymes'
-p5412
+p5411
 sS'YBR249C'
-p5413
+p5412
 S'Amino acid metabolism'
-p5414
+p5413
 sS'YCL035C'
-p5415
+p5414
 S''
 sS'YFR008W'
-p5416
+p5415
 S''
 sS'YNL102W'
-p5417
+p5416
 S'DNA replication complex'
-p5418
+p5417
 sS'YOL077C'
-p5419
+p5418
 S''
 sS'YDR137W'
-p5420
+p5419
 S''
 sS'YHR031C'
-p5421
+p5420
 S''
 sS'YBR084W'
-p5422
+p5421
 S'Other central metabolism enzymes'
-p5423
+p5422
 sS'YLR003C'
-p5424
+p5423
 S''
 sS'YDL061C'
-p5425
+p5424
 S'Ribosome'
-p5426
+p5425
 sS'YLR337C'
-p5427
+p5426
 S''
 sS'YIL010W'
-p5428
+p5427
 S'Other enzymes'
-p5429
+p5428
 sS'YOR261C'
-p5430
+p5429
 S'Proteasome'
-p5431
+p5430
 sS'YNR051C'
-p5432
+p5431
 S''
 sS'YGR187C'
-p5433
+p5432
 S''
 sS'YDR056C'
-p5434
+p5433
 S''
 sS'YHR122W'
-p5435
+p5434
 S''
 sS'YDR390C'
-p5436
+p5435
 S'Ubiquitin mediated proteolysis'
-p5437
+p5436
 sS'YOR229W'
-p5438
+p5437
 S''
 sS'YKL164C'
-p5439
+p5438
 S'Cell wall'
-p5440
+p5439
 sS'YEL024W'
-p5441
+p5440
 S'Oxidative phosphorylation'
-p5442
+p5441
 sS'YJR010C-A'
-p5443
+p5442
 S'Amino acid metabolism'
-p5444
+p5443
 sS'YML031W'
-p5445
+p5444
 S'RNA transport'
-p5446
+p5445
 sS'YDR006C'
-p5447
+p5446
 S''
 sS'YGR005C'
-p5448
+p5447
 S'Basal transcription factors'
-p5449
+p5448
 sS'YBL032W'
-p5450
+p5449
 S''
 sS'YGL049C'
-p5451
+p5450
 S'RNA transport'
-p5452
+p5451
 sS'YDR023W'
-p5453
+p5452
 S'tRNA loading'
-p5454
+p5453
 sS'YFR052W'
-p5455
+p5454
 S'Proteasome'
-p5456
+p5455
 sS'YER141W'
-p5457
+p5456
 S'Oxidative phosphorylation'
-p5458
+p5457
 sS'YCR052W'
-p5459
+p5458
 S'Chromosome-related'
-p5460
+p5459
 sS'YNL209W'
-p5461
+p5460
 S'Chaperones and folding catalysts'
-p5462
+p5461
 sS'YBR272C'
-p5463
+p5462
 S''
 sS'YLR327C'
-p5464
+p5463
 S''
 sS'YDR298C'
-p5465
+p5464
 S'Oxidative phosphorylation'
-p5466
+p5465
 sS'YDR011W'
-p5467
+p5466
 S'Transport'
-p5468
+p5467
 sS'YOR272W'
-p5469
+p5468
 S''
 sS'YMR184W'
-p5470
+p5469
 S''
 sS'YOL059W'
-p5471
+p5470
 S'Lipid and steroid metabolism'
-p5472
+p5471
 sS'YPR097W'
-p5473
+p5472
 S''
 sS'YHL031C'
-p5474
+p5473
 S'SNARE interactions in vesicular transport'
-p5475
+p5474
 sS'YML100W'
-p5476
+p5475
 S'Carbohydrate metabolism'
-p5477
+p5476
 sS'YOL151W'
-p5478
+p5477
 S''
 sS'YDR425W'
-p5479
+p5478
 S''
 sS'YHR026W'
-p5480
+p5479
 S'Phagosome'
-p5481
+p5480
 sS'YOR358W'
-p5482
+p5481
 S''
 sS'YER036C'
-p5483
+p5482
 S''
 sS'YDR005C'
-p5484
+p5483
 S''
 sS'YNL238W'
-p5485
+p5484
 S'Chaperones and folding catalysts'
-p5486
+p5485
 sS'YOR090C'
-p5487
+p5486
 S''
 sS'YBR281C'
-p5488
+p5487
 S'Peptidases'
-p5489
+p5488
 sS'YJL198W'
-p5490
+p5489
 S''
 sS'YPL207W'
-p5491
+p5490
 S''
 sS'YKL138C-A'
-p5492
+p5491
 S'Chromosome-related'
-p5493
+p5492
 sS'YDR197W'
-p5494
+p5493
 S''
 sS'YGR027C'
-p5495
+p5494
 S'Ribosome'
-p5496
+p5495
 sS'YOL135C'
-p5497
+p5496
 S''
 sS'YOR323C'
-p5498
+p5497
 S'Amino acid metabolism'
-p5499
+p5498
 sS'YLL041C'
-p5500
+p5499
 S'TCA cycle and anaplerotic enzymes'
-p5501
+p5500
 sS'YML106W'
-p5502
+p5501
 S'Pyrimidine metabolism'
-p5503
+p5502
 sS'YCR009C'
-p5504
+p5503
 S''
 sS'YCL054W'
-p5505
+p5504
 S'Amino acid metabolism'
-p5506
+p5505
 sS'YMR169C'
-p5507
+p5506
 S'Glycolysis'
-p5508
+p5507
 sS'YOR195W'
-p5509
+p5508
 S'Cell cycle'
-p5510
+p5509
 sS'YLR118C'
-p5511
+p5510
 S''
 sS'YER006W'
-p5512
+p5511
 S'Ribosome biogenesis in eukaryotes'
-p5513
+p5512
 sS'YGL117W'
-p5514
+p5513
 S''
 sS'YLR182W'
-p5515
+p5514
 S'Transcription factors'
-p5516
+p5515
 sS'YMR105C'
-p5517
+p5516
 S'Glycolysis'
-p5518
+p5517
 sS'YER182W'
-p5519
+p5518
 S''
 sS'YLL034C'
-p5520
+p5519
 S'Ribosome biogenesis in eukaryotes'
-p5521
+p5520
 sS'YML042W'
-p5522
+p5521
 S'Peroxisome'
-p5523
+p5522
 sS'YBL105C'
-p5524
+p5523
 S'MAPK signaling pathway'
-p5525
+p5524
 sS'YMR251W-A'
-p5526
+p5525
 S''
 sS'YKR060W'
-p5527
+p5526
 S''
 sS'YDR069C'
-p5528
+p5527
 S'Ubiquitin labeling'
-p5529
+p5528
 sS'YKR048C'
-p5530
+p5529
 S'Chromosome-related'
-p5531
+p5530
 sS'YOR144C'
-p5532
+p5531
 S'DNA replication control'
-p5533
+p5532
 sS'YGR232W'
-p5534
+p5533
 S''
 sS'YEL066W'
-p5535
+p5534
 S''
 sS'YEL046C'
-p5536
+p5535
 S'Amino acid metabolism'
-p5537
+p5536
 sS'YBL055C'
-p5538
+p5537
 S''
 sS'YPR035W'
-p5539
+p5538
 S'Amino acid metabolism'
-p5540
+p5539
 sS'YDL189W'
-p5541
+p5540
 S''
 sS'YLL018C'
-p5542
+p5541
 S'tRNA loading'
-p5543
+p5542
 sS'YBR276C'
-p5544
+p5543
 S'Transport'
-p5545
+p5544
 sS'YDR227W'
-p5546
+p5545
 S'DNA replication control'
-p5547
+p5546
 sS'YPR060C'
-p5548
+p5547
 S'Amino acid metabolism'
-p5549
+p5548
 sS'YML008C'
-p5550
+p5549
 S'Lipid and steroid metabolism'
-p5551
+p5550
 sS'YPR019W'
-p5552
+p5551
 S'DNA replication complex'
-p5553
+p5552
 sS'YDR174W'
-p5554
+p5553
 S''
 sS'YMR265C'
-p5555
+p5554
 S''
 sS'YML073C'
-p5556
+p5555
 S'Ribosome'
-p5557
+p5556
 sS'YGL137W'
-p5558
+p5557
 S''
 sS'YOR155C'
-p5559
+p5558
 S''
 sS'YNL236W'
-p5560
+p5559
 S''
 sS'YHR143W-A'
-p5561
+p5560
 S'RNA polymerase'
-p5562
+p5561
 sS'YCR072C'
-p5563
+p5562
 S''
 sS'YBR044C'
-p5564
+p5563
 S''
 sS'YOR287C'
-p5565
+p5564
 S''
 sS'YCL009C'
-p5566
+p5565
 S'Amino acid metabolism'
-p5567
+p5566
 sS'YDL072C'
-p5568
+p5567
 S'Protein processing in endoplasmic reticulum'
-p5569
+p5568
 sS'YER159C'
-p5570
+p5569
 S''
 sS'YDL005C'
-p5571
+p5570
 S''
 sS'YER122C'
-p5572
+p5571
 S'Endocytosis'
-p5573
+p5572
 sS'YHR113W'
-p5574
+p5573
 S''
 sS'YMR212C'
-p5575
+p5574
 S''
 sS'YER048W-A'
-p5576
+p5575
 S''
 sS'YBR093C'
-p5577
+p5576
 S'Cofactor biosynthesis'
-p5578
+p5577
 sS'YPR182W'
-p5579
+p5578
 S'Spliceosome'
-p5580
+p5579
 sS'YJL196C'
-p5581
+p5580
 S'Lipid and steroid metabolism'
-p5582
+p5581
 sS'YGL054C'
-p5583
+p5582
 S''
 sS'YGL025C'
-p5584
+p5583
 S''
 sS'YLR021W'
-p5585
+p5584
 S''
 sS'YOL126C'
-p5586
+p5585
 S'TCA cycle and anaplerotic enzymes'
-p5587
+p5586
 sS'YLR058C'
-p5588
+p5587
 S'Other central metabolism enzymes'
-p5589
+p5588
 sS'YLR134W'
-p5590
+p5589
 S'Amino acid metabolism'
-p5591
+p5590
 sS'YNL068C'
-p5592
+p5591
 S''
 sS'YDR058C'
-p5593
+p5592
 S'Lipid and steroid metabolism'
-p5594
+p5593
 sS'YGL038C'
-p5595
+p5594
 S'Glycan metabolism'
-p5596
+p5595
 sS'YLR074C'
-p5597
+p5596
 S''
 sS'YNL216W'
-p5598
+p5597
 S'Transcription factors'
-p5599
+p5598
 sS'YKL207W'
-p5600
+p5599
 S''
 sS'YLR405W'
-p5601
+p5600
 S'Other enzymes'
-p5602
+p5601
 sS'YPL225W'
-p5603
+p5602
 S''
 sS'YPL270W'
-p5604
+p5603
 S''
 sS'YDR489W'
-p5605
+p5604
 S'DNA replication control'
-p5606
+p5605
 sS'YPL249C'
-p5607
+p5606
 S''
 sS'YHR023W'
-p5608
+p5607
 S'Cytoskeleton proteins'
-p5609
+p5608
 sS'YJL024C'
-p5610
+p5609
 S''
 sS'YPR148C'
-p5611
+p5610
 S''
 sS'YER031C'
-p5612
+p5611
 S'GTP-binding signaling proteins'
-p5613
+p5612
 sS'YMR089C'
-p5614
+p5613
 S'Chaperones and folding catalysts'
-p5615
+p5614
 sS'YDR345C'
-p5616
+p5615
 S'Transport'
-p5617
+p5616
 sS'YJL177W'
-p5618
+p5617
 S'Ribosome'
-p5619
+p5618
 sS'YGL002W'
-p5620
+p5619
 S''
 sS'YLR430W'
-p5621
+p5620
 S''
 sS'YOR108W'
-p5622
+p5621
 S''
 sS'YPL118W'
-p5623
+p5622
 S''
 sS'YJL068C'
-p5624
+p5623
 S'Other enzymes'
-p5625
+p5624
 sS'YBR065C'
-p5626
+p5625
 S'Spliceosome'
-p5627
+p5626
 sS'YKL112W'
-p5628
+p5627
 S'Transcription factors'
-p5629
+p5628
 sS'YNL054W'
-p5630
+p5629
 S''
 sS'YHR046C'
-p5631
+p5630
 S'Phosphatidylinositol signaling system'
-p5632
+p5631
 sS'YDR156W'
-p5633
+p5632
 S'RNA polymerase'
-p5634
+p5633
 sS'YMR130W'
-p5635
+p5634
 S''
 sS'YPR155C'
-p5636
+p5635
 S''
 sS'YHR179W'
-p5637
+p5636
 S'Other enzymes'
-p5638
+p5637
 sS'YOR117W'
-p5639
+p5638
 S'Proteasome'
-p5640
+p5639
 sS'YNL049C'
-p5641
+p5640
 S''
 sS'YGL195W'
-p5642
+p5641
 S''
 sS'YKL172W'
-p5643
+p5642
 S''
 sS'YKR025W'
-p5644
+p5643
 S'RNA polymerase'
+p5644
+sS'YBR271W'
 p5645
+S''
 sS'YMR290C'
 p5646
 S'Ribosome biogenesis'
