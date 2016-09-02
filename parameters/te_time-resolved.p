@@ -25,10 +25,10 @@ p11
 g3
 NtRp12
 ((lp13
-cpandas.core.index
+cpandas.indexes.base
 _new_Index
 p14
-(cpandas.core.index
+(cpandas.indexes.numeric
 Int64Index
 p15
 (dp16
@@ -63,7 +63,7 @@ tbsS'name'
 p23
 NstRp24
 ag14
-(cpandas.core.index
+(cpandas.indexes.base
 Index
 p25
 (dp26
