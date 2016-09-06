@@ -6,6 +6,8 @@ Includes effects of
 - mRNA variation (time course)
 - mRNA dilution (tRNA influence on elongation rate, ribosomes on initiation rate)
 
+This script overrides TRSL_dynamic_cell_cycle.py
+
 __author__ = 'martin'
 """
 
@@ -22,7 +24,8 @@ switch_times = [key * 60 for key in sorted(transcriptomes_dict.keys())]
 # load exome
 exome = pkl.load(open("../parameters/orf_coding.p", "rb"))
 # load initiation rates
-init_rates = pkl.load(open("../parameters/init_rates_enhanced_median.p", "rb"))  # missing replaced by median
+# init_rates = pkl.load(open("../parameters/init_rates_enhanced_median.p", "rb"))  # missing replaced by median
+init_rates = pkl.load(open("../parameters/init_rates_plotkin.p", "rb"))  # missing replaced by median
 # load initial transcriptome
 transcriptome = transcriptomes_dict[0]
 
@@ -35,11 +38,11 @@ genes = list(set(exome) & set(transcriptome) & set(init_rates))
 print "{} genes found.".format(len(genes))
 
 # to create a growing number of ribosomes and tRNAs
-nribo_start = 200000 * len(genes) / len(exome)  # scaled to make ribosome count more realistic (197974)
+nribo_start = 200000  # Needs no scaling as this is taken care of by transcriptome
 
 # run simulation
-# Einschwingvorgang: 900 s
-burnin = 900
+# Einschwingvorgang: 1800 s
+burnin = 1800
 for start, stop, growth_factor in zip(switch_times[:-1], switch_times[1:], growth_factor_range):
     print "simulating from {} to {}...".format(start, stop)
 
