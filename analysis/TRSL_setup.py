@@ -62,6 +62,7 @@ conf = {1: {
     'init_rates': pkl.load(open("../parameters/init_rates_plotkin.p", "rb")),
     'description': 'updated Shah transcriptome, full exome, no decay, updated initiation rates according to Shah'
 }, 9: {
+    # 8 except with decay
     'exome': pkl.load(open("../parameters/orf_coding.p", "rb")),
     'transcriptome': pkl.load(open("../parameters/transcriptome_shah.p", "rb")),
     'init_rates': pkl.load(open("../parameters/init_rates_plotkin.p", "rb")),
@@ -115,7 +116,7 @@ if __name__ == "__main__":
         description = conf[i]['description']
         print description
 
-        duration = 1800.0
+        duration = 3600.0
 
         tr = TRSL_specific.TRSL_spec(mRNAs, conf[i]['exome'], conf[i]['decay_constants'], nribo=200000, detail=True)
 

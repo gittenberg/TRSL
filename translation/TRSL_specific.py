@@ -70,7 +70,7 @@ codon_anticodon = {
     'guu': 'aac', 'gcu': 'agc', 'gau': 'guc', 'ggu': 'gcc',
     'guc': 'aac', 'gcc': 'agc', 'gac': 'guc', 'ggc': 'gcc',
     'gua': 'uac', 'gca': 'ugc', 'gaa': 'uuc', 'gga': 'ucc',
-    'gug': 'cac', 'gcg': 'ugc', 'gag': 'cuc', 'ggg': 'ucc'
+    'gug': 'cac', 'gcg': 'ugc', 'gag': 'cuc', 'ggg': 'ccc'
 }
 
 ''' source: http://nar.oxfordjournals.org/content/suppl/2011/04/23/gkr300.DC1/Supplemental_File_S2.pdf
