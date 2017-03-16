@@ -6,12 +6,11 @@ The proteins are generic (not sequence-specific).
 
 Required steps and energy consumption:
 
-1. initiation (cost: 1 GTP) # TODO: is the probability/rate in the paper including the tRNA or just the ribosome??
+1. initiation (cost: 2 GTP)
 1.1 ribosome attachment (first subunit)
-1.2 AA-tRNA binding at P site. We assume the AA is activated elsewhere, so no ATP cost
+1.2 AA-tRNA binding at P site.
 1.3 ribosome attachment (second subunit)
-   (mRNA activation:    1 ATP -> ADP, 
-   initiation complex:  1 ATP -> ADP, 1 GTP -> GDP)
+   initiation complex:  2 GTP -> 2 GDP
    We currently merge 1.1, 1.2, 1.3 into one binomial experiment
 
 2. elongation
@@ -24,8 +23,9 @@ Required steps and energy consumption:
 3. termination (cost: 1 GTP -> GDP)
 
 Total energy balance per protein:
-2 ATP -> 2 ADP
-(2 + 2*length) GTP -> (2 + 2*length) GDP 
+We assume tRNA is activated outside of the model
+1 ATP -> 1 ADP
+(1 + 2*length) GTP -> (1 + 2*length) GDP
 """
 
 # TODO: after running, all mRNAs are empty
@@ -351,8 +351,8 @@ class TRSL(StochasticSolverInterface, object):
             self.release_tRNA(mRNA, current_pos+3, previous_type)
             # translocation: elongate proteinlength
             self.protein_length += 1
-            self.GTP -= 1
-            self.GDP += 1
+            self.GTP -= 2
+            self.GDP += 2
             return True
         else:
             if free_codons <= 0:
@@ -394,10 +394,10 @@ class TRSL(StochasticSolverInterface, object):
                         # log.debug("update_initiation: attaching ribosome at start of mRNA %s", mRNA.index)
                         self.ribo_bound += 1
                         self.ribo_free -= 1
-                        self.GTP -= 1
-                        self.GDP += 1
-                        self.ATP -= 2
-                        self.AMP += 2
+                        self.GTP -= 2
+                        self.GDP += 2
+                        # self.ATP -= 2
+                        # self.AMP += 2
                     else:
                         log.warning("update_initiation: unsuccessful attempt to attach ribosome")
                 else:
@@ -440,6 +440,8 @@ class TRSL(StochasticSolverInterface, object):
                     self.proteins[mRNA.geneID] += 1  # add another protein of type mRNA.geneID
                 self.GTP -= 1
                 self.GDP += 1
+                self.ATP -= 1
+                self.ADP += 1  # TODO: check ADP vs AMP
                 if mRNA.tic and mRNA.toc:
                     mRNA.toc -= 1                             # one ribosome falls off the mRNA
                 if mRNA.tic and mRNA.toc==1:                  # time measurement ongoing and the last ribosome just fell off
