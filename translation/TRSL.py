@@ -100,26 +100,6 @@ class TRSL(StochasticSolverInterface, object):
 
         self.detail = detail  # whether details are saved (e.g. ribosomes for every time step)
 
-        """
-        self.modeldict = {'name': "TRSL:_discrete_translation",
-                          'vars': ["protein", "ribos._bound", "ribos._free", "tRNA_bound", "tRNA_free", "ATP", "AMP", "GTP", "GDP"],
-                          'initvars': {"protein": 0, "ribos._bound": 0, "ribos._free": self.ribo_free, "tRNA_bound": 0, "tRNA_free": sum(self.tRNA_free.values()), 'GTP': self.GTP, 'GDP': self.GDP, 'ATP': self.ATP, 'AMP': self.AMP},
-                          'pars': [],
-                          'sp_annotations': {"protein": "CHEBI:36080",  # generic protein
-                                             # "amino_acid": "CHEBI:15705", # generic amino acid
-                                             "ribos._bound": "GO:0042788",
-                                             "ribos._free": "GO:0005840",
-                                             "tRNA_bound": "CHEBI:17843_b",
-                                             "tRNA_free": "GO:0005564",  # generic tRNA; http://www.ebi.ac.uk/chebi/searchId.do;010D9AC7FDDC72158F86B943C40AD04A?chebiId=CHEBI:2651 lists some others
-                                             'GTP': 'CHEBI:15996', 'GDP': 'CHEBI:17552', 'ATP': 'CHEBI:15422', 'AMP': 'CHEBI:16027'},
-                          'sp_compartment': {"protein": 'cytosol', "ribos._bound": 'cytosol', "ribos._free": 'cytosol', "tRNA_bound": 'cytosol', "tRNA_free": 'cytosol', 'GTP': 'cytosol', 'GDP': 'cytosol', 'ATP': 'cytosol', 'AMP': 'cytosol'},
-                          'units': {"protein": 1, "ribos._bound": 1, "ribos._free": 1, "tRNA_bound": 1, "tRNA_free": 1, 'GTP': 1, 'GDP': 1, 'ATP': 1, 'AMP': 1},
-                          'com_annotations': {'cytosol': 'GO:0005829'},
-                          'solver': self.solve_internal,
-                          'timerange': self.timerange,
-                          'timecourses': self.timecourses
-                          }  # TODO: to be implemented
-        """
 
     @property
     def tRNA_bound(self):
@@ -202,6 +182,7 @@ class TRSL(StochasticSolverInterface, object):
         """
         results = {}
         results['proteome'] = self.proteins
+        results['peptide_bonds'] = self.protein_length
         results['transcriptome'] = self.mRNAs
         results['timerange'] = self.timerange
         results["timecourses"] = self.timecourses
@@ -225,7 +206,7 @@ class TRSL(StochasticSolverInterface, object):
         results["description"] = description
         from cPickle import dump
         dump(results,
-             open("../results/{}_{}_{}s.p".format(description, results['time_stamp'],
+             open("../results/{}_{}_{}_ribosomes_{}s.p".format(description, results['time_stamp'], results["n_ribosomes"],
                                                   str(int(results["duration"])).zfill(4)), "wb"))
         print description
 
@@ -262,9 +243,9 @@ class TRSL(StochasticSolverInterface, object):
         return success
 
     def release_tRNA(self, mRNA, pos, tRNA_type):
-        '''
+        """
         releases a tRNA molecule of type tRNA_type from mRNA
-        '''
+        """
         if mRNA.ribosomes[pos] == tRNA_type and self._tRNA_bound[tRNA_type] > 0:
             self.tRNA_bound[tRNA_type] -= 1
             self.tRNA_free[tRNA_type] += 1
@@ -279,10 +260,10 @@ class TRSL(StochasticSolverInterface, object):
         return success
     
     def elongate_while_possible(self, mRNA, k, current_pos):
-        '''
+        """
         attempts to elongate the protein on mRNA by at most k AAs starting at current_pos
         stops if steric hindrance by another ribosome , or end of mRNA is encountered
-        '''
+        """
         free_range = mRNA.find_max_free_range(current_pos)
         # log.debug("elongate_while_possible: found free range of %s nts downstream of %s", free_range, current_pos)
         codons = min(k, free_range / 3)  # number k of available tRNAs and sterically free codons limit elongation # integer division
@@ -311,7 +292,9 @@ class TRSL(StochasticSolverInterface, object):
         # log.debug("elongate_while_possible: protein length is now %s", self.proteinlength)
 
     def fill_empty_ribosomes(self, mRNA, deltat):
-        """Walk through every empty ribosome and try to diffuse the required tRNA into the site."""
+        """
+        Walk through every empty ribosome and try to diffuse the required tRNA into the site.
+        """
         change_occurred = False
         empty_ribos = [key for key in mRNA.ribosomes if mRNA.ribosomes[key] is None]  # I think termination position must not be excluded here - tRNA becomes termination factor
         for ribo_pos in empty_ribos:
@@ -362,7 +345,9 @@ class TRSL(StochasticSolverInterface, object):
             # log.debug("elongate_one_step: protein length is now %s", self.proteinlength)
 
     def elongate_mRNA(self, mRNA):
-        """translocates all ribosomes on mRNA by one step"""
+        """
+        translocates all ribosomes on mRNA by one step
+        """
         # log.debug("update_elongation: ribosomes on this mRNA are: %s", mRNA.ribosomes)
         occupied_ribos = [key for key in mRNA.ribosomes if mRNA.ribosomes[key] is not None]
         for ribo_pos in occupied_ribos:  # TODO: test reverse list and other sort orders
@@ -501,7 +486,7 @@ class TRSL(StochasticSolverInterface, object):
         '''
         log.info("solve: simulation from %s to %s", start, end)
 
-        fieldnames = ["protein", "ribos._bound", "ribos._free", "tRNA_bound", "tRNA_free", "ATP", "AMP", "GTP", "GDP"]
+        fieldnames = ["protein", "peptide_bonds", "ribos._bound", "ribos._free", "tRNA_bound", "tRNA_free", "ATP", "AMP", "GTP", "GDP"]
         self.initialize_solve_internal(fieldnames)
 
         self.timerange = np.arange(start, end, deltat)
@@ -520,7 +505,7 @@ class TRSL(StochasticSolverInterface, object):
             log.info("solve_internal: free ribosomes:  %s", self.ribo_free)
             log.info("solve_internal: bound tRNA:      %s", sum(self.tRNA_bound.values()))
             log.info("solve_internal: free tRNA:       %s", sum(self.tRNA_free.values()))
-            fieldvalues = [self.protein_length, self.ribo_bound, self.ribo_free, sum(self.tRNA_bound.values()), sum(self.tRNA_free.values()), self.ATP, self.AMP, self.GTP, self.GDP]
+            fieldvalues = [self.proteins, self.protein_length, self.ribo_bound, self.ribo_free, sum(self.tRNA_bound.values()), sum(self.tRNA_free.values()), self.ATP, self.AMP, self.GTP, self.GDP]
 
             self.update_solve_internal(deltat, fieldnames, fieldvalues, start, time)
 
@@ -582,8 +567,9 @@ class TRSL(StochasticSolverInterface, object):
 
 if __name__ == "__main__":
     log.basicConfig(level=log.DEBUG, format='%(message)s', stream=sys.stdout)
-    trsl = TRSL(nribo=2000)
-    trsl.solve_internal(0.0, 20.0, deltat=1.0)
+    trsl = TRSL(nribo=10)
+    trsl.solve_internal(0.0, 30.0, deltat=0.2)
+    trsl.dump_results(description='results')
     '''
     # Profiling:
     cProfile.run('trsl.solve_internal(0.0, 20.0, deltat=1.0)', 'trsl_profile')
