@@ -187,64 +187,7 @@ class TRSL_spec(TRSL.TRSL):
         self.n_mRNA = len(self.mRNAs)
         self.modeldict = {}
         self.decay_constants = decay_constants
-        #self.initialize_modeldict(mRNAs, gene_library)
 
-    """
-    def initialize_modeldict(self, mRNAs, gene_library):
-        '''
-        Create the modeldict required for the WCM (TODO:)
-        The tRNAs, mRNAs and proteins are added with additional indices for separate identification in the loops below
-        '''
-        self.modeldict['name'] = 'TRSL:_discrete_translation_gene_specific'
-        self.modeldict['vars'] = ['ribosomes', 'ATP', 'AMP', 'GTP', 'GDP']
-        self.modeldict['initvars'] = col.Counter({'GTP': self.GTP, 'GDP': self.GDP, 'ATP': self.ATP, 'AMP': self.AMP,
-                                                  'ribosomes': self.ribo_free})
-        self.modeldict['pars'] = []  # TODO: populate pars
-        self.modeldict['sp_annotations'] = {'ribosomes': 'GO:0005840',
-                                            'GTP': 'CHEBI:15996', 'GDP': 'CHEBI:17552', 'ATP': 'CHEBI:15422',
-                                            'AMP': 'CHEBI:16027'}
-        self.modeldict['sp_compartment'] = {'ribosomes': 'cytosol', 'GTP': 'cytosol', 'GDP': 'cytosol',
-                                            'ATP': 'cytosol', 'AMP': 'cytosol'}
-        self.modeldict['units'] = {'ribosomes': 1, 'GTP': 1, 'GDP': 1, 'ATP': 1, 'AMP': 1}
-
-        # add tRNAs:
-        for tRNA_num in tRNA_types:
-            # the distinction between bound and free tRNA exists only at module level
-            self.modeldict['vars'].extend(['tRNA_' + str('%02d' % (tRNA_num,))])
-            self.modeldict['initvars']['tRNA_' + str('%02d' % (tRNA_num,))] = tRNA_types[tRNA_num]['abundancy']
-            self.modeldict['sp_annotations']['tRNA_' + str('%02d' % (tRNA_num,))] = 'CHEBI:17843_' + str(
-                '%02d' % (tRNA_num,))
-            # ersetzen durch CHEBIs aus http://www.ebi.ac.uk/ebisearch/search.ebi?db=smallMolecules&t=tRNA
-            # oder http://www.ebi.ac.uk/chebi/searchId.do;010D9AC7FDDC72158F86B943C40AD04A?chebiId=CHEBI:2651
-            self.modeldict['sp_compartment']['tRNA_' + str('%02d' % (tRNA_num,))] = 'cytosol'
-            self.modeldict['units']['tRNA_' + str('%02d' % (tRNA_num,))] = "dimensionless"
-
-        # add mRNAs:
-        for mRNA in mRNAs:
-            # every mRNA molecule is a separate species because they might have difference ribosomal occupancies
-            self.modeldict['vars'].extend(['mRNA_' + str('%02d' % (mRNA.index,))])
-            self.modeldict['initvars'][
-                'mRNA_' + str('%02d' % (mRNA.index,))] += 1  # this is possible for Counters, not for dicts
-            self.modeldict['sp_annotations']['mRNA_' + str('%02d' % (mRNA.index,))] = 'CHEBI:33699_' + str(
-                '%02d' % (mRNA.index,))
-            self.modeldict['sp_compartment']['mRNA_' + str('%02d' % (mRNA.index,))] = 'cytosol'
-            self.modeldict['units']['mRNA_' + str('%02d' % (tRNA_num,))] = 1
-            # print mRNA, mRNA.index, mRNA.sequence
-
-        # add proteins:
-        for gene in gene_library:
-            self.modeldict['vars'].extend(
-                ['protein_' + str(gene)])  # FIXME: the proteins should NOT be different, hence labelled by the sequence
-            self.modeldict['initvars']['protein_' + str(gene)] = 0
-            self.modeldict['sp_annotations']['protein_' + str(gene)] = 'CHEBI:36080_' + str(gene)
-            self.modeldict['sp_compartment']['protein_' + str(gene)] = 'cytosol'
-            self.modeldict['units']['protein_' + str(gene)] = 1
-
-        self.modeldict['com_annotations'] = {'cytosol': 'GO:0005829'}
-        self.modeldict['solver'] = self.solve_internal
-        self.modeldict['timerange'] = self.timerange
-        self.modeldict['timecourses'] = self.timecourses
-    """
 
     def diffuse_ribosomes_to_initiation_site(self, mRNA, deltat, time):
         """Perform Poisson experiment to test how many ribosomes make it initiation site and try to attach."""
@@ -263,8 +206,8 @@ class TRSL_spec(TRSL.TRSL):
                             self.ribo_free -= 1
                             self.GTP -= 1
                             self.GDP += 1
-                            self.ATP -= 2
-                            self.AMP += 2
+                            self.ATP -= 1
+                            self.AMP += 1
                             if not mRNA.tic:  # no time measurement ongoing on this mRNA
                                 mRNA.tic = time
                                 mRNA.toc = len(mRNA.ribosomes) + 1  # number of ribos + 1 to countdown to end of time measurement

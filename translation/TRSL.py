@@ -14,23 +14,19 @@ Required steps and energy consumption:
    We currently merge 1.1, 1.2, 1.3 into one binomial experiment
 
 2. elongation
-2.1 AA-tRNA binding at A site (cost: 1*length GTP -> GDP)
+2.1 AA-tRNA binding at A site (cost: (n-1) GTP -> (n-1) GDP)
 2.2 peptide bond formation and peptide elongation (no cost for bond)
-2.3 translocation P>E, A>P (cost: 1*length GTP -> GDP)
+2.3 translocation P>E, A>P (cost: (n-1) GTP -> (n-1) GDP)
 2.4 release tRNA from E
     We carry out 2.4 (release) before 2.1 (binding) so we do not have to distinguish E, P, A sites
+    Total: 2 (n-1) GTP -> 2 (n-1) GDP
 
-3. termination (cost: 1 GTP -> GDP)
+3. termination (cost: 2 GTP -> 2 GDP, in reality, one of the GTPs is an ATP but we want to avoid using ADP in the model)
 
 Total energy balance per protein:
 We assume tRNA is activated outside of the model
-1 ATP -> 1 ADP
-(1 + 2*length) GTP -> (1 + 2*length) GDP
+2 (n+1) GTP -> 2 (n+1) GDP
 """
-
-# TODO: after running, all mRNAs are empty
-# is this an error or is it because elongation is instantaneous?
-# if latter then fix instantaneous elongation
 
 import sys
 import cProfile
@@ -39,7 +35,6 @@ import random as ran
 import collections as col
 import math
 import logging as log
-import gc
 
 import numpy as np
 import numpy.random as npr
@@ -54,16 +49,16 @@ class TRSL(StochasticSolverInterface, object):
     '''
 
     # initiation and auxiliary functions
-    ##################################################################################################################################
+    ###################################################################################################################
 
     def __init__(self, nribo=200000, proteome=col.Counter({}), detail=False):
-        '''
+        """
         initializes the parameters of the translation process
-        '''
+        """
         log.info("__init__: initializing TRSL")
 
         # Parameters
-        ##################################################################################################################################
+        ###############################################################################################################
         self.types_tRNA = 42  # number of types of tRNAs, including termination factor
         V = 4.2e-17           # m^3 # cell volume # http://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1000865
         n_genes = 3795        # number of protein-coding genes in the experiment
@@ -105,6 +100,7 @@ class TRSL(StochasticSolverInterface, object):
 
         self.detail = detail  # whether details are saved (e.g. ribosomes for every time step)
 
+        """
         self.modeldict = {'name': "TRSL:_discrete_translation",
                           'vars': ["protein", "ribos._bound", "ribos._free", "tRNA_bound", "tRNA_free", "ATP", "AMP", "GTP", "GDP"],
                           'initvars': {"protein": 0, "ribos._bound": 0, "ribos._free": self.ribo_free, "tRNA_bound": 0, "tRNA_free": sum(self.tRNA_free.values()), 'GTP': self.GTP, 'GDP': self.GDP, 'ATP': self.ATP, 'AMP': self.AMP},
@@ -123,6 +119,7 @@ class TRSL(StochasticSolverInterface, object):
                           'timerange': self.timerange,
                           'timecourses': self.timecourses
                           }  # TODO: to be implemented
+        """
 
     @property
     def tRNA_bound(self):
@@ -376,7 +373,7 @@ class TRSL(StochasticSolverInterface, object):
 
     def update_initiation(self, deltat, mRNA):
         """
-        performs random experiment to attach ribosome (not the initial tRNA)
+        performs random experiment to attach ribosome
 
         :param deltat: duration parameter driving the initiation probability
         :param mRNA:   mRNA object to which ribosome is attached
@@ -396,8 +393,6 @@ class TRSL(StochasticSolverInterface, object):
                         self.ribo_free -= 1
                         self.GTP -= 2
                         self.GDP += 2
-                        # self.ATP -= 2
-                        # self.AMP += 2
                     else:
                         log.warning("update_initiation: unsuccessful attempt to attach ribosome")
                 else:
@@ -438,10 +433,8 @@ class TRSL(StochasticSolverInterface, object):
                     self.proteins[mRNA.geneID] = 1  # add first protein of type mRNA.geneID
                 else:
                     self.proteins[mRNA.geneID] += 1  # add another protein of type mRNA.geneID
-                self.GTP -= 1
-                self.GDP += 1
-                self.ATP -= 1
-                self.ADP += 1  # TODO: check ADP vs AMP
+                self.GTP -= 2  # in the cell one of these is an ATP but this is equivalent
+                self.GDP += 2
                 if mRNA.tic and mRNA.toc:
                     mRNA.toc -= 1                             # one ribosome falls off the mRNA
                 if mRNA.tic and mRNA.toc==1:                  # time measurement ongoing and the last ribosome just fell off
@@ -521,7 +514,7 @@ class TRSL(StochasticSolverInterface, object):
 
             self.update_processes(deltat, time)
 
-            # log.info("solve_internal: self.proteins = %s", self.proteins)
+            log.info("solve_internal: self.proteins = %s", self.proteins)
             log.info("solve_internal: protein length:  %s", self.protein_length)
             log.info("solve_internal: bound ribosomes: %s", self.ribo_bound)
             log.info("solve_internal: free ribosomes:  %s", self.ribo_free)
