@@ -291,21 +291,23 @@ class TRSL(StochasticSolverInterface, object):
         # log.debug("elongate_while_possible: ribosomes: tRNA is now %s", mRNA.ribosomes)
         # log.debug("elongate_while_possible: protein length is now %s", self.proteinlength)
 
-    def fill_empty_ribosomes(self, mRNA, deltat):
+    def fill_empty_ribosomes(self, mRNA, time):
         """
         Walk through every empty ribosome and try to diffuse the required tRNA into the site.
         """
         change_occurred = False
+        # TODO: FIXME: do not fill the ribosome at position 0, this one comes filled (CHECK!!!)
         empty_ribos = [key for key in mRNA.ribosomes if mRNA.ribosomes[key] is None]  # I think termination position must not be excluded here - tRNA becomes termination factor
         for ribo_pos in empty_ribos:
             required_tRNA_type = ran.choice(self._tRNA.keys())  # random type to be inserted
-            tRNA_diffusion_probability = self.elong_rate * deltat  # ignoring wobble in the unspecific model
+            tRNA_diffusion_probability = self.elong_rate * time  # ignoring wobble in the unspecific model
             failure_probability = (1 - tRNA_diffusion_probability) ** self.tRNA_free[required_tRNA_type]
             randomnumber = ran.random()  # TODO: try Poisson approximation if faster
-            # log.debug("update_initiation: failure probability is %s at mRNA position 0", failure_probability)
+            log.debug("fill_empty_ribosomes: failure probability is %s at mRNA position %s", failure_probability, ribo_pos)
             success = not (randomnumber < failure_probability)  # this means the required tRNA type has diffused to the site
+            log.debug("fill_empty_ribosomes: success: {}".format(success))
             if success:
-                # log.debug('update_initiation: matching tRNA diffused to initiation site')
+                # log.debug('fill_empty_ribosomes: matching tRNA diffused to initiation site')
                 if not self.insert_tRNA(mRNA, ribo_pos, required_tRNA_type):
                     log.warning("elongate_mRNA: unsuccessful attempt to insert tRNA")
                 else:
@@ -319,7 +321,6 @@ class TRSL(StochasticSolverInterface, object):
         stops if steric hindrance by another ribosome or end of mRNA is encountered
         """
         free_codons = (mRNA.find_max_free_range(current_pos) - 3 * MRNA.cr) / 3  # integer division on purpose
-        # log.debug("elongate_one_step: found free range of %s nts downstream of %s", free_range, current_pos)
         # log.debug("elongate_one_step: free range of %s nts, trying to elongate by %s codons", free_range, codons)
         if self.GTP >= 1 and free_codons > 0:
             # log.debug("elongate_one_step: possible to translocate")
@@ -567,8 +568,8 @@ class TRSL(StochasticSolverInterface, object):
 
 if __name__ == "__main__":
     log.basicConfig(level=log.DEBUG, format='%(message)s', stream=sys.stdout)
-    trsl = TRSL(nribo=10)
-    trsl.solve_internal(0.0, 30.0, deltat=0.2)
+    trsl = TRSL(nribo=2)
+    trsl.solve_internal(0.0, 20.0, deltat=0.2)
     trsl.dump_results(description='results')
     '''
     # Profiling:
