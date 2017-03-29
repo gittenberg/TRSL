@@ -240,10 +240,10 @@ class TRSL_spec(TRSL.TRSL):
             tRNA_diffusion_probability = self.elong_rate * deltat * wobble[thiscodon]
             failure_probability = (1 - tRNA_diffusion_probability) ** self.tRNA_free[required_tRNA_type]
             randomnumber = np.random.ranf()  # TODO: try Poisson approximation if faster
-            # log.debug("update_initiation: failure probability is %s at mRNA position 0", failure_probability)
+            # log.debug("fill_empty_ribosomes: failure probability is %s at mRNA position 0", failure_probability)
             success = not (randomnumber < failure_probability)  # this means the required tRNA type has diffused to the site
             if success:
-                # log.debug('update_initiation: matching tRNA diffused to initiation site')
+                # log.debug('fill_empty_ribosomes: matching tRNA diffused to initiation site')
                 if not self.insert_tRNA(mRNA, ribo_pos, required_tRNA_type):
                     log.warning("elongate_mRNA: unsuccessful attempt to insert tRNA")
                 else:
