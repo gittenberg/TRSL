@@ -263,6 +263,7 @@ class TRSL(StochasticSolverInterface, object):
         """
         attempts to elongate the protein on mRNA by at most k AAs starting at current_pos
         stops if steric hindrance by another ribosome , or end of mRNA is encountered
+        NOTE: function is now obsolete
         """
         free_range = mRNA.find_max_free_range(current_pos)
         # log.debug("elongate_while_possible: found free range of %s nts downstream of %s", free_range, current_pos)
@@ -291,27 +292,31 @@ class TRSL(StochasticSolverInterface, object):
         # log.debug("elongate_while_possible: ribosomes: tRNA is now %s", mRNA.ribosomes)
         # log.debug("elongate_while_possible: protein length is now %s", self.proteinlength)
 
-    def fill_empty_ribosomes(self, mRNA, time):
+    def fill_empty_ribosomes(self, this_mRNA, time):
         """
         Walk through every empty ribosome and try to diffuse the required tRNA into the site.
         """
         change_occurred = False
         # TODO: FIXME: do not fill the ribosome at position 0, this one comes filled (CHECK!!!)
-        empty_ribos = [key for key in mRNA.ribosomes if mRNA.ribosomes[key] is None]  # I think termination position must not be excluded here - tRNA becomes termination factor
+        # empty ribosomes on this particular mRNA
+        empty_ribos = [key for key in this_mRNA.ribosomes if this_mRNA.ribosomes[key] is None]  # TODO: I think termination position must not be excluded here - tRNA becomes termination factor
+        print "empty_ribos = ", empty_ribos
+        print "mRNA.ribosomes = ", this_mRNA.ribosomes
+        # TODO: FIXME: here is where the error occurs!!!???
         for ribo_pos in empty_ribos:
             required_tRNA_type = ran.choice(self._tRNA.keys())  # random type to be inserted
             tRNA_diffusion_probability = self.elong_rate * time  # ignoring wobble in the unspecific model
             failure_probability = (1 - tRNA_diffusion_probability) ** self.tRNA_free[required_tRNA_type]
             randomnumber = ran.random()  # TODO: try Poisson approximation if faster
-            log.debug("fill_empty_ribosomes: failure probability is %s at mRNA position %s", failure_probability, ribo_pos)
+            log.debug("fill_empty_ribosomes: from mRNA %s: failure probability is %s at mRNA position %s. Available time: %s", this_mRNA, failure_probability, ribo_pos, time)
             success = not (randomnumber < failure_probability)  # this means the required tRNA type has diffused to the site
             log.debug("fill_empty_ribosomes: success: {}".format(success))
             if success:
                 # log.debug('fill_empty_ribosomes: matching tRNA diffused to initiation site')
-                if not self.insert_tRNA(mRNA, ribo_pos, required_tRNA_type):
-                    log.warning("elongate_mRNA: unsuccessful attempt to insert tRNA")
+                if not self.insert_tRNA(this_mRNA, ribo_pos, required_tRNA_type):
+                    log.warning("fill_empty_ribosomes: unsuccessful attempt to insert tRNA")
                 else:
-                    # log.debug("elongate_mRNA: successful attempt to insert tRNA")
+                    # log.debug("fill_empty_ribosomes: successful attempt to insert tRNA")
                     change_occurred = True
         return change_occurred
 
@@ -321,7 +326,6 @@ class TRSL(StochasticSolverInterface, object):
         stops if steric hindrance by another ribosome or end of mRNA is encountered
         """
         free_codons = (mRNA.find_max_free_range(current_pos) - 3 * MRNA.cr) / 3  # integer division on purpose
-        # log.debug("elongate_one_step: free range of %s nts, trying to elongate by %s codons", free_range, codons)
         if self.GTP >= 1 and free_codons > 0:
             # log.debug("elongate_one_step: possible to translocate")
             previous_type = mRNA.ribosomes[current_pos]  # type to be released at ribo_pos
@@ -349,7 +353,7 @@ class TRSL(StochasticSolverInterface, object):
         """
         translocates all ribosomes on mRNA by one step
         """
-        # log.debug("update_elongation: ribosomes on this mRNA are: %s", mRNA.ribosomes)
+        log.debug("elongate_mRNA: from mRNA %s: ribosomes on this mRNA are: %s", mRNA, mRNA.ribosomes)
         occupied_ribos = [key for key in mRNA.ribosomes if mRNA.ribosomes[key] is not None]
         for ribo_pos in occupied_ribos:  # TODO: test reverse list and other sort orders
             self.elongate_one_step(mRNA, ribo_pos)
@@ -374,7 +378,7 @@ class TRSL(StochasticSolverInterface, object):
                 # log.debug("update_initiation: found mRNA with free first position")
                 if self.GTP > 0 and self.ATP > 0:
                     if mRNA.attach_ribosome_at_start():
-                        # log.debug("update_initiation: attaching ribosome at start of mRNA %s", mRNA.index)
+                        log.debug("update_initiation: attaching ribosome at start of mRNA %s", mRNA.index)
                         self.ribo_bound += 1
                         self.ribo_free -= 1
                         self.GTP -= 2
@@ -390,7 +394,7 @@ class TRSL(StochasticSolverInterface, object):
     def update_elongation(self, deltat, mRNA):
         # log.info("update_elongation: starting mRNA %s, geneID %s", mRNA.index, mRNA.geneID)
         # while a change occurs:
-        #   update all empty ribosomes by tRNA diffusion
+        #   update/fill all empty ribosomes by tRNA diffusion
         #   if possible:
         #     all occupied ribosomes move by one step
         #     after the move they lose bound tRNA
@@ -399,9 +403,9 @@ class TRSL(StochasticSolverInterface, object):
         available_time = deltat
         while change_flag:  # while there is a change in tRNA or ribosome position
             change_flag = self.fill_empty_ribosomes(mRNA, available_time)  # if a tRNA bound this becomes True
-            self.elongate_mRNA(mRNA)  # translocate all ribosomes as far as possible
+            self.elongate_mRNA(mRNA)  # translocate all ribosomes by one step if possible
             available_time *= 0.5
-            # log.debug("halving time, available time is now %s", available_time)
+            log.debug("update_elongation: from mRNA %s: halving time, available time is now %s", mRNA, available_time)
 
     def update_termination(self, mRNA, time):
         #log.info("update_termination: starting")
