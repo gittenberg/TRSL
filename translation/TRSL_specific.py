@@ -73,8 +73,8 @@ codon_anticodon = {
     'gug': 'cac', 'gcg': 'ugc', 'gag': 'cuc', 'ggg': 'ccc'
 }
 
-''' source: http://nar.oxfordjournals.org/content/suppl/2011/04/23/gkr300.DC1/Supplemental_File_S2.pdf
-            http://nar.oxfordjournals.org/content/39/15/6705
+''' source: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3159466/bin/supp_39_15_6705__index.html
+            https://academic.oup.com/nar/article/39/15/6705/1022014/The-role-of-tRNA-and-ribosome-competition-in
     anticodons are in 5'-3' direction (same convention as above)'''
 tRNA_types = {
     1: {'anticodon': 'ugc', 'abundancy': 55351},  # reverse complement the anticodon to look it up
@@ -230,7 +230,10 @@ class TRSL_spec(TRSL.TRSL):
     def fill_empty_ribosomes(self, mRNA, deltat):
         """Walk through every empty ribosome and try to diffuse the required tRNA into the site."""
         change_occurred = False
-        empty_ribos = [key for key in mRNA.ribosomes if mRNA.ribosomes[key] is None]  # TODO: test if termination position must be excluded here
+        # empty ribosomes on this particular mRNA
+        # the ribosome at position 0 is filled during the initiation process (not modelled)
+        empty_ribos = [key for key in mRNA.ribosomes if mRNA.ribosomes[key] is None and key!=0]
+        # TODO: test if termination position must be excluded here
         for ribo_pos in empty_ribos:
             thiscodon = mRNA.sequence[ribo_pos: ribo_pos + 3]
             if thiscodon in stopcodons:
@@ -254,7 +257,7 @@ class TRSL_spec(TRSL.TRSL):
     def elongate_mRNA(self, mRNA):
         """translocates all ribosomes on mRNA by one step"""
         # log.debug("elongate_mRNA: ribosomes on this mRNA are: %s", mRNA.ribosomes)
-        occupied_ribos = [key for key in mRNA.ribosomes if mRNA.ribosomes[key] is not None]
+        occupied_ribos = [key for key in mRNA.ribosomes if mRNA.ribosomes[key] is not None or key==0] # the first codon is always occupied by tRNA^Met_i
         for ribo_pos in occupied_ribos:
             present_pos = ribo_pos
             thiscodon = mRNA.sequence[present_pos: present_pos + 3]  # TODO: is this redundant because elongate_one_step or translocate_ribosome are testing the same?
@@ -317,6 +320,7 @@ if __name__ == "__main__":
     tr._tRNA_free = col.Counter({i: int(tr._tRNA[i]) for i in tRNA_types})  # tRNA not bound to ribosomes
     tr._tRNA_bound = tr._tRNA - tr._tRNA_free  # tRNA bound to ribosomes
     tr.solve_internal(0.0, duration, deltat=1.0)
+    tr.dump_results(description='results')
 
     '''
     # Profiling:

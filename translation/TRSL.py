@@ -251,12 +251,12 @@ class TRSL(StochasticSolverInterface, object):
             self.tRNA_bound[tRNA_type] -= 1
             self.tRNA_free[tRNA_type] += 1
             mRNA.ribosomes[pos] = None
-            # log.debug("release_tRNA: successfully released tRNA %s from pos %s", tRNA_type, pos)
+            #log.debug("release_tRNA: successfully released tRNA %s from pos %s", tRNA_type, pos)
             success = True
         else:
-            log.warning("release_tRNA: failed to release tRNA from pos %s", pos)
-            log.warning("release_tRNA: mRNA.ribosomes[pos] == %s", mRNA.ribosomes[pos])
-            log.warning("release_tRNA: self.tRNA_bound[tRNA_type] == %s", self._tRNA_bound[tRNA_type])
+            #log.warning("release_tRNA: failed to release tRNA from pos %s", pos)
+            #log.warning("release_tRNA: mRNA.ribosomes[pos] == %s", mRNA.ribosomes[pos])
+            #log.warning("release_tRNA: self.tRNA_bound[tRNA_type] == %s", self._tRNA_bound[tRNA_type])
             success = False
         return success
     
@@ -298,9 +298,9 @@ class TRSL(StochasticSolverInterface, object):
         Walk through every empty ribosome and try to diffuse the required tRNA into the site.
         """
         change_occurred = False
-        # TODO: FIXME: do not fill the ribosome at position 0, this one comes filled (CHECK!!!)
         # empty ribosomes on this particular mRNA
-        empty_ribos = [key for key in this_mRNA.ribosomes if this_mRNA.ribosomes[key] is None]  # TODO: I think termination position must not be excluded here - tRNA becomes termination factor
+        # the ribosome at position 0 is filled during the initiation process (not modelled)
+        empty_ribos = [key for key in this_mRNA.ribosomes if this_mRNA.ribosomes[key] is None and key!=0]  # TODO: I think termination position must not be excluded here - tRNA becomes termination factor
         # log.debug("fill_empty_ribosomes: this_mRNA.index = {}".format(this_mRNA.index))
         # log.debug("fill_empty_ribosomes: empty_ribos = {}".format(empty_ribos))
         # log.debug("fill_empty_ribosomes: this_mRNA.ribosomes = {}".format(this_mRNA.ribosomes))
@@ -355,7 +355,7 @@ class TRSL(StochasticSolverInterface, object):
         translocates all ribosomes on mRNA by one step
         """
         # log.debug("elongate_mRNA: from mRNA %s: ribosomes on this mRNA are: %s", mRNA.index, mRNA.ribosomes)
-        occupied_ribos = [key for key in mRNA.ribosomes if mRNA.ribosomes[key] is not None]
+        occupied_ribos = [key for key in mRNA.ribosomes if (mRNA.ribosomes[key] is not None or key==0)] # the first codon is always occupied by tRNA^Met_i
         for ribo_pos in occupied_ribos:  # TODO: test reverse list and other sort orders
             self.elongate_one_step(mRNA, ribo_pos)
 
