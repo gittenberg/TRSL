@@ -90,7 +90,8 @@ class TRSL(StochasticSolverInterface, object):
         self.timecourses = {}
         self._tRNA = col.Counter({i: int(0.5 + n_tRNA / (self.types_tRNA * 1.0)) for i in range(1, self.types_tRNA + 1)})  # uniform distribution because translation is not specific
 
-        self.mRNAs = [MRNA.MRNA(index=gene) for gene in [ran.randint(1, n_genes) for k in range(self.n_mRNA)]]  # randomized gene expressions
+        # Warning: if ribosomes are not passed explicitely in the following MRNA constructor, they will be passed by reference and all MRNAs will share the same ribosome!
+        self.mRNAs = [MRNA.MRNA(index=gene, ribosomes={}) for gene in [ran.randint(1, n_genes) for k in range(self.n_mRNA)]]  # randomized gene expressions
         # self.ribo_bound = sum(len(mRNA.ribosomes) for mRNA in self.mRNAs)  # number of ribosomes bound to mRNA
         self.proteins = proteome  # contains protein IDs and counts not including polypeptides in statu nascendi
         self.protein_length = sum(self.proteins.values())  # not quite true, equals number of peptide bonds (difference is plus/minus 1)
@@ -300,17 +301,17 @@ class TRSL(StochasticSolverInterface, object):
         # TODO: FIXME: do not fill the ribosome at position 0, this one comes filled (CHECK!!!)
         # empty ribosomes on this particular mRNA
         empty_ribos = [key for key in this_mRNA.ribosomes if this_mRNA.ribosomes[key] is None]  # TODO: I think termination position must not be excluded here - tRNA becomes termination factor
-        print "empty_ribos = ", empty_ribos
-        print "mRNA.ribosomes = ", this_mRNA.ribosomes
-        # TODO: FIXME: here is where the error occurs!!!???
+        # log.debug("fill_empty_ribosomes: this_mRNA.index = {}".format(this_mRNA.index))
+        # log.debug("fill_empty_ribosomes: empty_ribos = {}".format(empty_ribos))
+        # log.debug("fill_empty_ribosomes: this_mRNA.ribosomes = {}".format(this_mRNA.ribosomes))
         for ribo_pos in empty_ribos:
             required_tRNA_type = ran.choice(self._tRNA.keys())  # random type to be inserted
             tRNA_diffusion_probability = self.elong_rate * time  # ignoring wobble in the unspecific model
             failure_probability = (1 - tRNA_diffusion_probability) ** self.tRNA_free[required_tRNA_type]
             randomnumber = ran.random()  # TODO: try Poisson approximation if faster
-            log.debug("fill_empty_ribosomes: from mRNA %s: failure probability is %s at mRNA position %s. Available time: %s", this_mRNA, failure_probability, ribo_pos, time)
+            # log.debug("fill_empty_ribosomes: from mRNA %s: failure probability is %s at mRNA position %s. Available time: %s", this_mRNA, failure_probability, ribo_pos, time)
             success = not (randomnumber < failure_probability)  # this means the required tRNA type has diffused to the site
-            log.debug("fill_empty_ribosomes: success: {}".format(success))
+            # log.debug("fill_empty_ribosomes: success: {}".format(success))
             if success:
                 # log.debug('fill_empty_ribosomes: matching tRNA diffused to initiation site')
                 if not self.insert_tRNA(this_mRNA, ribo_pos, required_tRNA_type):
@@ -353,7 +354,7 @@ class TRSL(StochasticSolverInterface, object):
         """
         translocates all ribosomes on mRNA by one step
         """
-        log.debug("elongate_mRNA: from mRNA %s: ribosomes on this mRNA are: %s", mRNA, mRNA.ribosomes)
+        # log.debug("elongate_mRNA: from mRNA %s: ribosomes on this mRNA are: %s", mRNA.index, mRNA.ribosomes)
         occupied_ribos = [key for key in mRNA.ribosomes if mRNA.ribosomes[key] is not None]
         for ribo_pos in occupied_ribos:  # TODO: test reverse list and other sort orders
             self.elongate_one_step(mRNA, ribo_pos)
@@ -405,7 +406,7 @@ class TRSL(StochasticSolverInterface, object):
             change_flag = self.fill_empty_ribosomes(mRNA, available_time)  # if a tRNA bound this becomes True
             self.elongate_mRNA(mRNA)  # translocate all ribosomes by one step if possible
             available_time *= 0.5
-            log.debug("update_elongation: from mRNA %s: halving time, available time is now %s", mRNA, available_time)
+            # log.debug("update_elongation: from mRNA %s: halving time, available time is now %s", mRNA.index, available_time)
 
     def update_termination(self, mRNA, time):
         #log.info("update_termination: starting")
@@ -573,7 +574,7 @@ class TRSL(StochasticSolverInterface, object):
 if __name__ == "__main__":
     log.basicConfig(level=log.DEBUG, format='%(message)s', stream=sys.stdout)
     trsl = TRSL(nribo=2)
-    trsl.solve_internal(0.0, 20.0, deltat=0.2)
+    trsl.solve_internal(0.0, 60.0, deltat=0.2)
     trsl.dump_results(description='results')
     '''
     # Profiling:
