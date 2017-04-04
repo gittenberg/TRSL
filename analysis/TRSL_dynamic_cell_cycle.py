@@ -1,6 +1,8 @@
 """
 Script to simulate a cell cycle with varying transcriptomes
 
+You probably want to run TRSL_dynamic_cell_cycle_volume_effects.py
+
 __author__ = 'martin'
 """
 

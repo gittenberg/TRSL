@@ -490,7 +490,7 @@ class TRSL(StochasticSolverInterface, object):
         '''
         solves TRSL for the interval [start, end[, iterating through several steps
         '''
-        log.info("solve: simulation from %s to %s", start, end)
+        log.info("solve_internal: simulation from %s to %s", start, end)
 
         fieldnames = ["protein", "peptide_bonds", "ribos._bound", "ribos._free", "tRNA_bound", "tRNA_free", "ATP", "AMP", "GTP", "GDP"]
         self.initialize_solve_internal(fieldnames)
@@ -498,9 +498,9 @@ class TRSL(StochasticSolverInterface, object):
         self.timerange = np.arange(start, end, deltat)
         for time in self.timerange:
             if not int(time) % 100:
-                print "reached time {} sec.".format(int(time))
+                print "solve_internal: reached time {} sec.".format(int(time))
             log.info("################################################################################################")
-            log.info("solve: time: %s", time)
+            log.info("solve_internal: time: %s", time)
             log.info("################################################################################################")
 
             self.update_processes(deltat, time)

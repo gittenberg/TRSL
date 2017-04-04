@@ -25,7 +25,7 @@ switch_times = [key * 60 for key in sorted(transcriptomes_dict.keys())]
 exome = pkl.load(open("../parameters/orf_coding.p", "rb"))
 # load initiation rates
 # init_rates = pkl.load(open("../parameters/init_rates_enhanced_median.p", "rb"))  # missing replaced by median
-init_rates = pkl.load(open("../parameters/init_rates_plotkin.p", "rb"))  # missing replaced by median
+init_rates = pkl.load(open("../parameters/init_rates_plotkin.p", "rb"))
 # load initial transcriptome
 transcriptome = transcriptomes_dict[0]
 
@@ -35,7 +35,7 @@ growth_factor_range = np.arange(1.0, total_growth, (total_growth - 1.0) / len(sw
 
 # find common data set
 genes = list(set(exome) & set(transcriptome) & set(init_rates))
-print "{} genes found.".format(len(genes))
+print "TRSL_dynamic_cell_cycle_volume_effects: {} genes found.".format(len(genes))
 
 # to create a growing number of ribosomes and tRNAs
 nribo_start = 200000  # Needs no scaling as this is taken care of by transcriptome
@@ -44,7 +44,7 @@ nribo_start = 200000  # Needs no scaling as this is taken care of by transcripto
 # Einschwingvorgang: 1800 s
 burnin = 1800
 for start, stop, growth_factor in zip(switch_times[:-1], switch_times[1:], growth_factor_range):
-    print "simulating from {} to {}...".format(start, stop)
+    print "TRSL_dynamic_cell_cycle_volume_effects: simulating from {} to {}...".format(start, stop)
 
     transcriptome = transcriptomes_dict[start / 60]
     mRNAs = []
@@ -57,19 +57,19 @@ for start, stop, growth_factor in zip(switch_times[:-1], switch_times[1:], growt
                                                  init_rate=init_rates[gene]))  # do not just multiply the list
             counter += 1
 
-    print "created transcriptome at time {}.".format(start)
+    print "TRSL_dynamic_cell_cycle_volume_effects: created transcriptome at time {}.".format(start)
 
     tr = TRSL_specific.TRSL_spec(mRNAs, exome, None, int(nribo_start * growth_factor), proteome=col.Counter({}), detail=True)
 
     tr._tRNA = col.Counter({i: int(TRSL_specific.tRNA_types[i]['abundancy'] * len(genes) / len(exome) * growth_factor) for i in TRSL_specific.tRNA_types})
     tr._tRNA_free = col.Counter({i: int(tr._tRNA[i]) for i in TRSL_specific.tRNA_types})  # tRNA not bound to ribosomes
     tr._tRNA_bound = tr._tRNA - tr._tRNA_free  # tRNA bound to ribosomes
-    print "corrected tRNA counts for growth effect"
+    print "TRSL_dynamic_cell_cycle_volume_effects: corrected tRNA counts for growth effect"
 
     # reduce initiation rates of every mRNA by factor inversely proportional to volume
     for mRNA in tr.mRNAs:
         mRNA.init_rate /= growth_factor
-    print "corrected initation rates for growth effect"
+    print "TRSL_dynamic_cell_cycle_volume_effects: corrected initation rates for growth effect"
     # reduce elongation rate by factor inversely proportional to volume
     tr.elong_rate /= growth_factor
 
@@ -84,3 +84,5 @@ for start, stop, growth_factor in zip(switch_times[:-1], switch_times[1:], growt
     p.strip_dirs().sort_stats('cumulative').print_stats()
     '''
     tr.dump_results(description)
+
+print "done."
