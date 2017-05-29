@@ -73,7 +73,7 @@ class TRSL(StochasticSolverInterface, object):
         D_ribo = 3e-13                             # m^2/s # diffusion coefficient of ribosomes
         tau_ribo = lambda_ribo ** 2 / 6. / D_ribo  # s # char. time for ribosomes
         num_pos_ribo = V / lambda_ribo ** 3        # number of discrete positions for ribosomes
-        p_init = math.sqrt(3.5e-6 * 0.115)         # initiation probability at mRNA 5' end # we choose the geometric mean btw the lowest and highest possible value
+        p_init = math.sqrt(6.3)         # initiation probability at mRNA 5' end # we choose the geometric mean btw the lowest and highest possible value
         competition = 7.78e-4                      # tRNA competition coefficient
 
         # Initial values
