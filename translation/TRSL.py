@@ -414,7 +414,7 @@ class TRSL(StochasticSolverInterface, object):
             if mRNA.termination_condition():
                 # log.debug("update_termination: mRNA.ribosomes = %s", mRNA.ribosomes)
                 release_pos = max(mRNA.ribosomes.keys())
-                release_type = mRNA.ribosomes[release_pos]
+                # release_type = mRNA.ribosomes[release_pos]
                 # log.debug("update_termination: terminating translation at mRNA %s, release position %s, release type %s", mRNA.index, release_pos, release_type)
                 # self.release_tRNA(mRNA, release_pos, release_type)  # commented because there is no tRNA at the stop codon
                 mRNA.detach_ribosome(release_pos)
