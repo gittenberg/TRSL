@@ -16,7 +16,7 @@ import numpy as np
 import collections as col
 from translation import MRNA_specific, TRSL_specific
 
-transcriptomes_dict = pkl.load((open('../parameters/transcriptome_time_dependent.p')))
+transcriptomes_dict = pkl.load((open('../../parameters/transcriptome_time_dependent.p')))
 
 # when are new transcriptomes loaded (conversion from minutes to seconds):
 switch_times = [key * 60 for key in sorted(transcriptomes_dict.keys())]
