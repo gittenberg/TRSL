@@ -18,26 +18,26 @@ cr = 10  # ribosome footprint in codons. if this is > 0, the sequence needs to i
 
 
 class MRNA:
-    '''
+    """
     class representing a single polysome
-    '''
+    """
     def __init__(self, index=None, length=1251, geneID=None, ribosomes={}):  # 1250, source: http://bionumbers.hms.harvard.edu/bionumber.aspx?id=107678
-        '''
+        """
         initializes one mRNA molecule
-        '''
+        """
         self.index = index          # counts the unique mRNA molecules; no biological meaning
         self.length = length        # length of mRNA in nts # http://bionumbers.hms.harvard.edu//bionumber.aspx?id=107678&ver=1
         self.geneID = geneID        # corresponds to sequence and proteinID; there might be more than one mRNA with this geneID
-        self.ribosomes = ribosomes  # keys between 0 and self.length - 3*cr, value None: no AA-tRNA, <value>: AA-tRNA of type <value>
+        self.ribosomes = ribosomes  # keys between 0 and self.length - 3, value None: no AA-tRNA, <value>: AA-tRNA of type <value>
         self.tic = False            # initiation time for a certain ribosome on this mRNA
         self.toc = False            # termination time for a certain ribosome on this mRNA
         self.tic_toc = []           # list of measured (tic, toc) pairs for this mRNA
 
     def attach_ribosome(self, pos=0):
-        '''
+        """
         attaches a ribosome without tRNA at position pos
         TODO: currently unused; if ever used again, it should be rewritten
-        '''
+        """
         if pos in self.ribosomes:
             log.warning("attach_ribosome: warning: there is already a ribosome at %s", pos)
             success = False
@@ -51,9 +51,9 @@ class MRNA:
         return success
 
     def detach_ribosome(self, pos):
-        '''
+        """
         detaches a ribosome without tRNA at position pos
-        '''
+        """
         if pos in self.ribosomes:
             del self.ribosomes[pos]
             # log.debug("detach_ribosome: successful at pos %s", pos)
@@ -65,9 +65,9 @@ class MRNA:
         return success
 
     def attach_ribosome_at_start(self):
-        '''
+        """
         attaches a ribosome without tRNA at position 0
-        '''
+        """
         if not self.ribosomes or min(self.ribosomes.keys()) > 3 * cr:
             self.ribosomes[0] = None
             # log.debug("attach_ribosome_at_start: successfully attached ribosome at pos 0")
@@ -78,9 +78,9 @@ class MRNA:
         return success
 
     def first_position_occupied(self):
-        '''
+        """
         returns True iff the first 3*cr nts of an mRNA are occupied by a ribosome
-        '''
+        """
         if not self.ribosomes:  # no ribosomes
             return False
         elif min(self.ribosomes.keys()) > 3 * cr:  # ribosomes behind position 30 nt
@@ -90,9 +90,9 @@ class MRNA:
             return True
 
     def next_range_free(self, pos, by=3):
-        '''
+        """
         returns True iff no ribosomes within the next by+3*cr positions from pos
-        '''
+        """
         return not any([ribo in range(pos + 1, pos + 1 + by + 3 * cr) for ribo in self.ribosomes])
 
     def find_max_free_range(self, pos):
@@ -111,10 +111,10 @@ class MRNA:
         return max_free_range
 
     def termination_condition(self):
-        '''
+        """
         returns True iff a ribosome is at the end of the mRNA.
         the ribosome footprint cr is ignored in this now.
-        '''
+        """
         if self.ribosomes:
             if max(self.ribosomes.keys()) + 3 >= self.length:
                 return True
@@ -124,16 +124,16 @@ class MRNA:
             return False
 
     def prev_range_free(self, pos, by=3):
-        '''
+        """
         returns True iff no ribosomes within the previous by+3*cr positions from pos
-        '''
+        """
         return not any([ribo in range(pos - 1, pos - 1 - by - 3 * cr, -1) for ribo in self.ribosomes])
 
     def translocate_ribosome(self, pos, by=3):
-        '''
+        """
         moves a ribosome at position pos by by positions 3'wards
         returns True if move was successful
-        '''
+        """
         if pos in self.ribosomes:
             # we assume the next 3*by positions are free to translocate
             self.ribosomes[pos + by] = self.ribosomes[pos]
