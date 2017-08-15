@@ -295,7 +295,8 @@ class TRSL(StochasticSolverInterface, object):
 
     def fill_empty_ribosomes(self, this_mRNA, time):
         """
-        Walk through every empty ribosome and try to diffuse the required tRNA into the site.
+        iterate through every empty ribosome and try to diffuse the required tRNA into the site
+        returns True if at least one attempt was successful, else false
         """
         change_occurred = False
         # empty ribosomes on this particular mRNA
@@ -352,7 +353,7 @@ class TRSL(StochasticSolverInterface, object):
 
     def elongate_mRNA(self, mRNA):
         """
-        translocates all ribosomes on mRNA by one step
+        translocates all ribosomes on mRNA by one step where possible
         """
         # log.debug("elongate_mRNA: from mRNA %s: ribosomes on this mRNA are: %s", mRNA.index, mRNA.ribosomes)
         occupied_ribos = [key for key in mRNA.ribosomes if (mRNA.ribosomes[key] is not None or key==0)] # the first codon is always occupied by tRNA^Met_i
@@ -364,7 +365,7 @@ class TRSL(StochasticSolverInterface, object):
 
     def update_initiation(self, deltat, mRNA):
         """
-        performs random experiment to attach ribosome
+        performs binomial random experiment to attach ribosome at start codon
 
         :param deltat: duration parameter driving the initiation probability
         :param mRNA:   mRNA object to which ribosome is attached
@@ -393,13 +394,15 @@ class TRSL(StochasticSolverInterface, object):
                 pass
 
     def update_elongation(self, deltat, mRNA):
+        """
+        while a change still occurs:
+            fill all empty ribosomes by tRNA diffusion
+            if possible:
+                elongate all polypeptides
+                all occupied ribosomes move by one step and lose bound tRNA
+            halve time interval and continue
+        """
         # log.info("update_elongation: starting mRNA %s, geneID %s", mRNA.index, mRNA.geneID)
-        # while a change occurs:
-        #   update/fill all empty ribosomes by tRNA diffusion
-        #   if possible:
-        #     all occupied ribosomes move by one step
-        #     after the move they lose bound tRNA
-        #   halve time interval and continue
         change_flag = True
         available_time = deltat
         while change_flag:  # while there is a change in tRNA or ribosome position
@@ -409,6 +412,10 @@ class TRSL(StochasticSolverInterface, object):
             # log.debug("update_elongation: from mRNA %s: halving time, available time is now %s", mRNA.index, available_time)
 
     def update_termination(self, mRNA, time):
+        """
+        check for termination condition
+        if fulfilled, detach ribosome and increase number of proteins
+        """
         #log.info("update_termination: starting")
         if self.GTP >= 1:
             if mRNA.termination_condition():
@@ -436,6 +443,9 @@ class TRSL(StochasticSolverInterface, object):
             log.warning("update_termination: not enough GTP")
     
     def update_processes(self, deltat, time):
+        """
+        for all mRNAs update initiation, elongation and termination
+        """
         for mRNA in self.mRNAs:
             if mRNA.ribosomes != {}:  # mRNAs without ribosomes do not need the following
                 self.update_termination(mRNA, time)
@@ -488,7 +498,7 @@ class TRSL(StochasticSolverInterface, object):
 
     def solve_internal(self, start, end, deltat):
         """
-        solves TRSL for the interval [start, end[, iterating through several steps
+        iterate TRSL for the timerange (start, end, deltat)
         """
         log.info("solve_internal: simulation from %s to %s", start, end)
 
