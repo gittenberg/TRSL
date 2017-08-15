@@ -487,9 +487,9 @@ class TRSL(StochasticSolverInterface, object):
             ribosomes_database.close()
 
     def solve_internal(self, start, end, deltat):
-        '''
+        """
         solves TRSL for the interval [start, end[, iterating through several steps
-        '''
+        """
         log.info("solve_internal: simulation from %s to %s", start, end)
 
         fieldnames = ["protein", "peptide_bonds", "ribos._bound", "ribos._free", "tRNA_bound", "tRNA_free", "ATP", "AMP", "GTP", "GDP"]
