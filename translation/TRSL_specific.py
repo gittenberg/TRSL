@@ -190,7 +190,9 @@ class TRSL_spec(TRSL.TRSL):
 
 
     def diffuse_ribosomes_to_initiation_site(self, mRNA, deltat, time):
-        """Perform Poisson experiment to test how many ribosomes make it initiation site and try to attach."""
+        """
+        performs Poisson experiment to test how many ribosomes diffuse to initiation site and attempt to attach
+        """
         if self.ribo_free > 0:
             # k = npr.binomial(self.ribo_free, mRNA.init_rate*deltat, 1)[0]  # number of ribosomes that diffuse to the initiation site during deltat
             k = npr.poisson(
@@ -228,7 +230,9 @@ class TRSL_spec(TRSL.TRSL):
         self.diffuse_ribosomes_to_initiation_site(mRNA, deltat, time)  # tic = True if an initiation occurred
 
     def fill_empty_ribosomes(self, mRNA, deltat):
-        """Walk through every empty ribosome and try to diffuse the required tRNA into the site."""
+        """
+        loops through every empty bound ribosome and tries to diffuse the required tRNA into the A-binding site
+        """
         change_occurred = False
         # empty ribosomes on this particular mRNA
         # the ribosome at position 0 is filled during the initiation process (not modelled)
@@ -255,7 +259,9 @@ class TRSL_spec(TRSL.TRSL):
         return change_occurred
 
     def elongate_mRNA(self, mRNA):
-        """translocates all ribosomes on mRNA by one step"""
+        """
+        translocates all ribosomes on mRNA by one step if possible
+        """
         # log.debug("elongate_mRNA: ribosomes on this mRNA are: %s", mRNA.ribosomes)
         occupied_ribos = [key for key in mRNA.ribosomes if mRNA.ribosomes[key] is not None or key==0] # the first codon is always occupied by tRNA^Met_i
         for ribo_pos in occupied_ribos:
