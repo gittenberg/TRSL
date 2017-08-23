@@ -73,7 +73,7 @@ class TRSL(StochasticSolverInterface, object):
         D_ribo = 3e-13                             # m^2/s # diffusion coefficient of ribosomes
         tau_ribo = lambda_ribo ** 2 / 6. / D_ribo  # s # char. time for ribosomes
         num_pos_ribo = V / lambda_ribo ** 3        # number of discrete positions for ribosomes
-        p_init = math.sqrt(6.3)         # initiation probability at mRNA 5' end # we choose the geometric mean btw the lowest and highest possible value
+        p_init = math.sqrt(3.5e-06 * 0.115)        # math.sqrt(3.5e-06 * 0.115) # initiation probability at mRNA 5' end # geometric mean btw the lowest and highest possible value
         competition = 7.78e-4                      # tRNA competition coefficient
 
         # Initial values
@@ -91,7 +91,7 @@ class TRSL(StochasticSolverInterface, object):
         self._tRNA = col.Counter({i: int(0.5 + n_tRNA / (self.types_tRNA * 1.0)) for i in range(1, self.types_tRNA + 1)})  # uniform distribution because translation is not specific
 
         # Warning: if ribosomes are not passed explicitely in the following MRNA constructor, they will be passed by reference and all MRNAs will share the same ribosome!
-        self.mRNAs = [MRNA.MRNA(index=gene, ribosomes={}) for gene in [ran.randint(1, n_genes) for k in range(self.n_mRNA)]]  # randomized gene expressions
+        self.mRNAs = [MRNA.MRNA(index=gene, length=1251, ribosomes={}) for gene in [ran.randint(1, n_genes) for k in range(self.n_mRNA)]]  # randomized gene expressions
         # self.ribo_bound = sum(len(mRNA.ribosomes) for mRNA in self.mRNAs)  # number of ribosomes bound to mRNA
         self.proteins = proteome  # contains protein IDs and counts not including polypeptides in statu nascendi
         self.protein_length = sum(self.proteins.values())  # not quite true, equals number of peptide bonds (difference is plus/minus 1)
@@ -456,11 +456,12 @@ class TRSL(StochasticSolverInterface, object):
     def initialize_solve_internal(self, fieldnames):
         self.timecourses = {fieldname: [] for fieldname in fieldnames}
 
+        # tRNAs are separate because they are many:
         for tRNA_type in self.tRNA_free:
             self.timecourses["tRNA_free_" + str(tRNA_type).zfill(2)] = []
 
     def update_solve_internal(self, deltat, fieldnames, fieldvalues, start, time):
-        # update everything except proteins and specific tRNA_free
+        # update everything except specific tRNA_free
         for fieldname, fieldvalue in zip(fieldnames, fieldvalues):
             self.timecourses[fieldname].append(fieldvalue)
 
@@ -502,7 +503,7 @@ class TRSL(StochasticSolverInterface, object):
         """
         log.info("solve_internal: simulation from %s to %s", start, end)
 
-        fieldnames = ["protein", "peptide_bonds", "ribos._bound", "ribos._free", "tRNA_bound", "tRNA_free", "ATP", "AMP", "GTP", "GDP"]
+        fieldnames = ["protein", "proteins", "peptide_bonds", "ribos._bound", "ribos._free", "tRNA_bound", "tRNA_free", "ATP", "AMP", "GTP", "GDP"]
         self.initialize_solve_internal(fieldnames)
 
         self.timerange = np.arange(start, end, deltat)
@@ -552,7 +553,7 @@ class TRSL(StochasticSolverInterface, object):
             log.info("solve_internal: free ribosomes:  %s", self.ribo_free)
             log.info("solve_internal: bound tRNA:      %s", sum(self.tRNA_bound.values()))
             log.info("solve_internal: free tRNA:       %s", sum(self.tRNA_free.values()))
-            fieldvalues = [self.protein_length, self.ribo_bound, self.ribo_free, sum(self.tRNA_bound.values()), sum(self.tRNA_free.values()), self.ATP, self.AMP, self.GTP, self.GDP]
+            fieldvalues = [self.proteins, self.protein_length, self.ribo_bound, self.ribo_free, sum(self.tRNA_bound.values()), sum(self.tRNA_free.values()), self.ATP, self.AMP, self.GTP, self.GDP]
 
             # we assume that trange is evenly spaced:
             self.update_solve_internal(trange[1]-trange[0], fieldnames, fieldvalues, trange[0], time)
@@ -582,9 +583,13 @@ class TRSL(StochasticSolverInterface, object):
 
 
 if __name__ == "__main__":
-    log.basicConfig(level=log.DEBUG, format='%(message)s', stream=sys.stdout)
-    trsl = TRSL(nribo=2)
-    trsl.solve_internal(0.0, 60.0, deltat=0.2)
+    log.basicConfig(level=log.INFO, format='%(message)s', stream=sys.stdout)
+
+    trsl = TRSL(nribo=20)
+    # overwrite number of transcripts:
+    trsl.n_mRNA = 60
+
+    trsl.solve_internal(0.0, 300.0, deltat=0.1)
     trsl.dump_results(description='results')
     '''
     # Profiling:
