@@ -73,13 +73,13 @@ class TRSL(StochasticSolverInterface, object):
         D_ribo = 3e-13                             # m^2/s # diffusion coefficient of ribosomes
         tau_ribo = lambda_ribo ** 2 / 6. / D_ribo  # s # char. time for ribosomes
         num_pos_ribo = V / lambda_ribo ** 3        # number of discrete positions for ribosomes
-        p_init = math.sqrt(3.5e-06 * 0.115)        # math.sqrt(3.5e-06 * 0.115) # initiation probability at mRNA 5' end # geometric mean btw the lowest and highest possible value
         competition = 7.78e-4                      # tRNA competition coefficient
 
         # Initial values
         ##################################################################################################################################
-        self.n_mRNA = 60000            # 60000 # number of mRNAs (or 20000: http://book.bionumbers.org/how-many-mrnas-are-in-a-cell/)
-        self.ribo_free = nribo         # 200000; number of ribosomes # http://bionumbers.hms.harvard.edu/bionumber.aspx?&id=100267&ver=13&trm=ribosomes/cell
+        self.n_mRNA = 60000                      # 60000 # number of mRNAs (or 20000: http://book.bionumbers.org/how-many-mrnas-are-in-a-cell/)
+        self.ribo_free = nribo                   # 200000; number of ribosomes # http://bionumbers.hms.harvard.edu/bionumber.aspx?&id=100267&ver=13&trm=ribosomes/cell
+        self.p_init = 3.0e-5                       # math.sqrt(3.5e-06 * 0.115) # initiation probability at mRNA 5' end # geometric mean btw the lowest and highest possible value
 
         self.GTP = 1e3 * avogadro * V  # GTP molecules (made up)
         self.GDP = 0                   # GDP molecules
@@ -96,7 +96,7 @@ class TRSL(StochasticSolverInterface, object):
         self.proteins = proteome  # contains protein IDs and counts not including polypeptides in statu nascendi
         self.protein_length = sum(self.proteins.values())  # not quite true, equals number of peptide bonds (difference is plus/minus 1)
 
-        self.init_rate = p_init / tau_ribo / num_pos_ribo        # 8.157e-07 s^-1 (yeast)
+        self.init_rate = self.p_init / tau_ribo / num_pos_ribo        # 8.157e-07 s^-1 (yeast)
         self.elong_rate = competition / tau_tRNA / num_pos_tRNA  # 0.000140 s^-1  (yeast)
 
         self.detail = detail  # whether details are saved (e.g. ribosomes for every time step)
@@ -199,7 +199,7 @@ class TRSL(StochasticSolverInterface, object):
     def dump_results(self, description='results'):
         """
         Save results of the simulation to a pickle file in the ../results directory.
-        The name is generated using the given description and a timestamp.
+        The name is generated using ttimecourseshe given description and a timestamp.
 
         @param description: readable string describing the simulation
         """
@@ -460,9 +460,9 @@ class TRSL(StochasticSolverInterface, object):
         for tRNA_type in self.tRNA_free:
             self.timecourses["tRNA_free_" + str(tRNA_type).zfill(2)] = []
 
-    def update_solve_internal(self, deltat, fieldnames, fieldvalues, start, time):
-        # update everything except specific tRNA_free
-        for fieldname, fieldvalue in zip(fieldnames, fieldvalues):
+    def update_solve_internal(self, deltat, fields, start, time):
+        # update standard
+        for fieldname, fieldvalue in fields.iteritems():
             self.timecourses[fieldname].append(fieldvalue)
 
         # now update proteins
@@ -503,7 +503,7 @@ class TRSL(StochasticSolverInterface, object):
         """
         log.info("solve_internal: simulation from %s to %s", start, end)
 
-        fieldnames = ["protein", "proteins", "peptide_bonds", "ribos._bound", "ribos._free", "tRNA_bound", "tRNA_free", "ATP", "AMP", "GTP", "GDP"]
+        fieldnames = ["proteins", "ribos._bound", "ribos._free", "tRNA_bound", "tRNA_free", "ATP", "AMP", "GTP", "GDP", "peptide_bonds"]
         self.initialize_solve_internal(fieldnames)
 
         self.timerange = np.arange(start, end, deltat)
@@ -522,14 +522,19 @@ class TRSL(StochasticSolverInterface, object):
             log.info("solve_internal: free ribosomes:  %s", self.ribo_free)
             log.info("solve_internal: bound tRNA:      %s", sum(self.tRNA_bound.values()))
             log.info("solve_internal: free tRNA:       %s", sum(self.tRNA_free.values()))
-            fieldvalues = [self.proteins, self.protein_length, self.ribo_bound, self.ribo_free, sum(self.tRNA_bound.values()), sum(self.tRNA_free.values()), self.ATP, self.AMP, self.GTP, self.GDP]
+            # careful: fieldnames and fieldvalues must be in the same order
+            fields = {"proteins": self.proteins, "ribos._bound": self.ribo_bound, "ribos._free": self.ribo_free,
+                      "tRNA_bound": sum(self.tRNA_bound.values()), "tRNA_free": sum(self.tRNA_free.values()),
+                      "ATP": self.ATP, "AMP": self.AMP, "GTP": self.GTP, "GDP": self.GDP, "peptide_bonds": self.protein_length}
+            #fieldvalues = fields.values()
 
-            self.update_solve_internal(deltat, fieldnames, fieldvalues, start, time)
+            self.update_solve_internal(deltat, fields, start, time)
 
     def solve_internal_new(self, trange):
         '''
         solves TRSL for the interval [start, end[, iterating through several steps
         updated to conform with stochasticSolverInterface
+        TODO: not updated (see solve_internal, which has been updated)
         '''
         log.info("solve: simulation from %s to %s", trange[0], trange[-1])
 
@@ -589,8 +594,9 @@ if __name__ == "__main__":
     # overwrite number of transcripts:
     trsl.n_mRNA = 60
 
-    trsl.solve_internal(0.0, 300.0, deltat=0.1)
-    trsl.dump_results(description='results')
+    trsl.solve_internal(0.0, 300.0, deltat=0.2)
+    trsl.dump_results(description='TRSL_unspecific_low_ribosomes_results')
+
     '''
     # Profiling:
     cProfile.run('trsl.solve_internal(0.0, 20.0, deltat=1.0)', 'trsl_profile')
