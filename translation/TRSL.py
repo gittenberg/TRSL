@@ -79,7 +79,7 @@ class TRSL(StochasticSolverInterface, object):
         ##################################################################################################################################
         self.n_mRNA = 60000                      # 60000 # number of mRNAs (or 20000: http://book.bionumbers.org/how-many-mrnas-are-in-a-cell/)
         self.ribo_free = nribo                   # 200000; number of ribosomes # http://bionumbers.hms.harvard.edu/bionumber.aspx?&id=100267&ver=13&trm=ribosomes/cell
-        self.p_init = 3.0e-5                       # math.sqrt(3.5e-06 * 0.115) # initiation probability at mRNA 5' end # geometric mean btw the lowest and highest possible value
+        self.p_init = math.sqrt(3.5e-06 * 0.115) # math.sqrt(3.5e-06 * 0.115) # initiation probability at mRNA 5' end # geometric mean btw the lowest and highest possible value
 
         self.GTP = 1e3 * avogadro * V  # GTP molecules (made up)
         self.GDP = 0                   # GDP molecules

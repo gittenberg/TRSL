@@ -14,6 +14,7 @@ log.basicConfig(level=log.INFO, format='%(message)s', stream=sys.stdout)
 Low ribosome scenario, vary number of transcripts
 """
 
+"""
 factor = [1, 10, 100, 1000, 10000]
 
 for n in factor:
@@ -24,3 +25,12 @@ for n in factor:
 
     trsl.solve_internal(0.0, 300.0, deltat=0.2)
     trsl.dump_results(description='TRSL_unspecific_low_ribosomes_results_{}_transcripts'.format(n))
+"""
+
+"""
+Realistic ribosome and transcript scenario
+"""
+trsl = TRSL.TRSL(nribo=200000)
+trsl.n_mRNA = 60000
+trsl.solve_internal(0.0, 100.0, deltat=0.2)
+trsl.dump_results(description='TRSL_unspecific_realistic_results_{}_transcripts'.format(trsl.n_mRNA))
