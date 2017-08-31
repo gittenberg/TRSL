@@ -229,6 +229,24 @@ class TRSL_spec(TRSL.TRSL):
         # log.debug('update_initiation: found mRNA %s', mRNA)
         self.diffuse_ribosomes_to_initiation_site(mRNA, deltat, time)  # tic = True if an initiation occurred
 
+    def update_elongation(self, deltat, mRNA):
+        """
+        while a change still occurs:
+            fill all empty ribosomes by tRNA diffusion
+            if possible:
+                elongate all polypeptides
+                all occupied ribosomes move by one step and lose bound tRNA
+            halve time interval and continue
+        """
+        # log.info("update_elongation: starting mRNA %s, geneID %s", mRNA.index, mRNA.geneID)
+        change_flag = True
+        available_time = deltat
+        while change_flag:  # while there is a change in tRNA or ribosome position
+            change_flag = self.fill_empty_ribosomes(mRNA, available_time)  # if a tRNA bound this becomes True
+            self.elongate_mRNA(mRNA)  # translocate all ribosomes by one step if possible
+            available_time *= 0.5
+            # log.debug("update_elongation: from mRNA %s: halving time, available time is now %s", mRNA.index, available_time)
+
     def fill_empty_ribosomes(self, mRNA, deltat):
         """
         loops through every empty bound ribosome and tries to diffuse the required tRNA into the A-binding site
@@ -252,9 +270,9 @@ class TRSL_spec(TRSL.TRSL):
             if success:
                 # log.debug('fill_empty_ribosomes: matching tRNA diffused to initiation site')
                 if not self.insert_tRNA(mRNA, ribo_pos, required_tRNA_type):
-                    log.warning("elongate_mRNA: unsuccessful attempt to insert tRNA")
+                    log.warning("fill_empty_ribosomes: unsuccessful attempt to insert tRNA")
                 else:
-                    # log.debug("elongate_mRNA: successful attempt to insert tRNA")
+                    # log.debug("fill_empty_ribosomes: successful attempt to insert tRNA")
                     change_occurred = True
         return change_occurred
 
