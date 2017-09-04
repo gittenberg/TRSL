@@ -27,6 +27,7 @@ import MRNA_specific
 
 '''
 these codons are on the mRNA from 5' to 3'
+non-primary source also: http://journals.plos.org/ploscompbiol/article/file?id=10.1371/journal.pcbi.1002203.s002&type=supplementary
 '''
 genetic_code = {
     'uuu': 'F', 'ucu': 'S', 'uau': 'Y', 'ugu': 'C',
