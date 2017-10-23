@@ -4,9 +4,11 @@
 setwd("~/git/TRSL/workbooks/analyses/tAI_misc")
 
 require("tAI")
-yeast.trna = scan("yeast.trna")
+#yeast.trna = scan("yeast.trna")  # wrong according to https://github.com/smsaladi/tAI/issues/2
+yeast.trna = scan("sc_abundance.trna")
 yeast.ws = get.ws(tRNA=yeast.trna, sking=0) # superkingdom, 0 indicating Eukaryota
 yeast.m = matrix(scan("yeast.m"), ncol=61, byrow=TRUE)
+#yeast.m = matrix(scan("ecolik12.m"), ncol=61, byrow=TRUE)  # test (to replicate https://github.com/smsaladi/tAI/issues/2, set sking=1)
 yeast.m = yeast.m[,-33]
 
 yeast.tai = get.tai(yeast.m, yeast.ws)
