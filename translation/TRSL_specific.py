@@ -75,7 +75,7 @@ codon_anticodon = {
 }
 
 ''' source: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3159466/bin/supp_39_15_6705__index.html
-            https://academic.oup.com/nar/article/39/15/6705/1022014/The-role-of-tRNA-and-ribosome-competition-in
+    https://academic.oup.com/nar/article/39/15/6705/1022014/The-role-of-tRNA-and-ribosome-competition-in
     anticodons are in 5'-3' direction (same convention as above)'''
 tRNA_types = {
     1: {'anticodon': 'ugc', 'abundancy': 55351},  # reverse complement the anticodon to look it up
