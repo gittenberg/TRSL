@@ -48,7 +48,7 @@ tRp20
 tcnumpy
 dtype
 p21
-(S'O8'
+(S'O4'
 I0
 I1
 tRp22
@@ -161,7 +161,7 @@ tRp50
 (I1
 I4475
 tg21
-(S'O8'
+(S'O4'
 I0
 I1
 tRp51
@@ -9229,7 +9229,7 @@ slice
 p4553
 (I2
 I6
-I2
+L2L
 tRp4554
 sg4551
 g49
