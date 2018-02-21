@@ -47,3 +47,8 @@ for scale in scaling_factors:
 
     duration = 1800.0
     tr.solve_internal(0.0, duration, deltat=0.2)
+
+    tr.dump_results(description)
+    # write last polysomes to shelve database
+    tr.write_last_polysome(description)
+
