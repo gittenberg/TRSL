@@ -49,7 +49,7 @@ for ribonumber in ribonumbers:
     scaling_factor = ribonumber * 1.0 / 200000
     for transcriptome_ID in transcriptomes_dict:
         mRNAs = []
-        description = '{} ribosomes, {} phase transcriptome, varying tRNAs, full exome, no decay, median-enhanced initiation rates according to Shah'.format(ribonumber, transcriptome_ID)
+        description = '{} ribosomes, {} phase transcriptome, varying tRNAs, full exome, no decay, median-enhanced initiation rates according to Shah, deltat=0.05s'.format(ribonumber, transcriptome_ID)
 
         counter = 0
         genes = list(set(exome) & set(transcriptomes_dict[transcriptome_ID]) & set(init_rates))
@@ -74,7 +74,7 @@ for ribonumber in ribonumbers:
 
         # Run with profiling:
         import cProfile
-        cProfile.run('tr.solve_internal(0, '+str(duration)+', deltat=0.2)', 'trsl_profile')
+        cProfile.run('tr.solve_internal(0, '+str(duration)+', deltat=0.05)', 'trsl_profile')
         import pstats
         p = pstats.Stats('trsl_profile')
         p.strip_dirs().sort_stats('cumulative').print_stats()
