@@ -51,7 +51,8 @@ median_init_rate = np.median(init_rates.values())  # 1.29e-06
 init_rates = {key: median_init_rate for key in init_rates}
 
 duration = 1200.0  # should be sufficent to saturate
-ribonumbers = range(50000, 550000, 50000)
+#ribonumbers = range(50000, 550000, 50000)
+ribonumbers = range(50, 550, 50)
 
 for ribonumber in ribonumbers:
     scaling_factor = ribonumber * 1.0 / 200000
