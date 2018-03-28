@@ -14,7 +14,7 @@ Test comment for review branch
 
 import logging as log
 
-cr = 10  # ribosome footprint in codons. if this is > 0, the sequence needs to include a 3' UTR
+cr = 10  # ribosome footprint in codons
 
 
 class MRNA:
