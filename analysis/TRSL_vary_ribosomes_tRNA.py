@@ -41,16 +41,19 @@ for transcriptome in transcriptomes_dict:
 # load other data
 exome = pkl.load(open("../parameters/orf_coding.p", "rb"))
 init_rates = pkl.load(open("../parameters/init_rates_enhanced_median.p", "rb"))  # missing replaced by median
+# init_rates = pkl.load(open("../parameters/init_rates_plotkin.p", "rb"))
+#  TODO: check if this makes a difference; it should not because the number of common genes is the same both ways
 
-duration = 1200.0  # should be sufficent to saturate
-#ribonumbers = range(50000, 550000, 50000)
-ribonumbers = [1000, 2000, 5000, 10000, 20000]
+duration = 1200.0  # 1200 .should be sufficent to saturate
+# ribonumbers = range(50000, 550000, 50000)
+ribonumbers = [1000, 2000, 5000, 10000, 20000, 50000, 100000, 200000, 500000]
 
 for ribonumber in ribonumbers:
-    scaling_factor = ribonumber * 1.0 / 200000
+    scaling_factor = ribonumber * 1.0 / 200000  # only used to scale tRNAs
     for transcriptome_ID in transcriptomes_dict:
         mRNAs = []
-        description = '{} ribosomes, {} phase transcriptome, varying tRNAs, full exome, no decay, median-enhanced initiation rates according to Shah, deltat=0.05s'.format(ribonumber, transcriptome_ID)
+        deltat = 0.05
+        description = '{} ribosomes, {} phase transcriptome, varying tRNAs, full exome, no decay, median-enhanced initiation rates according to Shah, deltat={}s'.format(ribonumber, transcriptome_ID, deltat)
 
         counter = 0
         genes = list(set(exome) & set(transcriptomes_dict[transcriptome_ID]) & set(init_rates))
@@ -75,11 +78,9 @@ for ribonumber in ribonumbers:
 
         # Run with profiling:
         import cProfile
-        cProfile.run('tr.solve_internal(0, '+str(duration)+', deltat=0.05)', 'trsl_profile')
+        cProfile.run('tr.solve_internal(0, '+str(duration)+', deltat='+str(deltat)+')', 'trsl_profile')
         import pstats
         p = pstats.Stats('trsl_profile')
         p.strip_dirs().sort_stats('cumulative').print_stats()
 
         tr.dump_results(description)
-
-

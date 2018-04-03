@@ -195,9 +195,9 @@ class TRSL_spec(TRSL.TRSL):
         performs Poisson experiment to test how many ribosomes diffuse to initiation site and attempt to attach
         """
         if self.ribo_free > 0:
-            # k = npr.binomial(self.ribo_free, mRNA.init_rate*deltat, 1)[0]  # number of ribosomes that diffuse to the initiation site during deltat
-            k = npr.poisson(
-                self.ribo_free * mRNA.init_rate * deltat)  # number of ribosomes that diffuse to the initiation site during deltat
+            k = npr.binomial(self.ribo_free, mRNA.init_rate*deltat, 1)[0]  # number of ribosomes that diffuse to the initiation site during deltat
+            # k = npr.poisson(
+            #    self.ribo_free * mRNA.init_rate * deltat)  # number of ribosomes that diffuse to the initiation site during deltat
             # log.debug('update_initiation: %s ribosomes out of %s diffused to init site at mRNA %s with probability %s', k, self.ribo_free, mRNA.index, self.init_rate*deltat)
             for i in range(k):  # currently k>1 will not attach k ribosomes, TODO:
                 if not mRNA.ribosomes or not mRNA.first_position_occupied():
@@ -205,6 +205,7 @@ class TRSL_spec(TRSL.TRSL):
                     if self.GTP > 0 and self.ATP > 0:
                         if mRNA.attach_ribosome_at_start():
                             # log.debug("update_initiation: attaching ribosome at start of mRNA %s", mRNA.index)
+                            self.nocollision += 1  # global counter at class level to count collisions
                             self.ribo_bound += 1
                             self.ribo_free -= 1
                             self.GTP -= 1
@@ -220,6 +221,7 @@ class TRSL_spec(TRSL.TRSL):
                         log.warning("update_initiation: no GTP or no ATP")
                 else:
                     # log.warning("update_initiation: unsuccessful attempt to attach ribosome: first position occupied")
+                    self.collision += 1  # global counter at class level to count collisions
                     pass
         else:
             # log.warning("update_initiation: no free ribosomes left")

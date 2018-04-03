@@ -100,6 +100,8 @@ class TRSL(StochasticSolverInterface, object):
         self.elong_rate = competition / tau_tRNA / num_pos_tRNA  # 0.000140 s^-1  (yeast)
 
         self.detail = detail  # whether details are saved (e.g. ribosomes for every time step)
+        (self.nocollision, self.collision) = (0, 0)
+        # to count collisions at the initiation site; I am only using this in the specific mode
 
 
     @property
@@ -181,7 +183,7 @@ class TRSL(StochasticSolverInterface, object):
 
         :return: dict
         """
-        results = {}
+        results = dict()
         results['proteome'] = self.proteins
         results['peptide_bonds'] = self.protein_length
         results['transcriptome'] = self.mRNAs
@@ -191,6 +193,8 @@ class TRSL(StochasticSolverInterface, object):
         import time; now = time.strftime("%Y%m%d_%H%M", time.gmtime())
         results["time_stamp"] = now
         results["n_ribosomes"] = self.ribo_bound + self.ribo_free
+        results["collisions"] = self.collision
+        results["nocollisions"] = self.nocollision
         results["n_tRNA"] = sum(self._tRNA.values())
         duration = self.timerange[-1] - self.timerange[0] + 1
         results["duration"] = duration
@@ -199,7 +203,7 @@ class TRSL(StochasticSolverInterface, object):
     def dump_results(self, description='results'):
         """
         Save results of the simulation to a pickle file in the ../results directory.
-        The name is generated using ttimecourseshe given description and a timestamp.
+        The name is generated using the given description and a timestamp.
 
         @param description: readable string describing the simulation
         """
@@ -207,12 +211,13 @@ class TRSL(StochasticSolverInterface, object):
         results["description"] = description
         from cPickle import dump
         dump(results,
-             open("../results/{}_{}_{}_ribosomes_{}s.p".format(description, results['time_stamp'], results["n_ribosomes"],
-                                                  str(int(results["duration"])).zfill(4)), "wb"))
+             open("../results/{}_{}_{}_ribosomes_{}s.p".format(description, results['time_stamp'],
+                                                               results["n_ribosomes"],
+                                                               str(int(results["duration"])).zfill(4)), "wb"))
         print description
 
     # functions used in simulation
-    ##################################################################################################################################
+    ####################################################################################################################
 
     def insert_tRNA(self, mRNA, pos, tRNA_type):
         """
@@ -516,10 +521,11 @@ class TRSL(StochasticSolverInterface, object):
 
             self.update_processes(deltat, time)
 
-            log.info("solve_internal: self.proteins = %s", self.proteins)
+            log.info("solve_internal: sum(self.proteins.values()) = %s", sum(self.proteins.values()))
             log.info("solve_internal: protein length:  %s", self.protein_length)
             log.info("solve_internal: bound ribosomes: %s", self.ribo_bound)
             log.info("solve_internal: free ribosomes:  %s", self.ribo_free)
+            log.info("solve_internal: collisions/no collisions:  %s/%s", self.collision, self.nocollision)
             log.info("solve_internal: bound tRNA:      %s", sum(self.tRNA_bound.values()))
             log.info("solve_internal: free tRNA:       %s", sum(self.tRNA_free.values()))
             # careful: fieldnames and fieldvalues must be in the same order
@@ -530,12 +536,13 @@ class TRSL(StochasticSolverInterface, object):
 
             self.update_solve_internal(deltat, fields, start, time)
 
+    '''
     def solve_internal_new(self, trange):
-        '''
-        solves TRSL for the interval [start, end[, iterating through several steps
-        updated to conform with stochasticSolverInterface
-        TODO: not updated (see solve_internal, which has been updated)
-        '''
+    '''
+    #solves TRSL for the interval [start, end[, iterating through several steps
+    #updated to conform with stochasticSolverInterface
+    #TODO: not updated (see solve_internal, which has been updated)
+    '''
         log.info("solve: simulation from %s to %s", trange[0], trange[-1])
 
         fieldnames = ["protein", "ribos._bound", "ribos._free", "tRNA_bound", "tRNA_free", "ATP", "AMP", "GTP", "GDP"]
@@ -562,6 +569,7 @@ class TRSL(StochasticSolverInterface, object):
 
             # we assume that trange is evenly spaced:
             self.update_solve_internal(trange[1]-trange[0], fieldnames, fieldvalues, trange[0], time)
+    '''
 
     def execute(self, trange, x0 = None):
         """
