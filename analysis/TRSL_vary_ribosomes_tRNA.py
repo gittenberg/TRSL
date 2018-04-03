@@ -74,7 +74,7 @@ for ribonumber in ribonumbers:
         tr._tRNA_bound = tr._tRNA - tr._tRNA_free  # tRNA bound to ribosomes
 
         # Run without profiling:
-        # tr.solve_internal(0, duration, deltat=0.2)
+        # tr.solve_internal(0, duration, deltat=deltat)
 
         # Run with profiling:
         import cProfile
