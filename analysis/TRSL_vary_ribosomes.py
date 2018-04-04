@@ -3,10 +3,13 @@ Script to simulate a grid of the following conditions:
 
 - transcriptomes estimated at S phase and scaled down by a factor of 2
 - different numbers of ribosomes
+- this version keeps tRNA constant
 
 to test the hypothesis of an optimal translational efficiency
 
 Created on 27.04.2016
+
+Updated to cover wider range of ribosome numbers.
 
 @author: MJS
 '''
@@ -40,14 +43,19 @@ for transcriptome in transcriptomes_dict:
 # load other data
 exome = pkl.load(open("../parameters/orf_coding.p", "rb"))
 init_rates = pkl.load(open("../parameters/init_rates_enhanced_median.p", "rb"))  # missing replaced by median
+# init_rates = pkl.load(open("../parameters/init_rates_plotkin.p", "rb"))
+#  TODO: check if this makes a difference; it should not because the number of common genes is the same both ways
 
-duration = 1200.0  # should be sufficent to saturate
-ribonumbers = range(50000, 550000, 50000)
+duration = 1200.0  # 1200. should be sufficent to saturate
+# ribonumbers = range(50000, 550000, 50000)
+ribonumbers = [1000, 2000, 5000, 10000, 20000, 50000, 100000, 200000, 500000]
 
 for ribonumber in ribonumbers:
+
     for transcriptome_ID in transcriptomes_dict:
         mRNAs = []
-        description = '{} ribosomes, {} phase transcriptome, full exome, no decay, median-enhanced initiation rates according to Shah'.format(ribonumber, transcriptome_ID)
+        deltat = 0.05
+        description = '{} ribosomes, {} phase transcriptome, constant tRNAs, full exome, median-enhanced initiation rates according to Shah, deltat={}s'.format(ribonumber, transcriptome_ID, deltat)
 
         counter = 0
         genes = list(set(exome) & set(transcriptomes_dict[transcriptome_ID]) & set(init_rates))
@@ -60,7 +68,7 @@ for ribonumber in ribonumbers:
 
         print "created transcriptome: {}.".format(description)
 
-        tr = TRSL_specific.TRSL_spec(mRNAs, exome, decay_constants=None, nribo=ribonumber, proteome=col.Counter({}), detail=False)
+        tr = TRSL_specific.TRSL_spec(mRNAs, exome, decay_constants=None, nribo=ribonumber, proteome=col.Counter({}), detail=True)
 
         # tr._tRNA = col.Counter({i: TRSL_specific.tRNA_types[i]['abundancy'] for i in TRSL_specific.tRNA_types})
         tr._tRNA = col.Counter({i: int(TRSL_specific.tRNA_types[i]['abundancy'] * 1.0 * len(genes) / len(exome)) for i in TRSL_specific.tRNA_types})  # we do not let tRNA vary like the ribosomes
@@ -68,16 +76,14 @@ for ribonumber in ribonumbers:
         tr._tRNA_bound = tr._tRNA - tr._tRNA_free  # tRNA bound to ribosomes
 
         # Run without profiling:
-        # tr.solve_internal(0, duration, deltat=0.2)
+        # tr.solve_internal(0, duration, deltat=deltat)
 
         # Run with profiling:
         import cProfile
-        cProfile.run('tr.solve_internal(0, '+str(duration)+', deltat=0.2)', 'trsl_profile')
+        filename = 'trsl_profile_2'
+        cProfile.run('tr.solve_internal(0, '+str(duration)+', deltat='+str(deltat)+')', filename)
         import pstats
-        p = pstats.Stats('trsl_profile')
+        p = pstats.Stats(filename)
         p.strip_dirs().sort_stats('cumulative').print_stats()
 
         tr.dump_results(description)
-
-
-

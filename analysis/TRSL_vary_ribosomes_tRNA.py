@@ -10,12 +10,11 @@ Created on 27.04.2016
 
 @author: MJS
 '''
-print "TRSL_vary_ribosomes: starting"
+print "TRSL_vary_ribosomes_tRNA: starting"
 import logging as log
 import sys
 import cPickle as pkl
 import collections as col
-import unittest
 
 from translation import MRNA_specific, TRSL_specific
 
@@ -66,7 +65,7 @@ for ribonumber in ribonumbers:
 
         print "created transcriptome: {}.".format(description)
 
-        tr = TRSL_specific.TRSL_spec(mRNAs, exome, decay_constants=None, nribo=ribonumber, proteome=col.Counter({}), detail=False)
+        tr = TRSL_specific.TRSL_spec(mRNAs, exome, decay_constants=None, nribo=ribonumber, proteome=col.Counter({}), detail=True)
 
         # tr._tRNA = col.Counter({i: TRSL_specific.tRNA_types[i]['abundancy'] for i in TRSL_specific.tRNA_types})
         tr._tRNA = col.Counter({i: int(TRSL_specific.tRNA_types[i]['abundancy'] * scaling_factor * len(genes) / len(exome)) for i in TRSL_specific.tRNA_types})  # this time we do let tRNA vary like the ribosomes
@@ -78,9 +77,10 @@ for ribonumber in ribonumbers:
 
         # Run with profiling:
         import cProfile
-        cProfile.run('tr.solve_internal(0, '+str(duration)+', deltat='+str(deltat)+')', 'trsl_profile')
+        filename = 'trsl_profile_1'
+        cProfile.run('tr.solve_internal(0, '+str(duration)+', deltat='+str(deltat)+')', filename)
         import pstats
-        p = pstats.Stats('trsl_profile')
+        p = pstats.Stats(filename)
         p.strip_dirs().sort_stats('cumulative').print_stats()
 
         tr.dump_results(description)
