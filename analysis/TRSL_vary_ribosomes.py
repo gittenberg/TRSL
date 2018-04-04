@@ -68,7 +68,7 @@ for ribonumber in ribonumbers:
 
         print "created transcriptome: {}.".format(description)
 
-        tr = TRSL_specific.TRSL_spec(mRNAs, exome, decay_constants=None, nribo=ribonumber, proteome=col.Counter({}), detail=True)
+        tr = TRSL_specific.TRSL_spec(mRNAs, exome, decay_constants=None, nribo=ribonumber, proteome=col.Counter({}), detail=False)
 
         # tr._tRNA = col.Counter({i: TRSL_specific.tRNA_types[i]['abundancy'] for i in TRSL_specific.tRNA_types})
         tr._tRNA = col.Counter({i: int(TRSL_specific.tRNA_types[i]['abundancy'] * 1.0 * len(genes) / len(exome)) for i in TRSL_specific.tRNA_types})  # we do not let tRNA vary like the ribosomes
