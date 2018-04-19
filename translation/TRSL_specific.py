@@ -212,9 +212,10 @@ class TRSL_spec(TRSL.TRSL):
                             self.GDP += 1
                             self.ATP -= 1
                             self.AMP += 1
-                            if not mRNA.tic:  # no time measurement ongoing on this mRNA
-                                mRNA.tic = time
+                            if not mRNA.tic:  # no time measurement ongoing on this mRNA yet
+                                mRNA.tic = time  # this defines the beginning of time measurement
                                 mRNA.toc = len(mRNA.ribosomes) + 1  # number of ribos + 1 to countdown to end of time measurement
+                                # this is decremented in update_termination
                         else:
                             log.warning("update_initiation: unsuccessful attempt to attach ribosome")
                     else:
