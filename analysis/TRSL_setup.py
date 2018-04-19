@@ -18,10 +18,12 @@ examplesequence_2 = "aug aaa cug ccc gag ggg uuu uca uca uuu gag gac aaa cug ccc
 
 # configuration dictionary
 conf = {1: {
+    # mini test case run
     'exome': {1: examplesequence_1, 2: examplesequence_2},
     'transcriptome': {1: 2, 2: 1},
     'init_rates': {1: 0.1, 2: 0.1},
-    'description': 'test configuration with 2 genes in 3 transcripts'
+    'description': 'test configuration with 2 genes in 3 transcripts',
+    'tRNA': col.Counter({i: 100 for i in TRSL_specific.tRNA_types})
 }, 2: {
     'exome': pkl.load(open("../parameters/orf_coding.p", "rb")),
     'transcriptome': pkl.load(open("../parameters/transcriptome_plotkin_20000.p", "rb")),
@@ -88,7 +90,7 @@ conf = {1: {
 if __name__ == "__main__":
     log.basicConfig(level=log.DEBUG, format='%(message)s', stream=sys.stdout)
 
-    for i in [8]:  # set configuration_id
+    for i in [1]:  # set configuration_id
         if 'decay_constants' in conf[i]:
             genes = list(set(conf[i]['exome']) & set(conf[i]['transcriptome']) & set(conf[i]['init_rates']) & set(conf[i]['decay_constants']))
         else:
@@ -116,9 +118,9 @@ if __name__ == "__main__":
         description = conf[i]['description']
         print description
 
-        duration = 3600.0
+        duration = 120.0
 
-        tr = TRSL_specific.TRSL_spec(mRNAs, conf[i]['exome'], conf[i]['decay_constants'], nribo=200000, detail=True)
+        tr = TRSL_specific.TRSL_spec(mRNAs, conf[i]['exome'], conf[i]['decay_constants'], nribo=20, detail=True)
 
         # overwrite tRNA:
         if 'tRNA' not in conf[i]:

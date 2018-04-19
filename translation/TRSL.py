@@ -306,7 +306,7 @@ class TRSL(StochasticSolverInterface, object):
         change_occurred = False
         # empty ribosomes on this particular mRNA
         # the ribosome at position 0 is filled during the initiation process (not modelled)
-        empty_ribos = [key for key in this_mRNA.ribosomes if this_mRNA.ribosomes[key] is None and key!=0]  # TODO: I think termination position must not be excluded here - tRNA becomes termination factor
+        empty_ribos = [key for key in this_mRNA.ribosomes if this_mRNA.ribosomes[key] is None and key != 0]
         # log.debug("fill_empty_ribosomes: this_mRNA.index = {}".format(this_mRNA.index))
         # log.debug("fill_empty_ribosomes: empty_ribos = {}".format(empty_ribos))
         # log.debug("fill_empty_ribosomes: this_mRNA.ribosomes = {}".format(this_mRNA.ribosomes))
@@ -407,14 +407,14 @@ class TRSL(StochasticSolverInterface, object):
                 all occupied ribosomes move by one step and lose bound tRNA
             halve time interval and continue
         """
-        # log.info("update_elongation: starting mRNA %s, geneID %s", mRNA.index, mRNA.geneID)
+        log.info("update_elongation: starting mRNA %s, geneID %s", mRNA.index, mRNA.geneID)
         change_flag = True
         available_time = deltat
         while change_flag:  # while there is a change in tRNA or ribosome position
             change_flag = self.fill_empty_ribosomes(mRNA, available_time)  # if a tRNA bound this becomes True
             self.elongate_mRNA(mRNA)  # translocate all ribosomes by one step if possible
             available_time *= 0.5
-            # log.debug("update_elongation: from mRNA %s: halving time, available time is now %s", mRNA.index, available_time)
+            log.debug("update_elongation: from mRNA %s: halving time, available time is now %s", mRNA.index, available_time)
 
     def update_termination(self, mRNA, time):
         """

@@ -258,7 +258,7 @@ class TRSL_spec(TRSL.TRSL):
         change_occurred = False
         # empty ribosomes on this particular mRNA
         # the ribosome at position 0 is filled during the initiation process (not modelled)
-        empty_ribos = [key for key in mRNA.ribosomes if mRNA.ribosomes[key] is None and key!=0]
+        empty_ribos = [key for key in mRNA.ribosomes if mRNA.ribosomes[key] is None and key != 0]
         # TODO: test if termination position must be excluded here
         for ribo_pos in empty_ribos:
             thiscodon = mRNA.sequence[ribo_pos: ribo_pos + 3]
