@@ -44,18 +44,18 @@ conf = {1: {
     'exome': pkl.load(open("../parameters/orf_coding.p", "rb")),
     'transcriptome': pkl.load(open("../parameters/transcriptome_plotkin.p", "rb")),
     'init_rates': pkl.load(open("../parameters/init_rates_plotkin.p", "rb")),
-    'decay_constants': pkl.load(open("../parameters/decay_constants.p", "rb")),
+    #'decay_constants': pkl.load(open("../parameters/decay_constants.p", "rb")),
     'description': 'full transcriptome and exome, with decay, specific best estimate initiation rates according to Plotkin'
 }, 6: {
     'exome': pkl.load(open("../parameters/orf_coding.p", "rb")),
     'transcriptome': pkl.load(open("../parameters/transcriptome.p", "rb")),
-    'init_rates': pkl.load(open("../parameters/init_rates_stansfield.p", "rb")),
-    'decay_constants': pkl.load(open("../parameters/decay_constants.p", "rb")),
+    #'init_rates': pkl.load(open("../parameters/init_rates_stansfield.p", "rb")),
+    #'decay_constants': pkl.load(open("../parameters/decay_constants.p", "rb")),
     'description': 'full transcriptome and exome, specific best estimate initiation rates according to Stansfield'
 }, 7: {
     'exome': pkl.load(open("../parameters/orf_coding.p", "rb")),
     'transcriptome': pkl.load(open("../parameters/transcriptome_plotkin.p", "rb")),
-    'init_rates': pkl.load(open("../parameters/init_rates_plotkin_old_1.p", "rb")),
+    #'init_rates': pkl.load(open("../parameters/init_rates_plotkin_old_1.p", "rb")),
     'description': 'full transcriptome and exome, no decay, old (buggy) initiation rates according to Plotkin'
 }, 8: {
     # base case run with reduced number of genes (limited by availability of initiation rates)
@@ -68,13 +68,13 @@ conf = {1: {
     'exome': pkl.load(open("../parameters/orf_coding.p", "rb")),
     'transcriptome': pkl.load(open("../parameters/transcriptome_shah.p", "rb")),
     'init_rates': pkl.load(open("../parameters/init_rates_plotkin.p", "rb")),
-    'decay_constants': pkl.load(open("../parameters/decay_constants.p", "rb")),
+    #'decay_constants': pkl.load(open("../parameters/decay_constants.p", "rb")),
     'description': 'updated Shah transcriptome, full exome, with decay, updated initiation rates according to Shah'
 }, 10: {
     'exome': pkl.load(open("../parameters/orf_coding.p", "rb")),
     'transcriptome': pkl.load(open("../parameters/transcriptome_shah.p", "rb")),
     'init_rates': pkl.load(open("../parameters/init_rates_plotkin.p", "rb")),
-    'decay_constants': pkl.load(open("../parameters/decay_constants.p", "rb")),
+    #'decay_constants': pkl.load(open("../parameters/decay_constants.p", "rb")),
     'description': 'updated Shah transcriptome, full exome, with decay, rare tRNAs reduced 90%, updated initiation rates according to Shah',
     'tRNA': col.Counter(
             {i: TRSL_specific.tRNA_types[i]['abundancy'] if TRSL_specific.tRNA_types[i]['abundancy'] > 11070 else 1107
@@ -82,7 +82,7 @@ conf = {1: {
 }, 11: {
     'exome': pkl.load(open("../parameters/orf_coding.p", "rb")),
     'transcriptome': pkl.load(open("../parameters/transcriptome_shah.p", "rb")),
-    'init_rates': pkl.load(open("../parameters/init_rates_plotkin_old_1.p", "rb")),
+    #'init_rates': pkl.load(open("../parameters/init_rates_plotkin_old_1.p", "rb")),
     #'decay_constants': pkl.load(open("../parameters/decay_constants.p", "rb")),
     'description': 'updated Shah transcriptome, full exome, without decay, OLD initiation rates according to Shah',
 }}
@@ -136,7 +136,7 @@ if __name__ == "__main__":
         print "found {} tRNA molecules".format(sum(tr._tRNA.values()))
         print "solving..."
 
-        tr.solve_internal(0.0, duration, deltat=0.2)
+        tr.solve_internal(0.0, duration, deltat=0.05)
 
         '''
         # Profiling:
