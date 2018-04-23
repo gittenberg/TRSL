@@ -51,7 +51,6 @@ duration = 1200.0  # 1200. should be sufficent to saturate
 ribonumbers = [1000, 2000, 5000, 10000, 20000, 50000, 100000, 200000, 500000]
 
 for ribonumber in ribonumbers:
-
     for transcriptome_ID in transcriptomes_dict:
         mRNAs = []
         deltat = 0.05

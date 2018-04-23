@@ -35,6 +35,7 @@ import random as ran
 import collections as col
 import math
 import logging as log
+import os.path
 
 import numpy as np
 import numpy.random as npr
@@ -200,20 +201,21 @@ class TRSL(StochasticSolverInterface, object):
         results["duration"] = duration
         return results
 
-    def dump_results(self, description='results'):
+    def dump_results(self, description='results', dirname=r'../results'):
         """
         Save results of the simulation to a pickle file in the ../results directory.
         The name is generated using the given description and a timestamp.
 
         @param description: readable string describing the simulation
+        @param dirname: directory to save the results
         """
         results = self.get_state()
         results["description"] = description
         from cPickle import dump
-        dump(results,
-             open("../results/{}_{}_{}_ribosomes_{}s.p".format(description, results['time_stamp'],
-                                                               results["n_ribosomes"],
-                                                               str(int(results["duration"])).zfill(4)), "wb"))
+        filename = "{}_{}_{}_ribosomes_{}s.p".format(description, results['time_stamp'], results["n_ribosomes"],
+                                                     str(int(results["duration"])).zfill(4))
+        pathname = os.path.join(dirname, filename)
+        dump(results, open(pathname, "wb"))
         print description
 
     # functions used in simulation
@@ -535,41 +537,6 @@ class TRSL(StochasticSolverInterface, object):
             #fieldvalues = fields.values()
 
             self.update_solve_internal(deltat, fields, start, time)
-
-    '''
-    def solve_internal_new(self, trange):
-    '''
-    #solves TRSL for the interval [start, end[, iterating through several steps
-    #updated to conform with stochasticSolverInterface
-    #TODO: not updated (see solve_internal, which has been updated)
-    '''
-        log.info("solve: simulation from %s to %s", trange[0], trange[-1])
-
-        fieldnames = ["protein", "ribos._bound", "ribos._free", "tRNA_bound", "tRNA_free", "ATP", "AMP", "GTP", "GDP"]
-        self.initialize_solve_internal(fieldnames)
-
-        self.timerange = trange
-        for time in self.timerange:
-            if not int(time) % 100:
-                print "reached time {} sec.".format(int(time))
-            log.info("################################################################################################")
-            log.info("solve: time: %s", time)
-            log.info("################################################################################################")
-
-            # we assume that trange is evenly spaced:
-            self.update_processes(trange[1]-trange[0], time)
-
-            log.info("solve_internal: self.proteins = %s", self.proteins)
-            log.info("solve_internal: protein length:  %s", self.protein_length)
-            log.info("solve_internal: bound ribosomes: %s", self.ribo_bound)
-            log.info("solve_internal: free ribosomes:  %s", self.ribo_free)
-            log.info("solve_internal: bound tRNA:      %s", sum(self.tRNA_bound.values()))
-            log.info("solve_internal: free tRNA:       %s", sum(self.tRNA_free.values()))
-            fieldvalues = [self.proteins, self.protein_length, self.ribo_bound, self.ribo_free, sum(self.tRNA_bound.values()), sum(self.tRNA_free.values()), self.ATP, self.AMP, self.GTP, self.GDP]
-
-            # we assume that trange is evenly spaced:
-            self.update_solve_internal(trange[1]-trange[0], fieldnames, fieldvalues, trange[0], time)
-    '''
 
     def execute(self, trange, x0 = None):
         """
