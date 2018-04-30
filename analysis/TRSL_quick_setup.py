@@ -18,13 +18,14 @@ from translation import MRNA_specific, TRSL_specific
 print "TRSL_vary_ribosomes: starting"
 log.basicConfig(level=log.DEBUG, format='%(message)s', stream=sys.stdout)
 
-examplesequence_1 = "ggg uuu uca uca uuu gag gac gau gua aaa ggg uaa".replace(' ', '')
-examplesequence_2 = "aug aaa cug ccc gag ggg uuu uca uca uuu gag gac aaa cug ccc gag ggg uuu uca uca uuu gag gac aaa cug ccc gag ggg uuu uca uca uaa".replace(' ', '')
+examplesequence_1 = "aug uuu uuu gag gac gau gua aaa ggg uaa".replace(' ', '')  # 30
+examplesequence_2 = "aug aaa gag ggg uuu uca uuu gag aaa cug ggg uuu uca uca gag gac cug gag uca uaa".replace(' ', '') # 60
+examplesequence_3 = "aug aaa cug ccc gag ggg uuu uca uca uuu gag gac aaa cug ccc gag ggg uuu uca uca gac aaa cug ccc gag ggg uuu uca uca uaa".replace(' ', '') # 90
 
 # configuration
-exome = {0: examplesequence_1, 1: examplesequence_2}
-transcriptomes = [{0: 2, 1: 4}, {0: 20, 1: 40}, {0: 200, 1: 400}, {0: 4, 1: 2}, {0: 40, 1: 20}, {0: 400, 1: 200}]
-init_rates_list = [{0: 0.1, 1: 0.001}, {0: 0.01, 1: 0.001}, {0: 0.001, 1: 0.001}, {0: 0.001, 1: 0.1}, {0: 0.001, 1: 0.01}, {0: 0.001, 1: 0.1}]
+exome = {0: examplesequence_1, 1: examplesequence_2, 2: examplesequence_3}
+transcriptomes = [{0: 20, 1: 20, 2: 20}, {0: 200, 1: 200, 2: 200}, {0: 2000, 1: 2000, 2: 2000}]
+init_rates_list = [{0: 0.1, 1: 0.001, 2: 0.01}]
 
 scenarios = []
 # add description to scenarios:
@@ -38,7 +39,7 @@ tRNA = col.Counter({i: 100 for i in TRSL_specific.tRNA_types})
 print "found {} transcripts in transcriptome...".format(sum(transcriptome.values()))
 
 duration = 200.0  # 1200. should be sufficent to saturate
-ribonumbers = [1, 2, 3, 5, 8, 10, 20, 30, 50, 80, 100, 200, 500]
+ribonumbers = [1, 2, 3, 5, 8, 10, 20, 30, 50, 80, 100, 200, 500, 800]
 
 # loop over scenarios:
 for index, (transcriptome, init_rates, description_short) in enumerate(scenarios):
