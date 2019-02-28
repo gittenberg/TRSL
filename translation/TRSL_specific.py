@@ -53,6 +53,7 @@ source: http://www.ncbi.nlm.nih.gov/pmc/articles/PMC147333/
 we use 5'-3' convention for codon and anticodon;
 we ignore special nucleotides i and psi and use a and u instead;
 some simplification by making this a 1:1 relationship
+note that https://academic.oup.com/bioinformatics/article/28/18/i340/248836 are mapping acg to cau not cgu
 '''
 
 codon_anticodon = {
