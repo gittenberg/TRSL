@@ -16,7 +16,8 @@ import numpy as np
 import collections as col
 from translation import MRNA_specific, TRSL_specific
 
-transcriptomes_dict = pkl.load((open('../../parameters/transcriptome_time_dependent.p')))
+#transcriptomes_dict = pkl.load((open('../parameters/transcriptome_time_dependent.p')))
+transcriptomes_dict = pkl.load((open('../parameters/transcriptome_time_dependent_v2.p')))
 
 # when are new transcriptomes loaded (conversion from minutes to seconds):
 switch_times = [key * 60 for key in sorted(transcriptomes_dict.keys())]
@@ -49,7 +50,7 @@ for start, stop, growth_factor in zip(switch_times[:-1], switch_times[1:], growt
     transcriptome = transcriptomes_dict[start / 60]
     mRNAs = []
     counter = 0
-    description = 'volume-adjusted polyphasic cell cycle from {} to {}, Teufel transcriptome, full exome, no decay, with ribo growth factor, updated initiation rates according to Shah'.format(start, stop)
+    description = 'volume-adjusted polyphasic cell cycle v2 from {} to {}, Teufel transcriptome, full exome, no decay, with ribo growth factor, updated initiation rates according to Shah'.format(start, stop)
 
     for gene in genes:
         for transcript in range(transcriptome[gene]):

@@ -11,16 +11,18 @@ import collections as col
 import numpy as np
 from translation import MRNA_specific, TRSL_specific
 
-transcriptomes_dict = pkl.load((open('../parameters/transcriptome_time_dependent.p')))
+#transcriptomes_dict = pkl.load((open('../parameters/transcriptome_time_dependent.p')))
+transcriptomes_dict = pkl.load((open('../../parameters/transcriptome_time_dependent_v2.p')))
 
 # when are new transcriptomes loaded (conversion from minutes to seconds):
 switch_times = [key * 60 for key in sorted(transcriptomes_dict.keys())]
 
 # load other data
-exome = pkl.load(open("../parameters/orf_coding.p", "rb"))
+exome = pkl.load(open("../../parameters/orf_coding.p", "rb"))
 # init_rates = pkl.load(open("../parameters/init_rates_plotkin.p", "rb"))
-init_rates = pkl.load(open("../parameters/init_rates_enhanced_median.p", "rb"))  # missing replaced by median
-decay_constants = pkl.load(open("../parameters/decay_constants.p", "rb"))
+init_rates = pkl.load(open("../../parameters/init_rates_enhanced_median.p", "rb"))  # missing replaced by median
+decay_constants = pkl.load(open("../../parameters/decay_constants.p", "rb"))
+
 # load initial transcriptome
 transcriptome = transcriptomes_dict[0]
 
@@ -44,7 +46,7 @@ for start, stop, growth_factor in zip(switch_times[:-1], switch_times[1:], growt
     mRNAs = []
     counter = 0
     #description = 'polyphasic cell cycle from {} to {}, updated Shah transcriptome, full exome, no decay, with ribo growth factor updated initiation rates according to Shah'.format(start, stop)
-    description = 'polyphasic cell cycle from {} to {}, updated Shah transcriptome, full exome, no decay, without ribo growth factor updated initiation rates according to Shah'.format(start, stop)
+    description = 'polyphasic cell cycle v2 from {} to {}, updated Shah transcriptome, full exome, no decay, without ribo growth factor updated initiation rates according to Shah'.format(start, stop)
 
     for gene in genes:
         for transcript in range(transcriptome[gene]):
